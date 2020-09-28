@@ -1,0 +1,134 @@
+\renewcommand{\lastmod}{\today}
+
+\chapter{Molekülorbitaltheorie}
+
+
+
+
+\section{Kovalente Bindung}
+
+%ML 2014
+
+
+In dieser Aufgabe untersuchen wir die kovalente Bindung zwischen zwei Kernen und einem Elektron in einem idealisierten, eindimensionalen Model. Die beiden Kerne haben den Abstand d zueinander. Die Kerne erzeugen ein elektrostatisches Potential 
+
+$$ U_d(x) = - u_0 \cdot \left[\delta\left(x - \frac{d}{2}\right) + \delta\left(x + \frac{d}{2}\right)\right], \quad u_0 > 0 $$
+
+an der Position x des Elektrons. $\delta$ bezeichnet die Dirac-Delta Funktion. Die elektrostatische Abstoßung der Kerne führt zu einem Energiebeitrag 
+
+$$ V_{NN}(d) = \gamma \frac{u_0^2}{d}\quad,$$
+
+wobei $\gamma$ eine Konstante ist.
+
+\begin{itemize}
+
+	\item[\textbf{(a)}] Berechnen Sie die möglichen Zustände $\psi(x)$ des Systems. Welche Zustände sind bindend und welche antibindend? Skizzieren Sie die Zustände. Geben Sie eine Gleichung für die Energien der Zustände an. 
+	
+	\textit{Hinweis: Teilen Sie die Ortsachse des Systems in drei Bereiche. Stellen Sie, unter Ausnutzung der Symmetrien des Systems, die Kontinuitätsbedingungen für die Wellenfunktion an den Bereichsgrenzen auf. Für die erste Ableitung des Wellenfunktion gilt nahe des Delta-Potentials ($\epsilon \rightarrow 0$)} 
+	
+	$$ \psi'\left(\pm \frac{d}{2} + \epsilon\right) - \psi'\left(\pm \frac{d}{2} - \epsilon\right) = -\frac{2 m u_0}{\hbar^2} \cdot \psi\left(\pm \frac{d}{2}\right) $$
+
+	\item[\textbf{(b)}] Beschreiben Sie das qualitative Verhalten der Eigenenergien als Funktion des Kernabstandes. Welche Eigenenergien erhalten Sie für $d \rightarrow 0$ bzw. $d \rightarrow \infty$?
+	
+	
+	\item[\textbf{(c)}] Was bestimmt die Bindungslänge des Moleküls? Welchen Einfluss hat die abstoßende Kraft zwischen den Kernen und die Energie des Elektrons im gebundenen Zustand?
+	
+
+
+\end{itemize}
+	
+
+
+
+\section{Symmetrie in Molekülen}
+
+% ML2014
+
+In der Vorlesung haben Sie gelernt, dass man Elektronwellenfunktionen im Molekül durch Superposition aus atomaren Wellenfunktionen zusammensetzen kann (LCAO - Methode). Die Wellenfunktionen der $\pi$-Elektronen eines Benzolrings kann man beispielsweise aus den $2p_z$-Orbitalen $\psi_{2pz}$ von Kohlenstoff zusammensetzen. 
+
+$$ \Psi_\pi = \sum_1^6 c_i \psi_{2pz,i} $$
+
+wobei $\psi_{2pz,i}$ ein an der Position von Atom i lokalisiertes $2p_z$-Orbital bezeichnet.
+\bigskip
+
+Um mehr Information über die Koeffizienten $c_i$ zu erhalten kann man die räumlichen Symmetrien des Moleküls ausnutzen. Diese spiegeln sich in seiner Wellenfunktion wider. Zum Beispiel besitzt Benzol 6-fache Drehsymmetrie, dh. eine $60^\circ$ Rotation um eine Achse senkrecht zur Molekülebene verändert das Molekül nicht. Die Wellenfunktion kann sich bei einer Drehoperation also höchstens um einen konstanten Faktor ändern.
+
+$$ C_6 \Psi_\pi = \lambda \Psi_\pi $$
+
+Berechnen Sie mit Hilfe dieser Gleichung die Koeffizienten $c_i$. Beachten Sie, dass die $C_6$ - Operation keinen Einfluss auf die atomaren Orbitale hat, also $C_6 \psi_{2pz} = \psi_{2pz}$.
+
+\vspace{0.5cm}
+
+\textit{Hinweis:} $(C_6)^6 = 1$.
+
+
+
+
+\section{Zustandsterme von Molekülen}
+
+% ML 2014
+
+Leiten Sie die erlaubten Termsymbole von $O_2$ und $N_2^+$ her. Beginnen Sie mit der Herleitung der Elektronenkonfiguration und leiten Sie aus den möglichen Werten von Spin und Drehimpuls die Termsymbole her.
+
+Fertigen Sie ein Orbitaldiagramm an.
+
+
+\section{Variationsprinzip}
+%AK 17
+
+Beweisen Sie das Variationsprinzip der Quantenmechanik:
+
+ wobei die Schrödingergleichung (SGL) %HΨ = EΨ 
+ gilt und E0 der tiefste Eigenwert der SGL ist. $\Psi$ sei dabei eine Funktion, die nicht notwendigerweise Eigenfunktion der SGL ist, aber deren Randbedingungen genügt.
+ 
+ 
+\section{Hückeltheorie: $\pi$-System in Butadien}
+% AK17
+
+Die $\pi$-Orbitale des Butadien-Moleküls (H2C = CH - CH = CH2) kann man mit dem Hückelverfahren näherungsweise beschreiben. Dabei nimmt man die $\sigma$-Bindungen als starres Gerüst an, das die Struktur des Moleküls bestimmt, und die $\pi$-Orbitale werden als Linerakombination der p-Orbitale der Kohlenstoffatome angesetzt:
+%|Ψ⟩ = cA |ΨA⟩ + cB |ΨB⟩ + cC |ΨC⟩ + cD |ΨD⟩ (2)
+ Dabei bezeichnet %|Ψi⟩
+  die Wellenfunktion des p-Orbitals des Kohlenstoffatoms i. Die Koeffizienten
+werden mit Hilfe des Variationsprinzips berechnet.
+In der Hückelnäherung werden folgende Annahmen gemacht:
+
+Alle Überlappintegrale S werden null gesetzt.
+
+
+Alle Austauschintegrale Hij zwischen nicht-nächsten Nachbarn werden ebenfalls null gesetzt.
+
+ Die restlichen Austauschintegrale werden gleich einem Parameter $\beta$ gesetzt.
+ 
+a) Bestimmen Sie zunächst mit Hilfe des Variationsprinzips die Hückel-Matrix von Butadien.
+
+b) Bestimmen Sie nun die Energieeigenwerte der $\pi$-Orbitale von Butadien.
+
+c) Berechnen Sie schließlich die Koeffizienten ci des HOMO- (Highest Occupied Molecular Orbital) und des LUMO-(Lowest Unoccupied Molecular Orbital) Niveaus.
+
+d) Wie groß ist die Gesamtenergie des $\pi$-Elektronensystems? Vergleichen Sie diese Energie mit derjenigen zweier einzelner Ethen-Moleküle (H2 C = C H2 ). Diese Energiedifferenz stellt eine Abschätzung der zusätzlichen Stabilisierung des konjugierten $\pi$-Elektronensystems im Butadien- Molekül durch Delokalisation der $\pi$-Elektronen dar (Delokalisationsenergie).
+
+
+
+\section{Cyclobutadien}
+
+% AK17
+
+ a) Stellen Sie analog zu Aufgabe 2 die Hückel-Matrix von Cyclobutadien auf und berechnen Sie die zugehörigen Energieeigenwerte.
+ 
+b) Wie groß ist die Delokalisationsenergie im Fall von Cyclobutadien? Bewerten Sie aufgrund dieser Abschätzung die Stabilität eines derartigen Moleküls im Vergleich zu Butadien.
+
+Abb. 1: Cyclobutadien
+ 
+\section{LCAO-Variationen:}
+% IR11
+
+Für Molekülorbitalansätze   für das   soll  dargestellt werden.
+Schrittweise:
+- zeichen Sie zunächst das Atomorbital 1d, 2d. 
+- integrieren Sie die Wahrscheinlichskeitsdichte des Atomorbitals (numerisch) auf.
+- zeichen Sie Linearkombinationen zweier Atomarbitale in 1d, 2d.
+- integrieren Sie die Wahrscheinlichskeitsdichte dieser Kombinationen (numerisch) auf.
+- Berechnen Sie E = int pis H psi (durch numerische Integration)
+- Zeichen Sie  für die Linearkombinationen der Atomorbitale.
+- Versuchen Sie, durch phantasievolle Ansätze für   den Verlauf von  zu verbessern.
+	  Welche maximale Bindungsenergie erreichen Sie?

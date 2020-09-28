@@ -1,18 +1,31 @@
 \renewcommand{\lastmod}{\today}
 
-\chapter{Valenzbindungstheorie}
+\chapter{Die Valenzbindungstheorie und die Form von Molekülen}
 
 
 
 
 \section{Ziele}
 
-\begin{itemize}
-\item dsf
 
-\item sdvsdfs
+
+\begin{itemize}
+\item Sie können die Valenzbindungstheorie benutzen, um die Form von Molekülen vorherzusagen und zu erklären. Ein Beispiel ist das hier abgebildete Pentacen-Molekül.
+
+\item Sie können die Grundzüge verschiedener Methoden erklären, mit denen Eigenschaften von Molekülen bestimmt werden können.
+
+\item Sie können die Begriffe Orbital, $\sigma$- oder $\pi$-Bindung und Hybridisierung erklären und korrekt verwenden.
 
 \end{itemize}
+
+
+\begin{marginfigure}
+\includegraphics[width=\textwidth]{\currfiledir Pentacene_on_Ni(111)_STM.jpg}
+\caption{Pentacen-Moleküle durch ein Raster-Tunnel-Mikroskop abgebildet.  Bildgröße $5 \times 5$~nm.
+\href{https://commons.wikimedia.org/wiki/File:Pentacene_on_Ni(111)_STM.jpg}{L.~E.~Dinca et al.}  / \href{https://creativecommons.org/licenses/by/4.0}{CC BY}
+}
+\end{marginfigure}
+
 
 \section{Überblick}
 
@@ -20,11 +33,43 @@
 Die Valenzbindungstheorie (engl. valence bond theory) ist die historisch erste quantenmechanische Theorie zur Molekülbindung. Sie wurde 1927 von
 Walter Heitler und Fritz London entwickelt. Kurz darauf entstand die komplementäre Molekülorbitaltheorie, die wir im nächsten Kapitel besprechen werden. Beide Theorien versuchen durch verschiedene Annahmen das quantenmechanische Problem zu lösen, welche Grundzustands-Energie und räumliche Anordnung die vielen Atomkerne und noch viel mehr Elektronen in einem Molekül annehmen.
 
-Die Valenzbindungstheorie (VB) macht die Annahme, dass ein Elektron zunächst einmal zu einem einzigen Atomkern gehört und somit durch ein Atomorbital beschrieben wird. Die Molekülorbitaltheorie (MO) hingegen bildet die Gesamtwellenfunktion aufbauend auf der Annahme, dass jedes Elektron über das gesamte Molekül verteilt ist, also durch Molekülorbitale beschrieben wird. Die Valenzbindungstheorie ist einfacher, insbesondere von Hand, ohne Computer, und führt Begriffe ein, die auch darüber hinaus verwendet werden. Die Molekülorbitaltheorie ist insbesondere durch die Verwendung von Computern weiter entwickelt und 'moderner'.
+Die Valenzbindungstheorie (VB) macht die Annahme, dass ein Elektron zunächst einmal zu einem einzigen Atomkern gehört und somit durch ein Atomorbital beschrieben wird. Eine Bindung zwischen Atomen entsteht durch das Paaren von Elektronen. Dies wird im Lewis-Schema dargestellt. Die Molekülorbitaltheorie (MO) hingegen bildet die Gesamtwellenfunktion aufbauend auf der Annahme, dass jedes Elektron über das gesamte Molekül verteilt ist, also durch Molekülorbitale beschrieben wird. Die Valenzbindungstheorie ist einfacher, insbesondere von Hand, ohne Computer, und führt Begriffe ein, die auch darüber hinaus verwendet werden. Die Molekülorbitaltheorie ist insbesondere durch die Verwendung von Computern weiter entwickelt und 'moderner'.
 
-XXX VB als Paare von Elektronen, Lewis schema ? Bond order ?
 
 Literatur: Atkins: chapter on moleculatr structure
+
+\section{Moleküle 'sehen'}
+
+\paragraph{Röntgenstreuung} Wenn sich viele identische Moleküle zu einem Kristall anordnen lassen (was nicht trivial ist), dann kann man kurzwellige elektromagnetische Strahlung an diesem  Kristall-Gitter beugen. Aus dem Beugungsbild erhält man durch Fourier-Transformation und ein paar Annahmen die Elektronendichte-Verteilung im Kristall. Es sind die Elektronen, die mit EM-Strahlung wechselwirken. Die Elektronendichte-Verteilung wird oft in Form von 'Höhenlinien' dargestellt. Damit ist klar, dass es nicht eine exakte 'Größe' eines Moleküls gibt.
+
+\begin{marginfigure}
+%\includegraphics[width=\textwidth]{\currfiledir Pentacene_on_Ni(111)_STM.jpg}
+\caption{Ladungsdichte eines Moleküls
+\href{https://commons.wikimedia.org/wiki/File:Pentacene_on_Ni(111)_STM.jpg}{L.~E.~Dinca et al.}  / \href{https://creativecommons.org/licenses/by/4.0}{CC BY}
+}
+\end{marginfigure}
+
+
+\paragraph{Raster-Tunnel-Mikroskopie} (engl. scanning tunneling microscope, STM) Direkter, ohne Fourier-Transformation, kann man einzelne Moleküle auf einer leitenden Oberfläche in einem sehr guten Vakuum abbilden, in dem man eine sehr scharfe Metallspitze nahe an die Oberfläche bringt. Bei einem Abstand im Bereich weniger Angstrom fließt ein Tunnelstrom, wenn eine Spannung zwischen Spitze und Oberfläche angelegt wird. Eine Elektronik hält den Tunnelstrom durch Regelung des Abstands konstant währen die Spitze über die Oberfläche gerastert wird. Man erhält ein Höhen-Bild konstanten Tunnelstroms. Da Strom nur fließen kann, wenn sich die Wellenfunktion der Elektronen in der Spitze und in der Oberfläche wenigstens etwas überlappen, kann man so die Elektronen-Wellenfunktion von Molekülen auf der Oberfläche abbilden. Die beobachtete Form hängt auch von der gewählten Spannung ab.
+
+\begin{marginfigure}
+%\includegraphics[width=\textwidth]{\currfiledir Pentacene_on_Ni(111)_STM.jpg}
+\caption{Prinzip STM
+\href{https://commons.wikimedia.org/wiki/File:Pentacene_on_Ni(111)_STM.jpg}{L.~E.~Dinca et al.}  / \href{https://creativecommons.org/licenses/by/4.0}{CC BY}
+}
+\end{marginfigure}
+
+
+\paragraph{Raster-Kraft-Mikroskopie} (engl. atomic force microscope, AFM) Alternativ zum Tunnelstrom kann man die Kraft zwischen einer Spitze und der Probe bestimmen und Oberflächen konstanter Kraft abbilden. Wie wir in späteren Kapitel sehen werden gibt es einen anziehenden Abstands-Bereich aufgrund der van-der-Waals Wechselwirkung, und einen abstoßenden Bereich aufgrund des Pauli-Verbots. Als Sonde wird eine sehr scharfe Spitze aus beispielsweise Silizium verwendet, die an einer schwingenden Blattfeder montiert ist. Die Auslenkung dieses Arms wird gemessen und spiegelt die Wechselwirkung mit de Oberfläche wider.
+
+
+\begin{marginfigure}
+%\includegraphics[width=\textwidth]{\currfiledir Pentacene_on_Ni(111)_STM.jpg}
+\caption{Prinzip AFM
+\href{https://commons.wikimedia.org/wiki/File:Pentacene_on_Ni(111)_STM.jpg}{L.~E.~Dinca et al.}  / \href{https://creativecommons.org/licenses/by/4.0}{CC BY}
+}
+\end{marginfigure}
+
  
 \section{Vorbereitung}
 
@@ -77,7 +122,7 @@ Dies löst die Schrödinger-Gleichung mit dem Gesamt-Hamilton-Operator
 \end{equation}
 wobei der Term mit $r_{AB}$ auch zunächst weggelassen werden kann, weil die Kern-Positionen in der Born-Oppenheimer-Näherung ja als konstant angenommen werden.
 
-Es zeigt sich\sidenote{Rechnung in Haken / Wolf II, Kapitel 4.4.2}, dass die symmetrische Superposition die niedrigere Gesamtenergie liefert. Die beiden Terme der Wellenfunktion interferieren konstruktiv und sorgen dafür, dass im Raum zwischen den beiden Kernen eine höhere Aufenthaltswahrscheinlichkeit der Elektronen zu finden ist. Diese kompensiert die Coulomb-Abstoßung der Kerne.
+Es zeigt sich\footcite[Kapitel 4.4.2]{Haken_wolf_II}, dass die symmetrische Superposition die niedrigere Gesamtenergie liefert. Die beiden Terme der Wellenfunktion interferieren konstruktiv und sorgen dafür, dass im Raum zwischen den beiden Kernen eine höhere Aufenthaltswahrscheinlichkeit der Elektronen zu finden ist. Diese kompensiert die Coulomb-Abstoßung der Kerne.
 
 In der Valenzbindungstheorie entstehen Bindungen zwischen Atomen durch das 
 Paaren von zwei Elektronen. Zwei Kerne teilen sich also zwei Elektronen, die nicht mehr einem einzelnen Kern zugeordnet sind.
@@ -123,39 +168,5 @@ Diese Orbitale entstehen also durch Interferenz der ursprünglichen Orbitale und
 Analog gibt es auch die sp$^2$ und die sp-Hybridisierung.  Die sp$^2$-Hybridisierung findet man beispielsweise in Ethen (C$_2$H$_4$). Die drei  sp$^2$-Orbitale jedes Kohlenstoff-Atoms sind an der Bindung der beiden Wasserstoff-Atome beteiligt und an einer der beiden C--C Bindungen. Die zweite C--C Bindung ist eine 'gewöhnliche' $\sigma$-Bindung zwischen den verbleibenden, nicht hybridisierten p-Orbitalen. Dadurch ergeben sich die Winkel in der HCH bzw. HCC-Bindung zu circa 120$^\circ$.
 
 Ein Beispiel für die sp-Hybridisierung ist Ethin (C$_2$H$_2$).
-
-
-\section{Bezeichnung von Molekülzuständen}
-
-siehe demtröder chap. 2.4.3
-
-In der Atomphysik gibt es für jedes Elektron die Quantenzahlen $n$, $l$, $m_l$, $s$, $m_s$, $j$, $m_j$, die (bis auf $n$) die Länge und die Orientierung eines Drehimpuls-artigen Vektors anzeigen. Die Größe des Bahndrehimpulses, also die 
-Quantenzahl $l$ wird als s,p,d,f, ... angegeben. In Mehrelektronen-Atomen bildet man vektorielle Summen über die einzelnen Vektoren der Elektronen. Je nach Kopplungsschema addiert man zunächst alle Bahndrehimpulse $\vec{l}$ und Spins $\vec{s}$, oder alle Gesamtdrehimpulse $\vec{j}$. Das Ergebnis wird dann wieder als Längen- und Orientierungsquantenzahl angegeben, also $L$, $M_L$, $S$, $M_S$, $J$ und $M_J$.
-
-
-
-
-
-Der wichtigste Unterschied in Molekülen ist, dass die Vorzugsrichtung oder z-Achse durch die Kern--Kern--Achse immer gegeben ist. Da Drehimpulserhaltung Rotationssymmetrie voraussetzt, ist in Molekülen nur noch die Drehimpuls-Komponenten entlang der Kern--Kern--Achse eine gute Quantenzahl. $m_l$ übernimmt also die Rolle von $l$ in der Atomphysik. Manchmal wird $l$ noch angegeben, sagt dann aber nur noch aus, in welcher Quantenzahl $l$ das Elektron landen würde, wenn das Molekül zu einzelnen Atomen auseinandergezogen würde.
-
-Weiterhin hängt die Gesamtenergie nicht vom Vorzeichen von $m_l$ ab, so dass $\lambda = | m_l | $ eingeführt wird. Analog zu $l$ in der Atomphysik wird der Wert von $\lambda$ als $\sigma, \pi, \delta, \phi, \dots$ dargestellt, wie wir es bei der Klassifizierung der Bindungen schon gesehen hatten.\sidenote{Anti-bindenden Orbitale werden dabei mit einem hochgestellten Stern gekennzeichnet, beispielsweise $\pi^\star$.} Man beachte jedoch, dass somit alle Zustände außer $\lambda = 0$ zweifach entartet sind, da ja $m_l = \pm \lambda$.
-
-
-Analog zum Mehrelektronen-Atom können im Molekül auch Gesamt-Quantenzahlen definiert werden. Wie im Atom auch sind die Projektionen auf die Achse einfach per Addition zu gewinnen:
-\begin{equation}
-M_S = \sum m_s{_i} \quad \text{und} \quad M_L  = \sum m_{l_i}
-\end{equation}
-Wie beim einzelnen Elektron ist auch wieder $\Lambda = | M_L|$ die interessantere Größe, die ebenfalls wieder als $\Sigma, \Pi, \Delta, \Phi, \dots$ dargestellt wird. Wenn die Länge des Gesamt-Spin-Vektors $|\vec{S}| = \hbar \sqrt{S (S+1)}$ ist, dann muss  $M_S$ ist zwischen $-S$ und $S$ liegen, kann also  $2S + 1$  verschiedene Werte annehmen.\sidenote{Daher Triplett für $S=1$ und Singulett für $S=0$.} Dies wird als Multiplizität bezeichnet. Für den Gesamt-Drehimpuls $\vec{J}$ ist analog auch nur der Betrag der Projektions-Komponenten interessant, die $\Omega$ genannt wird
-\begin{equation}
- \Omega = | M_J | = | \Lambda + M_S|
-\end{equation}
-Dies alles wird zum spektroskopischen Termsymbol zusammengefasst:
-\begin{equation}
- ^{2 S + 1}\Lambda_\Omega
-\end{equation}
-
-
-https://chemistry.stackexchange.com/questions/67031/determination-of-reflections-in-sigma-molecular-term-symbols
-
 
 \printbibliography[segment=\therefsegment,heading=subbibliography]

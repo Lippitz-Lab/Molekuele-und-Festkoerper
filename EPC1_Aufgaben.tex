@@ -1,5 +1,5 @@
 
-\documentclass[notoc,nofonts,a4paper,twoside,nobib]{tufte-book}
+\documentclass[notoc,nofonts,a4paper,twoside,nobib,german]{tufte-book}
 %\documentclass[nofonts,a4paper,twoside]{book}
 
 \usepackage[ngerman]{babel}
@@ -48,7 +48,7 @@
 \usepackage{chemformula}
 
 \usepackage{braket}
-\setcounter{secnumdepth}{0}
+\setcounter{secnumdepth}{1}
 
 % citations
 %\usepackage{natbib}
@@ -79,7 +79,7 @@
 
 
 \ifthenelse{\boolean{@tufte@twoside}}
-  {\fancyhead[LE]{\thepage\quad{\newlinetospace{Molekülphysik und Festkörperphysik I}}}%
+  {\fancyhead[LE]{\thepage\quad{\newlinetospace{Aufgaben zu EPC1}}}%
     \fancyhead[RO]{{\newlinetospace{\leftmark}}\quad\thepage}}%
   {\fancyhead[RE,RO]{{\newlinetospace{c}}\quad\thepage}}
   
@@ -144,7 +144,7 @@
 \begin{document}
 
 
-\title{Experimentalphysik C1 \\ Molekülphysik und Festkörperphysik I}
+\title{Experimentalphysik C1 \\ Aufgaben}
 
 \author{Markus Lippitz}
 \date{\today}
@@ -161,17 +161,18 @@
 %
 \part{Theorie der molekularen Bindung}
 
-\include{1_VB/1_VB}
 \include{1_VB/1_VB_UE}
 
-\include{2_MO/2_MO}
 \include{2_MO/2_MO_UE}
 
 
 \part{Spektroskopie von Molekülen}
 
-
-\include{3_rot/3_rot}
+\include{3_diel/3_diel_UE}
+\include{4_rot/4_rot_UE}
+\include{5_vib/5_vib_UE}
+\include{6_raman/6_raman_UE}
+\include{7_elec/7_elec_UE}
 
 %-------
 %

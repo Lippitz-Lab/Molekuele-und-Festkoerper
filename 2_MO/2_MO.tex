@@ -213,4 +213,56 @@ x^6 - 6 x^4 + 9x^2 - 4 = 0 \quad \text{oder} \quad x = \pm 1, \pm 1, \pm 2
 Da wir insgesamt 6 Elektronen in diese Orbitale einfüllen müssen, und jedes Orbital mit 2 Elektron (spin up und down) besetzen können, sind das Orbitale mit $E=\alpha + 2 \beta$ und die beiden Orbitale mit $E = \alpha + \beta$ besetzt\sidenote{$\beta < 0$}. Auch diese Orbitale tragen also zur Bindung bei, da sie die Gesamtenergie insgesamt um $8\beta$ reduzieren. Das Orbital mit $E=\alpha + 2 \beta$ ist über den ganzen Ring delokalisiert, die beiden mit $E = \alpha + \beta$  über zwei bzw. drei Atome.
 
 
+
+
+\section{Bezeichnung von Molekülzuständen}
+
+siehe demtröder chap. 2.4.3
+
+In der Atomphysik gibt es für jedes Elektron die Quantenzahlen $n$, $l$, $m_l$, $s$, $m_s$, $j$, $m_j$, die (bis auf $n$) die Länge und die Orientierung eines Drehimpuls-artigen Vektors anzeigen. Die Größe des Bahndrehimpulses, also die 
+Quantenzahl $l$ wird als s,p,d,f, ... angegeben. In Mehrelektronen-Atomen bildet man vektorielle Summen über die einzelnen Vektoren der Elektronen. Je nach Kopplungsschema addiert man zunächst alle Bahndrehimpulse $\vec{l}$ und Spins $\vec{s}$, oder alle Gesamtdrehimpulse $\vec{j}$. Das Ergebnis wird dann wieder als Längen- und Orientierungsquantenzahl angegeben, also $L$, $M_L$, $S$, $M_S$, $J$ und $M_J$.
+
+
+
+
+
+Der wichtigste Unterschied in Molekülen ist, dass die Vorzugsrichtung oder z-Achse durch die Kern--Kern--Achse immer gegeben ist. Da Drehimpulserhaltung Rotationssymmetrie voraussetzt, ist in Molekülen nur noch die Drehimpuls-Komponenten entlang der Kern--Kern--Achse eine gute Quantenzahl. $m_l$ übernimmt also die Rolle von $l$ in der Atomphysik. Manchmal wird $l$ noch angegeben, sagt dann aber nur noch aus, in welcher Quantenzahl $l$ das Elektron landen würde, wenn das Molekül zu einzelnen Atomen auseinandergezogen würde.
+
+Weiterhin hängt die Gesamtenergie nicht vom Vorzeichen von $m_l$ ab, so dass $\lambda = | m_l | $ eingeführt wird. Analog zu $l$ in der Atomphysik wird der Wert von $\lambda$ als $\sigma, \pi, \delta, \phi, \dots$ dargestellt, wie wir es bei der Klassifizierung der Bindungen schon gesehen hatten.\sidenote{Anti-bindenden Orbitale werden dabei mit einem hochgestellten Stern gekennzeichnet, beispielsweise $\pi^\star$.} Man beachte jedoch, dass somit alle Zustände außer $\lambda = 0$ zweifach entartet sind, da ja $m_l = \pm \lambda$.
+
+
+Analog zum Mehrelektronen-Atom können im Molekül auch Gesamt-Quantenzahlen definiert werden. Wie im Atom auch sind die Projektionen auf die Achse einfach per Addition zu gewinnen:
+\begin{equation}
+M_S = \sum m_s{_i} \quad \text{und} \quad M_L  = \sum m_{l_i}
+\end{equation}
+Wie beim einzelnen Elektron ist auch wieder $\Lambda = | M_L|$ die interessantere Größe, die ebenfalls wieder als $\Sigma, \Pi, \Delta, \Phi, \dots$ dargestellt wird. Wenn die Länge des Gesamt-Spin-Vektors $|\vec{S}| = \hbar \sqrt{S (S+1)}$ ist, dann muss  $M_S$ ist zwischen $-S$ und $S$ liegen, kann also  $2S + 1$  verschiedene Werte annehmen.\sidenote{Daher Triplett für $S=1$ und Singulett für $S=0$.} Dies wird als Multiplizität bezeichnet. Für den Gesamt-Drehimpuls $\vec{J}$ ist analog auch nur der Betrag der Projektions-Komponenten interessant, die $\Omega$ genannt wird
+\begin{equation}
+ \Omega = | M_J | = | \Lambda + M_S|
+\end{equation}
+Dies alles wird zum spektroskopischen Termsymbol zusammengefasst:
+\begin{equation}
+ ^{2 S + 1}\Lambda_\Omega
+\end{equation}
+
+
+%https://chemistry.stackexchange.com/questions/67031/determination-of-reflections-in-sigma-molecular-term-symbols
+
+
+In den Termsymbolen wird häufig auch noch die Symmetrie der Wellenfunktion angegeben. Ein $g$ bzw. $u$ als Index bezeichnet eine Wellenfunktion, die gerade bzw. ungerade bei Inversion, also Punktspiegelung ist. Bei $\Sigma$-Zuständen wird zusätzlich noch die Symmetrie bei Spiegelung an einer Ebene angegeben, die die Kern--Kern--Achse enthält. Dies stellt man als hochgestelltes $+$ oder $-$ dar.
+Alles zusammen
+\begin{equation}
+ ^{2 S + 1}\Lambda_{\Omega, (g,u)}^\pm
+\end{equation}
+
+Als Beispiel betrachten wir das Sauerstoff-Molekül O$_2$. Atomarer Sauerstoff hat die Elektronenkonfiguration [He]2s$^2$2p$_x^2$2p$_y^1$2p$_z^1$. Die beiden ungepaarten p-Elektronen tragen zur Bindung bei. Im Molekül entstehen volle Orbitale, sowie zwei Elektronen in einem $2\pi_g$-Orbital. Nur diese beiden Elektronen müssen wir betrachten, da volle Schalen bzw. volle Orbitale in Summe nicht beitragen. Die Orientierung der  Bahndrehimpulse ist  $\lambda = 1$ bzw. $m_l = \pm 1$, so dass die Orientierung des Gesamt-Bahndrehimpulses $M_L = 0$ oder $\pm 2$ sein kann ($\Sigma$ oder $\Delta$). Analog für den Spin $m_s = \pm 1/2$ und $M_S = 0 $ oder $\pm 1$. Dies ergibt zunächst  vier  Kombinationen. Es können die beiden Elektronen aber nicht sowohl im $m_l$ als auch in $m_s$ übereinstimmen. Dies schließt den Zustand $M_L = \pm 2$; $M_s = \pm 1$ aus.
+\begin{equation}
+ ^1\Sigma \quad ^3\Sigma \quad ^1\Delta \qquad \text{Pauli-verboten:} \quad ^3\Delta  
+\end{equation}
+Die Symmetrie ist bei allen drei Zuständen gerade, da alle aus  Elektronen in einem geraden $2\pi_g$-Orbital aufgebaut sind. Die Symmetrie der $\Sigma$-Zustände kann man sich aus den jeweiligen Spin-Funktionen herleiten: ein Triplett-Zustand ist symmetrisch im Spin, und muss daher anti-symmetrisch im Raum sein, also $^3\Sigma^-$ und andersrum. Zusammen also
+\begin{equation}
+ ^1\Sigma_g^+ \quad ^3\Sigma_g^- \quad ^1\Delta _g
+\end{equation}
+Genau wie in der Atomphysik kann man mit den Hund'schen Regel den energetisch niedrigsten Zustand finden. Maximales $S$ gewinnt, also ist $^3\Sigma_g^- $ der Grundzustand.
+
+
 \printbibliography[segment=\therefsegment,heading=subbibliography]
