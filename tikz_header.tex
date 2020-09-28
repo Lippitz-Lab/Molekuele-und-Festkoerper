@@ -1,0 +1,58 @@
+\usepackage{tikz}
+
+
+
+\newcommand{\inputtikz}[1]{%
+%  \tikzsetnextfilename{#1}%
+  \input{#1.tikz}%
+}
+
+
+\usetikzlibrary{math,matrix,fit,positioning}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta} %needed tikz library
+
+\usepackage{standalone}
+\usepackage{pgfplots}
+ \pgfplotsset{compat=newest}
+
+\tikzset{>=latex}
+
+
+\pgfplotsset{
+tufte line/.style={
+    axis line style={draw opacity=0},
+    ytick=\empty,
+    axis x line*=bottom,
+    x axis line style={
+      draw opacity=1,
+      gray,
+      thick
+},
+ %   yticklabel=\pgfmathprintnumber{\tick}
+  }
+  }
+
+\tikzset{
+mymat/.style={
+    matrix of math nodes,
+    left delimiter=|, right delimiter=|,
+    align=center,
+    column sep=-\pgflinewidth,
+}
+%,mymats/.style={
+%    mymat,
+%    nodes={draw,fill=#1}
+%} 
+ }
+ 
+\newcommand{\myarrow}[5]{\draw[#4](#1.south -| #2)  -- ++(#3 :6mm) node[above,pos=0.55]{$#5$};
+} 
+
+\newcommand{\interactLp}[3]{\myarrow{#1-#2-1}{#1.west}{-135}{<-}{#3}} 
+\newcommand{\interactLm}[3]{\myarrow{#1-#2-1}{#1.west}{+135}{->}{#3}} 
+\newcommand{\interactRp}[3]{\myarrow{#1-#2-2}{#1.east}{ -45}{<-}{#3}} 
+\newcommand{\interactRm}[3]{\myarrow{#1-#2-2}{#1.east}{ +45}{->}{#3}}  
+
+\newcommand{\interactout}[2]{\myarrow{#1-1-1}{#1.west}{+135}{->,dashed}{#2}} 

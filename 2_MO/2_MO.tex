@@ -1,0 +1,216 @@
+\renewcommand{\lastmod}{April 29, 2020}
+
+\chapter{Molekülorbitaltheorie}
+
+
+
+
+\section{Ziele}
+
+\begin{itemize}
+\item dsf
+
+\item sdvsdfs
+
+\end{itemize}
+
+\section{Überblick}
+
+Die Molekülorbitaltheorie  (MO) baut zunächst neue (Ein-Elektron-) Orbitale, die sich über das ganze Molekül erstrecken. Dann werden in diese Orbitzale nach und nach Elektronen eingefüllt, analog zu Mehr-Elektronen-Atomen in der Atomphysik. Dabei wird die Wechselwirkung zwischen den Elektronen zunächst vernachlässigt. Die MO-Theorie macht also andere Näherungen als die Valenzbindungstheorie.
+
+
+\section{Vorbereitung}
+
+\subsection{Störungsrechnung}
+
+\subsection{Variationsprinzip}
+
+Wir schreiben die Schrödinger-Gleichung
+\begin{equation}
+ \hat{H} \ket{\Psi} = E \, \ket{\Psi} 
+\end{equation}
+um durch Multiplikation von links mit $\bra{\Psi}$ und erhalten
+\begin{equation}
+ E = \frac{\braket{\Psi | H | \Psi}} {\braket{\Psi | \Psi}}
+ \label{eq:MO_variation}
+\end{equation}
+Den Term auf der rechten Seite kann man für beliebige Wellenfunktionen ausrechnen. Die Mathematik sagt aber, dass er minimal wird, wenn die Wellenfunktion eine Eigenfunktion von $\hat{H}$ ist, also die Schrödinger-Gleichung erfüllt. Wir probieren nun also verschiedene Test-Funktionen durch und versuchen, die Energie nach Gl.~\ref{eq:MO_variation} zu minimieren. Dadurch nähern wir uns der echten Eigenfunktion immer mehr an, die Lösung der Schrödinger-Gleichung ist.
+
+Sei die Testfunktion
+\begin{equation}
+ \ket{\Psi} = c_1 \ket{\phi_1} + c_2 \ket{\phi_2}
+\end{equation}
+mit normierten  $\ket{\phi_i}$ und reell-wertigen Koeffizienten $c_i$. Damit erhält man
+\begin{eqnarray}
+\braket{\Psi | \Psi}  &= & c_1^2 + c_2^2  + 2 c_1 c_2 \underbrace{\braket{\phi_1 | \phi_2}}_{= S}\\
+\braket{\Psi |  H | \Psi} &=& c_1^2 \underbrace{\braket{\phi_1 |  H | \phi_1 }}_{= H_{11}} +
+										c_2^2 \underbrace{\braket{\phi_2 |  H | \phi_2 }}_{= H_{22}} +
+								2 c_1 c_2 \underbrace{\braket{\phi_1 |  H | \phi_2 }}_{= H_{12}} 
+\end{eqnarray}
+Dabei bezeichnet $S$ das Überlapp-Integral der beiden Wellenfunktionen, und $H_{ij}$ die Matrix-Elemente des Hamilton-Operators. Die Diagonalelemente $H_{11}$ und $H_{22}$ geben die Coulomb-Energie an, die Außerdiagnoalelemente $H_{12} = H_{21}$ die Austausch-Energie. Mit diesen Abkürzungen kann man die Eigen-Energie schreiben als
+\begin{equation}
+  E = \frac{c_1^2 H_{11} + c_2^2 H_{22} + 2 c_1 c_2 H_{12}}{c_1^2 + c_2^2 + 2 c_1 c_2 S}
+\end{equation}
+Für eine minimale Eigenen-Energie $E$ müssen die partiellen Ableitungen nach $c_i$ beide Null sein, oder
+\begin{equation}
+ \begin{vmatrix}
+   H_{11} - E & H_{12} - E \, S \\  H_{12} - E \, S & H_{22} - E \\
+ \end{vmatrix}
+= 0
+\quad
+\text{oder} \quad
+E_\pm = \frac{H_{11} \pm H_{12}}{1 \pm S}
+\end{equation}
+wobei wir im letzten Schritt angenommen haben, dass $H_{11} = H_{22}$.
+
+\section{Das Wasserstoff-Molekül-Ion H$_2^+$}
+
+Als Beispiel für das Variationsprinzip in der Molekülorbitaltheorie betrachten wir das Wasserstoff-Molekül-Ion\sidenote{Dies wäre auch exakt möglich, mittels elliptischer Koordinaten, siehe z.B. Demtröder, Molekülphysik Kap. 2.4.1} H$_2^+$. Es gibt also nur ein Elektron, was das Problem der Elektron-Elektron-Wechselwirkung umgeht.
+
+Wir benutzen wie immer die Born-Oppenheimer-Näherung. Die Kerne bewegen sich also nicht und tragen somit auch nicht zur kinetischen Energie bei. Der Abstand des einzigen Elektrons zu den beiden Kernen sei $r_1$ und $r_2$. Der Hamilton-Operator des Gesamtsystems ist
+\begin{equation}
+\hat{H} =  - \frac{\hbar^2}{2 m} \nabla^2 - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{1}} - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}}
+= \hat{H}_1  - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}}
+\end{equation} 
+wobei $\hat{H}_1 $ der Hamilton-Operator des Wasserstoff-\emph{Atoms} ist. Die Coulomb-Energie der beiden Kerne untereinander hängt nur vom Kern--Kern--Anstand ab und ist somit eine Konstante, die später zur Gesamtenergie addiert werden wird.
+
+Wir suchen Molekül-Orbitale $\ket{\Psi}$, die mit $\hat{H}$ die Schrödinger-Gleichung lösen, und kennen bereits die Lösungen für $\hat{H}_1$:
+\begin{equation}
+\hat{H} \ket{\Psi} = E \ket{\Psi} \quad \text{und} \quad 
+\hat{H}_1 \ket{\phi} = E_1 \ket{\phi} 
+\end{equation}
+Da die beiden Kerne identisch sind, gibt es solche Lösungen $\ket{\phi_2}$ in der gleichen Form aber zentriert um eine andere Kernposition auch für den zweiten Kern. Linearkombinationen von diesen  $\ket{\phi_{1,2}}$ nehmen wir jetzt als Testfunktion $\ket{\Psi}$. Dies nennt man \emph{linear combination of atomic orbitals} (LCAO).
+
+Wir folgen dem oben dargestellten Variationsprinzip und müssen nur die drei Integrale $S$, $ H_{11}$ und $H_{12}$ diskutieren.
+
+\paragraph{Überlappintegral $S$} Das Integral $S$ beschreibt den räumlichen Überlapp der beiden Atom-Wellenfunktionen, wenn die einen um Kern 1, die andere um Kern 2 zentriert ist:
+\begin{equation}
+ S = \braket{\phi_1 | \phi_2} = \int \phi_1( \mathbf{r} - \mathbf{r}_1)  \, \phi_2( \mathbf{r} - \mathbf{r}_2)   \, d\mathbf{r}
+\end{equation}
+Dabei bezeichnet $\mathbf{r}$ die Position des Elektrons und  $\mathbf{r}_{1,2}$  die Position der Kerne.\sidenote{Wasserstoff-Wellenfunktionen sind reell-wertig.} Da die $\ket{\phi}$ normiert sind, liegt der Wert von $S$ zwischen $0$ und $1$.
+
+\paragraph{Coulomb-Wechselwirkung $H_{11}$}  Dieser Term beschreibt die Coulomb-Energie des Elektrons in der atomaren Wellenfunktion $\phi_1$, aber in Gegenwart beider Kerne:
+\begin{eqnarray}
+H_{11} &= &  \braket{\phi_1 | \hat{H} | \phi_1} = \braket{\phi_1 | \hat{H}_1 | \phi_1}  - \braket{\phi_1 |  \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}} | \phi_1}  \\
+ & = & E_1 - \frac{e^2}{4 \pi \epsilon_0} \int \frac{|\phi_1(\mathbf{r})|^2 }{|\mathbf{r} - \mathbf{r}_2  |} \, d\mathbf{r} = E_1 + C
+\end{eqnarray}
+Das Ergebnis ist die Eigen-Energie des Elektrons im Wasserstoff-\emph{Atom}, korrigiert im ein Überlappintegral der Ladungsdichte ${|\phi_1(\mathbf{r})|^2 }$ um den einen Kern im Coulomb-Potential des anderen Kerns. Der Korrekturterm $C$ ist negativ.
+
+\paragraph{Austausch-Wechselwirkung $H_{11}$} Die Austausch-Wechselwirkung ist ein rein quantenmechanischer Effekt.
+\begin{eqnarray}
+H_{12} &= &  \braket{\phi_1 | \hat{H} | \phi_2} = \braket{\phi_1 | \hat{H}_1 | \phi_2}  - \braket{\phi_1 |  \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}} | \phi_2}  \\
+ & = & E_1 \, S - \frac{e^2}{4 \pi \epsilon_0} \int \frac{ \phi_1(\mathbf{r}) \, \phi_2(\mathbf{r})  }{|\mathbf{r} - \mathbf{r}_2  |} \, d\mathbf{r} = E_1 \, S + A
+\end{eqnarray}
+Die Austausch-Dichte $\phi_1(\mathbf{r}) \, \phi_2(\mathbf{r})$ ist ähnlich einer Ladungsdichte $|\phi(\mathbf{r})|^2$, nur dass zwei verschiedenen Wellenfunktionen eingehen. Das Elektron wechselt sozusagen zwischen der Zugehörigkeit zu Kern 1 und 2. Der Korrekturterm $A$ ist ebenfalls negativ.
+
+Mit diesen Integralen wird die Gesamtenergie
+\begin{equation}
+E_\pm = \frac{H_{11} \pm H_{12}}{1 \pm S} = E_1 + \frac{C \pm A}{1 \pm S}
+\end{equation}
+Die zugehörigen Molekül-Orbitale sind die symmetrische und die anti-symmetrisch Kombination der Atom-Orbitale
+\begin{equation}
+\ket{\Psi_\pm }= \frac{1}{\sqrt{2 (1 \pm  S)}} \, \left( \ket{\phi_1} \pm \ket{\phi_2} \right)
+\end{equation}
+
+Zur Berechnung der Bindungsenergie nehmen wir jetzt die nur vom Kern--Kern--Abstand $R$ abhängende Coulomb-Energie der Kerne wieder hinzu
+\begin{eqnarray}
+ E_\text{Bindung} &=&  E_\text{Molekül} -  E_\text{Atom} \\
+  &=&   E_1 + \frac{C \pm A}{1 \pm S} + \frac{e^2}{4 \pi \epsilon_0} \frac{1}{R} - E_1 \\
+   &=&\frac{C }{1 \pm S}  + \frac{e^2}{4 \pi \epsilon_0} \frac{1}{R}  \pm \frac{ A}{1 \pm S}  \label{eq:MO_E_bindung_h2p}
+\end{eqnarray}
+Numerische Rechnungen zeigen, dass das Überlapp-Integral $S$ keinen Entscheidenden Einfluss auf das Ergebnis hat, wir es hier also nicht weiter betrachten müssen.
+
+Das Coulomb-Integral $C$ ist für einen  großen Kern--Kern--Abstand $R$ quasi die Energie einer Punkt-Ladung im Potential des anderen Kerns, da die Ausdehnung der Wellenfunktion $\phi_1$ vernachlässigt werden kann. Da $C$ negativ ist, kompensieren sich dann die ersten beiden Summanden in Gl. \ref{eq:MO_E_bindung_h2p}. Für kleine Kern--Kern--Abstände $R$ bleibt $C$ negativ und endlich, da die potentielle Energie eines Elektrons im Wasserstoff-Atom endlich ist. Der zweite Summand strebt aber mit $1/R$ gegen positiv unendlich. Die Summe der ersten beiden Terme ist also entweder Null oder positiv, so dass keine Bindung zustande kommt.
+
+Den entschiedenen Beitrag liefert der dritte Summand mit dem Austausch-Integral $A$. Für große $R$ ist das Austausch-Integral wieder Null. Für kleine Abstände $R$ ist das Austausch-Integral sehr ähnlich dem Coulomb-Integral und endlich negativ. Dazwischen ist es in einem gewissen Bereich von $R$ negativ genug, dass bei positivem Vorzeichen in Gl. \ref{eq:MO_E_bindung_h2p} die Bindungsenergie negativ wird, eine Bindung also zustande kommt.
+
+Damit ist also $\Psi_+$ das bindende Orbital. Da es aus Wasserstoff-1s-Orbitalen zusammengesetzt ist, ist es ein $\sigma$-Orbital. $\Psi_-$ ist ein anti-bindendes $\sigma^\star$-Orbital.
+
+
+\section{Das Austausch-Integral für verschiedene Atom-Orbitale}
+
+Wir haben bisher nicht diskutiert, welche Form die Atom-Orbitale $\ket{\phi}$ denn eigentlich haben.
+Im Wasserstoff-Molekül-Ion H$_2^+$ werden es sicherlich s-Orbitale sein (was auch bei der Diskussion der Beiträge angenommen wurde). Bei anderen Orbitalen kann es zum Verschwinden des Austausch-Integrals $A$ kommen, und somit keine Bindung geben.
+
+XXX see figure !
+
+
+Ein Beispiel ist das Austausch-Integrals zwischen  einem s-Orbital und einem p$_x$-Orbital, wenn $z$ die Kern--Kern--Achse ist.  Die beiden Keulen des  p$_x$-Orbitals tragen mit unterschiedlichem Vorzeichen zum Austausch-Integral bei und kompensieren sich so. In diesem Fall wäre $A$ Null. Wenn hingehen ein p$_z$-Orbital mit einem s-Orbital überlappt, dann verschwindet das  Austausch-Integral $A$ nicht.
+
+
+\section{Anschauliche Argumente für eine chemische Bindung}
+
+Kann man anschalich verstehen, warum das Wasserstoff-Molekül-Ion H$_2^+$ existiert, also energetsich günstiger ist als ein Wasserstoff-Atom und ein ffeies Proton? Aus meienr Sicht gibt es zwei bis drei Wege.
+
+\paragraph{Elektronen-Dichte-Verteilung} Im symmetrischen Molekülorbital $\Psi_+ \propto \phi_1 + \phi_2$ ergibt sich ein deutlich von Null verschiedener Wert der Elektronendichte $|\Psi_+|^2$ in der Mitte zwischen den beiden Kernen. Diese negative Ladungsdichte schirmt den positiven Kern vom anderen positiven Kern ab. Die Coulomb-Abstoßung der Kerne ist also geringer, als wenn das Elektron in einem s-Orbital um einen Kern alleine  wäre. Im $\Psi_-$-Orbital ist dies nicht mehr der Fall. Hier ist die Elektronen-Dichte zwischen den Kernen geringer, in der Mitte der Strecke sogar exakt Null.
+
+\paragraph{Teilchen im Kasten}  Man kann das Molekül-Orbital $\Psi_+$ als Kasten für das Elektron sehen, auch wenn die Wände nicht senkrecht und unendlich hoch sind. Die Energie des niedrigsten Zustands in einem eindimensionalen  Kasten-Potential ist proportional zu $1/L$, mit der Kastenlänge $L$. Das Molekül bildet einen größeren Kasten als das Atom, darum sinkt die Energie für das Elektron und es kommt zur Bindung.
+
+\paragraph{Quantenmechanische Interferenz} Die Ladungsdichte in einem Molekül-Orbital ist $| \phi_1 + \phi_2 |^2$, wenn das Orbital aus den beiden Atom-Orbitalen $\phi_1$ und $\phi_2$ aufgebaut ist. Die Ladungsdichte ist damit \emph{nicht} die Summe der Ladungsdichten der beiden Atom-Orbitale, also nicht $| \phi_1 |^2 +| \phi_2 |^2$. Quantenmechanische Wellenfunktionen interferieren, werden also addiert bevor das Betrags-Quadrat gebildet wird. Dies ermöglicht Auslöschung (im Fall von $\Psi_-$) und konstruktive Interferenz (im Fall von $\Psi_+$), wodurch obiges Elektronendichte-Argument zum Tragen kommt und  die chemische Bindung ermöglicht wird.
+
+
+\section{Vergleich unser Rechnung mit der Wirklichkeit}
+
+Unsere Rechnung ergibt ein qualitativ korrektes Bindungspotential für das  Wasserstoff-Molekül-Ion H$_2^+$. Quantitativ stimmt sie aber nicht. Experimentell ist der Bindungsabstand $R_0 = 106$~pm, die Rechnung liefert $132$~pm. Experimentell ist die Bindungsenergie $2.5$~eV die Rechnung liefert $1.7$~eV.
+
+Auch erfüllt unser Modell den Virialsatz nicht. Für ein Coulomb-Potential müsste der Mittelwert der kinetischen Energie $\braket{\hat{T}}$ genau $-2$ mal dem Mittelwert der kinetischen potentiellen Energie $\braket{\hat{V}}$ sein. In unserem Modell ist der Faktor\sidenote{McQuarrie} aber nur ca. $-1.6$.
+
+Die Ursache für beides ist, dass unsere Testfunktion $c_1 \ket{\phi_1} + c_2 \ket{\phi_2}$ zwar die Schrödinger-Gleichung löst, aber nicht die geringste Energie in Gl. XXX liefert. Die Testfunktion ist zu einfach und muss weitere Terme enthalten. Damit kann die Übereinstimmung mit dem Experiment so gut werden, dass keine Unterschiede im Rahmen der Messgenauigkeit festgestellt werden können. Beispiele finden sich in McQuarrie und Demtröder.
+
+
+\section{Mehr als ein Elektron: Hund--Mulliken--Bloch-Methode }
+
+Um Moleküle mit mehr als einem Elektron zu beschreiben verfahren wir genauso wie in der Atomphysik bei dem Übergang von Wasserstoff-Atom zu Mehr-Elektronen-Atomen: wir ignorieren die Wechselwirkung der Elektronen untereinander und füllen nach und nach Elektronen in Ein-Elektronen-Molekül-Orbitale und multiplizieren mit einer passenden Spin-Wellenfunktion. Diese Idee ist mit den Namen Hund, Mulliken und Bloch verknüpft.
+
+Zunächst formen wir Molekül-Orbitale als Linearkombination vom Atom-Orbitalen, benutzen also LCAO. Beides sind Ein-Elektronen-Orbitale, also Raum-Anteile der Wellenfunktion. Wenn in den zu bindenden Atomen viele Elektronen vorhanden sind, dann tragen auch viele Orbitale bei.  Allerdings sind nicht alle Orbitale kombinierbar, sondern nur solche, die in der Gruppentheorie die gleiche Symmetrie aufweisen. Dies verallgemeinert die obige Diskussion zum verschwindenden Austausch-Integral. Vereinfachend kann man auch sagen, dass nur Orbitale ähnlicher Energie kombiniert werden, also 1s mit 1s, 2s mit 2s usw. 
+
+Wie in der Valenzbindungstheorie gesehen, liefern Kombinationen von s-Orbitalen eine $\sigma$-Bindung. Dementsprechend entsteht also ein $\sigma$-Orbital. Bei den p-Orbitalen hängt es von der relativen Orientierung ab: p$_z$-Orbitale erzeugen eine molekulare $\sigma$-Orbital, atomare p$_{x,y}$-Orbitale ein molekulares  $\pi$-Orbital. 
+
+XXX Bild Elektronen einfüllen
+
+Die Gesamt-Wellenfunktion ist also aufgebaut aus einzelnen Molekül-Orbitalen $\Psi_i$, die wiederum Linearkombination von passenden Atom-Orbitalen $\phi_j$ sind:
+\begin{eqnarray}
+ \Psi_i(\mathbf{r}_i) & \propto &  \sum_j c_j \phi_j(\mathbf{r}_i) \\
+  \Psi_\text{ges}(\mathbf{r}_1, ..., \text{spin}_1, ...)  & \propto & \prod_i \Psi_i(\mathbf{r}_i) \, \times \, \text{Spinfunktion}
+\end{eqnarray}
+wobei $\mathbf{r}_i$ die Raum-Koordinaten des $i$-ten Elektrons ist, und die $\phi_j$ um die Position des jeweiligen Kerns zentriert sind. Die Spinfunktion muss so gewählt werden, dass $ \Psi_\text{ges}$ das Pauli-Prinzip erfüllt, also insgesamt antisymmetrisch ist. Die Slater-Determinante hilft, dies für große Systeme aufzuschreiben.
+
+Bei nur zwei Elektronen kann man die Spin-Funktion von Hand konstruieren. Jeder Elektronenspin kann entweder up $\uparrow$ oder down $\downarrow$ sein. Bei mehr Elektronen gibt der n-te Pfeil den Spin des n-ten Elektrons an.  Die möglichen Spin-Wellenfunktion sind also 
+\begin{eqnarray}
+\text{anti-symmetrisch} &  & \frac{1}{\sqrt{2}} \left( \ket{\uparrow \downarrow} - \ket{\downarrow \uparrow} \right) \\
+\text{symmetrisch} &  &\ket{\uparrow \uparrow}  \\
+& &\frac{1}{\sqrt{2}} \left( \ket{\uparrow \downarrow} + \ket{\downarrow \uparrow} \right) \\
+& &\ket{\downarrow \downarrow}  
+\end{eqnarray}
+Eine symmetrische Raum-Wellenfunktion muss mit einer anti-symmetrisch Spin-Wellenfunktion verknüpft sein, für die es nur eine Möglichkeit gibt, also ein Singulett. Eine Anti-symmetrische Raum-Wellenfunktion (zum Beispiel im anti-bindenden $\sigma^\star$-Orbital in H$_2$) ist mit einer symmetrischen Spin-Wellenfunktion verknüpft, die ein Triplett-Zustand ist.
+
+\section{Mehr als zwei Atom-Kerne: Hückel-Näherung}
+
+Die Molekülorbitaltheorie ist auch auf größere Moleküle anwendbar, verlangt dann aber  numerischen Lösungen. Für konjugierte Moleküle liefert die Hückel-Näherung aber gute Ergebnisse. In konjugierte Molekülen wird das mechanische Gerüst durch $\sigma$-Bindungen zwischen den Kohlenstoff-Atomen gebildet. Eine Kette von Kohlenstoff-Atomen ist darüber hinaus durch alternierende $\sigma$ und $\pi$-Bindungen verbunden. Die an diesen Bindungen beteiligten Elektronen sind dann über die ganze Kette delokalisiert. Die Hückel-Näherung erlaubt es, diese ausgedehnten  $\pi$-Orbitale  zu berechnen.
+
+Wir betrachten also nur eine Teilmenge aller Atom-Orbitale, nur die $\pi$-Orbitale, die auch an der $\pi$-Bindung teilnehmen. Wir nehmen an, dass
+\begin{itemize} \setlength{\itemsep}{0pt}
+\item die Atom-Orbitale nur mit sich selbst überlappen, also $S_{ij} = \delta_{ij}$
+\item alle Atome identisch sind, also $H_{ii} = \alpha$
+\item Austausch nur zwischen benachbarten Orbitalen stattfinden, also  $H_{ij} = \beta < 0 $ falls Atome $i$ und $j$ benachbart, sonst $0$ 
+\end{itemize}
+
+Als Beispiel betrachten wir Benzol (C$_6$H$_6$). Die 6 Kohlenstoff-Atome sind sp$^2$ hybridisiert. $\sigma$-Bindungen verbinden die Kohlenstoff-Atome untereinander und mit den Wasserstoff-Atomen. Je ein nicht hybridisiertes p-Orbital steht senkrecht auf dem Ring. Diese Orbitale werden in der Hückel-Näherung betrachtet. Die Determinante zur Bestimmung der Eigen-Energien hat dann analog zu Gl.XXX die Form (Nullen weggelassen)
+\begin{equation}
+ \begin{vmatrix}
+  \alpha -E & \beta &  &  &  & \beta \\
+  \beta & \alpha -E & \beta & & & \\
+  & \beta & \alpha  -E& \beta & & \\
+ &  & \beta & \alpha-E & \beta & \\
+&  &  & \beta & \alpha -E& \beta \\
+\beta & &  &  & \beta & \alpha -E
+ \end{vmatrix} = 0
+\end{equation}
+Wenn wir $E = \alpha + x \beta$ ansetzen, dann vereinfacht sich die Gleichung zu 
+\begin{equation}
+x^6 - 6 x^4 + 9x^2 - 4 = 0 \quad \text{oder} \quad x = \pm 1, \pm 1, \pm 2
+\end{equation}
+Da wir insgesamt 6 Elektronen in diese Orbitale einfüllen müssen, und jedes Orbital mit 2 Elektron (spin up und down) besetzen können, sind das Orbitale mit $E=\alpha + 2 \beta$ und die beiden Orbitale mit $E = \alpha + \beta$ besetzt\sidenote{$\beta < 0$}. Auch diese Orbitale tragen also zur Bindung bei, da sie die Gesamtenergie insgesamt um $8\beta$ reduzieren. Das Orbital mit $E=\alpha + 2 \beta$ ist über den ganzen Ring delokalisiert, die beiden mit $E = \alpha + \beta$  über zwei bzw. drei Atome.
+
+
+\printbibliography[segment=\therefsegment,heading=subbibliography]
