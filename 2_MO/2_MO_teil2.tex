@@ -1,0 +1,258 @@
+
+\renewcommand{\lastmod}{\today}
+
+\chapter{Molekülorbitaltheorie II}
+
+
+
+
+\section{Ziele}
+
+\begin{itemize}
+\item Sie können für di-atomare Moleküle Orbital-Diagramme erstellen, Elektronen einfüllen und die spektroskopischen Termsymbole bestimmen.
+
+\item Sie können die Hückel-Methode benutzen um Molekülorbitale in großen $\pi$-Systemen zu berechnen und deren Eigenschaften zu bestimmen.
+
+\item Sie können die Molekülorbitaltheorie von der Valenzbindungstheorie abgrenzen.
+
+\end{itemize}
+
+\section{Überblick}
+
+Wie benutzen die Molekülorbitaltheorie um Moleküle jenseits von H$_2^+$ zu beschreiben, die also mehr als ein Elektron besitzen und aus mehr als zwei Kernen aufgebaut sind.
+
+
+
+\section{Bezeichnung von Molekülzuständen}
+
+
+
+Bevor wir beginnen, weitere Elektronen in die Molekülorbitale einzufüllen, müssen wir kurz die Nomenklatur der Zustände diskutieren. Diese ist analog zu Mehrelektronen-Atomen. Ausführlich dargestellt ist sie beispielsweise in \cite{Demtröder_molekuelphysik} oder \cite{Demtröder_AMP}.
+
+
+
+In der Atomphysik gibt es für jedes Elektron die Quantenzahlen $n$, $l$, $m_l$, $s$, $m_s$, $j$, $m_j$, die (bis auf $n$) die Länge und die Orientierung eines Drehimpuls-artigen Vektors anzeigen. Die Größe des Bahndrehimpulses, also die 
+Quantenzahl $l$ wird als s,p,d,f, ... angegeben. In Mehrelektronen-Atomen bildet man vektorielle Summen über die einzelnen Vektoren der Elektronen. Je nach Kopplungsschema addiert man zunächst alle Bahndrehimpulse $\vec{l}$ und Spins $\vec{s}$, oder alle Gesamtdrehimpulse $\vec{j}$. Das Ergebnis wird dann wieder als Längen- und Orientierungsquantenzahl angegeben, also $L$, $M_L$, $S$, $M_S$, $J$ und $M_J$.
+
+
+Der wichtigste Unterschied in Molekülen ist, dass die Vorzugsrichtung oder z-Achse durch die Kern--Kern--Achse immer gegeben ist. Da Drehimpulserhaltung Rotationssymmetrie voraussetzt, ist in Molekülen nur noch die Drehimpuls-Komponenten entlang der Kern--Kern--Achse eine gute Quantenzahl. $m_l$ übernimmt also die Rolle von $l$ in der Atomphysik. Manchmal werden noch $n$ und  $l$  angegeben, was dann  aber nur noch aussagt, in welchen Quantenzahlen $n$, $l$ das Elektron landen würde, wenn das Molekül zu einzelnen Atomen auseinandergezogen würde. Manchmal sind statt dessen auch die Orbitale eines Typs nach aufsteigender Energie durchnummeriert.
+
+Weiterhin hängt die Gesamtenergie nicht vom Vorzeichen von $m_l$ ab, so dass $\lambda = | m_l | $ eingeführt wird. Analog zu $l$ in der Atomphysik wird der Wert von $\lambda$ als $\sigma, \pi, \delta, \phi, \dots$ dargestellt, wie wir es bei der Klassifizierung der Bindungen schon gesehen hatten.\sidenote{Anti-bindenden Orbitale werden dabei mit einem hochgestellten Stern gekennzeichnet, beispielsweise $\pi^\star$.} Man beachte jedoch, dass somit alle Zustände außer $\lambda = 0$ zweifach entartet sind, da ja $m_l = \pm \lambda$.
+
+
+Analog zum Mehrelektronen-Atom können im Molekül auch Gesamt-Quantenzahlen definiert werden. Wie im Atom auch sind die Projektionen auf die Achse einfach per Addition zu gewinnen:
+\begin{equation}
+M_S = \sum m_s{_i} \quad \text{und} \quad M_L  = \sum m_{l_i}
+\end{equation}
+Wie beim einzelnen Elektron ist auch wieder $\Lambda = | M_L|$ die interessantere Größe, die ebenfalls wieder als $\Sigma, \Pi, \Delta, \Phi, \dots$ dargestellt wird. Wenn die Länge des Gesamt-Spin-Vektors $|\vec{S}| = \hbar \sqrt{S (S+1)}$ ist, dann muss  $M_S$ ist zwischen $-S$ und $S$ liegen, kann also  $2S + 1$  verschiedene Werte annehmen.\sidenote{Daher Triplett für $S=1$ und Singulett für $S=0$.} Dies wird als Multiplizität bezeichnet. Für den Gesamt-Drehimpuls $\vec{J}$ ist analog auch nur der Betrag der Projektions-Komponenten interessant, die $\Omega$ genannt wird
+\begin{equation}
+ \Omega = | M_J | = | \Lambda + M_S|
+\end{equation}
+Dies alles wird zum spektroskopischen Termsymbol zusammengefasst:
+\begin{equation}
+ ^{2 S + 1}\Lambda_\Omega
+\end{equation}
+
+
+%https://chemistry.stackexchange.com/questions/67031/determination-of-reflections-in-sigma-molecular-term-symbols
+
+
+In den Termsymbolen wird häufig auch noch die Symmetrie der Wellenfunktion angegeben. Ein $g$ bzw. $u$ als Index bezeichnet eine Wellenfunktion, die gerade bzw. ungerade bei Inversion, also Punktspiegelung ist. Bei $\Sigma$-Zuständen wird zusätzlich noch die Symmetrie bei Spiegelung an einer Ebene angegeben, die die Kern--Kern--Achse enthält. Dies stellt man als hochgestelltes $+$ oder $-$ dar.
+Alles zusammen
+\begin{equation}
+ ^{2 S + 1}\Lambda_{\Omega, (g,u)}^\pm
+\end{equation}
+
+So wie es hier dargestellt ist, gilt dies für di-atomare Moleküle. Bei größeren Molekülen wird auf die Symmetrie-Gruppe zurückgegriffen\sidenote{Etwas mehr dazu zu Beginn der Festkörperphysik, ansonsten Kristallographie.} Häufig wird dann nur noch die Multiplizität des Zustands als Singulett (S) oder Triplett (T) angegeben und die Zustände in energetisch aufsteigender Reihenfolge nummeriert.
+
+
+
+
+
+Als Beispiel betrachten wir das Sauerstoff-Molekül O$_2$. Atomarer Sauerstoff hat die Elektronenkonfiguration [He]2s$^2$2p$_x^2$2p$_y^1$2p$_z^1$. Die beiden ungepaarten p-Elektronen tragen zur Bindung bei. Im Molekül entstehen volle Orbitale, sowie zwei Elektronen in einem $2\pi_g$-Orbital.\sidenote{siehe auch nächsten Abschnitt} Nur diese beiden Elektronen müssen wir betrachten, da volle Schalen bzw. volle Orbitale in Summe nicht beitragen. Die Orientierung der  Bahndrehimpulse ist  $\lambda = 1$ bzw. $m_l = \pm 1$, so dass die Orientierung des Gesamt-Bahndrehimpulses $M_L = 0$ oder $\pm 2$ sein kann ($\Sigma$ oder $\Delta$). Analog für den Spin $m_s = \pm 1/2$ und $M_S = 0 $ oder $\pm 1$. Dies ergibt zunächst  vier  Kombinationen. Es können die beiden Elektronen aber nicht sowohl im $m_l$ als auch in $m_s$ übereinstimmen. Dies schließt den Zustand $M_L = \pm 2$; $M_s = \pm 1$ aus.
+\begin{equation}
+ ^1\Sigma \quad ^3\Sigma \quad ^1\Delta \qquad \text{Pauli-verboten:} \quad ^3\Delta  
+\end{equation}
+Die Symmetrie ist bei allen drei Zuständen gerade, da alle aus  Elektronen in einem geraden $2\pi_g$-Orbital aufgebaut sind. Die Symmetrie der $\Sigma$-Zustände kann man sich aus den jeweiligen Spin-Funktionen herleiten: ein Triplett-Zustand ist symmetrisch im Spin, und muss daher anti-symmetrisch im Raum sein, also $^3\Sigma^-$ und andersrum. Zusammen also
+\begin{equation}
+ ^1\Sigma_g^+ \quad ^3\Sigma_g^- \quad ^1\Delta _g
+\end{equation}
+Genau wie in der Atomphysik kann man mit den Hund'schen Regel den energetisch niedrigsten Zustand finden. Maximales $S$ gewinnt, also ist $^3\Sigma_g^- $ der Grundzustand. Es ist selten, dass der Grundzustand ein Triplett-Zustand ist. Quais immer ist der Singulett-Zustand energetisch niedriger. Dies hängt davon ab, in welchem Orbital die letzten, energetisch höchsten Elektronen laden, die eingefüllt werden, wie wir im nächsten Abschnitt sehen.
+
+
+
+
+
+\section{Mehr als ein Elektron: Hund--Mulliken--Bloch-Methode }
+
+Um Moleküle mit mehr als einem Elektron zu beschreiben verfahren wir genauso wie in der Atomphysik bei dem Übergang von Wasserstoff-Atom zu Mehr-Elektronen-Atomen: wir ignorieren die Wechselwirkung der Elektronen untereinander und füllen nach und nach Elektronen in Ein-Elektronen-Molekül-Orbitale und multiplizieren mit einer passenden Spin-Wellenfunktion. Diese Idee ist mit den Namen Hund, Mulliken und Bloch verknüpft.
+
+Zunächst formen wir Molekül-Orbitale als Linearkombination vom Atom-Orbitalen, benutzen also LCAO. Beides sind Ein-Elektronen-Orbitale, also Raum-Anteile der Wellenfunktion. Wenn in den zu bindenden Atomen viele Elektronen vorhanden sind, dann tragen auch viele Orbitale bei.  Allerdings sind nicht alle Orbitale kombinierbar, sondern nur solche, die in der Gruppentheorie die gleiche Symmetrie aufweisen. Dies verallgemeinert die obige Diskussion zum verschwindenden Austausch-Integral. Vereinfachend kann man auch sagen, dass nur Orbitale ähnlicher Energie kombiniert werden, also 1s mit 1s, 2s mit 2s usw. 
+
+\begin{marginfigure}
+\centering
+
+ \begin{modiagram}[labels, names, AO-width=6pt, distance=3cm]
+% labels-fs=\footnotesize] 
+ 
+\atom[Atom 1]{left}{2s= -10mm, 2p = 20mm ,
+        label = {
+      2sleft  = s,
+      2pxleft = p$_x$,
+      2pyleft = p$_y$,
+      2pzleft = p$_z$
+}
+}
+
+ \atom[Atom 2]{right}{2s= -10mm, 2p  =  20mm,
+        label = {
+      2sright  = s,
+      2pxright = p$_x$,
+      2pyright = p$_y$,
+      2pzright = p$_z$
+}
+ }
+\molecule[Molekül]{
+ 2sMO = , 2pMO  = ,
+       label = {
+      1sigma  = s$\sigma_g$,
+      1sigma* = s$\sigma_u^\star$,
+      2sigma  = s$\sigma_g$,
+      2sigma* = s$\sigma_u^\star$,
+      2psigma  = p$\sigma_g$,
+      2psigma* = p$\sigma_u^\star$,
+      2piy = \hspace*{5mm} p$\pi_u$,
+      2piz = \ ,
+      2piy* = \hspace*{5mm} p$\pi_g^\star$,
+      2piz* = \
+}
+    }
+    
+\end{modiagram}
+\caption{Nur Atom-Orbitale ähnlicher Energie und Symmetrie bilden in Linearkombination die Molekülorbitale. }
+\end{marginfigure}
+
+
+
+Wie in der Valenzbindungstheorie gesehen, liefern Kombinationen von s-Orbitalen eine $\sigma$-Bindung. Dementsprechend entsteht also ein $\sigma$-Orbital. Bei den p-Orbitalen hängt es von der relativen Orientierung ab: p$_z$-Orbitale erzeugen eine molekulare $\sigma$-Orbital, atomare p$_{x,y}$-Orbitale ein molekulares  $\pi$-Orbital. 
+
+
+Die Gesamt-Wellenfunktion ist also aufgebaut aus einzelnen Molekül-Orbitalen $\Psi_i$, die wiederum Linearkombination von passenden Atom-Orbitalen $\phi_j$ sind:
+\begin{eqnarray}
+ \Psi_i(\mathbf{r}_i) & \propto &  \sum_j c_j \phi_j(\mathbf{r}_i) \\
+  \Psi_\text{ges}(\mathbf{r}_1, ..., \text{spin}_1, ...)  & \propto & \prod_i \Psi_i(\mathbf{r}_i) \, \times \, \text{Spinfunktion}
+\end{eqnarray}
+wobei $\mathbf{r}_i$ die Raum-Koordinaten des $i$-ten Elektrons ist, und die $\phi_j$ um die Position des jeweiligen Kerns zentriert sind. Die Spinfunktion muss so gewählt werden, dass $ \Psi_\text{ges}$ das Pauli-Prinzip erfüllt, also insgesamt antisymmetrisch ist. Die Slater-Determinante hilft, dies für große Systeme aufzuschreiben.
+
+Bei nur zwei Elektronen kann man die Spin-Funktion von Hand konstruieren. Jeder Elektronenspin kann entweder up $\uparrow$ oder down $\downarrow$ sein. Bei mehr Elektronen gibt der n-te Pfeil den Spin des n-ten Elektrons an.  Die möglichen Spin-Wellenfunktion sind also 
+\begin{eqnarray}
+\text{anti-symmetrisch} &  & \frac{1}{\sqrt{2}} \left( \ket{\uparrow \downarrow} - \ket{\downarrow \uparrow} \right) \\
+\text{symmetrisch} &  &\ket{\uparrow \uparrow}  \\
+& &\frac{1}{\sqrt{2}} \left( \ket{\uparrow \downarrow} + \ket{\downarrow \uparrow} \right) \\
+& &\ket{\downarrow \downarrow}  
+\end{eqnarray}
+Eine symmetrische Raum-Wellenfunktion muss mit einer anti-symmetrisch Spin-Wellenfunktion verknüpft sein, für die es nur eine Möglichkeit gibt, also ein Singulett. Eine anti-symmetrische Raum-Wellenfunktion (zum Beispiel im anti-bindenden $\sigma^\star$-Orbital in H$_2$) ist mit einer symmetrischen Spin-Wellenfunktion verknüpft, die ein Triplett-Zustand ist.
+
+Bei mehreren Elektronen pro Molekül können auch mehrere Bindungen gleichzeitig existieren. Die effektive Anzahl der Bindungen wird \textit{Bindungsordnung} $b$ genannt. Jedes Elektronenpaar in einem bindenden Orbital trägt $+1$ bei, jedes Elektronenpaar in einem anti-bindenden Orbital $-1$, oder
+\begin{equation}
+  b = \frac{1}{2} \left( n - n^\star \right)
+\end{equation}
+mit $n$ ($n^\star$) der Anzahl der Elektronen\sidenote{nicht Paare !} in bindenden (anti-bindenden) Orbitalen. Je größer die Bindungsordnung, desto stärker ist die Bindung und desto kürzer ist der Bindungsabstand.
+
+In der optischen Molekül-Spektroskopie werden Übergänge zwischen verschiedenen Molekülorbitalen relevant werden. In diesem Zusammenhang bezeichnet man das niedrigste noch unbesetzte Orbital als LUMO (lowest unoccupied molecular orbital), das höchste besetzte als HOMO (highest occupied molecular orbital).
+
+Betrachten wir noch einmal als Beispiel das Sauerstoff-Molekül O$_2$.
+Atomarer Sauerstoff hat die Elektronenkonfiguration [He]2s$^2$2p$_x^2$2p$_y^1$2p$_z^1$. Die atomaren 1s und 2s-Schalen sind komplett gefüllt. Damit sind auch bei den  molekularen 1s$\sigma$ und 2s$\sigma$-Orbitalen sowohl das bindende als auch das anti-bindende Orbital gefüllt. Die Bindungsordung ist Null und diese Elektronen tragen nicht zur Bindung bei. Es verbleiben 
+insgesamt 4 2p-Elektronen pro Atom, 8 pro Molekül. Entsprechend der in Abbildung
+\ref{fig:MO_orbitaleX2} angegeben Anordnung der Orbitale ist das 2p$\sigma_g$ und das 2p$\pi_u$-Orbital mit 2 bzw. 4 Elektronen vollständig gefüllt.\sidenote{Die $\pi$-Orbitale nehmen 2 Elektronen jeden Spins auf, da bei gegebenem $\lambda$ zwei Werte von $m_l = \pm \lambda$ möglich sind (für $\lambda > 0$). } Das 2p$\pi_g^\star$-Orbital ist mit 2 Elektronen halb gefüllt. Damit sind 6 Elektronen bindend, 2 anti-bindend, also Bindungsordnung $b=2$. Das Sauerstoff-Molekül O$_2$ ist in einer Doppelbindung gebunden, die sich aus einer $\sigma$ und einer $\pi$-Bindung zusammensetzt. Wie schon im letzten Abschnitt behandelt, sind für das spektroskopische Termsymbol nur die beiden Elektronen im 2p$\pi_g^\star$-Orbital relevant. Für alle anderen Elektronen findet sich immer eines, das genau den entgegengesetzten Spin und Bahndrehimpuls hat.
+
+
+\begin{figure}
+\centering
+
+ \begin{modiagram}[labels, names, AO-width=12pt]
+% labels-fs=\footnotesize] 
+ 
+\atom[\ch{O_a}]{left}{1s, 2s, 2p = {;pair,up,up}}
+
+ \atom[\ch{O_b}]{right}{1s, 2s, 2p = {;pair,up,up} }
+\molecule[\ch{O2}]{
+1sMO, 2sMO, 2pMO = {;pair,pair,pair,up,up},
+      label = {
+      1sigma  = 1s$\sigma_g$,
+      1sigma* = 1s$\sigma_u^\star$,
+      2sigma  = 2s$\sigma_g$,
+      2sigma* = 2s$\sigma_u^\star$,
+      2psigma  = 2p$\sigma_g$,
+      2psigma* = 2p$\sigma_u^\star$,
+      2piy = \hspace*{5mm} 2p$\pi_u$,
+      2piz = \ ,
+      2piy* = \hspace*{5mm} 2p$\pi_g^\star$,
+      2piz* = \
+}
+    }
+    
+\end{modiagram}
+\caption{Molekülorbitale von Sauerstoff aufgebaut aus den Atomorbitalen.
+ Die relative Lage der Orbitale 2p$\sigma_g$ und 2p$\pi_i$ hängt von der Kernladungszahl ab. Die hier gezeigte Lage gilt für O$_2$ und F$_2$. N$_2$ und leichtere Moleküle besitzen die getauschte Anordnung. \label{fig:MO_orbitaleX2}
+
+}
+\end{figure}
+
+\newpage
+\section{Mehr als zwei Atom-Kerne: Hückel-Näherung}
+
+Die Molekülorbitaltheorie ist auch auf größere Moleküle anwendbar, verlangt dann aber  numerischen Lösungen. Für konjugierte Moleküle liefert die Hückel-Näherung aber gute Ergebnisse. In konjugierte Molekülen wird das mechanische Gerüst durch $\sigma$-Bindungen zwischen den Kohlenstoff-Atomen gebildet. Eine Kette von Kohlenstoff-Atomen ist darüber hinaus durch alternierende $\sigma$ und $\pi$-Bindungen verbunden. Die an diesen Bindungen beteiligten Elektronen sind dann über die ganze Kette delokalisiert. Die Hückel-Näherung erlaubt es, diese ausgedehnten  $\pi$-Orbitale  zu berechnen.
+
+Wir betrachten also nur eine Teilmenge aller Atom-Orbitale, nur die $\pi$-Orbitale, die auch an der $\pi$-Bindung teilnehmen. Wir nehmen an, dass
+\begin{itemize} \setlength{\itemsep}{0pt}
+\item die Atom-Orbitale nur mit sich selbst überlappen, also $S_{ij} = \delta_{ij}$
+\item alle Atome identisch sind, also $H_{ii} = \alpha$
+\item Austausch nur zwischen benachbarten Orbitalen stattfinden, also  $H_{ij} = \beta < 0 $ falls Atome $i$ und $j$ benachbart, sonst $0$ 
+\end{itemize}
+
+Analog zu Gleichung XXX im letzten Kapitel berechnen wir die Eigen-Energie nach dem Variationsprinzip
+\begin{equation}
+ E = \frac{  \sum_{i,j} c_i \, c_j \, H_{i,j} }{ \sum_{i,j} c_i \, c_j \, S_{i,j} }
+\end{equation}
+Die minimale Eigen-Energie $E$ ergibt sich, wenn alle partiellen Ableitungen nach den $c_i$ Null sind, oder wenn
+\begin{equation}
+ \left| \mathbf{H} - E \, \mathbf{S}\right| = 0
+\end{equation}
+Da wir $S_{ij} = \delta_{ij}$ angenommen haben, vereinfacht sich dies zu 
+\begin{equation}
+ \left| \mathbf{H} - E \, \mathds{1} \right| = 0
+\end{equation}
+Wir müssen also die Eigenwerte und Eigenvektoren von $H_{i,j}$ bestimmen. Die Eigenwerte geben die Energie des Zustands an, die Eigenvektoren die dazugehörige  Linearkombination der atomare Orbitale.
+
+
+Als Beispiel betrachten wir Benzol (C$_6$H$_6$). Die 6 Kohlenstoff-Atome sind sp$^2$ hybridisiert. $\sigma$-Bindungen verbinden die Kohlenstoff-Atome untereinander und mit den Wasserstoff-Atomen. Je ein nicht hybridisiertes p-Orbital steht senkrecht auf dem Ring. Diese Orbitale werden in der Hückel-Näherung betrachtet. Die Hamilton-Matrix $H_{ij}$ hat dann die Form (Nullen weggelassen)
+\begin{equation}
+\mathbf{H} = 
+ \begin{pmatrix}
+  \alpha  & \beta &  &  &  & \beta \\
+  \beta & \alpha  & \beta & & & \\
+  & \beta & \alpha  & \beta & & \\
+ &  & \beta & \alpha & \beta & \\
+&  &  & \beta & \alpha & \beta \\
+\beta & &  &  & \beta & \alpha 
+ \end{pmatrix} 
+\end{equation}
+Die $\beta$ in den Ecken schließen den Ring.
+Wenn wir $E = \alpha + x \beta$ ansetzen, dann vereinfacht sich die Eigenwert-Gleichung zu 
+\begin{equation}
+x^6 - 6 x^4 + 9x^2 - 4 = 0 \quad \text{oder} \quad x = \pm 1, \pm 1, \pm 2
+\end{equation}
+%
+\begin{marginfigure}
+\inputtikz{\currfiledir benzol}
+\caption{Molekülorbitale von Benzol in der Hückel-Näherung. Die Farben kodieren das Vorzeichen der Wellenfunktion. Die Anordnung entspricht der Eigen-Energie.\label{fig:MO_benzol}}
+\end{marginfigure}
+%
+Da wir insgesamt 6 Elektronen in diese Orbitale einfüllen müssen, und jedes Orbital mit 2 Elektron (spin up und down) besetzen können, sind das Orbitale mit $E=\alpha + 2 \beta$ und die beiden Orbitale mit $E = \alpha + \beta$ besetzt\sidenote{$\beta < 0$}. Auch diese Orbitale tragen also zur Bindung bei, da sie die Gesamtenergie insgesamt um $8\beta$ reduzieren. Wenn man die Eigenfunktionen betrachtet\footcite{Atkins}, sieht man, dass  das Orbital mit $E=\alpha \pm 2 \beta$  über den ganzen Ring delokalisiert ist, die beiden mit $E = \alpha \pm \beta$  über zwei  Atome.
+
+Die Hückel-Näherung in der Molekülphysik entspricht der \emph{tight binding} Methode zur Berechnung der Bandstruktur von Elektronen  in der Festkörperphysik. In der Festkörperphysik macht man den Übergang von hier $N=6$ Atomen hin zu $N= 6 \cdot 10^{23}$ Atomen, wodurch dann  $6 \cdot 10^{23}$ eng benachbarte Zustände für Elektronen entstehen, die alle durch Wellenfunktionen ähnlich zu Abbildung \ref{fig:MO_benzol} beschrieben sind.
+
+%https://en.wikipedia.org/wiki/H%C3%BCckel_method#Delocalization_energy,_%CF%80-bond_orders,_and_%CF%80-electron_populations
+
+\printbibliography[segment=\therefsegment,heading=subbibliography]

@@ -6,7 +6,7 @@
 \usepackage{currfile,hyperxmp}
 
 \usepackage{filemod}
-   
+   \usepackage{dsfont}
 \usepackage[
     type={CC},
     modifier={by-sa},
@@ -23,7 +23,8 @@
 
 \usepackage{amssymb,amsmath}
 
-
+\usepackage{modiagram}
+\usepackage{chemformula}
 
 \input{tikz_header}
 %\usetikzlibrary{external}
@@ -141,6 +142,9 @@
   \renewcommand\eqref[1]{{\let\my@tag@font\relax\amsmath@eqref{#1}}}
 \makeatother
 
+%\includeonly{2_MO/2_MO_teil2}
+
+
 \begin{document}
 
 
@@ -162,16 +166,16 @@
 \part{Theorie der molekularen Bindung}
 
 \include{1_VB/1_VB}
-\include{1_VB/1_VB_UE}
 
 \include{2_MO/2_MO}
-\include{2_MO/2_MO_UE}
+\include{2_MO/2_MO_teil2}
 
 
 \part{Spektroskopie von Molekülen}
 
 
-\include{3_rot/3_rot}
+\include{3_diel/3_diel}
+\include{4_rot/4_rot}
 
 %-------
 %

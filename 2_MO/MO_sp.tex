@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{modiagram}
+\usepackage{chemformula}
+
+\begin{document}
+
+Hallo
+
+ \begin{modiagram}[labels,names,AO-width=8pt,
+ labels-fs=\footnotesize] 
+\atom[\ch{O_a}]{left}{1s, 2s, 2p = {;pair,up,up}}
+
+ \atom[\ch{O_b}]{right}{1s, 2s, 2p = {;pair,up,up} }
+\molecule[\ch{O2}]{
+1sMO, 2sMO, 2pMO = {;pair,pair,pair,up,up},
+      color = { 2piy*=red, 2piz*=red },
+      label = {
+      1sigma  = 1s$\sigma_g$,
+      1sigma* = 1s$\sigma_u^\star$,
+      2sigma  = 2s$\sigma_g$,
+      2sigma* = 2s$\sigma_u^\star$,
+      2psigma  = 2p$\sigma_g$,
+      2psigma* = 2p$\sigma_u^\star$,
+      2piy = \hspace*{5mm} 2p$\pi_u$,
+      2piz = \ ,
+      2piy* = \hspace*{5mm} 2p$\pi_g^\star$,
+      2piz* = \
+}
+    }
+\end{modiagram}
+
+%\caption{MO diagram of \ch{^3 "\chemSigma-" O2}.}
+
+
+
+
+
+
+\end{document}
