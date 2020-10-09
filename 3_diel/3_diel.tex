@@ -1,6 +1,6 @@
-\renewcommand{\lastmod}{April 29, 2020}
+\renewcommand{\lastmod}{\today}
 
-\chapter{Rotation}
+\chapter{Dielektrische Eigenschaften von Molekülen}
 
 
 
@@ -8,15 +8,279 @@
 \section{Ziele}
 
 \begin{itemize}
-\item dsf
-
-\item sdvsdfs
+\item Sie können die Phänomene erklären und durch einfache Modelle beschreiben, die in den  dielektrischen Eigenschaften von Molekülen zu finden sind, beispielsweise diese dielektrische Funktion von Wasser.
 
 \end{itemize}
 
-\section{Hallo}
+\begin{figure}
+\inputtikz{\currfiledir fig_water}
+\caption{Dielektrische Funktion $\epsilon = \epsilon' - i \, \epsilon''$ von flüssigem Wasser (\cite{Segelstein_water} via 
+\href{https://refractiveindex.info/?shelf=main&book=H2O&page=Segelstein}{refractiveindex.info}). Der niederfrequente Bereich unterhalb von $\bar{\nu} = 30$~cm$^{-1}$ ist um den Faktor 20 reduziert dargestellt.
+\label{fig:diel_water}}
 
-Hallo 
+%D. J. Segelstein. The complex refractive index of water, Master Thesis (1981)
+%https://refractiveindex.info/?shelf=main&book=H2O&page=Segelstein
+% http://hdl.handle.net/10355/11599 
+\end{figure}
+
+\section{Wie misst man das ?}
+
+ Ellipsometrie etc.
+
+Die Wellenzahl $\bar{\nu} = 1 / \lambda =\nu / c =  E / (h c)$ (eigentlich immer angegeben in der Einheit 1/cm) ist eine Maß für die  \emph{Frequenz} oder \emph{Energie}. Dieses Maß in der Spektroskopie sehr weit verbreitet ist, weil es proportional zur Energie ist (und damit das Reziproke der Wellenlänge umgeht), aber gleichzeitig nahe an der praktischen, intuitiven Größe 'Wellenlänge'.
+
+\section{Erinnerung an die Elektrostatik }
+
+Es gibt die Maxwell-Gleichungen in einer mikroskopischen Form und in einer makroskopischen Form.
+%
+\begin{align}
+\text{mikroskopische Form} & &
+\text{makroskopische Form} \nonumber \\
+%
+%\text{Gaußsches Gesetz} &
+ \vec\nabla\cdot\vec{E}= \frac{\rho}{\epsilon_0} & &
+ \vec\nabla\cdot\vec{D}= \rho_{\text{frei}} \\
+%
+%\text{Gaußsches Gesetz für Magnetfelder }&
+\vec\nabla\cdot\vec{B}=0
+ & &
+\vec\nabla\cdot\vec{B}=0 \\
+%
+%\text{Induktionsgesetz} &
+\vec\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}  
+& &
+\vec\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t} \\
+%
+%\text{Erweitertes Durchflutungsgesetz} &
+\vec\nabla\times\vec{B}= \mu_0\vec{j}+\mu_0\epsilon_0\frac{\partial\vec{E}}{\partial t}  & &
+\vec\nabla\times\vec{H}= \vec{j}_{\text{frei}}+\frac{\partial\vec{D}}{\partial t}
+\end{align}
+%
+Die makroskopische Form berücksichtigt dabei die Gegenwart von Medien, in dem die Größen dielektrische Verschiebung $\vec{D}$ und magnetische Feldstärke $\vec{H}$ eingeführt werden. Dies ist einerseits historisch bedingt, weil zur Zeit Maxwells der mikroskopischer Aufbau der Materie noch unbekannt war. Andererseits ist es aber auch heute hilfreich, nicht alle Details der mikroskopischen Struktur der Materie explizit berücksichtigen zu müssen, sondern durch gemittelte, makroskopische Parameter beschreiben zu können.
+
+Besonders deutlich wird dies bei der Unterscheidung zwischen freien Ladungen und Polarisationsladungen.  Vom modernen, mikroskopischen Standpunkt her trennt man die Elektronen in zwei Gruppen: von außen beispielsweise auf einen Kondensator aufgebrauchte (= freie) und durch Verschiebung der schon vorhandenen Elektronen in einem Dielektrikum an einem Ort neu hinzukommende Polarisationsladung. Letztere Verschiebung ist eine Konsequenz der Anwesenheit der freien Ladungen.
+
+Wenn wir ein Stück dielektrische Materie in einen Plattenkondensator halten, dann bewegt das elektrische Feld $\vec{E}$ des Kondensators die Ladungsträger der Ladung $q$ in der Materie um  die Distanz $\Delta  \vec{x}$ von der neutralisierenden Gegenladung $-q$ weg. Dadurch entsteht dadurch ein Dipolmoment $\vec{p} = q \Delta \vec{x}$. Oft werden Dipolmomente in der Einheit Debye angegeben ($1 D = 3{,}33564 \cdot 10^{-30} \ C \cdot m$). Ein Elektron im Abstand von 1~\AA\ von einem Proton produziert ein Dipolmoment von etwa 4.8~D. Bei $N$ Molekülen (Ladungsträgerpaaren) pro Volumen ergibt sich eine makroskopische Polarisation $\vec{P}$ zu
+\begin{equation}
+\vec{P} = N \, q \, \Delta \vec{x} = f(\vec{E})
+\end{equation}
+Der Zusammenhang zwischen angelegtem externen Feld $\vec{E}$ und resultierende 
+Polarisation $\vec{P}$ hängt ganz entscheidend vom mikroskopischen Aufbau der Materie ab. Alle Methoden der Spektroskopie vermessen diesen Zusammenhang. Oft wird er als 
+\begin{equation}
+ \vec{P} =  (\epsilon - 1) \, \epsilon_0 \, \vec{E} = \epsilon_0 \,\chi \, \vec{E} 
+ \label{eq:diel_p_lin}
+\end{equation}
+geschrieben, mit der relativen Permittivität\sidenote{Vorsicht, hier gibt es verschiedene Schreibweisen. Ich benutze die Form $D = \epsilon \epsilon_0 E$, mit einheiten-freiem $\epsilon$. Manchmal findet man $\epsilon_0 \epsilon_r$, manchmal auch nur $\epsilon$.} $\epsilon$ bzw. der elektrischen Suszeptibilität $\chi$. Dies ist aber nur eine Näherung. In allgemeiner Form ist der Zusammenhang
+\begin{equation}
+\vec{P}  = \epsilon_0 \left( \chi^{(1)} \vec{E} + \chi^{(2)} \vec{E}  \vec{E} +  \chi^{(3)} \vec{E}  \vec{E}  \vec{E}  + \dots \right)
+\end{equation}
+Zum einen muss der Polarisation-Vektor nicht unbedingt in die Richtung des elektrischen Feldes zeigen. Dies macht die $\chi^{(n)}$ zu Tensoren $(n+1)$ter Stufe und führt beispielsweise zu Doppelbrechung. Zum anderen muss der Zusammenhang zwischen Feld und Polarisation nicht unbedingt linear sein, wodurch verschieden Taylor-Koeffizienten notwendig werden. Dies ist Thema der nichtlinearen Optik.
+
+In diesem Kapitel betrachten wir allgemeine, einfache Aussagen über $\epsilon$.
+Das Thema der folgenden Kapitel ist, wie man aus Vermessung von $\epsilon$ Aussagen über den Aufbau  von Molkeülen, insbesondere über die Parameter des Bindungspotentials machen kann.
+
+%In der makroskopischen Betrachtung entspricht diese Verschiebung einer Polarisationsladung $\rho_\text{pol}$
+%\begin{equation}
+%\rho_\text{pol} = \rho - \rho_\text{frei} = - \vec\nabla\cdot\vec{P}
+%\end{equation}
+%
+%In der mikroskopischen Betrachtung sind alle Ladungen gleich, und es gilt
+%\begin{equation}
+% \vec\nabla\cdot\vec{E}= \frac{\rho}{\epsilon_0}  =  \frac{\rho_\text{frei} + \rho_\text{pol} }{\epsilon_0} 
+%\end{equation}
+
+\section{Unpolare Moleküle: Verschiebungspolarisation}
+
+Betrachten wir zunächst unpolare Moleküle, also solche, die kein permanentes Dipolmoment  besitzen\sidenote{siehe auch \cite[Kapitel 3]{Haken_wolf_II}}. Dies sind insbesondere zentro-symmetrische Moleküle wie H$_2$,  O$_2$,  N$_2$,  CCl$_4$. Aber ein externes angelegtes elektrisches Feld verschiebt die Ladungen\sidenote{Elektronen gegenüber Kernen, aber auch Kationen gegenüber Anionen} relativ zueinander und induziert ein Dipolmoment
+\begin{equation}
+ \vec{p}_\text{ind} = \alpha \, \vec{E}_\text{lokal}
+\end{equation}
+mit der Polarisierbarkeit $\alpha$ und dem Feld am Ort der Ladungen $\vec{E}_\text{lokal}$
+
+\paragraph{Verdünntes molekulares Gas} Wenn die Moleküle sehr weit voneinander entfernt sind, beispielsweise in einem verdünnten Gas, dann haben die anderen Moleküle keinen Einfluss auf das Feld, das das eine betrachtete Molekül sieht. Das lokale Feld ist gleich dem externen Feld.
+ Damit gilt
+\begin{equation}
+ \mathbf{P} = N \, \alpha \, \mathbf{E}_\text{lokal} =  \frac{\rho \, N_A } {M} \, \alpha \, \mathbf{E} \label{eq:diel_pind}
+\end{equation}
+mit der Teilchenzahldichte $N$, dem Molekulargewicht $M$, der (Masse-)DIchte $\rho$ und Avogadro-Konstanten $N_A$. Mit Gl \ref{eq:diel_p_lin} erhält man so
+\begin{equation}
+ \epsilon = 1 +  \frac{\rho \, N_A } {M} \, \alpha  
+\end{equation}
+Man kann also die dielektrische Konstante $\epsilon$ messen und die die Polarisierbarkeit $\alpha$ bestimmen. Oft wird $\alpha' = \alpha / 4 \pi \epsilon_0$ angegeben, was die Einheit eines Volumens hat, das Polarisierbarkeitsvolumen. Beides sind Tensoren, also Richtungsabhängig.
+
+\begin{marginfigure}
+\begin{tabular}{llll}
+ & $\braket{\alpha'} $ & $\alpha'_\perp$ & $\alpha'_\parallel$ \\
+H$_2$ & 0.79 & 0.61 & 0.85 \\
+C$_6$H$_6$ & 10.3 & 6.7 & 12.8 
+\end{tabular}
+\caption{Polarisierbarkeitsvolumen einiger Moleküle (in Einheiten von $10^{-30}$ m$^3$.)}
+\end{marginfigure}
+
+\paragraph{Flüssigkeiten} Bei höherer Dichte, also beispielsweise in einer Flüssigkeit, muss man die anderen, ebenfalls polarisierten Moleküle berücksichtigen. Verschiedene Methoden sind dabei möglich\footcite{Parson}, die unter dem Stichwort \emph{local field correction} zusammengefasst sind.
+
+Wir betrachten hier die Lorentz-Methode. Alle Moleküle zusammen werden als  ein homogenes Medium mit der  dielektrische Konstanten $\epsilon$  angesehen. Aus diesem Medium schneidet man eine Kugel aus, die gerade das einzelne, zu betrachtende Molekül umschließt. In die so entstandene Aushöhlung setzt man das Molekül in Vakuum, also wieder in einem sehr verdünnten Gas. Das externe elektrische Feld induziert eine Polarisation  $\mathbf{P}$, nur kennen wir deren Größe noch nicht. Diese Polarisation bewirkt  Oberflächenladung am Rand der Kugel, die das lokale Feld in der Kugel modifizieren:
+\begin{equation}
+\mathbf{E}_\text{lokal} = \mathbf{E} + \frac{1}{3 \, \epsilon_0} \, \mathbf{P}
+\end{equation}
+Damit können wird dann mit Gl.\ref{eq:diel_pind} das induzierte Dipolmoment berechnen
+\begin{align}
+ \mathbf{P} = N \, \alpha \, \mathbf{E}_\text{lokal} =&
+   \frac{\rho \, N_A }{M} \, \alpha \, \left( \mathbf{E} + \frac{1}{3 \, \epsilon_0} \, \mathbf{P} \right)   \\
+   =&
+     \frac{\rho \, N_A }{M} \, \alpha \, \left( \frac{1}{\epsilon_0 (1 + \epsilon)}\mathbf{P} + \frac{1}{3 \, \epsilon_0} \, \mathbf{P} \right) 
+\end{align}
+ $\mathbf{P}$ kürzt sich heraus und wir erhalten durch Umstellen die 
+\emph{Clausius-Mosotti-Gleichung}
+ stellen etwas um
+ \begin{equation}
+ \frac{\epsilon - 1}{\epsilon + 2} \frac{M}{\rho} = \frac{1}{3} \frac{N_A}{\epsilon
+_0} \, \alpha \label{eq:diel_Clausius-Mosotti}
+ \end{equation}
+ Das bemerkenswerte ist, dass wir die makroskopischen, messbaren Größen $\epsilon$,$M$, $\rho$ mit der molekularen Polarisierbarkeit $\alpha$ verknüpfen können. Durch einfache Messungen beispielsweise einer Flüssigkeit können wir eine mikroskopische Aussage über das Molekül machen.
+ 
+Bisher haben wir immer quasi-statische elektrische Felder angenommen.  Die Clausius-Mosotti-Gleichung findet aber auch bei optischen Feldern eine Entsprechung. Der Brechungsindex ist $n = \sqrt{\epsilon \, \mu}$ mit der Permeabilitätskonstanten $\mu$. DIese ist im optischen Frequenzbereich aber sehr nahe an eins, also $n = \sqrt{\epsilon }$. Damit wird Gl. \ref{eq:diel_Clausius-Mosotti} zu 
+  \begin{equation}
+ \frac{n^2 - 1}{n^2 + 2} \frac{M}{\rho} = \frac{1}{3} \frac{N_A}{\epsilon
+_0} \, \alpha_\text{optisch} \label{eq:diel_Lorentz_Lorenz}
+ \end{equation}
+ Diese Gleichung heißt Lorentz-Lorenz-Gleichung und beschreibt die \emph{optische Polarisierbarkeit} $\alpha_\text{optisch}$. Wie wir weiter unten sehen werden, unterscheiden sich $\alpha$ und  $\alpha_\text{optisch}$ bzw. $\epsilon(\nu \approx 0)$ und $\epsilon(\nu \approx 300 THz)$ deutlich.
+ 
+\section{Polare Moleküle: Orientierungspolarisation}
+ 
+Polare Moleküle wie beispielsweise H$_2$O oder HCl besitzen ein Dipolmoment $\mathbf{p}$, auch wenn kein externes Feld angelegt wird. Wenn dann doch ein Feld angelegt wird, dann verschieben sich nicht nur die Ladungen wie im letzten Abschnitt, sondern der schon vorhandene Dipol und damit das Molekül richtet sich im externen Feld aus. Dieser Ausrichtung stehen thermische Fluktuationen entgegen. Das entstehende Gleichgewicht ähnlich einer Boltzmann-Verteilung hängt vom Verhältnis der Energie des Dipols im Feld $\mathbf{p} \cdot \mathbf{E}$ und der thermischen Energie $k_B \, T$ ab. 
+
+\paragraph{Verdünnte Gase} Wenn wir zunächst wieder den Einfluss der anderen Moleküle vernachlässigen, dann ist die makroskopische Orientierungspolarisation $\mathbf{P}_\text{or}$ die Vektor-Summe über die einzelnen statischen Dipolmomente $ \mathbf{p}$. Sei $\theta$ der Winkel zwischen dem einzelnen Dipolmoment und dem externen Feld, dann lässt sich dies schreiben als
+\begin{equation}
+\mathbf{P}_\text{or} = N \, \mathbf{p} \, \braket{ \cos \theta}
+\end{equation}
+wobei die spitzen Klammer das Ensemble-Mittel bezeichnen. Statistische Rechnungen ergeben
+ \begin{equation}
+\mathbf{P}_\text{or} = N \, \mathbf{p} \, L \left( \frac{\mathbf{p} \cdot \mathbf{E}}{k_B \, T} \right)
+\end{equation}
+mit der Langevin-Funktion $L(x)$
+\begin{equation}
+L(x) = \coth x - \frac{1}{x} \approx \frac{x}{3} \quad \text{für} \quad x \ll 1
+\end{equation}
+Damit werden die Orientierungspolarisation und die dielektrische Konstante
+\begin{equation}
+\mathbf{P}_\text{or} = N \, \frac{|\mathbf{p} |^2}{3 \, k_B \, T} \, \mathbf{E}  \quad \text{und} \quad \epsilon = 1 + N \, \frac{|\mathbf{p} |^2}{3\, \epsilon_0 \, k_B \, T} \,
+\end{equation}
+Dies ist sowohl vom Formalismus als auch vom Ergebnis identisch zum Curie-Gesetz für paramagnetische Materialien. Die Orientierungspolarisation ist also temperaturabhängig, im Gegensatz zur Verschiebungspolarisation.
+
+\paragraph{Verschiebungs- und Orientierungs-Polarisatiuon} Beide Polarisationen addieren sich und gehen gemeinsam in die dielektrische Konstante ein:
+\begin{equation}
+\mathbf{P}  = \mathbf{P}_\text{ind} + \mathbf{P}_\text{or} = \left( \epsilon - 1 \right) \, \epsilon_0 \, \mathbf{E}
+\end{equation}
+Auch in dichten Medien kann man analog zur Verschiebungspolarisation eine Korrektur für das lokale Feld einführen. Die Clausius-Mosotti-Gleichung wird, wenn man beide Polarisationen zusammen nimmt, zur Debye-Gleichung
+ \begin{equation}
+ \frac{\epsilon - 1}{\epsilon + 2} \frac{M}{\rho} = \frac{1}{3} \frac{N_A}{\epsilon
+_0} \,  \left( \alpha  + \frac{|\mathbf{p} |^2}{3 \, k_B \, T}  \right)
+ \end{equation}
+ 
+ 
+\section{Frequenzabhängigkeit der dielektrische 'Konstanten' }
+ 
+Bisher haben wir nur statische elektrische Felder betrachtet. Nun wollen wir auch Licht, also elektromagnetische Felder bei  höheren, optischen Frequenzen  betrachten. Die dielektrische 'Konstante' $\epsilon$ ist dann nicht mehr konstant, sondern eine dielektrische Funktion der Frequenz, also $\epsilon(\nu)$. Welche Frequenzen sind 'hoch'? Bei welchen Frequenzen erwarten wir, dass Verschiebungs- und Orientierungspolarisation nicht mehr mit kommen?
+
+\paragraph{Orientierungspolarisation} Die Orientierung des Moleküls im Feld ist eine Drehbewegung. Diese Bewegungen werden bei der Rotationsspektroskopie im nächsten Kapitel detaillierter behandelt werden. Hier greifen wir vor. Der Drehimpuls $L$ ist in der Quantenmechanik quantisiert. Sei
+\begin{equation}
+1 \hbar = L = J \, \omega = m_\text{red} \, R^2 \, \omega
+\end{equation}
+mit dem Trägheitsmomnet $J$, der Kreisfrequenz $\omega$ und der reduzierten Masse 
+ $m_\text{red}$ sowie dem Bindungsabstand $R$ in einem angenommenen zwei-atomigen Molekül. Für das Molekül HCl gilt $R = 1.28$~\AA\ und $m_\text{red} \approx m_H = 1$~u. Damit ergibt sich eine Frequenz $\nu = 628$ GHz, also im Mikrowellen-Bereich. Oft wird dies auch geschrieben als Wellenzahl $\bar{\nu} = 1 /\lambda \approx 10$~cm$^{-1}$.
+ 
+\paragraph{Verschiebung der Kerne} Bei der Verschiebungspolarisation können sich zunächst einmal die Kerne bzw. Ionen gegeneinander bewegen. Dies ist Thema der Schwingungsspektroskopie, und wieder greifen wir vor. Zwei Atome seien im Gleichgewicht  im Bindungs-Abstand $R_0$. Wir nehmen an, die Rückstellkraft in diesem Gleichgewicht sein allein die Coulomb-Kraft des einen Kerns auf den anderen, also 
+\begin{equation}
+F = \frac{1}{4 \pi \epsilon_0} \, \frac{e^2}{R}
+\end{equation}
+Die Federkonstante $k$ ist dann die Ableitung dieser Kraft nach $R$. Für das Molekül HCl mit einem Gleichgewichts-Abstand $R_0 = 1.2$~\AA\ ergibt sich $k = 220$~N/m. Die Eigenfrequenz der Schwingung  ist $\nu = \sqrt{k/m_\text{red}} = 58$~THz mit der reduzierten Masse von oben. Dies entspricht einer Wellenlänge von $\lambda = 5.12$~\textmu m, also im Infraroten, und einer Wellenzahl $\bar{\nu} = 2000$~cm$^{-1}$.
+
+\paragraph{Verschiebung der Elektronenwolke} Wenn es zu einer Resonanz in der Verschiebung der Elektronenwolke kommt, dann entspricht dies einer elektronischen Anregung, also einem quantenmechanischen Übergang zwischen zwei Elektronen-Orbitalen. Auch dies wird uns in einem der folgenden Kapitel beschäftigen. Wir schätzen hier die Übergangsenergie analog zu atomaren Übergängen ab
+\begin{equation}
+  h \nu = R_H \, \left( \frac{1}{n^2} - \frac{1}{m^2} \right)
+\end{equation}
+Für Atome liegt die Frequenz $\nu$ im Bereich von $10^{15}$~Hz $= 1$~PHz. Bei Molekülen liegt sie etwas niedriger, also $nu \approx 10^{14} \cdots 10^{15}$~Hz, also $100 \cdots 1000$~THz.
+
+
+\section{Lorentz-Oszillator-Modell}
+
+Alle oben diskutieren Phänomene sind Resonanzen. Das Lorentz-Oszillator-Modell ist ein einfaches Modell, mit dem die Frequenzabhängigkeit der dielektrischen Funktion in der Nähe solcher Resonanzen beschrieben werden kann. In einem gedämpften harmonischen Oszillator (Masse $m$, Dämpfungskonstante $\gamma$, Eigenfrequenz $\omega_0$) wird die Masse durch ein periodisches Elektrisches Feld (Amplitude $E_0$, Frequenz $\omega$) um $x$ ausgelenkt, da die Masse eine Ladung $e$ trägt. Alles zusammen
+\begin{equation}
+ m \ddot{x} + \gamma \dot{x} + m \omega_0^2  x = e E_0 e^{+ i \omega t}
+\end{equation}
+Die stationäre Lösung dieser Differntialgleiochung ist
+\begin{equation}
+ x(t) = \frac{e E_0}{m (\omega_0^2  - \omega^2) + i \gamma \omega} \, e^{+ i \omega t}
+\end{equation}
+Die makroskopische Polarisation $P$ ist die Summe über alle mikroskpische Polarisationen, also
+\begin{equation}
+P(t) = N \, e \,x(t) =  (\epsilon -1 ) \epsilon_0 \, E_0 e^{+ i \omega t}
+= \chi \epsilon_0 E(t)
+\end{equation}
+Damit ergibt sich die dielektrische Funktion
+\begin{equation}
+\epsilon(\omega) = 1 + \frac{N e^2}{m (\omega_0^2  - \omega^2) + i \gamma \omega} = \epsilon' - i \epsilon''
+\end{equation}
+Man beachten das per Konvention negative Vorzeichen des Imaginärteils $\epsilon''$. Explizit sind Real- und Imaginärteil
+\begin{align}
+ \epsilon' = & 1 + \frac{N e^2 \, m (\omega_0^2  - \omega^2)}{m^2 (\omega_0^2  - \omega^2)^2 +  \gamma^2 \omega^2}  \\
+  \epsilon'' = &  \frac{N e^2 \, \gamma \omega }{m^2 (\omega_0^2  - \omega^2)^2 +  \gamma^2 \omega^2} 
+\end{align}
+Das Polarisierbarkeitsvolumen $\alpha / \epsilon_0$ ist dann
+\begin{equation}
+\frac{\alpha}{\epsilon_0} = \frac{e^2}{m (\omega_0^2  - \omega^2) + i \gamma \omega} 
+\end{equation}
+Für den  komplexwertige\sidenote{Oft wird nicht zwischen $n$ und $\tilde{n}$ unterschieden und $n$ selbst ist komplexwertig.} Brechungsindex\sidenote{Die hier benutzte Konvention der Vorzeichen ist die in der Physik übliche, ausgehend von der Zeitabhängigkeit $e^{+ i \omega t}$. In der eher ingenieurwissenschaftlichen Literatur findet sich aber genauso oft auch die Zeitabhängigkeit $e^{- i \omega t}$. Dies führt zu komplex-konjugierten Gleichungen. } $\tilde{n} = n - i k$ gilt
+\begin{align}
+ \epsilon = & \tilde{n}^2 = (n - i k)^2 \\
+  \epsilon' =& n^2 - k^2 \\
+ \epsilon'' = & 2 n k
+\end{align}
+Dabei beschreibt $k$ die Dämpfung und $n$ die Dispersion, also die Variation der effektiven Wellenlänge in der Nähe einer Resonanz:
+\begin{equation}
+E(t,z) = E_0 \, e^{i \omega (t - \frac{z}{c}(n - i k))} = 
+ E_0 \, e^{ - \frac{\omega}{c} k z}  
+ \, e^{i \omega (t - \frac{z}{c/n} )} 
+\end{equation}
+
+Wenn in einem Medium mehrere Resonanzen vorhanden sind, so addieren sich die Suszeptibilitäten:
+\begin{equation}
+\epsilon(\omega)_\text{ges} = 1 + \chi(\omega)_\text{elec} +  \chi(\omega)_\text{ion}  + \chi(\omega)_\text{orient}
+\end{equation}
+
+\begin{figure}
+\caption{Addition der Suszeptibilitäten}
+\end{figure}
+
+Die Abbildung zeigt schematisch den Verlauf der dielektrischen Funktion $\epsilon(\omega)$ für Glas, also amorphes SiO$_2$. Man erkennt ... XXX
+
+XXX Lorentz-Linie
+
+
+\section{Die Kramers-Kronig-Relationen}
+
+Wir haben bisher den Zusammenhang zwischen dem angelegten externen Feld $E(t)$ und der entstehenden Polarisation $P(t)$ eigentlich nur für 'monochromatische' Felder der Art $\exp(i \omega t)$ diskutiert, also für eine genau bestimmte Frequenz $\omega$:
+\begin{equation}
+P(t) = \chi(\omega) \epsilon_0 E(t) \quad \text{für} \quad E(t) = E_0 e^{i \omega t}
+\end{equation}
+Daraus ergab sich dann die Frequenzabhängigkeit von $\chi(\omega)$ Wir können dies Verallgemeinern für einen beliebigen zeitlichen Verlauf des Feldes  $E(t)$. Die Suszeptibilität ist nämlich die  \emph{Impulsantwort} des Materials, sozusagen das Gedächtnis:
+\begin{equation}
+P(t) = \epsilon_0 \int_{-\infty}^{+\infty} \chi( \Delta t = t - t') \, E(t') \, dt' \quad \text{für} \quad E(t) = \text{beliebig}
+\end{equation}
+Die Polarisation $P$ jetzt, also zum Zeitpunkt $t$ hängt vom elektrischen Feld zu allen anderen Zeiten $t'$ ab. Wie stark die Felder eingehen, hängt nur vom zeitlichen Abstand $\Delta t$ ab. Die Kausalität verlangt, dass die Polarisation 'jetzt' nicht von Feldamplituden in der Zukunft abhängen darf. $\chi( \Delta t = t - t' < 0) $ muss daher Null sein. Damit ist die Suszeptibilität $\chi( \Delta t ) $ zwar komplexwertig, aber über die eine Hälfte des Zeitstrahls bekannt und zu Null festgelegt. Dies hat Konsequenzen für die Fouriertransformation, also für $\chi(\omega)$.
+
+Diese Konsequenzen lassen sich mit Hilfe der Funktionentheorie herleiten\sidenote{siehe auch Anhang A von \cite{Yariv1989}} und sind die Kramers-Kronig-Relationen. Es besteht folgender Zusammenhang zwischen Real- ($\chi'$) und Imaginärteil  ($\chi''$) der Suszeptibilität, wenn dieser der Kausalität gehorcht:
+\begin{align}
+ \chi'(\nu) = & \frac{2}{\pi} \, CH \int_0^\infty \frac{s  \, \chi''(s)}{s^2 - \nu^2} \, ds \\
+ \chi''(\nu) = & \frac{2}{\pi}\,  CH \int_0^\infty \frac{\nu \, \chi''(s)}{\nu^2 - s^2} \, ds 
+ \label{eq:diel_KK}
+\end{align}
+$CH$ kennzeichnet dabei das Cauchy'sche Hauptwertintegral. Ähnliche Beziehung existieren auch für $\chi(\omega)$ und $\epsilon(\omega)$ sowie für alle anderen Größen, die der Kausalität unterliegen.
+
+Es reicht also im Prinzip aus, den Realteil der Suszeptibiliität $\chi(\omega)$ zu messen, um daraus den Imaginärteil und somit die komplette kompelxwertige Funktion zu bestimmen. Leider laufen die Integrale in Gl~\ref{eq:diel_KK} aber über den ganzen Frequenzbereich von Null bis Unendlich, der experimentell natürlich nicht zugänglich ist. Man kann die Kramers-Kronig-Relationen trotzdem sinnvoll benutzen, indem man über den Verlauf außerhalb des gemessenen Intervalls passende Annahmen macht.
+
+
 
 
 \printbibliography[segment=\therefsegment,heading=subbibliography]

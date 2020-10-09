@@ -1,22 +1,183 @@
-\renewcommand{\lastmod}{April 29, 2020}
+\renewcommand{\lastmod}{\today}
 
-\chapter{Rotation}
-
+\chapter{Rotationsspektroskopie}
 
 
 
 \section{Ziele}
 
 \begin{itemize}
-\item dsf
-
-\item sdvsdfs
-
+\item Sie können Rotationsspektren von Molekülen in der Gasphase wie das untenstehende von HCl erklären und daraus Eigenschaften des Moleküls wie Bindungsabstand oder Atommasse bestimmen.
 \end{itemize}
 
-\section{Hallo}
+\begin{figure}
+\inputtikz{\currfiledir fig_hcl}
+\caption{Mikrowellen-Transmissionspektrum durch  HCl Gas  (\cite{Li_2011_hcl} via \href{https://hitran.org}{hitran.org}).
+\label{fig:rot_hcl}}
+\end{figure}
 
-Hallo 
+
+
+\section{Wie misst man das?}
+
+Der dargestellte Bereich  von etwa 10 bis 300 cm$^{-1}$ entspricht einer Frequenz von 0.3 bis 9 THz oder einer Wellenlänge von 1000 bis 33 \textmu m. Dieser Spektralbereich ist experimentell nicht einfach zugänglich (\emph{THz gap}). Für niedrigere Frequenzen unterhalb etwa 0.3 THz, im Mikrowellen-Bereich, existieren in der Frequenz durchstimmbare  Mikrowellen-Generatoren (Klystron) und passende Detektoren. Bei höheren Frequenzen ist dies technisch aufwändig. Möglichkeiten sind das Synchrotron oder durch sehr kurze Laserpulse erzeugte THz-Pulse.
+
+Nach Erzeugung der Strahlung durch Klystron oder Synchrotron wird diese durch ein möglichst langes Volumen des zu untersuchenden Gases geleitet, da die Absorption gering ist. Die transmittierte Leistung wird dann als Funktion der Frequenz des Generators gemessen. So erhält man  Spektren ähnlich zu oben stehender Abbildung.
+
+Die Transmission $T$ (oder auch die Absorption) ist eine etwas unpraktische Größe, da sie immer im Bereich zwischen Null und Eins liegt, also beispielsweise nicht linear von der Konzentration des Gases abhängt. Daher betrachtet man eigentlich immer die Absorbanz oder Extinktion.\sidenote{Der Unterschied zwischen Absorbanz und Extinktion ist, dass letztere auch Streuung beinhaltet, was für uns aber keine Rolle spielt.} Die Extinktion $E$ ist
+%
+\begin{equation}
+ E = - \log_{10} T
+\end{equation}
+%
+Im folgenden betrachten wir also Absorbanz- oder Extinktions-Spektren, die oft auch einfach Absorptionsspektren genannt werden, auch wenn nicht $1-T$ sondern $\log_{10} ( 1- T)$ dargestellt ist.
+
+\begin{marginfigure}
+\inputtikz{\currfiledir fig_hcl_extinction}
+\caption{Das HCl-Spektrum aus Abbildung \ref{fig:rot_hcl} als Extinktionsspektrum.}
+\end{marginfigure}
+
+
+\section{Modell des starren Rotators}
+
+Ein einfaches Modell, um Rotationsspektren zu beschreiben, ist das des starren Rotators. Wir nehmen eine klassische Hantel mit zwei Massen $m_1$ und $m_2$ an, die durch eine starre Achse der Länge $R$ miteinander verbunden sind. Das Trägheitsmoment der Hantel ist
+\begin{equation}
+ \Theta = \frac{m_1 \, m_2}{m_1 + m_2} \, R^2 = m_\text{red} \, R^2
+\end{equation}
+Damit berechnet sich die Rotationsenergie $E_\text{rot}$ zu
+\begin{equation}
+ E_\text{rot} = \frac{1}{2} \, \Theta \, \omega^2
+\end{equation}
+mit der Rotationsfrequenz $\omega$. Die Quantenmechanik kommt durch die Quantisierung des Drehimpulses $\mathbf{L} $ ins Spiel:
+\begin{equation}
+ | \mathbf{L} | = \Theta \, \omega = \hbar \sqrt{J (J + 1)}
+\end{equation}
+mit der Drehimpuls-Quantenzahl $J = 0, 1, \dots$. Die Rotationsenergie ist damit
+\begin{equation}
+ E_\text{rot} = \frac{ | \mathbf{L} |^2}{2 \Theta} = \frac{\hbar^2 \, J (J+1)}{2 \Theta}
+\end{equation}
+
+Dies sind die Energien der \emph{Zustände} des Systems, noch nicht die Lage der Peaks im Spektrum. Bei der Absorption eines Mikrowellen- oder THz-Photons ändert sich der Zustand. Wir suchen also die Energien der \emph{Übergänge} zwischen Zuständen, um die Lage der Peaks im Absorptionsspektrum zu beschreien.
+
+\section{Auswahlregeln bei Rotationsübergängen}
+
+Zwischen welchen Zuständen können unter welchen Umständen Übergänge durch Absorption (oder Emission) eines Photons stattfinden? Dies beschreiben  die Auswahlregeln.
+
+Zunächst muss die Rotationsbewegung überhaupt an das elektromagnetische Feld koppeln. Dies verlangt  ein statisches, permanentes Dipolmoment des Moleküls. Klassisch hätte man so einen oszillierenden Dipol, und diese Bedingung bleibt auch in der Quantenmechanik erhalten. Damit sind homonukleare Moleküle (z.B. H$_2$), symmetrische lineare Moleküle (z.B. CO$_2$) und hoch-symmetrische Moleküle (z.B. CCl$_4$) ausgeschlossen. Dieser Ausschluss kann, wie wir im folgenden Kapitel sehen werden, durch eine Schwingung des Moleküls wieder aufgehoben werden.
+
+Wenn optische Rotationsübergänge im Prinzip möglich sind, dann muss noch die Drehimpuls-Erhaltung erfüllt sein. Die Summe des Drehimpulses von Molekül und Photon muss erhalten bleiben. Der Drehimpuls des Photons ist $1 \hbar$. Bei der Absorption einer Photons muss sich also $J$ erhöhen, bei der Emission erniedrigen.\sidenote{Glücklicherweise passt das mit der Änderung der Energie zusammen.} Damit ergibt sich als Auswahlregel
+\begin{equation}
+\Delta J = \pm 1 \quad \text{und} \quad \Delta M_J = 0, \pm 1
+\end{equation}
+$M_J$ ist die Orientierungs-Quantenzahl zur Drehimpuls-Quantenzahl $J$ des Moleküls, wie immer bei Drehimpuls-artigen Größen.
+
+\section{Modellierung des Spektrums}
+
+\begin{marginfigure}
+\inputtikz{\currfiledir fig_states}
+\caption{Skizze Zustände und Übergange.}
+\end{marginfigure}
+
+
+Aus der Lage der Zustände $E_\text{rot}(J)$ und der Auswahlregel $\Delta J = \pm 1$ erhalten wir die  Energie (bzw. hier eigentlich Wellenzahl) der erlaubten Übergange
+\begin{align}
+ \bar{\nu}_{J \rightarrow J + 1} =& \frac{1}{h c}  \, \left[ E_\text{rot}(J+1) - E_\text{rot}(J) \right]
+ \\ 
+ =  & \frac{1}{h c}\frac{\hbar^2}{2 \Theta} \, \left[ (J+1)(J+2) - J (J+1) \right] \\
+ = & 2 \, \frac{h}{8 \pi^2 c \, \Theta} \, \left( J +1 \right) = 2 \, B \, (J+1)
+\end{align}
+wobei $B = h / (8 \pi^2 c \, \Theta)$ Rotationskonstante genannt wird. Die Linien sind im Spektrum also äquidistant, mit dem Abstand $2B$ und auch die erste Linie ist gerade im Abstand $2B$ vom Ursprung. Dies entspricht zumindest qualitativ dem in Abbildung \ref{fig:rot_hcl} gezeigtem Spektrum. Aus dem Abstand der Linien lässt sich der Gleichgewichts-Bindungsabstand $R_0$ bestimmen, wenn die Atom-Massen bekannt sind.
+
+
+
+\begin{marginfigure}
+\inputtikz{\currfiledir entartung_vs_boltzman}
+\caption{Verlauf von $2J +1$ und Boltzmann-Faktor mit $J$.}
+\end{marginfigure}
+
+
+Im Spektrum sieht man weiterhin einen charakteristischen, nicht-monotonen Verlauf der Amplituden der Linien mit der Übergangsfrequenz. Zunächst wächst die Linien-Stärke (oder Amplitude) mit steigende Übergangsfrequenz, um dann wieder abzufallen. Die Ursache dafür sind zwei gegenläufige Effekte. Zum einen steigt der Entartungsgrad mit $J$, da ja $M_J = 0, \pm 1, ... \pm J$. Es gibt also $2J+1$ Zustände mit gleicher Quantenzahl $J$.
+Zum anderen fällt die Besetzung des Ausgangszustands mit steigendem $J$. Um überhaupt einen Übergang machen zu können muss ja der Ausgangszustand besetzt sein. Dies geschieht durch thermische Anregung und folgt einer Boltzmann-Verteilung. Die thermische Energie $k_B T$ bei Raumtemperatur entspricht  $\bar{\nu}_{k T} \approx 200$~cm$^{-1}$, liegt also im hier relevanten Energiebereich. Zusammen ergibt sich so für die Übergangswahrscheinlichkeit und damit die Linien-Stärke
+\begin{equation}
+ S= (2J+1) \, e^{- E(J) / k_B T} = (2J+1) \, e^{- B hc J (J+1) / k_B T} 
+\end{equation}
+Damit haben wir Lage und Amplitude der Linien erklärt.
+
+
+\section{Nicht-Starrer Rotator}
+
+Nun werden wir die Annahme des \emph{starren} Rotators fallen lassen. Die Atome sind in einem Bindungspotential gebunden, das sich harmonisch um die Gleichgewichtslage nähern lässt. Dies entspricht einer Federkonstanten $k$ der Bindung. Wenn das Molekül rotiert, dann dehnt die Fliehkraft die Bindung. Damit nimmt der Abstand $R$ zu, und so auch das Trägheitsmoment $\Theta$. Schließlich erwarten wir, dass so die Rotationskonstante $B$ und die Abstände zwischen den Linien abnehmen.
+
+Im Gleichgewicht kompensieren sich Fliehkraft und Federkraft, also
+\begin{equation}
+ m \, R \, \omega^2 = k \, ( R - R_0)
+\end{equation} 
+mit dem Ruhe-Abstand $R_0$ und $m$ hier als \emph{reduziert} Masse. Wir stellen um und benutzen $L = m R \omega$
+\begin{equation}
+R - R_0 = \frac{L^2}{m \, k \, R^3  } 
+%\approx \frac{L^2}{m \, k \, R_0^3  }
+\end{equation}
+%wobei wir ausgenutzt haben, das die relative Änderung von $R_0$ nach $R$ nur sehr klein sein wird. 
+Die Rotationsenergie entwickeln wir jetzt in einer Taylor-Reihe nach der Änderung des Bindungsabstands, und brechen gleich nach dem ersten Korrekturterm ab
+\begin{align}
+ E_\text{rot} = \frac{L^2}{2 m R^2} \approx &
+ \frac{L^2}{2 m R_0^2}  + \left. \frac{\partial E_\text{rot}}{\partial R}
+ \right|_{R_0}  (R - R_0) \\
+ = & \frac{L^2}{2 m R_0^2}  -  \frac{L^2}{m \, R_0^3  }   \frac{L^2}{m \, k \, R^3  } \\
+  \approx & \frac{L^2}{2 m R_0^2}  -  \frac{L^4}{m^2 \, k\, R_0^6  }   
+\end{align}
+Im letzten Schritt haben wir die  Annahme $1/R^3 \approx 1 / R_0^3$ gemacht.
+%\begin{align}
+%\frac{1}{R^3} \approx & \frac{1}{R_0^3} + \frac{3}{R_0^4}  ( R - R_0) \\
+%= & \frac{1}{R_0^3}  \left( 1 - \frac{3 L^2}{m \, R_0^4  } \right)
+%\end{align}
+Nun benutzen wir die Definition der Rotationskonstanten $B = h / (8 \pi^2  m  c R_0^2)$ sowie $L = \hbar \sqrt{ J (J+1)}$ und erhalten alles zusammen
+\begin{equation}
+\frac{ E_\text{rot}}{h c} = B \, J (J+1) - D \, J^2 (J+1)^2
+\end{equation}
+Die Konstante vor dem Korrekturterm nennt sich Zentrifugal-Dehnungskonstante $D$
+\begin{equation}
+D = \frac{4 B^2}{k \, R_0^2}
+\end{equation}
+Sie ist klein ($D/B \approx 10^{-4}$), aber messbar, insbesondere beim großem\sidenote{Bei $J = 100$ wären beide Terme gleich groß.} $J$. Die Auswahlregeln bleiben durch die Dehnung der Bindungslänge unverändert, da sich die Form oder Symmetrie der Moleküle nicht ändert. Die Äquidistanz der Linien im Spektrum wird dadurch aufgehoben. Mit steigendem $J$ rücken die Linien etwas näher zusammen.
+
+\begin{figure}
+\caption{Schematische Darstellung der Verschiebung der Linien mit steigendem $J$ für eine hier übertrieben große Zentrifugal-Dehnungskonstante $D$.}
+\end{figure}
+
+
+\section{Mehratomige Moleküle}
+
+Im allgemeinen Fall der mehratomigen Moleküle können wir auf die klassische Kreiseltheorie zurückgreifen und die mit dem Korrespondenzprinzip in die Quantenmechanik übertragen\sidenote{Eine  ausführliche Darstellung findet sich in Kapitel 11.2 von \cite{Haken_wolf_II} und in Kapitel 6.2 von \cite{Demtröder_molekuelphysik}}. Ein beliebig geformter Körper hat drei aufeinander senkrecht stehende Haupt-(Trägheits-)Achsen $x,y,z$. Die Rotation um jede dieser Achsen wird durch ein Trägheitsmoment $\Theta_{x,y,z}$ beschrieben. Die kinetische Energie der Rotation ist dann
+\begin{equation}
+E_\text{rot} = \frac{L_x^2}{2 \Theta_x} + \frac{L_y^2}{2 \Theta_y} + \frac{L_z^2}{2 \Theta_z} 
+\end{equation}
+Die verschiedenen Varianten des Kreisels unterscheiden sich nun darin, ob ggf. manche der $\Theta_i$ identisch sind.
+
+\paragraph{Sphärischer Kreisel} Alle drei Trägheitsmomente sind identisch und das Molekül benimmt sich wie das oben beschriebene zweiatomige Molekül. Beispiele sind CH$_4$, SiH$_4$ und SF$_6$.
+
+\paragraph{Symmetrischer Kreisel} Zwei Trägheitsmomente sind identisch ($\Theta_y = \Theta_z$), das dritte Moment $\Theta_x$ davon verschieden. Ein Kinderkreisel ist solch ein Fall. Falls $\Theta_x$  < $\Theta_{y,z}$ spricht man von  einem gestreckten, prolaten oder zigarenförmigen Kreisel. Im anderen Fall von abgeplattet, oblat oder diskusförmig. Die Rotationsenergie ist
+\begin{equation}
+E_\text{rot} = \frac{L_y^2 + L_z^2}{2 \Theta_y} + \frac{L_x^2}{2 \Theta_x} 
+= \frac{L^2 }{2 \Theta_y} + \left( \frac{1}{2 \Theta_x} - \frac{1}{2 \Theta_y} \right) \, L_x^2
+\end{equation}
+Beim Übergang in die Quantenmechanik gibt es also die übliche Drehimpuls-Quantenzahl $J$ mit $L^2 = \hbar^2 J (J+1)$ und eine Quantenzahl $K$ für die x-Komponente des Drehimpulses, also $L_x = \hbar K$ mit $K = 0, \pm 1, ... \pm J$. Im Unterschied zu $M_J$ ist $K$ die Projektion auf eine Molekülachse, nicht auf eine äußere Vorzugsrichtung. Damit wird 
+\begin{equation}
+\frac{E_\text{rot}}{hc} = B J (J + 1) + C K^2
+\end{equation}
+wobei $\Theta_{y,z}$ die Rolle von $\Theta$ in unserer früheren Definition von $BR$ übernimmt. $C$ ist analog, nur geht $1\Theta$ in $1/ \Theta_x - 1/ \Theta_y$ über.
+
+Die Auswahlregeln für optische Übergange sind weiterhin $\Delta J = \pm 1$ und $\Delta K = 0$. Die Rotation um die $x$-Achse (die Symmetrieachse des Kinderkreisels) ist nicht mit einem rotierenden Dipolmoment verbunden und koppelt so nicht ans Lichtfeld. Die spektrale Lager der Übergangslinien ändert sich so also nicht gegenüber dem zweiatomigen Molekül, da sich $C$ heraus kürzt. Erst wenn man die einen nicht-starren symmetrischen Kreisel betrachtet, dann hat $C$ einen Einfluss auf die Lage der Linien. Beispiele sind C$_6$H$_6$ (oblat) und CH$_3$Cl (prolat).
+
+\paragraph{Linearer Kreisel} Alle Atome sind auf einer Achse angeordnet und als Punktmassen angenommen. Rotation um diese Achse hat dann das Trägheitsmoment $\Theta_z = 0$. Damit ist auch dieser Kreisel in seinen Eigenschaften analog zum zweiatomigen Molekül. Beispiele sind CO$_2$ und C$_2$H$_2$ und natürlich alle zweiatomigen Moleküle.
+
+\paragraph{Asymmetrischer Kreisel} Alle drei Trägheitsmomente sind verschieden. Beispiele sind H$_2$O und CH$_2$OH. In der Quantenmechanik ist allerdings nur der Gesamt-Drehimpuls $L$ und \emph{eine} seiner Komponenten quantisiert. Hier benötigt man alle drei Drehimpuls-Komponenten. Das macht die Rechnung aufwändig. Vom Ergebnis her kann man sich die Lage der Energieniveaus als kontinuierlichen Übergang zwischen dem prolaten und oblaten Kreisel vorstellen, je nach dem, ob das Trägheitsmoment $\Theta_y$ näher an $\Theta_x$ oder $\Theta_z$ liegt, wenn die $\Theta_i$ der Größe nach sortiert sind.
+
+
+%\section{Um welche Achsen dreht sich ein lineares Molekül?}
+
+
+
 
 
 \printbibliography[segment=\therefsegment,heading=subbibliography]

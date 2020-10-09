@@ -53,10 +53,8 @@ Literatur: Atkins: chapter on moleculatr structure
 \paragraph{Raster-Tunnel-Mikroskopie} (engl. scanning tunneling microscope, STM) Direkter, ohne Fourier-Transformation, kann man einzelne Moleküle auf einer leitenden Oberfläche in einem sehr guten Vakuum abbilden, in dem man eine sehr scharfe Metallspitze nahe an die Oberfläche bringt. Bei einem Abstand im Bereich weniger Angstrom fließt ein Tunnelstrom, wenn eine Spannung zwischen Spitze und Oberfläche angelegt wird. Eine Elektronik hält den Tunnelstrom durch Regelung des Abstands konstant währen die Spitze über die Oberfläche gerastert wird. Man erhält ein Höhen-Bild konstanten Tunnelstroms. Da Strom nur fließen kann, wenn sich die Wellenfunktion der Elektronen in der Spitze und in der Oberfläche wenigstens etwas überlappen, kann man so die Elektronen-Wellenfunktion von Molekülen auf der Oberfläche abbilden. Die beobachtete Form hängt auch von der gewählten Spannung ab.
 
 \begin{marginfigure}
-%\includegraphics[width=\textwidth]{\currfiledir Pentacene_on_Ni(111)_STM.jpg}
-\caption{Prinzip STM
-\href{https://commons.wikimedia.org/wiki/File:Pentacene_on_Ni(111)_STM.jpg}{L.~E.~Dinca et al.}  / \href{https://creativecommons.org/licenses/by/4.0}{CC BY}
-}
+\includegraphics[width=\textwidth]{\currfiledir stm.png}
+\caption{Prinzip STM}
 \end{marginfigure}
 
 
@@ -64,10 +62,8 @@ Literatur: Atkins: chapter on moleculatr structure
 
 
 \begin{marginfigure}
-%\includegraphics[width=\textwidth]{\currfiledir Pentacene_on_Ni(111)_STM.jpg}
-\caption{Prinzip AFM
-\href{https://commons.wikimedia.org/wiki/File:Pentacene_on_Ni(111)_STM.jpg}{L.~E.~Dinca et al.}  / \href{https://creativecommons.org/licenses/by/4.0}{CC BY}
-}
+\includegraphics[width=\textwidth]{\currfiledir afm.png}
+\caption{Prinzip AFM}
 \end{marginfigure}
 
  
@@ -108,6 +104,12 @@ Die Wellenfunktion $\phi_A(\mathbf{r_1})$ löst damit die Schrödinger-Gleichung
 \begin{equation}
  \Psi = \phi_A(\mathbf{r}_1) \, \phi_B(\mathbf{r}_2)
 \end{equation}
+%
+\begin{marginfigure}
+\includegraphics[width=\textwidth]{\currfiledir coords.png}
+\caption{Skizze Koordinaten Atom und Molekül}
+\end{marginfigure}
+%
 Wenn die beiden Atome nahe beieinander sind, kann man nicht mehr sagen, ob Elektron $1$ bei Kern $A$ oder Kern $B$ ist. In dieser Situation ist daher die Gesamt-Wellenfunktion 
 \begin{equation}
  \Psi = \phi_A(\mathbf{r}_2) \, \phi_B(\mathbf{r}_1)
@@ -121,11 +123,6 @@ Dies löst die Schrödinger-Gleichung mit dem Gesamt-Hamilton-Operator
   \hat{H}_{ges} =  \hat{H}_A + \hat{H}_A  + \frac{e^2}{4 \pi \epsilon_0} \left( \frac{1}{r_{12}} + \frac{1}{r_{AB}} \right)
 \end{equation}
 wobei der Term mit $r_{AB}$ auch zunächst weggelassen werden kann, weil die Kern-Positionen in der Born-Oppenheimer-Näherung ja als konstant angenommen werden.
-
-\begin{marginfigure}
-%\includegraphics[width=\textwidth]{\currfiledir Pentacene_on_Ni(111)_STM.jpg}
-\caption{Skizze Koordinaten Atom und Molekül}
-\end{marginfigure}
 
 
 
@@ -152,6 +149,12 @@ Die Art der Bindung hängt von der Orientierung der beteiligten Orbitale zueinan
 
 Aus den p$_x$ und p$_y$-Orbitalen erhält man je eine $\pi$-Bindung: Die hantelförmigen p-Orbitale liegen parallel zueinander und senkrecht zur Bindungsachse. Dabei überlappen im Gegensatz zur $\sigma$-Bindung der p$_z$-Orbitalen beide Teile der Hanteln. Das Elektron in diesem bindenden Orbital hat einen Drehimpuls von $1 \hbar$ entlang der Kern--Kern--Achse, daher wird dies $\pi$-Bindung genannt.
 
+%
+\begin{marginfigure}
+\includegraphics[width=\textwidth]{\currfiledir p-zu-sigma.png}
+\caption{Atomare p-Orbitale können zu $\sigma$- und $\pi$-Bindungen kombinieren. }
+\end{marginfigure}
+%
 
 Insgesamt ist N$_2$ also aus einer $\sigma$-Bindung und zwei $\pi$-Bindungen
 aufgebaut.
@@ -159,7 +162,14 @@ aufgebaut.
 
 \section{Bindungswinkel}
 
+%
+\begin{marginfigure}
+\includegraphics[width=\textwidth]{\currfiledir h20.png}
+\caption{Bindungswinkel in  H$_2$O. }
+\end{marginfigure}
+%
 Wenn drei oder mehr Atome ein Molekül bilden, dann kann man den Winkel einer Bindung definieren und oft aus der Valenzbindungstheorie (näherungsweise) vorhersagen. Als Beispiel betrachten wir H$_2$O. Die Elektronenkonfiguration von Sauerstoff ist [He]2s$^2$2p$_x^2$2p$_y^1$2p$_z^1$. Für die Bindung relevant sind die ungepaarten Elektronen in den hier p$_y$ und p$_z$ genannten Orbitalen. Diese gehen jeweils eine $\sigma$-Bindung mit dem 1s-Elektron des Wasserstoffs ein. Das p$_y$-Orbital steht senkrecht auf dem  p$_z$-Orbital von Sauerstoff. Daher erwarten wir einen Bindungswinkel von 90$^\circ$. Dies ist nahe aber nicht exakt am experimentellen Wert von 104.5$^\circ$.
+
 
 
 \section{Hybridisierung}
@@ -176,8 +186,21 @@ Die neuen Hybrid-Orbitale $h_{1 .. 4}$ sind so gewählt, dass $\braket{h_i | h_j
  h_4 = s - p_x - p_y + p_z 
 \end{eqnarray}
 Diese Orbitale entstehen also durch Interferenz der ursprünglichen Orbitale und haben eine Ladungsverteilung, deren Keulen einen Tetraeder aufspannen. Der Bindungswinkel ist $\arccos (-\frac{1}{3}) = 109.5^\circ$. Methan (CH$_4$) ist daher tetraederförmig.
+%
+\begin{marginfigure}
+\includegraphics[width=\textwidth]{\currfiledir ch4.png}
+\caption{sp$^3$-Hybridisierung in CH$_4$. }
+\end{marginfigure}
+%
+
 
 Analog gibt es auch die sp$^2$ und die sp-Hybridisierung.  Die sp$^2$-Hybridisierung findet man beispielsweise in Ethen (C$_2$H$_4$). Die drei  sp$^2$-Orbitale jedes Kohlenstoff-Atoms sind an der Bindung der beiden Wasserstoff-Atome beteiligt und an einer der beiden C--C Bindungen. Die zweite C--C Bindung ist eine 'gewöhnliche' $\sigma$-Bindung zwischen den verbleibenden, nicht hybridisierten p-Orbitalen. Dadurch ergeben sich die Winkel in der HCH bzw. HCC-Bindung zu circa 120$^\circ$.
+%
+\begin{marginfigure}
+\includegraphics[width=\textwidth]{\currfiledir c2h4.png}
+\caption{sp$^2$-Hybridisierung in C$_2$H$_4$. }
+\end{marginfigure}
+%
 
 Ein Beispiel für die sp-Hybridisierung ist Ethin (C$_2$H$_2$).
 
