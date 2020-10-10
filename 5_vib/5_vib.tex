@@ -1,6 +1,6 @@
-\renewcommand{\lastmod}{\today}
+%\renewcommand{\lastmod}{\today}
 
-\chapter{Schwingungsspektrum}
+\chapter{Schwingungsspektroskopie im Infraroten}
 
 
 \section{Ziele}
@@ -8,6 +8,8 @@
 \begin{itemize}
 \item Sie können Vibrationssspektren von Molekülen in der Gasphase wie das untenstehende von HCN erklären und daraus Eigenschaften des Moleküls wie die  Federkonstante der Bindung oder die  Molekülform bestimmen.
 \end{itemize}
+
+%\tikzexternaldisable
 
 \begin{figure}
 \inputtikz{\currfiledir fig_hcn}
@@ -109,6 +111,13 @@ und $\omega_0 = \sqrt{k / \mu}$. Die Aufenthaltswahrscheinlichkeit der Wellenfun
 Aufenthaltswahrscheinlichkeit an den Umkehrpunkten des Oszillators besonders hoch, da dort klassisch ja die Geschwindigkeit Null ist.
 
 
+\begin{marginfigure}
+\inputtikz{\currfiledir vib_state_wf}
+\caption{Die Eigenfunktionen des quantenmechanischen harmonischen Oszilatorrs für $\nu = 0 \dots 5$ (dünne Linie) und die Aufenthaltswahrscheinlichkeit (gefüllte Kurven). Die Position in y-Richtung entspricht der Eigen-Energie des Zustands auf der Skala des parabelförmigen Bindungspotentials im Hintergrund.
+\label{fig:vib_1d_WF}}
+\end{marginfigure}
+
+
 \section{Auswahlregeln für reine Schwingungsübergänge}
 
 Lässt sich die Schwingung eines Moleküls (eigentlich der Kerne entlang der Bindungsachse) durch die Absorption eines Photons anregen? Oder anderherum: hinterlassen die Schwingungs-Energie-Eigenwerte $E_\nu$ von oben einen beobachtbaren Effekt? Hier wollen wir uns darauf beschränken, \emph{nur} die Schwingung anzuregen. Weiter unten werden wir Kombinationen mit anderen Anregungen (Rotation, Elektronisch) diskutieren.
@@ -149,10 +158,14 @@ Die harmonische Parabel ist nur eine erste Näherung für das Bindungspotential.
  V(R) = D_e \left( 1 - e^{-a (R - R_0)} \right)^2 \approx D_e \, a^2 (R - R_0)^2 + \cdots
 \end{equation}
 Dabei ist $D_e$ die Dissoziationsenergie des Moleküls, also die Tiefe des Minimums unter der Energie bei $R \rightarrow \infty$. In der harmonischen Näherung des Morse-Potentials entspricht $k = 2 D_e a^2$ der Federkonstanten bzw. $\omega_0 = a \sqrt{2 D_e / \mu}$ der Eigenfrequenz. Als Energie-Eigenwerte erhält man
-\begin{equation}
- E_\nu = \hbar \omega_0 \left( \nu  + \frac{1}{2} \right)
- - \frac{\hbar^2 \omega_0^2}{4 D_e} \left( \nu  + \frac{1}{2} \right)^2
-\end{equation}
+\begin{align}
+ E_\nu =&  \hbar \omega_0 \left( \nu  + \frac{1}{2} \right)
+ - \frac{\hbar^2 \omega_0^2}{4 D_e} \left( \nu  + \frac{1}{2} \right)^2 \\
+ = &
+ \hbar \omega_0 \left( \nu  + \frac{1}{2} \right)
+ - \chi_e \, \hbar \omega_0  \left( \nu  + \frac{1}{2} \right)^2
+\end{align}
+mit der Anharmonizitätskonstanten $\chi_e =\hbar \omega_0 / 4 D_e$.
 Die Zustände sind also nicht mehr äquidistant. Die Abstände zwischen benachbarten Zuständen nehmen mit steigender Quantenzahl $\nu$ ab. Die Auswahlregeln werden auch aufgeweicht, und Übergänge mit 
 \begin{equation}
 \Delta \nu = \pm 1, \pm 2 , \pm 3, \dots
@@ -162,6 +175,279 @@ werden erlaubt, wenn auch sie mit steigendem $|\Delta \nu |$ schnell schwächer 
  
 Das anharmonische Bindungspotential erklärt auch die Expansion von Festkörpern --- eigentlich ein Thema für den dritten Abschnitt der Vorlesung. Der Schwerpunkt der Aufenthalts-Wahrscheinlichkeit der Schwingungs-Wellenfunktionen verschiebt sich mit steigender Quantenzahl im anharmonischen Oszillator zu größeren Bindungsabständen. Im harmonischen Oszillator bleibt er immer beim Gleichgewichtsabstand. Mit höherer Temperatur werden also immer höhere Schwingungszustände besetzt und so dehnt sich Materie aus.
 
+
+\section{Rotation und Schwingung gleichzeitig}
+
+Nun soll auch die Rotation des Moleküls erlaubt sein. Zunächst gehen wir davon aus, dass diese beiden Bewegungen sich nicht gegenseitig beeinflussen, also nicht gekoppelt sind. Die Energie-Eigenwerte sind dann gerade die Summe der Zustandsenergien aus Rotation und Schwingung\sidenote{Wir nehmen hier einen harmonischen Oszillator und einen starren Rotator an!}
+\begin{equation}
+E (\nu, J) = E_\text{vib}(\nu) + E_\text{rot}(J) = \hbar \omega_0 (\nu + \frac{1}{2}) + B J (J+1) \label{eq:vib_rot_simple}
+\end{equation}
+mit der Rotations-Quantenzahl $J$ und der Vibrations-Quantenzahl $\nu$. Der energetische Abstand der Vibrationszustände ist mit etwa $1000$~cm$^{-1}$  größer als der der Rotationszustände mit etwa $100$~cm$^{-1}$. Man kann sich also vorstellen, dass nun jeder Schwingungszustand mit einer Sequenz von Rotationszuständen dekoriert ist.
+
+Die Auswahlregeln sind zunächst die selben wie wir sie bereits für die beiden Prozesse separat diskutiert hatten. Hinzu kommt die Möglichkeit, dass nichts passiert, also sich nur die andere Quantenzahl verändert. Damit haben wir
+\begin{equation}
+ \Delta \nu = 0, \pm 1 \quad \text{und} \quad \Delta J = 0, \pm 1 
+\end{equation}
+aber nicht alle Kombinationen sind möglich oder interessant.
+
+\paragraph{Nichts passiert} Der Fall $\Delta \nu = \Delta J = 0$ ist langweilig.
+
+\paragraph{Reine Rotationsübergänge} Falls $\Delta \nu = 0$ ändert sich nur der Rotationszustand. Dies ist die Situation, die wir im letzten Kapitel besprochen haben, und führt zu Linien  in einem anderen Spektralbereich, bei etwa $\bar{\nu} \approx 100$~cm$^{-1}$.
+
+\paragraph{Reine Schwingungsübergänge} Am Anfang dieses Kapitel haben wir den  harmonische Oszillator betrachtet unter der Annahme $J=0$. Dies schließt $\Delta J = 0$ mit ein. Bei einem von Null verschiedenen $J$ muss sich dieses aber bei einem Schwingungsübergänge ändern, zumindest für eine zweiatomiges Molekül. Eine höhere Schwingungsanregung ändert den mittleren Kern--Kern--Abstand und somit das Trägheitsmoment. Die Drehimpulserhaltung verlangt dann, dass sich die Rotationsquantenzahl $J$ ändert. $\Delta J = 0$ ist also verboten für einfache, zu symmetrische Moleküle, andernfalls erlaubt. Wenn diese Übergänge erlaubt sind, dann führen sie zu einer einzigen Linien im Spektrum bei $ \bar{\nu}_0 = (\hbar \omega_0)/(h c) $, analog dem reinen Schwingungsspektrum. Diese wird 'Q-Zweig' genannt. 
+
+\paragraph{P-Zweig} Falls $\Delta J = -1$ ist, und $\Delta \nu = +1$ (in Absorption eines IR Photons) oder $-1$ (in Emission eines IR Photons), dann führen diese Übergänge zum sogenannten P-Zweig. Die Linienpositionen sind
+\begin{equation}
+ \frac{\Delta E}{h c} = \frac{1}{h c} ( E(\nu +1, J -1) - E(\nu, J) ) = \frac{\hbar \omega_0}{h c}   - 2 B J
+\end{equation}
+Wir erhalten also eine äquidistante Schar von Linien, völlig analog dem reinen Rotationsspektrum, insbesondere auch im dort besprochenen Verlauf der Amplituden. Der einzige Unterschied ist das negative Vorzeichen. Die Linienschar ist also gespiegelt gegenüber dem THz-Spektrum und beginnt an der reinen Schwingungslinie $\bar{\nu}_0 $.
+
+\paragraph{R-Zweig} Analog zum P-Zweig, nur mit  $\Delta J = +1$ nur mit den Linienpositonen
+\begin{equation}
+ \frac{\Delta E}{h c} =  \bar{\nu}_0   + 2 B J
+\end{equation}
+also in der gleichen Orientierung wie das THz-Spektrum und bei $\bar{\nu}_0 $ beginnend.
+
+Mit diesen Überlegungen können wir die am Anfang des Kapitel gezeigten Spektren zumindest qualitativ erklären.
+
+\section{Rotations-Schwingungs-Kopplung}
+
+Bei der Diskussion des Q-Zweigs oben hatten wir ja schon den Fall, dass Rotation und Schwingung nicht unabhängig voneinander sind. Nur wenn diese Koppeln kann der Q-Zweig erlaubt sein. Hier soll dies nun etwas detaillierter besprochen werden, und auch warum dies ein Q-Zweig und keine Q-Linie ist.
+
+Im Molekül geschehen Rotation und Schwingung gleichzeitig, aber auf etwa um den Faktor 10 bis 00 verschiedenen Zeitskalen. Während einer Schwingungsperiode dreht sich das Molekül sehr oft. Das heißt aber auch, dass die Bindungslänge für die Rotation nicht konstant ist, sondern sich permanent ändert. Gleichzeit sind aber Gesamtenergie und Drehimpuls erhalten. Es muss also zu einem permanenten Austausch von Energie zwischen Rotation, Schwingung und Bindungspotential kommen. Was wir früher und auch weiterhin 'Rotationsenergie' nennen ist der zeitliche Mittel dieser Energie.
+
+Um Gleichung \ref{eq:vib_rot_simple} zu verbessern, nehmen wir jetzt sowohl die Anharmonizität des Potentials als auch die Zentrifugaldehnung des Rotators mit in Betracht. Die Kopplung zwischen Rotation und Schwingung erfolgt dann über Rotationskonstanten, die von der Schwingungsquantenzahl $\nu$ abhängen
+\begin{align}
+ E(\nu, J) = & \hbar \omega_0 \left( \nu  + \frac{1}{2} \right)
+ - \chi_e \, \hbar \omega_0  \left( \nu  + \frac{1}{2} \right)^2 \\
+ & + B(\nu) J (J+1) - D(\nu) J^2 (J+1)^2  \nonumber
+\end{align}
+mit
+\begin{equation}
+B(\nu) = B_0 - \alpha \left(\nu + \frac{1}{2} \right) \quad \text{und} \quad
+D(\nu) = D_0 + \beta \left(\nu + \frac{1}{2} \right) 
+\end{equation}
+Die (positiven) Koeffizienten $\alpha$ und $\beta$ beschreiben die  Rotations-Schwingungs-Kopplung. Das Vorreichen vor $\alpha$ ergibt sich aus der $\nu$-Abhängigkeit des Mitteleren Bindungsabstands $R$: dieser steigt mit $\nu$, wodurch das gemittelte $1/R^2$ und somit auch die gemittelte Rotationskonstante $B$ fällt, also $\alpha$ mit negativem Vorzeichen eingeht. Das Vorzeichen vor $\beta$ ist positiv, weil das anharmonische Bindungspotential mit $\nu$ weicher (also flacher) wird und so die Zentrifugalkraft einen größeren Einfluss auf die Rotation hat.
+
+Alles zusammen rücken so die Linien im P-Zweig auseinander mit steigendem $J$, im R-Zweig rücken sie näher zusammen. Der Q-Zweig wird jetzt wirklich ein Zweig, da das anharmonische Potential ja nicht mehr äquidistante Zustände hat, $\Delta \nu = 1$ also mehrerer, aber eng benachbarte Linien liefert. Diese sind in der Abbildung am Anfang des Kapitels nicht aufgelöst.
+
+
+\section{Mehratomige Moleküle}
+
+Wenn ein Molekül aus mehr als zwei Atomen besteht, dann gibt es viele verschiedene, komplexe Muster der Auslenkung der einzelnen Atome aus ihrer Gleichgewichtsposition. Es gibt also mehr als eine Schwingungsmode in solchen Molekülen.
+
+Die Anzahl der Schwingungsmoden lässt sich aus der Summe der Freiheitsgrade berechnen. Bei $N$ Atomen im Molekül hat jedes Atom $3$ Translations-Freiheitsgrade\sidenote{Atome sind hier punktförmig, können also nicht rotieren und haben daher keine Rotationsfreiheitsgrade}. Diese insgesamt $3N$ Freiheitsgrade müssen auch im Molekül existieren. Sie lassen sich aufteilen in
+\begin{itemize} \setlength{\itemsep}{0pt}
+\item Schwerpunktbewegung: 3 Freiheitsgrade
+\item Rotation des Moleküls: 2 Freiheitsgrade, falls lineares Molekül, sonst 3 Freiheitsgrade
+\item Schwingung: der ganze Rest, also $3N-5$ für ein lineares Molekül bzw. $3N-6$ für alle anderen Moleküle. 
+\end{itemize}
+
+Ein zweiatomiges Molekül wie beispielsweise H$_2$ muss linear sein, hat also nur einen Schwingungs-Freiheitsgrad. Ein dreiatomiges Molekül kann linear sein, wie CO$_2$ und hat dann 4  Schwingungs-Freiheitsgrade, oder es ist nicht gerade, wie H$_2$O, und hat dann nur 3  Schwingungs-Freiheitsgrade. Napthalin beispielsweise besteht aus $N=18$ Atomen und hat damit  48 Schwingungs-Freiheitsgrade. Das Konzept der Normalmoden aus der Mechanik erlaubt hier den Überblick zu behalten.
+
+
+\section{Normalmoden}
+
+Wie handhabt man ein System aus $N$ Massen, die alle durch mehr oder weniger harmonische Potentiale miteinander verbunden sind? Dies ist ein Problem der klassischen Mechanik und führt zu den Normalmoden.\sidenote{siehe beispielsweise Kapitel 6.3 in \cite{Demtröder_molekuelphysik}}
+
+Wir benutzen Masse-gewichtete generalisierte Koordinaten $q_i = \sqrt{m_i}  \Delta \tilde{q}_i$, wobei der Index $i$ über alle Atome und alle Raumrichtungen läuft, also von $1$ bis $3N$. $m_i$ ist die Masse des zugehörigen Atoms und 
+$\Delta \tilde{q}_i$ die Auslenkung aus der Gleichgewichtsposition. Damit wird  die kinetische Energie $T$ 
+\begin{equation}
+T = \frac{1}{2} \sum_{i=1}^{3N} \dot{q}_i^2
+\end{equation}
+Für das Potential setzen wir eine Taylor-Reihe nach $q_i$ an. Wir legen den Nullpunkt der Energieskala auf das Minimum des Potentials. Damit verschwinden die ersten beiden Terme der Taylor-Reihe und wir behalten nur den nächsten
+\begin{equation}
+V \approx \frac{1}{2} \sum_{i,k = 1}^{3N} \frac{\partial V}{\partial q_i \partial q_k} \, q_i \, q_k = 
+ \frac{1}{2} \sum_{i,k = 1}^{3N} b_{ik} \, q_i \, q_k 
+\end{equation}
+Damit können wir die Lagrange -Funktion $L = T - V$ bilden und erhalten in diesem Formalismus die Bewegungsgleichungen
+\begin{equation}
+ \ddot{q}_i + \sum_{k = 1}^{3N} b_{ik} \, q_k = 0 \quad \text{für} \quad i = 1 \dots 3N
+\end{equation}
+oder als Matrix mit $\tilde{\mathbf{B}} = (b_{ik})$ und $\mathbf{q} = (q_i)$
+\begin{equation}
+\ddot{\mathbf{q}} + \tilde{\mathbf{B}}  \cdot  \mathbf{q} = 0
+\end{equation}
+Dies ist ein System aus $3N$ gekoppelten Differentialgleichungen. Um sie zu entkoppeln diagonalisieren wir 
+$\tilde{\mathbf{B}} $, suchen also $3N$ Eigenvektoren   $\mathbf{q}_n^0$ und (potentiell entartete) Eigenwerte $\lambda_n$ so dass
+\begin{equation}
+ \tilde{\mathbf{B}} \cdot \mathbf{q}_n^0 = \lambda_n \mathbf{q}_n^0 \quad \text{und damit} \quad
+ \mathbf{q}_n(t) =  \mathbf{q}_n^0 \, e^{i \, t \, \sqrt{\lambda_n}}
+\end{equation}
+Die Eigenvektoren   $\mathbf{q}_n^0$ nennt man Normalmoden. Sie beschreiben also die gleichzeitige Bewegung aller Kerne in alle Raumrichtungen bei der Normalmode $n$ mit der Frequenz\sidenote{Manche $\lambda_n$ müssen Null sein, da es ja nur $3N - 5$ (oder 6) Normalmoden gebe kann.} $\omega_n = \sqrt{\lambda_n}$. Da die $b_{ik}$ reelwertig sind, schwingen in der Normalmode alle Atome in Phase, machen also gleichzeitig den Nulldurchgang, und natürlich mit der gleichen Frequenz. In der Basis der Normalmoden vereinfacht sich das Potential: es hat nur noch quadratische Formen der Art $\frac{1}{2} k q_i^2$ aber keine bi-linearen der Art $\frac{1}{2} k q_i q_k$, sonst wäre $\tilde{\mathbf{B}} $ ja nicht dialogisiert.
+
+Die Normalmoden $\mathbf{q}_n^0$ sind komplexe Muster der Bewegung aller Atome. Man stellt diese grafisch dar, kann sie aber nicht als Achse in einem Diagramm verwenden. Dazu reduziert man weiter auf die Normalkoordinate
+\begin{equation}
+Q_n(t) = | \mathbf{q}_n (t) |
+\end{equation}
+also die masse-gewichtete Auslenkung aller Atome. Dieses $Q$ übernimmt in mehratomigen Molekülen die Rolle von $R$ im zweiatomigen Molekül. Die Energie einer Elementar-Anregung ist weiterhin 
+\begin{equation}
+E = \hbar \omega_n = \hbar	\sqrt{\lambda_n}
+\end{equation}
+Höhere Anregungen haben dann entsprechende Vielfache dieser Energie, und entsprechende Vielfache der Auslenkung 
+ $\mathbf{q}_n^0$.
+
+
+\section{Beispiele}
+
+Wie kommt man an die Normalmoden? Das Aufstellen und Diagonalisieren der Matrix  $\tilde{\mathbf{B}} $ ist sicherlich unpraktikabel. Einen systematischen Weg bietet die Betrachtung der Symmetrie der Moleküle, die sich in der Symmetrie der Normalmoden widerspiegeln muss. Dies geschieht im Rahmen der Gruppentheorie, die hier allerdings zu weit gehen würde.\sidenote{Mehr dazu in der Vorlesung zur Kristallographie, oder qualitativ in \cite{Atkins}.} Hier raten wir einfach. Dabei hilft es, vorher auszurechnen, wie viele Moden man finden muss, also wie viele Schwingungsfreiheitsgrade es gibt. Auch sollte sich dabei der Schwerpunkt nicht bewegen, oder das ganze Molekül sich drehen, weil das ja separat behandelt wird.
+
+\paragraph{Kohlendioxid} Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden
+\begin{description}
+\item[Symmetrische Streckschwingung]
+%$\overleftarrow{\text{O}} $ -- $\text{C}$ -- $\overrightarrow{\text{O}} $ 
+  $\bar{\nu} = 1337$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment nicht, die Schwingung ist also nicht IR aktiv, wäre im Spektrum also nicht zu sehen.
+\begin{marginfigure}
+\begin{tikzpicture}
+\useasboundingbox (-0.2,-0.2) rectangle (2,0.3);
+%\draw (-0.2,-0.2) rectangle (2,0.3);
+
+\draw  (0,0) node (o1) {O};
+\draw  (0.75,0) node (c) {C};
+\draw  (1.5,0) node (o2) {O};
+
+\draw (o1) -- (c) -- (o2);
+\draw[->] (o1.north east) -- (o1.north west);
+\draw[<-] (o2.north east) -- (o2.north west);
+\end{tikzpicture}
+\end{marginfigure}
+
+
+\item[Asymmetrische Streckschwingung]
+%$\overleftarrow{\text{O}} $ -- $\text{C}$ -- $\overleftarrow{\text{O}} $ bei der 
+ $\bar{\nu} = 2349$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
+\begin{marginfigure}
+\begin{tikzpicture}
+\useasboundingbox (-0.2,-0.2) rectangle (2,0.3);
+%\draw (-0.2,-0.2) rectangle (2,0.3);
+
+\draw  (0,0) node (o1) {O};
+\draw  (0.75,0) node (c) {C};
+\draw  (1.5,0) node (o2) {O};
+
+\draw (o1) -- (c) -- (o2);
+\draw[<-] (o1.north east) -- (o1.north west);
+\draw[<-] (o2.north east) -- (o2.north west);
+\draw[->] (c.north east) -- (c.north west);
+\end{tikzpicture}
+\end{marginfigure}
+
+\item[Biegeschwingung] % $\uparrow$O -- $\downarrow$C -- $\uparrow$ O  bei der 
+ $\bar{\nu} = 667$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv. Diese Mode ist zweifach entartet, da sie auch in der Ebene senkrecht zum Papier schwingen könnte. Für die Biegung ist das Potential weicher, die Frequenz daher niedriger als für die Streckung.
+\begin{marginfigure}
+\begin{tikzpicture}
+\useasboundingbox (-0.3,-0.2) rectangle (2,0.3);
+%\draw (-0.2,-0.2) rectangle (2,0.3);
+
+\draw  (0,0) node (o1) {O};
+\draw  (0.75,0) node (c) {C};
+\draw  (1.5,0) node (o2) {O};
+
+\draw (o1) -- (c) -- (o2);
+\draw[<-] (o1.north west) -- (o1.south west);
+\draw[<-] (o2.north east) -- (o2.south east);
+\draw[->] (c.north east) -- (c.south east);
+\end{tikzpicture}
+\end{marginfigure}
+
+\end{description}
+
+
+\paragraph{Wasser} Ein nicht-lineares Molekül mit $f=9 - 6 = 3$ Schwingungsfreiheitsgraden
+\begin{description}
+\item[Symmetrische Streckschwingung] 
+  $\bar{\nu} = 3657$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
+\begin{marginfigure}
+\begin{tikzpicture}
+\useasboundingbox  (-0.5,-0.5) rectangle (1.5,1.1);
+%\draw (-0.5,-0.5) rectangle (1.5,1.1);
+
+\draw  (0,0) node (h1) {H};
+\draw  (0.5,0.5) node (o) {O};
+\draw  (1,0) node (h2) {H};
+
+\draw (h1) -- (o) -- (h2);
+\draw[->] (h1.south west) -- ++(-135:4mm);
+\draw[->] (h2.south east) -- ++(-45:4mm);
+\draw[->] (o.north) -- ++(up:4mm);
+\end{tikzpicture}
+\end{marginfigure}
+
+\item[Symmetrische Streck-Biegeschwingung]
+  $\bar{\nu} = 1595$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
+\begin{marginfigure}
+\begin{tikzpicture}
+\useasboundingbox  (-0.5,-0.5) rectangle (1.5,1.1);
+%\draw (-0.5,-0.5) rectangle (1.5,0.75);
+
+\draw  (0,0) node (h1) {H};
+\draw  (0.5,0.5) node (o) {O};
+\draw  (1.,0) node (h2) {H};
+
+\draw (h1) -- (o) -- (h2);
+\draw[->] (h1.south west) -- ++(-45:4mm);
+\draw[->] (h2.south east) -- ++(-135:4mm);
+\draw[->] (o.north) -- ++(up:4mm);
+\end{tikzpicture}
+\end{marginfigure}
+
+\item[Asymmetrische Schwingung]
+  $\bar{\nu} = 3756$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
+\begin{marginfigure}
+\begin{tikzpicture}
+\useasboundingbox  (-0.5,-0.5) rectangle (1.5,0.75);
+%\draw (-0.5,-0.5) rectangle (1.5,0.75);
+
+\draw  (0,0) node (h1) {H};
+\draw  (0.5,0.5) node (o) {O};
+\draw  (1.,0) node (h2) {H};
+
+\draw (h1) -- (o) -- (h2);
+\draw[->] (h1.south west) -- ++(-135:4mm);
+\draw[->] (h2.north east) -- ++(135:4mm);
+\draw[->] (o.north) -- ++(east:4mm);
+\end{tikzpicture}
+\end{marginfigure}
+
+\end{description}
+
+\paragraph{Cyanwasserstoff (Blausäure, HCN)}  Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden, analog zu Kohlendioxid oben. Das Spektrum am Anfang des Kapitels zeigt die Biegeschwingung bei $\bar{\nu} = 712$~cm$^{-1}$ und deren ersten Oberton bei ungefähr der doppelten Frequenz. Die Mode bei  $\bar{\nu} = 3312$~cm$^{-1}$ ist die  asymmetrische Streckschwingung. Die symmetrische Streckschwingung ist bei $\bar{\nu} = 2097$~cm$^{-1}$ und in der Abbildung nicht gezeigt. Im Gegensatz zu CO$_2$ bewegt sich in dieser Mode das Kohlenstoffatom ebenfalls, da die Massen von H und N verschieden sind, und sich ansonsten der  Schwerpunkt bewegen würde. Nur für den Grundton der Biegeschwingung ist der P-Zweig erlaubt.
+\begin{marginfigure}
+\begin{tikzpicture}
+\useasboundingbox (-0.2,-0.2) rectangle (3,0.3);
+%\draw (-0.2,-0.2) rectangle (2,0.3);
+
+\draw  (0,0) node (o1) {H};
+\draw  (0.75,0) node (c) {C};
+\draw  (1.5,0) node (o2) {N};
+\draw  (2.4,0) node (t1) {asym.};
+
+
+\draw (o1) -- (c) -- (o2);
+\draw[->] (o1.north east) -- (o1.north west);
+\draw[->] (o2.north east) -- (o2.north west);
+\draw[<-] (c.north east) -- (c.north west);
+
+
+\end{tikzpicture}
+\end{marginfigure}
+\begin{marginfigure}
+\begin{tikzpicture}
+\useasboundingbox (-0.2,-0.2) rectangle (3,0.3);
+%\draw (-0.2,-0.2) rectangle (2,0.3);
+
+\draw  (0,0) node (o1) {H};
+\draw  (0.75,0) node (c) {C};
+\draw  (1.5,0) node (o2) {N};
+\draw  (2.4,0) node (t1) {sym.};
+
+\draw (o1) -- (c) -- (o2);
+\draw[->] (o1.north east) -- (o1.north west);
+\draw[<-] (o2.north east) -- (o2.north west);
+\draw[<-] (c.north east) -- (c.north west);
+
+\end{tikzpicture}
+\end{marginfigure}
 
 
 

@@ -27,8 +27,8 @@
 \usepackage{chemformula}
 
 \input{tikz_header}
-%\usetikzlibrary{external}
-%\tikzexternalize[prefix=figures/]
+\usetikzlibrary{external}
+\tikzexternalize[prefix=tikz_external/]
 
 
 
@@ -142,6 +142,10 @@
   \renewcommand\eqref[1]{{\let\my@tag@font\relax\amsmath@eqref{#1}}}
 \makeatother
 
+
+%\includeonly{1_VB/1_VB}
+%\includeonly{2_MO/2_MO}
+%\includeonly{2_MO/2_MO_teil2}
 %\includeonly{3_diel/3_diel}
 %\includeonly{4_rot/4_rot}
 %\includeonly{5_vib/5_vib}

@@ -26,14 +26,14 @@
     scale only axis
     ]
 
-\nextgroupplot[ylabel = {absorbance},xmin=620, xmax = 820, xtick = {715}, ytick pos = left]
+\nextgroupplot[ylabel = {Extinktion},xmin=620, xmax = 820, xtick = {712}, ytick pos = left]
  \addplot[no markers] table [x index=0, y index=1] {\currfiledir hcn.dat};
 
 
 %\nextgroupplot[group/empty plot]
 % second plot should be empty    
 
-\nextgroupplot[ytick = \empty, yticklabel = \empty,   xlabel = {wavenumber $\bar{\nu}$ (cm$^{-1}$)}, xmin=1320, xmax = 1520, xtick = {1415}, xticklabel = {1415}]
+\nextgroupplot[ytick = \empty, yticklabel = \empty,   xlabel = {Wellenzahl $\bar{\nu}$ (cm$^{-1}$)}, xmin=1320, xmax = 1520, xtick = {1415}, xticklabel = {1415}]
  \addplot[no markers] table [x index=2, y index=3] {\currfiledir hcn.dat};
 
 	\draw [|-|] (axis cs:1365,3) -- node[above] {100 cm$^{-1}$} (axis cs: 1465,3);
@@ -41,7 +41,7 @@
 %	\draw [<->] (axis cs:1390,3) -- node[above] {50 cm$^{-1}$} (axis cs: 1440,3);
 
 \nextgroupplot[ytick = \empty,
-   yticklabel =\empty, xmin=3200, xmax=3400, xtick = {3310}, xticklabel = {3310}
+   yticklabel =\empty, xmin=3200, xmax=3400, xtick = {3312}, xticklabel = {3312}
  %  height=2*\ploth + \vsep,
  %  yshift=\ploth+\vsep
   ]
