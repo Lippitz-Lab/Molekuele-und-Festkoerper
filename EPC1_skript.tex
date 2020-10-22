@@ -25,6 +25,9 @@
 
 \usepackage{modiagram}
 \usepackage{chemformula}
+\usepackage{chemfig}
+\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}
+
 
 \input{tikz_header}
 \usetikzlibrary{external}
@@ -149,8 +152,13 @@
 %\includeonly{3_diel/3_diel}
 %\includeonly{4_rot/4_rot}
 %\includeonly{5_vib/5_vib}
+%\includeonly{6_raman/6_raman}
+\includeonly{7_elec/7_elec}
+
 
 \begin{document}
+
+  \tikzexternaldisable
 
 
 \title{Experimentalphysik C1 \\ Molekülphysik und Festkörperphysik I}
@@ -178,10 +186,14 @@
 
 \part{Spektroskopie von Molekülen}
 
-
 \include{3_diel/3_diel}
 \include{4_rot/4_rot}
 \include{5_vib/5_vib}
+\include{6_raman/6_raman}
+\include{7_elec/7_elec}
+
+\part{Festkörperphysik I}
+
 
 %-------
 %

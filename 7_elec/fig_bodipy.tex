@@ -1,0 +1,38 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+ \pgfplotsset{compat=newest}
+
+
+
+
+\begin{document}
+
+
+\pgfplotsset{
+tufte line/.style={
+    axis line style={draw opacity=0},
+    ytick=\empty,
+    axis x line*=bottom,
+    x axis line style={
+      draw opacity=1,
+      gray,
+      thick
+},
+ %   yticklabel=\pgfmathprintnumber{\tick}
+  }
+  }
+  
+  
+\begin{tikzpicture}
+    \begin{axis}[no markers,  tufte line, xlabel={Wellenlänge (nm)},
+    xmin = 500,
+    xmax = 800,
+    width=10cm, height=5cm
+    ]
+    \addplot table [col sep=comma, x=Wavelength, y=Excitation] {BODIPY_650_665.csv};
+    \addplot table [col sep=comma, x=Wavelength, y=Emission] {BODIPY_650_665.csv};	
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

@@ -1,8 +1,9 @@
 %\renewcommand{\lastmod}{\today}
 
-\chapter{Dielektrische Eigenschaften von Molekülen}
+\chapter{Überblick und makroskopische Beschreibung}
+%Dielektrische Eigenschaften von Molekülen
 
-
+\label{chap:3_diel}
 
 
 \section{Ziele}
@@ -91,7 +92,7 @@ Das Thema der folgenden Kapitel ist, wie man aus Vermessung von $\epsilon$ Aussa
 
 \section{Unpolare Moleküle: Verschiebungspolarisation}
 
-Betrachten wir zunächst unpolare Moleküle, also solche, die kein permanentes Dipolmoment  besitzen\sidenote{siehe auch \cite[Kapitel 3]{Haken_wolf_II}}. Dies sind insbesondere zentro-symmetrische Moleküle wie H$_2$,  O$_2$,  N$_2$,  CCl$_4$. Aber ein externes angelegtes elektrisches Feld verschiebt die Ladungen\sidenote{Elektronen gegenüber Kernen, aber auch Kationen gegenüber Anionen} relativ zueinander und induziert ein Dipolmoment
+Betrachten wir zunächst unpolare Moleküle, also solche, die kein permanentes Dipolmoment  besitzen\sidenote{siehe auch \cite[Kapitel 3]{Haken_wolf_II}}. Dies sind insbesondere zentro-symmetrische Moleküle wie \ch{H2}, \ch{O2},\ch{N2}, \ch{CCl4}. Aber ein externes angelegtes elektrisches Feld verschiebt die Ladungen\sidenote{Elektronen gegenüber Kernen, aber auch Kationen gegenüber Anionen} relativ zueinander und induziert ein Dipolmoment
 \begin{equation}
  \vec{p}_\text{ind} = \alpha \, \vec{E}_\text{lokal}
 \end{equation}
@@ -111,8 +112,8 @@ Man kann also die dielektrische Konstante $\epsilon$ messen und die die Polarisi
 \begin{marginfigure}
 \begin{tabular}{llll}
  & $\braket{\alpha'} $ & $\alpha'_\perp$ & $\alpha'_\parallel$ \\
-H$_2$ & 0.79 & 0.61 & 0.85 \\
-C$_6$H$_6$ & 10.3 & 6.7 & 12.8 
+\ch{H2} & 0.79 & 0.61 & 0.85 \\
+\ch{C6H6} & 10.3 & 6.7 & 12.8 
 \end{tabular}
 \caption{Polarisierbarkeitsvolumen einiger Moleküle (in Einheiten von $10^{-30}$ m$^3$.)}
 \end{marginfigure}
@@ -148,7 +149,7 @@ _0} \, \alpha_\text{optisch} \label{eq:diel_Lorentz_Lorenz}
  
 \section{Polare Moleküle: Orientierungspolarisation}
  
-Polare Moleküle wie beispielsweise H$_2$O oder HCl besitzen ein Dipolmoment $\mathbf{p}$, auch wenn kein externes Feld angelegt wird. Wenn dann doch ein Feld angelegt wird, dann verschieben sich nicht nur die Ladungen wie im letzten Abschnitt, sondern der schon vorhandene Dipol und damit das Molekül richtet sich im externen Feld aus. Dieser Ausrichtung stehen thermische Fluktuationen entgegen. Das entstehende Gleichgewicht ähnlich einer Boltzmann-Verteilung hängt vom Verhältnis der Energie des Dipols im Feld $\mathbf{p} \cdot \mathbf{E}$ und der thermischen Energie $k_B \, T$ ab. 
+Polare Moleküle wie beispielsweise \ch{H2O} oder \ch{HCl} besitzen ein Dipolmoment $\mathbf{p}$, auch wenn kein externes Feld angelegt wird. Wenn dann doch ein Feld angelegt wird, dann verschieben sich nicht nur die Ladungen wie im letzten Abschnitt, sondern der schon vorhandene Dipol und damit das Molekül richtet sich im externen Feld aus. Dieser Ausrichtung stehen thermische Fluktuationen entgegen. Das entstehende Gleichgewicht ähnlich einer Boltzmann-Verteilung hängt vom Verhältnis der Energie des Dipols im Feld $\mathbf{p} \cdot \mathbf{E}$ und der thermischen Energie $k_B \, T$ ab. 
 
 \paragraph{Verdünnte Gase} Wenn wir zunächst wieder den Einfluss der anderen Moleküle vernachlässigen, dann ist die makroskopische Orientierungspolarisation $\mathbf{P}_\text{or}$ die Vektor-Summe über die einzelnen statischen Dipolmomente $ \mathbf{p}$. Sei $\theta$ der Winkel zwischen dem einzelnen Dipolmoment und dem externen Feld, dann lässt sich dies schreiben als
 \begin{equation}
@@ -205,6 +206,13 @@ Für Atome liegt die Frequenz $\nu$ im Bereich von $10^{15}$~Hz $= 1$~PHz. Bei M
 
 \section{Lorentz-Oszillator-Modell}
 
+
+\begin{marginfigure}
+\inputtikz{\currfiledir lorentz_oszillator}
+
+\caption{Frequenzabhängigkeit des Real- und Imaginärteils des Lorentz-Oszillators.}
+\end{marginfigure}
+
 Alle oben diskutieren Phänomene sind Resonanzen. Das Lorentz-Oszillator-Modell ist ein einfaches Modell, mit dem die Frequenzabhängigkeit der dielektrischen Funktion in der Nähe solcher Resonanzen beschrieben werden kann. In einem gedämpften harmonischen Oszillator (Masse $m$, Dämpfungskonstante $\gamma$, Eigenfrequenz $\omega_0$) wird die Masse durch ein periodisches Elektrisches Feld (Amplitude $E_0$, Frequenz $\omega$) um $x$ ausgelenkt, da die Masse eine Ladung $e$ trägt. Alles zusammen
 \begin{equation}
  m \ddot{x} + \gamma \dot{x} + m \omega_0^2  x = e E_0 e^{+ i \omega t}
@@ -249,13 +257,13 @@ Wenn in einem Medium mehrere Resonanzen vorhanden sind, so addieren sich die Sus
 \epsilon(\omega)_\text{ges} = 1 + \chi(\omega)_\text{elec} +  \chi(\omega)_\text{ion}  + \chi(\omega)_\text{orient}
 \end{equation}
 
-\begin{figure}
+\begin{marginfigure}
+\inputtikz{\currfiledir multiple_lorentz_oszillator}
+
 \caption{Addition der Suszeptibilitäten}
-\end{figure}
+\end{marginfigure}
 
-Die Abbildung zeigt schematisch den Verlauf der dielektrischen Funktion $\epsilon(\omega)$ für Glas, also amorphes SiO$_2$. Man erkennt ... XXX
-
-XXX Lorentz-Linie
+Für Fensterglas liegt die elektronische Resonanz im Ultravioletten. Sichtbares Licht ist also im Frequenzbereich etwas unterhalb dieser Resonanz. Die sogenannte 'normale' Dispersion des Brechungsindex (ansteigend mit fallender Wellenlänge / steigender Frequenz) rührt gerade von dem Anstieg der dielektrischen Funktion zur elektronischen Resonanz hin her.
 
 
 \section{Die Kramers-Kronig-Relationen}

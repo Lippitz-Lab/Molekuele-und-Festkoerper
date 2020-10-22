@@ -1,0 +1,96 @@
+
+
+
+\pgfplotsset{
+tufte bar/.style={
+    ybar,
+    axis line style={draw opacity=0},
+%    xtick=\empty,
+    ymin=0,
+    bar width=2mm,
+    x=1.5*\pgfkeysvalueof{/pgf/bar width},
+    ymajorgrids,
+    grid style=white,
+    axis on top,
+    major tick length=0pt,
+    cycle list={
+      fill=gray, draw=none\\
+    },
+enlarge x limits={ abs=0.5*\pgfkeysvalueof{/pgf/bar width}
+    },
+    axis x line*=bottom,
+    x axis line style={
+      draw opacity=1,
+      gray,
+      thick
+},
+ %   yticklabel=\pgfmathprintnumber{\tick}
+  }
+  }
+  
+\pgfmathdeclarefunction{poiss}{1}{%
+  \pgfmathparse{(#1^x)*exp(-#1)/(x!)}%
+}
+
+
+
+  
+  
+\begin{tikzpicture}
+\useasboundingbox (-1.0,-1.0) rectangle (10.2,4.2);
+%\draw (-1,-1.0) rectangle (10.2,4.2);
+%
+
+
+\pgfmathsetmacro\plotw{32mm} % width of subplots
+\pgfmathsetmacro\ploth{40mm} % height of smaller subplots
+\pgfmathsetmacro\vsep{5pt}  % vertical separation between subplots
+\pgfmathsetmacro\hsep{5pt}  % horizontal separation between subplots
+
+\begin{groupplot}[
+    group style={
+       group size=3 by 1,
+       vertical sep=\vsep,
+       horizontal sep=\hsep,
+       x descriptions at=edge bottom},
+    height=\ploth,
+    width=\plotw,
+    ymax = 5,
+    ymin = 0,
+    xtick pos = bottom,
+    scale only axis
+    ]
+
+
+\nextgroupplot[tufte bar, ymax = 0.5, scale only axis,
+ylabel = {Wahrscheinlichkeit},
+xlabel = {Zustand  $m$},
+  every axis plot post/.append style={
+  samples at = {0,...,10}}]
+  
+  \addplot {poiss(0.7)};
+  \node[anchor=south] at (axis cs: 5, 0.4) {$S = 0.7$};
+
+
+\nextgroupplot[tufte bar, ymax = 0.5,  yticklabel = \empty, scale only axis, 
+xlabel = {Zustand  $m$},
+  every axis plot post/.append style={
+  samples at = {0,...,10}}]
+  \addplot {poiss(1.5)};
+    \node[anchor=south] at (axis cs: 5, 0.4) {$S = 1.5$};
+
+
+
+
+\nextgroupplot[ tufte bar, ymax = 0.5, yticklabel = \empty, scale only axis,  
+xlabel = {Zustand  $m$},
+  every axis plot post/.append style={
+  samples at = {0,...,10}}]
+  
+  \addplot {poiss(2.5)};
+    \node[anchor=south] at (axis cs: 5, 0.4) {$S = 2.5$};
+
+\end{groupplot}
+
+\end{tikzpicture}
+

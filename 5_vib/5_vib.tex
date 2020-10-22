@@ -2,6 +2,9 @@
 
 \chapter{Schwingungsspektroskopie im Infraroten}
 
+\label{chap:vib}
+
+%https://webbook.nist.gov/cgi/cbook.cgi?ID=C74884&Type=IR-SPEC&Index=1#IR-SPEC
 
 \section{Ziele}
 
@@ -13,7 +16,7 @@
 
 \begin{figure}
 \inputtikz{\currfiledir fig_hcn}
-\caption{Infrarot-Absorptionsspektrum von HCN Gas ???XXX (\cite{Maki_1995_HCN} via \href{https://hitran.org}{hitran.org}).
+\caption{Infrarot-Absorptionsspektrum von HCN Gas  (\cite{Maki_1995_HCN} via \href{https://hitran.org}{hitran.org}).
 \label{fig:vib_hcn}}
 \end{figure}
 
@@ -22,7 +25,7 @@
 \section{Wie misst man das ?}
 
 Das Bindungspotential eines Moleküls kann in der Nähe des Minimums, also um den Gleichgewichts-Bindungsabstand $R_0$ herum, harmonisch genähert werden.
-Wie wir in Kapitel XXX schon abgeschätzt hatten hat die Federkonstante dieses harmonischen Potentials einen Wert von etwas $k \approx 200$~N/m. Damit ergibt sich eine Eigenfrequenz des harmonischen Oszillator von $\omega = \sqrt{k / m}$ die einer optischen Wellenlänge von etwa $\lambda \approx 5$~\textmu m oder einer Wellenzahl $\bar{\nu} \approx 2000$~cm$^{-1}$ entspricht. 
+Wie wir in Kapitel \ref{chap:3_diel} schon abgeschätzt hatten hat die Federkonstante dieses harmonischen Potentials einen Wert von etwas $k \approx 200$~N/m. Damit ergibt sich eine Eigenfrequenz des harmonischen Oszillator von $\omega = \sqrt{k / m}$ die einer optischen Wellenlänge von etwa $\lambda \approx 5$~\textmu m oder einer Wellenzahl $\bar{\nu} \approx 2000$~cm$^{-1}$ entspricht. 
 
 Absorptionsspektren in diesen (Nah-)Infraroten Wellenlängenbereich misst man beispielsweise durch Fourier-Transformations-Infrarot-Spektroskopie (FTIR). Als Lichtquelle wird oft ein breitbandiger Infrarotstrahler benutzt, der aus einem Silizium-Carbid-Stab (Globar) besteht, durch den ein Strom fließt und so heizt. DAs durch die Probe transmittierte Licht wird durch ein Michelson-Interferometer geleitet und mit einem infrarot-  also Wärme-empfindlichen Detektor (Bolometer) gemessen. Dieser Detektor selbst kann nur die Gesamt-Intensität messen. Das Michelson-Interferomter wirkt aber als spektraler Filter mit einer sinusförmigen Transmission. Die Periode des spektralen Modulation wird über den Armlängen-Unterschied eingestellt und kontinuierlich variiert. Aus der Fourier-Transformation des gemessenen Intensität als Funktion des Armlängen-Unterschieds erhält man das Spektrum des Infrarot-Lichts, also Intensität als Funktion der Wellenlänge.
 
@@ -144,7 +147,7 @@ Reine Schwingungsübergang sind also nur dann erlaubt, wenn sich das permanente 
 \begin{equation}
  \Delta \nu = \pm 1
 \end{equation}
-Reine Schwingungsübergänge sind also nur zwischen benachbarten Zuständen möglich, und das auch nur für manche Moleküle, bei denen sich das Dipolmoment mit dem Kern-Kern-Abstand ändert. NO ist also infrarotaktiv, H$_2$ nicht. Da im harmonischen Oszillator die Zustände äquidistant sind, bestehen reine Schwingungsspektren in diesem Fall aus einer einzigen Linie bei 
+Reine Schwingungsübergänge sind also nur zwischen benachbarten Zuständen möglich, und das auch nur für manche Moleküle, bei denen sich das Dipolmoment mit dem Kern-Kern-Abstand ändert. \ch{NO} ist also infrarotaktiv, \ch{H2} nicht. Da im harmonischen Oszillator die Zustände äquidistant sind, bestehen reine Schwingungsspektren in diesem Fall aus einer einzigen Linie bei 
 \begin{equation}
  \bar{\nu}_\text{vib} = \frac{\hbar \omega_0}{h c} = \frac{\sqrt{k / \mu} }{2 \pi  c}
 \end{equation}
@@ -172,6 +175,13 @@ Die Zustände sind also nicht mehr äquidistant. Die Abstände zwischen benachba
 \end{equation}
 werden erlaubt, wenn auch sie mit steigendem $|\Delta \nu |$ schnell schwächer werden. Der spektroskopisch sichtbare Effekt des anharmonischen Bindungspotentials sind also die Obertöne, also Linien bei in etwa ganzzahligen Vielfachen der harmonischen Linie. Die Aufspaltung der harmonischen Linie selbst ist deutlich schwieriger zu beobachten. Für CO beispielsweise liegt der Grundton bei $\bar{\nu}_1 = 2142$~cm$^{-1}$ und der erste Oberton bei 
  $\bar{\nu}_2 = 4269$~cm$^{-1}$, aber $2 \bar{\nu}_1 = 4284$~cm$^{-1}$.
+ 
+\begin{marginfigure}
+\inputtikz{\currfiledir fig_vib_states}
+\caption{Zustände und Übergange im harmonischen und anharmonischen Oszillator.}
+\end{marginfigure}
+ 
+ 
  
 Das anharmonische Bindungspotential erklärt auch die Expansion von Festkörpern --- eigentlich ein Thema für den dritten Abschnitt der Vorlesung. Der Schwerpunkt der Aufenthalts-Wahrscheinlichkeit der Schwingungs-Wellenfunktionen verschiebt sich mit steigender Quantenzahl im anharmonischen Oszillator zu größeren Bindungsabständen. Im harmonischen Oszillator bleibt er immer beim Gleichgewichtsabstand. Mit höherer Temperatur werden also immer höhere Schwingungszustände besetzt und so dehnt sich Materie aus.
 
@@ -210,6 +220,13 @@ also in der gleichen Orientierung wie das THz-Spektrum und bei $\bar{\nu}_0 $ be
 
 Mit diesen Überlegungen können wir die am Anfang des Kapitel gezeigten Spektren zumindest qualitativ erklären.
 
+
+\begin{marginfigure}
+\inputtikz{\currfiledir rot_vib}
+\caption{Rotations-Vibrations-Übergänge liefert die P, Q, R-Zweige im Spektrum.}
+\end{marginfigure}
+ 
+ 
 \section{Rotations-Schwingungs-Kopplung}
 
 Bei der Diskussion des Q-Zweigs oben hatten wir ja schon den Fall, dass Rotation und Schwingung nicht unabhängig voneinander sind. Nur wenn diese Koppeln kann der Q-Zweig erlaubt sein. Hier soll dies nun etwas detaillierter besprochen werden, und auch warum dies ein Q-Zweig und keine Q-Linie ist.
@@ -243,7 +260,7 @@ Die Anzahl der Schwingungsmoden lässt sich aus der Summe der Freiheitsgrade ber
 \item Schwingung: der ganze Rest, also $3N-5$ für ein lineares Molekül bzw. $3N-6$ für alle anderen Moleküle. 
 \end{itemize}
 
-Ein zweiatomiges Molekül wie beispielsweise H$_2$ muss linear sein, hat also nur einen Schwingungs-Freiheitsgrad. Ein dreiatomiges Molekül kann linear sein, wie CO$_2$ und hat dann 4  Schwingungs-Freiheitsgrade, oder es ist nicht gerade, wie H$_2$O, und hat dann nur 3  Schwingungs-Freiheitsgrade. Napthalin beispielsweise besteht aus $N=18$ Atomen und hat damit  48 Schwingungs-Freiheitsgrade. Das Konzept der Normalmoden aus der Mechanik erlaubt hier den Überblick zu behalten.
+Ein zweiatomiges Molekül wie beispielsweise \ch{H2} muss linear sein, hat also nur einen Schwingungs-Freiheitsgrad. Ein dreiatomiges Molekül kann linear sein, wie \ch{CO2} und hat dann 4  Schwingungs-Freiheitsgrade, oder es ist nicht gerade, wie \ch{H2O}, und hat dann nur 3  Schwingungs-Freiheitsgrade. Napthalin beispielsweise besteht aus $N=18$ Atomen und hat damit  48 Schwingungs-Freiheitsgrade. Das Konzept der Normalmoden aus der Mechanik erlaubt hier den Überblick zu behalten.
 
 
 \section{Normalmoden}
@@ -411,7 +428,7 @@ Wie kommt man an die Normalmoden? Das Aufstellen und Diagonalisieren der Matrix 
 
 \end{description}
 
-\paragraph{Cyanwasserstoff (Blausäure, HCN)}  Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden, analog zu Kohlendioxid oben. Das Spektrum am Anfang des Kapitels zeigt die Biegeschwingung bei $\bar{\nu} = 712$~cm$^{-1}$ und deren ersten Oberton bei ungefähr der doppelten Frequenz. Die Mode bei  $\bar{\nu} = 3312$~cm$^{-1}$ ist die  asymmetrische Streckschwingung. Die symmetrische Streckschwingung ist bei $\bar{\nu} = 2097$~cm$^{-1}$ und in der Abbildung nicht gezeigt. Im Gegensatz zu CO$_2$ bewegt sich in dieser Mode das Kohlenstoffatom ebenfalls, da die Massen von H und N verschieden sind, und sich ansonsten der  Schwerpunkt bewegen würde. Nur für den Grundton der Biegeschwingung ist der P-Zweig erlaubt.
+\paragraph{Cyanwasserstoff (Blausäure, HCN)}  Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden, analog zu Kohlendioxid oben. Das Spektrum am Anfang des Kapitels zeigt die Biegeschwingung bei $\bar{\nu} = 712$~cm$^{-1}$ und deren ersten Oberton bei ungefähr der doppelten Frequenz. Die Mode bei  $\bar{\nu} = 3312$~cm$^{-1}$ ist die  asymmetrische Streckschwingung. Die symmetrische Streckschwingung ist bei $\bar{\nu} = 2097$~cm$^{-1}$ und in der Abbildung nicht gezeigt. Im Gegensatz zu \ch{CO2} bewegt sich in dieser Mode das Kohlenstoffatom ebenfalls, da die Massen von H und N verschieden sind, und sich ansonsten der  Schwerpunkt bewegen würde. Nur für den Grundton der Biegeschwingung ist der P-Zweig erlaubt.
 \begin{marginfigure}
 \begin{tikzpicture}
 \useasboundingbox (-0.2,-0.2) rectangle (3,0.3);

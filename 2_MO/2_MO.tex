@@ -1,6 +1,6 @@
 %\renewcommand{\lastmod}{\today}
 
-\chapter{Molekülorbitaltheorie}
+\chapter{Molekülorbitaltheorie I -- Das aller einfachste Molekül}
 
 
 
@@ -19,7 +19,6 @@
 
 Die Molekülorbitaltheorie  (MO) baut zunächst neue (Ein-Elektron-) Orbitale, die sich über das ganze Molekül erstrecken. Dann werden in diese Orbitale nach und nach Elektronen eingefüllt, analog zu Mehr-Elektronen-Atomen in der Atomphysik. Dabei wird die Wechselwirkung zwischen den Elektronen zunächst vernachlässigt. Die MO-Theorie macht also andere Näherungen als die Valenzbindungstheorie.
 
- XXX kovalent, homöopolar
  
  
 \section{Das Variationsprinzip}
@@ -49,7 +48,7 @@ mit normierten  $\ket{\phi_i}$ und reell-wertigen Koeffizienten $c_i$. Damit erh
 \end{eqnarray}
 Dabei bezeichnet $S$ das Überlapp-Integral der beiden Wellenfunktionen, und $H_{ij}$ die Matrix-Elemente des Hamilton-Operators. Die Diagonalelemente $H_{11}$ und $H_{22}$ geben die Coulomb-Energie an, die Außerdiagnoalelemente $H_{12} = H_{21}$ die Austausch-Energie\sidenote{mehr zu den Namen im nächsten Abschnitt}. Mit diesen Abkürzungen kann man die Eigen-Energie schreiben als
 \begin{equation}
-  E = \frac{c_1^2 H_{11} + c_2^2 H_{22} + 2 c_1 c_2 H_{12}}{c_1^2 + c_2^2 + 2 c_1 c_2 S}
+  E = \frac{c_1^2 H_{11} + c_2^2 H_{22} + 2 c_1 c_2 H_{12}}{c_1^2 + c_2^2 + 2 c_1 c_2 S}  \label{eq:MO_e_variation}
 \end{equation}
 Für eine minimale Eigenen-Energie $E$ müssen die partiellen Ableitungen nach $c_i$ beide Null sein, oder
 \begin{equation}
@@ -129,7 +128,7 @@ Mit diesen Integralen wird die Gesamtenergie
 \begin{equation}
 E_\pm = \frac{H_{11} \pm H_{12}}{1 \pm S} = E_1 + \frac{C \pm A}{1 \pm S}
 \end{equation}
-Die zugehörigen Molekül-Orbitale sind die symmetrische und die anti-symmetrisch Kombination der Atom-Orbitale
+Die zugehörigen Molekül-Orbitale sind die symmetrische und die anti-symmetrische Kombination der Atom-Orbitale
 \begin{equation}
 \ket{\Psi_\pm }= \frac{1}{\sqrt{2 (1 \pm  S)}} \, \left( \ket{\phi_1} \pm \ket{\phi_2} \right)
 \end{equation}
@@ -172,7 +171,7 @@ Der Bindungsabstand $R_0$ ist der Abstand minimaler Energie. Das Potential kann 
 \section{Das Austausch-Integral für verschiedene Atom-Orbitale}
 
 Wir haben bisher nicht diskutiert, welche Form die Atom-Orbitale $\ket{\phi}$ denn eigentlich haben.
-Im Wasserstoff-Molekül-Ion H$_2^+$ werden es sicherlich s-Orbitale sein (was auch bei der Diskussion der Beiträge angenommen wurde). Bei anderen Orbitalen kann es zum Verschwinden des Austausch-Integrals $A$ kommen, und somit keine Bindung geben.
+Im Wasserstoff-Molekül-Ion \ch{H2+}  werden es sicherlich s-Orbitale sein (was auch bei der Diskussion der Beiträge angenommen wurde). Bei anderen Orbitalen kann es zum Verschwinden des Austausch-Integrals $A$ kommen, und somit keine Bindung geben.
 
 \begin{marginfigure}
 \inputtikz{\currfiledir orbitale_s_p}
@@ -187,7 +186,7 @@ Ein Beispiel ist das Austausch-Integrals zwischen  einem s-Orbital und einem p$_
 
 \section{Anschauliche Argumente für eine chemische Bindung}
 
-Kann man anschaulich verstehen, warum das Wasserstoff-Molekül-Ion H$_2^+$ existiert, also energetisch günstiger ist als ein Wasserstoff-Atom und ein freies Proton? Aus meiner Sicht gibt es zwei bis drei Wege.
+Kann man anschaulich verstehen, warum das Wasserstoff-Molekül-Ion \ch{H2+}existiert, also energetisch günstiger ist als ein Wasserstoff-Atom und ein freies Proton? Aus meiner Sicht gibt es zwei bis drei Wege.
 
 \paragraph{Elektronen-Dichte-Verteilung} Im symmetrischen Molekülorbital $\Psi_+ \propto \phi_1 + \phi_2$ ergibt sich ein deutlich von Null verschiedener Wert der Elektronendichte $|\Psi_+|^2$ in der Mitte zwischen den beiden Kernen. Diese negative Ladungsdichte schirmt den positiven Kern vom anderen positiven Kern ab. Die Coulomb-Abstoßung der Kerne ist also geringer, als wenn das Elektron in einem s-Orbital um einen Kern alleine  wäre. Im $\Psi_-$-Orbital ist dies nicht mehr der Fall. Hier ist die Elektronen-Dichte zwischen den Kernen geringer, in der Mitte der Strecke sogar exakt Null.
 
@@ -205,9 +204,9 @@ Kann man anschaulich verstehen, warum das Wasserstoff-Molekül-Ion H$_2^+$ exist
 \paragraph{Quantenmechanische Interferenz} Die Ladungsdichte in einem Molekül-Orbital ist $| \phi_1 + \phi_2 |^2$, wenn das Orbital aus den beiden Atom-Orbitalen $\phi_1$ und $\phi_2$ aufgebaut ist. Die Ladungsdichte ist damit \emph{nicht} die Summe der Ladungsdichten der beiden Atom-Orbitale, also nicht $| \phi_1 |^2 +| \phi_2 |^2$. Quantenmechanische Wellenfunktionen interferieren, werden also addiert bevor das Betrags-Quadrat gebildet wird. Dies ermöglicht Auslöschung (im Fall von $\Psi_-$) und konstruktive Interferenz (im Fall von $\Psi_+$), wodurch obiges Elektronendichte-Argument zum Tragen kommt und  die chemische Bindung ermöglicht wird.
 
 
-\section{Vergleich unser Rechnung mit der Wirklichkeit}
+\section{Vergleich unserer Rechnung mit der Wirklichkeit}
 
-Unsere Rechnung ergibt ein qualitativ korrektes Bindungspotential für das  Wasserstoff-Molekül-Ion H$_2^+$. Quantitativ stimmt sie aber nicht. Experimentell ist der Bindungsabstand $R_0 = 106$~pm, die Rechnung liefert $132$~pm. Experimentell ist die Bindungsenergie $2.5$~eV die Rechnung liefert $1.7$~eV.
+Unsere Rechnung ergibt ein qualitativ korrektes Bindungspotential für das  Wasserstoff-Molekül-Ion  \ch{H2+}. Quantitativ stimmt sie aber nicht. Experimentell ist der Bindungsabstand $R_0 = 106$~pm, die Rechnung liefert $132$~pm. Experimentell ist die Bindungsenergie $2.5$~eV die Rechnung liefert $1.7$~eV.
 
 Auch erfüllt unser Modell den Virialsatz nicht. Für ein Coulomb-Potential müsste der Mittelwert der kinetischen Energie $\braket{\hat{T}}$ genau $-2$ mal dem Mittelwert der kinetischen potentiellen Energie $\braket{\hat{V}}$ sein. In unserem Modell ist der Faktor\footcite{McQuarrie2008} aber nur ca. $-1.6$.
 
