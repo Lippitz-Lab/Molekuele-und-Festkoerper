@@ -23,6 +23,11 @@
 
 
 
+\section{Überblick}
+
+Von den in Kapitel \ref{chap:3_diel} diskutierten Formen der Anregung von Molekülen haben wir bis hier die Rotationsanregung mit der Quantenzahl $J$ und die Schwingungsanregung mit der Quantenzahl $\nu$ diskutiert. Nun kommt die ebenfalls schon in Kapitel  \ref{chap:3_diel} angesprochene elektronische Anregung hinzu. Es kann sich nun also auch die Wellenfunktion der Elektronen ändern. Die Gesamtenergie ist die Summe über die Energie in der Rotation, der Vibration und der im elektronischen System. Bei optischen Übergängen, also der Absorption und Emission von Licht, ändern sich damit potentiell diverse Quantenzahlen. Allerdings sind die drei Beiträge energetisch sehr unterschiedlich. Wenn der elektronische Anteil erfasst werden soll, dann können die anderen beiden nicht und nicht vollständig aufgelöst werden \sidenote{Die relative Auflösung eines Spektrometers liegt im Bereich von etwa $10^{-4}$.} Insbesondere die Rotationsstruktur erscheint zu 'Banden' zusammengefasst.
+
+
 
 \section{Wie misst man das?}
 
@@ -40,10 +45,6 @@ Im Frequenzbereich ist die spektrale Auflösung also nicht konstant, sondern pro
 Dieses Problem tritt nur bei Lichtspektren auf. Absorptionsspektren sind das Verhältnis zweier Lichtspektren, des Signal- und des Referenzstrahls. In diesem Fall heben sich die Vorfaktoren auf und es müssen nur die $x$-Werte umgerechnet werden. Die spektral integrierte Absorption hat im Gegensatz zum spektral integrierten Photonenfluss keine Bedeutung.
 
 
-
-\section{Überblick}
-
-Von den in Kapitel \ref{chap:3_diel} diskutierten Formen der Anregung von Molekülen haben wir bis hier die Rotationsanregung mit der Quantenzahl $J$ und die Schwingungsanregung mit der Quantenzahl $\nu$ diskutiert. Nun kommt die ebenfalls schon in Kapitel  \ref{chap:3_diel} angesprochene elektronische Anregung hinzu. Es kann sich nun also auch die Wellenfunktion der Elektronen ändern. Die Gesamtenergie ist die Summe über die Energie in der Rotation, der Vibration und der im elektronischen System. Bei optischen Übergängen, also der Absorption und Emission von Licht, ändern sich damit potentiell diverse Quantenzahlen. Allerdings sind die drei Beiträge energetisch sehr unterschiedlich. Wenn der elektronische Anteil erfasst werden soll, dann können die anderen beiden nicht und nicht vollständig aufgelöst werden \sidenote{Die relative Auflösung eines Spektrometers liegt im Bereich von etwa $10^{-4}$.} Insbesondere die Rotationsstruktur erscheint zu 'Banden' zusammengefasst.
 
 \section{Vibronische Kopplung}
 
@@ -85,9 +86,16 @@ Den Faktor
 \end{equation}
 nennt man \emph{Franck-Condon-Faktor}. Er beschreibt den räumlichen Überlapp der Schwingungs-Wellenfunktion von Ausgangs- und Zielzustand. Da die Übergangsrate proportional zu $|D|^2$ ist, bestimmt sein Betrags-Quadrat die Intensität des Übergangs.
 
+
+
 Es macht intuitiv Sinn, dass ein solcher Faktor existieren muss. Bei einer elektronischen Anregung ändert sich die Elektronenwellenfunktion instantan, die Kernposition aber gar nicht, weil Kerne viel schwerer sind. Damit ein Übergang stattfinden kann, muss es also möglich sein, dass die Kerne auch im angeregten Zustand an diesem Ort sind. Das Franck-Condon-Integral berechnet gerade diese Möglichkeit.
 
 Schematisch ist das in der Skizze gezeigt. Der Ausgangszustand für die Absorption eines Photons ist der elektronische Grundzustand und auch der Schwingungs-Grundzustand $\nu = 0$. Typische Schwingungs-Frequenzen sind so, dass $h \nu \gg k_b T$, also schon $\nu =1$ nicht thermisch angeregt werden kann. Das Bindungspotential im angeregten Zustand ist entlang der Kern-Kern-Koordinate $R$ nach außen verschoben (weniger stark bindend). Seine Form ist näherungsweise gleich zum Grundzustand. 
+
+\begin{marginfigure}
+   \inputtikz{\currfiledir FC_vib_state_wf}
+\caption{Die Absorption eines Photons führt zur Anregung der Kern--Kern--Schwingung, wenn die Potentiale gegeneinander verschoben sind.}
+\end{marginfigure}
 
 Wir hatten die Schwingungs-Wellenfunktionen $\chi_f(\mathbf{R})$ bereits in Kapitel \ref{chap:vib} besprochen. Für harmonische Potentiale sind es Hermite'schen Polynomen. Im elektronischen Grundzustand ist der Kern-Kern-Abstand $R$ also stark um $R_0$ lokalisiert. Direkt nach der elektronischen Anregung kann sich $R$ aber nicht geändert haben. Optische Übergänge sind \emph{senkrecht} in dieser Skizze. Wir suchen also eine Schwingungs-Wellenfunktion bzw. deren Quantenzahl $\nu$ im angeregten elektronischen Zustand, die möglichst viel Aufenthaltswahrscheinlichkeit bei $R_0$ hat (auch auch die Geschwindigkeit der Kerne muss übereinstimmen). Im Beispiel ist dies $\nu = 4$. Den Grad der Übereinstimmung gibt der Franck-Condon-Faktor.
 

@@ -120,7 +120,9 @@ genauso gut möglich. In der Quantenmechanik löst man dies auf durch die Superp
 \end{equation}
 Dies löst die Schrödinger-Gleichung mit dem Gesamt-Hamilton-Operator
 \begin{equation}
-  \hat{H}_{ges} =  \hat{H}_A + \hat{H}_A  + \frac{e^2}{4 \pi \epsilon_0} \left( \frac{1}{r_{12}} + \frac{1}{r_{AB}} \right)
+  \hat{H}_{ges} =  \hat{H}_A + \hat{H}_B  + \frac{e^2}{4 \pi \epsilon_0} \left( \frac{1}{r_{12}} + \frac{1}{r_{AB}} 
+  - \frac{1}{r_{A2}}  - \frac{1}{r_{B1}} 
+  \right)
 \end{equation}
 wobei der Term mit $r_{AB}$ auch zunächst weggelassen werden kann, weil die Kern-Positionen in der Born-Oppenheimer-Näherung ja als konstant angenommen werden.
 
@@ -167,7 +169,7 @@ Insgesamt ist \ch{N2} also aus einer $\sigma$-Bindung und zwei $\pi$-Bindungen a
 \caption{Bindungswinkel in  \ch{H2O}. }
 \end{marginfigure}
 %
-Wenn drei oder mehr Atome ein Molekül bilden, dann kann man den Winkel einer Bindung definieren und oft aus der Valenzbindungstheorie (näherungsweise) vorhersagen. Als Beispiel betrachten wir \ch{H2O}. Die Elektronenkonfiguration von Sauerstoff ist [He]2s$^2$2p$_x^2$2p$_y^1$2p$_z^1$. Für die Bindung relevant sind die ungepaarten Elektronen in den hier p$_y$ und p$_z$ genannten Orbitalen. Diese gehen jeweils eine $\sigma$-Bindung mit dem 1s-Elektron des Wasserstoffs ein. Das p$_y$-Orbital steht senkrecht auf dem  p$_z$-Orbital von Sauerstoff. Daher erwarten wir einen Bindungswinkel von 90$^\circ$. Dies ist nahe aber nicht exakt am experimentellen Wert von 104.5$^\circ$.
+Wenn drei oder mehr Atome ein Molekül bilden, dann kann man den Winkel einer Bindung definieren und oft aus der Valenzbindungstheorie (näherungsweise) vorhersagen. Als Beispiel betrachten wir \ch{H2O}. Die Elektronenkonfiguration von Sauerstoff ist [He]2s$^2$2p$_x^1$2p$_y^1$2p$_z^2$. Für die Bindung relevant sind die ungepaarten Elektronen in den hier\sidenote{Typischerweise ist $z$ die Symmetrieachse. In diesem Beispiel also senkrecht auf die Bindungen, in zwei-atomigen Molekülen aber die Bindungsachse.} p$_x$ und p$p_y$ genannten Orbitalen. Diese gehen jeweils eine $\sigma$-Bindung mit dem 1s-Elektron des Wasserstoffs ein. Das p$_y$-Orbital steht senkrecht auf dem  p$_x$-Orbital von Sauerstoff. Daher erwarten wir einen Bindungswinkel von 90$^\circ$. Dies ist nahe aber nicht exakt am experimentellen Wert von 104.5$^\circ$.
 
 
 
@@ -193,7 +195,7 @@ Diese Orbitale entstehen also durch Interferenz der ursprünglichen Orbitale und
 %
 
 
-Analog gibt es auch die sp$^2$ und die sp-Hybridisierung.  Die sp$^2$-Hybridisierung findet man beispielsweise in Ethen (\ch{C2H4}). Die drei  sp$^2$-Orbitale jedes Kohlenstoff-Atoms sind an der Bindung der beiden Wasserstoff-Atome beteiligt und an einer der beiden C--C Bindungen. Die zweite C--C Bindung ist eine 'gewöhnliche' $\sigma$-Bindung zwischen den verbleibenden, nicht hybridisierten p-Orbitalen. Dadurch ergeben sich die Winkel in der HCH bzw. HCC-Bindung zu circa 120$^\circ$.
+Analog gibt es auch die sp$^2$ und die sp-Hybridisierung.  Die sp$^2$-Hybridisierung findet man beispielsweise in Ethen (\ch{C2H4}). Die drei  sp$^2$-Orbitale jedes Kohlenstoff-Atoms sind an der $\sigma$-Bindung der beiden Wasserstoff-Atome beteiligt und $\sigma$-Bindung zwischen den beiden Kohlenstoff-Atomen. Die zweite C--C Bindung ist eine 'gewöhnliche' $\pi$-Bindung zwischen den verbleibenden, nicht hybridisierten p-Orbitalen, die senkrecht auf die durch die sp$^2$-Orbitale gebildete Ebene stehen. Dadurch ergeben sich die Winkel in der HCH bzw. HCC-Bindung zu circa 120$^\circ$.
 %
 \begin{marginfigure}
 \includegraphics[width=\textwidth]{\currfiledir c2h4.png}

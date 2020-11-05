@@ -9,13 +9,13 @@
 \section{Ziele}
 
 \begin{itemize}
-\item Sie können Vibrationssspektren von Molekülen in der Gasphase wie das untenstehende von HCN erklären und daraus Eigenschaften des Moleküls wie die  Federkonstante der Bindung oder die  Molekülform bestimmen.
+\item Sie können Vibrationsspektren von Molekülen in der Gasphase wie das untenstehende von HCN erklären und daraus Eigenschaften des Moleküls wie die  Federkonstante der Bindung oder die  Molekülform bestimmen.
 \end{itemize}
 
 %\tikzexternaldisable
 
 \begin{figure}
-\inputtikz{\currfiledir fig_hcn}
+\inputtikz{\currfiledir fig_hcn-single}
 \caption{Infrarot-Absorptionsspektrum von HCN Gas  (\cite{Maki_1995_HCN} via \href{https://hitran.org}{hitran.org}).
 \label{fig:vib_hcn}}
 \end{figure}
@@ -25,15 +25,15 @@
 \section{Wie misst man das ?}
 
 Das Bindungspotential eines Moleküls kann in der Nähe des Minimums, also um den Gleichgewichts-Bindungsabstand $R_0$ herum, harmonisch genähert werden.
-Wie wir in Kapitel \ref{chap:3_diel} schon abgeschätzt hatten hat die Federkonstante dieses harmonischen Potentials einen Wert von etwas $k \approx 200$~N/m. Damit ergibt sich eine Eigenfrequenz des harmonischen Oszillator von $\omega = \sqrt{k / m}$ die einer optischen Wellenlänge von etwa $\lambda \approx 5$~\textmu m oder einer Wellenzahl $\bar{\nu} \approx 2000$~cm$^{-1}$ entspricht. 
+Wie wir in Kapitel \ref{chap:3_diel} schon abgeschätzt hatten hat die Federkonstante dieses harmonischen Potentials einen Wert von etwas $k \approx 200$~N/m. Damit ergibt sich eine Eigenfrequenz des harmonischen Oszillators von $\omega = \sqrt{k / m}$ die einer optischen Wellenlänge von etwa $\lambda \approx 5$~\textmu m oder einer Wellenzahl $\bar{\nu} \approx 2000$~cm$^{-1}$ entspricht. 
 
-Absorptionsspektren in diesen (Nah-)Infraroten Wellenlängenbereich misst man beispielsweise durch Fourier-Transformations-Infrarot-Spektroskopie (FTIR). Als Lichtquelle wird oft ein breitbandiger Infrarotstrahler benutzt, der aus einem Silizium-Carbid-Stab (Globar) besteht, durch den ein Strom fließt und so heizt. DAs durch die Probe transmittierte Licht wird durch ein Michelson-Interferometer geleitet und mit einem infrarot-  also Wärme-empfindlichen Detektor (Bolometer) gemessen. Dieser Detektor selbst kann nur die Gesamt-Intensität messen. Das Michelson-Interferomter wirkt aber als spektraler Filter mit einer sinusförmigen Transmission. Die Periode des spektralen Modulation wird über den Armlängen-Unterschied eingestellt und kontinuierlich variiert. Aus der Fourier-Transformation des gemessenen Intensität als Funktion des Armlängen-Unterschieds erhält man das Spektrum des Infrarot-Lichts, also Intensität als Funktion der Wellenlänge.
+Absorptionsspektren in diesen (Nah-)Infraroten Wellenlängenbereich misst man beispielsweise durch Fourier-Transformations-Infrarot-Spektroskopie (FTIR). Als Lichtquelle wird oft ein breitbandiger Infrarotstrahler benutzt, der aus einem Silizium-Carbid-Stab (Globar) besteht, durch den ein Strom fließt und so heizt. DAs durch die Probe transmittierte Licht wird durch ein Michelson-Interferometer geleitet und mit einem infrarot-  also Wärme-empfindlichen Detektor (Bolometer) gemessen. Dieser Detektor selbst kann nur die Gesamt-Intensität messen. Das Michelson-Interferometer wirkt aber als spektraler Filter mit einer sinusförmigen Transmission. Die Periode der spektralen Modulation wird über den Armlängen-Unterschied eingestellt und kontinuierlich variiert. Aus der Fourier-Transformation der gemessenen Intensität als Funktion des Armlängen-Unterschieds erhält man das Spektrum des Infrarot-Lichts, also Intensität als Funktion der Wellenlänge.
 
 
 
 \section{Born-Oppenheimer-Näherung}
 
-In der Schwingungsspekroskopie beobachtet man, dass sich im Molekül der Kern--Kern--Abstand  periodisch ändert, aber nicht durch irgend eine Art zeitaufgelöste Messung, sondern durch den Einfluss dieser Bewegung auf das Absorptionsspektrum. Das ist aber zunächst durch die Elektronen bestimmt, nicht die Kerne. Wir müssen in diesem Kapitel also sehr genau die Kerne und die Elektronen einerseits separieren und andererseits in ihrer Wechselwirkung betrachten. Dazu starten wir noch einmal mit der Born-Oppenheimer-Näherung, nun etwas formalisierter.
+In der Schwingungsspektroskopie beobachtet man, dass sich im Molekül der Kern--Kern--Abstand  periodisch ändert, aber nicht durch irgendeine Art zeitaufgelöste Messung, sondern durch den Einfluss dieser Bewegung auf das Absorptionsspektrum. Das ist aber zunächst durch die Elektronen bestimmt, nicht die Kerne. Wir müssen in diesem Kapitel also sehr genau die Kerne und die Elektronen einerseits separieren und andererseits in ihrer Wechselwirkung betrachten. Dazu starten wir noch einmal mit der Born-Oppenheimer-Näherung, nun etwas formalisierter.
 
 Das Molekül habe $N$ Elektronen der Masse $m$ am Ort $\mathbf{r}_i$ und $K$ Kerne des Masse $M_k$ am Ort $\mathbf{R}_k$. Die Vektoren $\mathbf{r}$ und $\mathbf{R}$ (\emph{ohne} Index) fassen \emph{alle} Koordinaten aller Elektronen bzw. Kerne zusammen, haben also eine sehr hohe Dimension, vereinfachen aber die Schreibweise. Die Schrödinger-Gleichung ist dann
 \begin{equation}
@@ -116,14 +116,14 @@ Aufenthaltswahrscheinlichkeit an den Umkehrpunkten des Oszillators besonders hoc
 
 \begin{marginfigure}
 \inputtikz{\currfiledir vib_state_wf}
-\caption{Die Eigenfunktionen des quantenmechanischen harmonischen Oszilatorrs für $\nu = 0 \dots 5$ (dünne Linie) und die Aufenthaltswahrscheinlichkeit (gefüllte Kurven). Die Position in y-Richtung entspricht der Eigen-Energie des Zustands auf der Skala des parabelförmigen Bindungspotentials im Hintergrund.
+\caption{Die Eigenfunktionen des quantenmechanischen harmonischen Oszillators für $\nu = 0 \dots 5$ (dünne Linie) und die Aufenthaltswahrscheinlichkeit (gefüllte Kurven). Die Position in y-Richtung entspricht der Eigen-Energie des Zustands auf der Skala des parabelförmigen Bindungspotentials im Hintergrund.
 \label{fig:vib_1d_WF}}
 \end{marginfigure}
 
 
 \section{Auswahlregeln für reine Schwingungsübergänge}
 
-Lässt sich die Schwingung eines Moleküls (eigentlich der Kerne entlang der Bindungsachse) durch die Absorption eines Photons anregen? Oder anderherum: hinterlassen die Schwingungs-Energie-Eigenwerte $E_\nu$ von oben einen beobachtbaren Effekt? Hier wollen wir uns darauf beschränken, \emph{nur} die Schwingung anzuregen. Weiter unten werden wir Kombinationen mit anderen Anregungen (Rotation, Elektronisch) diskutieren.
+Lässt sich die Schwingung eines Moleküls (eigentlich der Kerne entlang der Bindungsachse) durch die Absorption eines Photons anregen? Oder andersherum: hinterlassen die Schwingungs-Energie-Eigenwerte $E_\nu$ von oben einen beobachtbaren Effekt? Hier wollen wir uns darauf beschränken, \emph{nur} die Schwingung anzuregen. Weiter unten werden wir Kombinationen mit anderen Anregungen (Rotation, Elektronisch) diskutieren.
 
 Um diese Fragen zu beantworten hilft Fermis Goldene Regel zur Übergangsrate $\Gamma_{i \rightarrow f}$ vom Zustand $\ket{i}$ in den Zustand $\ket{f}$:
 \begin{equation}
@@ -143,7 +143,7 @@ In der vollständigsten Form bestehen die Wellenfunktionen aus dem elektronische
 \begin{equation}
 D_{fi}^\text{vib} \propto  \left. \frac{\partial d_k}{\partial R} \right|_{R_0} \,  \int (\Psi_\text{vib}^\star (R) )_f \, R  \, \, (\Psi_\text{vib} (R) )_i \, dR
 \end{equation}
-Reine Schwingungsübergang sind also nur dann erlaubt, wenn sich das permanente Dipolmoment mit dem Kern-Kern-Abstand ändert. Solche Moleküle werden infrarotaktiv genannt. Dann  darf auch das Integral nicht verschwinden. Aufgrund einer Eigenschaft der Hermite'schen Polynome ist dass nur dann der Fall, wenn sich die Quantenzahl $\nu$ zwischen den beiden Zuständen nur um eins unterscheidet, also 
+Reine Schwingungsübergang sind also nur dann erlaubt, wenn sich das permanente Dipolmoment mit dem Kern-Kern-Abstand ändert. Solche Moleküle werden infrarotaktiv genannt. Dann  darf auch das Integral nicht verschwinden. Aufgrund einer Eigenschaft der Hermite'schen Polynome ist das nur dann der Fall, wenn sich die Quantenzahl $\nu$ zwischen den beiden Zuständen nur um eins unterscheidet, also 
 \begin{equation}
  \Delta \nu = \pm 1
 \end{equation}
@@ -194,7 +194,7 @@ E (\nu, J) = E_\text{vib}(\nu) + E_\text{rot}(J) = \hbar \omega_0 (\nu + \frac{1
 \end{equation}
 mit der Rotations-Quantenzahl $J$ und der Vibrations-Quantenzahl $\nu$. Der energetische Abstand der Vibrationszustände ist mit etwa $1000$~cm$^{-1}$  größer als der der Rotationszustände mit etwa $100$~cm$^{-1}$. Man kann sich also vorstellen, dass nun jeder Schwingungszustand mit einer Sequenz von Rotationszuständen dekoriert ist.
 
-Die Auswahlregeln sind zunächst die selben wie wir sie bereits für die beiden Prozesse separat diskutiert hatten. Hinzu kommt die Möglichkeit, dass nichts passiert, also sich nur die andere Quantenzahl verändert. Damit haben wir
+Die Auswahlregeln sind zunächst dieselben wie wir sie bereits für die beiden Prozesse separat diskutiert hatten. Hinzu kommt die Möglichkeit, dass nichts passiert, also sich nur die andere Quantenzahl verändert. Damit haben wir
 \begin{equation}
  \Delta \nu = 0, \pm 1 \quad \text{und} \quad \Delta J = 0, \pm 1 
 \end{equation}
@@ -204,7 +204,7 @@ aber nicht alle Kombinationen sind möglich oder interessant.
 
 \paragraph{Reine Rotationsübergänge} Falls $\Delta \nu = 0$ ändert sich nur der Rotationszustand. Dies ist die Situation, die wir im letzten Kapitel besprochen haben, und führt zu Linien  in einem anderen Spektralbereich, bei etwa $\bar{\nu} \approx 100$~cm$^{-1}$.
 
-\paragraph{Reine Schwingungsübergänge} Am Anfang dieses Kapitel haben wir den  harmonische Oszillator betrachtet unter der Annahme $J=0$. Dies schließt $\Delta J = 0$ mit ein. Bei einem von Null verschiedenen $J$ muss sich dieses aber bei einem Schwingungsübergänge ändern, zumindest für eine zweiatomiges Molekül. Eine höhere Schwingungsanregung ändert den mittleren Kern--Kern--Abstand und somit das Trägheitsmoment. Die Drehimpulserhaltung verlangt dann, dass sich die Rotationsquantenzahl $J$ ändert. $\Delta J = 0$ ist also verboten für einfache, zu symmetrische Moleküle, andernfalls erlaubt. Wenn diese Übergänge erlaubt sind, dann führen sie zu einer einzigen Linien im Spektrum bei $ \bar{\nu}_0 = (\hbar \omega_0)/(h c) $, analog dem reinen Schwingungsspektrum. Diese wird 'Q-Zweig' genannt. 
+\paragraph{Reine Schwingungsübergänge} Am Anfang dieses Kapitel haben wir den  harmonischen Oszillator betrachtet unter der Annahme $J=0$. Dies schließt $\Delta J = 0$ mit ein. Bei einem von Null verschiedenen $J$ muss sich dieses aber bei einem Schwingungsübergänge ändern, zumindest für eine zweiatomiges Molekül. Eine höhere Schwingungsanregung ändert den mittleren Kern--Kern--Abstand und somit das Trägheitsmoment. Die Drehimpulserhaltung verlangt dann, dass sich die Rotationsquantenzahl $J$ ändert. $\Delta J = 0$ ist also verboten für einfache, zu symmetrische Moleküle, andernfalls erlaubt. Wenn diese Übergänge erlaubt sind, dann führen sie zu einer einzigen Linie im Spektrum bei $ \bar{\nu}_0 = (\hbar \omega_0)/(h c) $, analog dem reinen Schwingungsspektrum. Diese wird 'Q-Zweig' genannt. 
 
 \paragraph{P-Zweig} Falls $\Delta J = -1$ ist, und $\Delta \nu = +1$ (in Absorption eines IR Photons) oder $-1$ (in Emission eines IR Photons), dann führen diese Übergänge zum sogenannten P-Zweig. Die Linienpositionen sind
 \begin{equation}
@@ -212,13 +212,13 @@ aber nicht alle Kombinationen sind möglich oder interessant.
 \end{equation}
 Wir erhalten also eine äquidistante Schar von Linien, völlig analog dem reinen Rotationsspektrum, insbesondere auch im dort besprochenen Verlauf der Amplituden. Der einzige Unterschied ist das negative Vorzeichen. Die Linienschar ist also gespiegelt gegenüber dem THz-Spektrum und beginnt an der reinen Schwingungslinie $\bar{\nu}_0 $.
 
-\paragraph{R-Zweig} Analog zum P-Zweig, nur mit  $\Delta J = +1$ nur mit den Linienpositonen
+\paragraph{R-Zweig} Analog zum P-Zweig, nur mit  $\Delta J = +1$ nur mit den Linienpositionen
 \begin{equation}
  \frac{\Delta E}{h c} =  \bar{\nu}_0   + 2 B J
 \end{equation}
 also in der gleichen Orientierung wie das THz-Spektrum und bei $\bar{\nu}_0 $ beginnend.
 
-Mit diesen Überlegungen können wir die am Anfang des Kapitel gezeigten Spektren zumindest qualitativ erklären.
+Mit diesen Überlegungen können wir das am Anfang des Kapitels gezeigte Spektrum zumindest qualitativ erklären.
 
 
 \begin{marginfigure}
@@ -231,7 +231,7 @@ Mit diesen Überlegungen können wir die am Anfang des Kapitel gezeigten Spektre
 
 Bei der Diskussion des Q-Zweigs oben hatten wir ja schon den Fall, dass Rotation und Schwingung nicht unabhängig voneinander sind. Nur wenn diese Koppeln kann der Q-Zweig erlaubt sein. Hier soll dies nun etwas detaillierter besprochen werden, und auch warum dies ein Q-Zweig und keine Q-Linie ist.
 
-Im Molekül geschehen Rotation und Schwingung gleichzeitig, aber auf etwa um den Faktor 10 bis 00 verschiedenen Zeitskalen. Während einer Schwingungsperiode dreht sich das Molekül sehr oft. Das heißt aber auch, dass die Bindungslänge für die Rotation nicht konstant ist, sondern sich permanent ändert. Gleichzeit sind aber Gesamtenergie und Drehimpuls erhalten. Es muss also zu einem permanenten Austausch von Energie zwischen Rotation, Schwingung und Bindungspotential kommen. Was wir früher und auch weiterhin 'Rotationsenergie' nennen ist der zeitliche Mittel dieser Energie.
+Im Molekül geschehen Rotation und Schwingung gleichzeitig, aber auf etwa um den Faktor 10 bis 00 verschiedenen Zeitskalen. Während einer Schwingungsperiode dreht sich das Molekül sehr oft. Das heißt aber auch, dass die Bindungslänge für die Rotation nicht konstant ist, sondern sich permanent ändert. Gleichzeit sind aber Gesamtenergie und Drehimpuls erhalten. Es muss also zu einem permanenten Austausch von Energie zwischen Rotation, Schwingung und Bindungspotential kommen. Was wir früher und auch weiterhin 'Rotationsenergie' nennen ist das zeitliche Mittel dieser Energie.
 
 Um Gleichung \ref{eq:vib_rot_simple} zu verbessern, nehmen wir jetzt sowohl die Anharmonizität des Potentials als auch die Zentrifugaldehnung des Rotators mit in Betracht. Die Kopplung zwischen Rotation und Schwingung erfolgt dann über Rotationskonstanten, die von der Schwingungsquantenzahl $\nu$ abhängen
 \begin{align}
@@ -244,7 +244,7 @@ mit
 B(\nu) = B_0 - \alpha \left(\nu + \frac{1}{2} \right) \quad \text{und} \quad
 D(\nu) = D_0 + \beta \left(\nu + \frac{1}{2} \right) 
 \end{equation}
-Die (positiven) Koeffizienten $\alpha$ und $\beta$ beschreiben die  Rotations-Schwingungs-Kopplung. Das Vorreichen vor $\alpha$ ergibt sich aus der $\nu$-Abhängigkeit des Mitteleren Bindungsabstands $R$: dieser steigt mit $\nu$, wodurch das gemittelte $1/R^2$ und somit auch die gemittelte Rotationskonstante $B$ fällt, also $\alpha$ mit negativem Vorzeichen eingeht. Das Vorzeichen vor $\beta$ ist positiv, weil das anharmonische Bindungspotential mit $\nu$ weicher (also flacher) wird und so die Zentrifugalkraft einen größeren Einfluss auf die Rotation hat.
+Die (positiven) Koeffizienten $\alpha$ und $\beta$ beschreiben die  Rotations-Schwingungs-Kopplung. Das Vorreichen vor $\alpha$ ergibt sich aus der $\nu$-Abhängigkeit des mittleren Bindungsabstands $R$: dieser steigt mit $\nu$, wodurch das gemittelte $1/R^2$ und somit auch die gemittelte Rotationskonstante $B$ fällt, also $\alpha$ mit negativem Vorzeichen eingeht. Das Vorzeichen vor $\beta$ ist positiv, weil das anharmonische Bindungspotential mit $\nu$ weicher (also flacher) wird und so die Zentrifugalkraft einen größeren Einfluss auf die Rotation hat.
 
 Alles zusammen rücken so die Linien im P-Zweig auseinander mit steigendem $J$, im R-Zweig rücken sie näher zusammen. Der Q-Zweig wird jetzt wirklich ein Zweig, da das anharmonische Potential ja nicht mehr äquidistante Zustände hat, $\Delta \nu = 1$ also mehrerer, aber eng benachbarte Linien liefert. Diese sind in der Abbildung am Anfang des Kapitels nicht aufgelöst.
 
@@ -260,7 +260,7 @@ Die Anzahl der Schwingungsmoden lässt sich aus der Summe der Freiheitsgrade ber
 \item Schwingung: der ganze Rest, also $3N-5$ für ein lineares Molekül bzw. $3N-6$ für alle anderen Moleküle. 
 \end{itemize}
 
-Ein zweiatomiges Molekül wie beispielsweise \ch{H2} muss linear sein, hat also nur einen Schwingungs-Freiheitsgrad. Ein dreiatomiges Molekül kann linear sein, wie \ch{CO2} und hat dann 4  Schwingungs-Freiheitsgrade, oder es ist nicht gerade, wie \ch{H2O}, und hat dann nur 3  Schwingungs-Freiheitsgrade. Napthalin beispielsweise besteht aus $N=18$ Atomen und hat damit  48 Schwingungs-Freiheitsgrade. Das Konzept der Normalmoden aus der Mechanik erlaubt hier den Überblick zu behalten.
+Ein zweiatomiges Molekül wie beispielsweise \ch{H2} muss linear sein, hat also nur einen Schwingungs-Freiheitsgrad. Ein dreiatomiges Molekül kann linear sein, wie \ch{CO2} und hat dann 4  Schwingungs-Freiheitsgrade, oder es ist nicht gerade, wie \ch{H2O}, und hat dann nur 3  Schwingungs-Freiheitsgrade. Naphthalin beispielsweise besteht aus $N=18$ Atomen und hat damit  48 Schwingungs-Freiheitsgrade. Das Konzept der Normalmoden aus der Mechanik erlaubt hier den Überblick zu behalten.
 
 
 \section{Normalmoden}
@@ -309,11 +309,12 @@ Höhere Anregungen haben dann entsprechende Vielfache dieser Energie, und entspr
 
 Wie kommt man an die Normalmoden? Das Aufstellen und Diagonalisieren der Matrix  $\tilde{\mathbf{B}} $ ist sicherlich unpraktikabel. Einen systematischen Weg bietet die Betrachtung der Symmetrie der Moleküle, die sich in der Symmetrie der Normalmoden widerspiegeln muss. Dies geschieht im Rahmen der Gruppentheorie, die hier allerdings zu weit gehen würde.\sidenote{Mehr dazu in der Vorlesung zur Kristallographie, oder qualitativ in \cite{Atkins}.} Hier raten wir einfach. Dabei hilft es, vorher auszurechnen, wie viele Moden man finden muss, also wie viele Schwingungsfreiheitsgrade es gibt. Auch sollte sich dabei der Schwerpunkt nicht bewegen, oder das ganze Molekül sich drehen, weil das ja separat behandelt wird.
 
-\paragraph{Kohlendioxid} Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden
+\paragraph{Kohlendioxid} 
+Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden
+
+
 \begin{description}
 \item[Symmetrische Streckschwingung]
-%$\overleftarrow{\text{O}} $ -- $\text{C}$ -- $\overrightarrow{\text{O}} $ 
-  $\bar{\nu} = 1337$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment nicht, die Schwingung ist also nicht IR aktiv, wäre im Spektrum also nicht zu sehen.
 \begin{marginfigure}
 \begin{tikzpicture}
 \useasboundingbox (-0.2,-0.2) rectangle (2,0.3);
@@ -328,11 +329,10 @@ Wie kommt man an die Normalmoden? Das Aufstellen und Diagonalisieren der Matrix 
 \draw[<-] (o2.north east) -- (o2.north west);
 \end{tikzpicture}
 \end{marginfigure}
+  $\bar{\nu} = 1337$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment nicht, die Schwingung ist also nicht IR aktiv, wäre im Spektrum also nicht zu sehen.
 
 
 \item[Asymmetrische Streckschwingung]
-%$\overleftarrow{\text{O}} $ -- $\text{C}$ -- $\overleftarrow{\text{O}} $ bei der 
- $\bar{\nu} = 2349$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
 \begin{marginfigure}
 \begin{tikzpicture}
 \useasboundingbox (-0.2,-0.2) rectangle (2,0.3);
@@ -348,9 +348,9 @@ Wie kommt man an die Normalmoden? Das Aufstellen und Diagonalisieren der Matrix 
 \draw[->] (c.north east) -- (c.north west);
 \end{tikzpicture}
 \end{marginfigure}
+ $\bar{\nu} = 2349$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
 
-\item[Biegeschwingung] % $\uparrow$O -- $\downarrow$C -- $\uparrow$ O  bei der 
- $\bar{\nu} = 667$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv. Diese Mode ist zweifach entartet, da sie auch in der Ebene senkrecht zum Papier schwingen könnte. Für die Biegung ist das Potential weicher, die Frequenz daher niedriger als für die Streckung.
+\item[Biegeschwingung] 
 \begin{marginfigure}
 \begin{tikzpicture}
 \useasboundingbox (-0.3,-0.2) rectangle (2,0.3);
@@ -366,14 +366,13 @@ Wie kommt man an die Normalmoden? Das Aufstellen und Diagonalisieren der Matrix 
 \draw[->] (c.north east) -- (c.south east);
 \end{tikzpicture}
 \end{marginfigure}
-
+ $\bar{\nu} = 667$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv. Diese Mode ist zweifach entartet, da sie auch in der Ebene senkrecht zum Papier schwingen könnte. Für die Biegung ist das Potential weicher, die Frequenz daher niedriger als für die Streckung.
 \end{description}
 
 
 \paragraph{Wasser} Ein nicht-lineares Molekül mit $f=9 - 6 = 3$ Schwingungsfreiheitsgraden
 \begin{description}
 \item[Symmetrische Streckschwingung] 
-  $\bar{\nu} = 3657$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
 \begin{marginfigure}
 \begin{tikzpicture}
 \useasboundingbox  (-0.5,-0.5) rectangle (1.5,1.1);
@@ -389,9 +388,9 @@ Wie kommt man an die Normalmoden? Das Aufstellen und Diagonalisieren der Matrix 
 \draw[->] (o.north) -- ++(up:4mm);
 \end{tikzpicture}
 \end{marginfigure}
+  $\bar{\nu} = 3657$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
 
 \item[Symmetrische Streck-Biegeschwingung]
-  $\bar{\nu} = 1595$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
 \begin{marginfigure}
 \begin{tikzpicture}
 \useasboundingbox  (-0.5,-0.5) rectangle (1.5,1.1);
@@ -407,9 +406,9 @@ Wie kommt man an die Normalmoden? Das Aufstellen und Diagonalisieren der Matrix 
 \draw[->] (o.north) -- ++(up:4mm);
 \end{tikzpicture}
 \end{marginfigure}
+  $\bar{\nu} = 1595$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
 
 \item[Asymmetrische Schwingung]
-  $\bar{\nu} = 3756$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
 \begin{marginfigure}
 \begin{tikzpicture}
 \useasboundingbox  (-0.5,-0.5) rectangle (1.5,0.75);
@@ -425,46 +424,30 @@ Wie kommt man an die Normalmoden? Das Aufstellen und Diagonalisieren der Matrix 
 \draw[->] (o.north) -- ++(east:4mm);
 \end{tikzpicture}
 \end{marginfigure}
-
+  $\bar{\nu} = 3756$~cm$^{-1}$. Hierbei ändert sich das Dipolmoment, die Schwingung ist also  IR aktiv.
+  
+  
 \end{description}
 
-\paragraph{Cyanwasserstoff (Blausäure, HCN)}  Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden, analog zu Kohlendioxid oben. Das Spektrum am Anfang des Kapitels zeigt die Biegeschwingung bei $\bar{\nu} = 712$~cm$^{-1}$ und deren ersten Oberton bei ungefähr der doppelten Frequenz. Die Mode bei  $\bar{\nu} = 3312$~cm$^{-1}$ ist die  asymmetrische Streckschwingung. Die symmetrische Streckschwingung ist bei $\bar{\nu} = 2097$~cm$^{-1}$ und in der Abbildung nicht gezeigt. Im Gegensatz zu \ch{CO2} bewegt sich in dieser Mode das Kohlenstoffatom ebenfalls, da die Massen von H und N verschieden sind, und sich ansonsten der  Schwerpunkt bewegen würde. Nur für den Grundton der Biegeschwingung ist der P-Zweig erlaubt.
+\paragraph{Cyanwasserstoff (Blausäure, HCN)}  
 \begin{marginfigure}
-\begin{tikzpicture}
-\useasboundingbox (-0.2,-0.2) rectangle (3,0.3);
-%\draw (-0.2,-0.2) rectangle (2,0.3);
-
-\draw  (0,0) node (o1) {H};
-\draw  (0.75,0) node (c) {C};
-\draw  (1.5,0) node (o2) {N};
-\draw  (2.4,0) node (t1) {asym.};
-
-
-\draw (o1) -- (c) -- (o2);
-\draw[->] (o1.north east) -- (o1.north west);
-\draw[->] (o2.north east) -- (o2.north west);
-\draw[<-] (c.north east) -- (c.north west);
-
-
-\end{tikzpicture}
+\inputtikz{\currfiledir fig_hcn_modes}
 \end{marginfigure}
-\begin{marginfigure}
-\begin{tikzpicture}
-\useasboundingbox (-0.2,-0.2) rectangle (3,0.3);
-%\draw (-0.2,-0.2) rectangle (2,0.3);
+Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden, analog zu Kohlendioxid oben. Das Spektrum am Anfang des Kapitels zeigt die Biegeschwingung bei $\bar{\nu} = 712$~cm$^{-1}$.  Abbildung \ref{fig:vib_hcn_all} gibt einen Überblick über einen größeren Spektralbereich. Man sieht zusätzlich den 
+ersten Oberton der Biegeschwingung bei ungefähr der doppelten Frequenz  $\bar{\nu} = 1415$~cm$^{-1}$
+. Die Mode bei  $\bar{\nu} = 3312$~cm$^{-1}$ ist die  asymmetrische Streckschwingung. Die symmetrische Streckschwingung  bei $\bar{\nu} = 2114$~cm$^{-1}$,
+ Im Gegensatz zu \ch{CO2} bewegt sich in dieser Mode das Kohlenstoffatom ebenfalls, da die Massen von H und N verschieden sind, und sich ansonsten der  Schwerpunkt bewegen würde. Dies macht diese Mode sehr schwach IR-aktiv.  Nur für den Grundton der Biegeschwingung und die  symmetrische Streckschwingung ist der P-Zweig erlaubt.
 
-\draw  (0,0) node (o1) {H};
-\draw  (0.75,0) node (c) {C};
-\draw  (1.5,0) node (o2) {N};
-\draw  (2.4,0) node (t1) {sym.};
+\begin{figure}
+\inputtikz{\currfiledir fig_hcn-lowres}
+\caption{Infrarot-Absorptionsspektrum von HCN Gas  (\cite{Maki_1995_HCN} via \href{https://hitran.org}{hitran.org}). Im unteren Spektrum ist ein größerer Ausschnitt bei geringer Auflösung gezeigt. Hier sind von den Rotationsbanden nur die Einhüllenden zu erkennen.
+\label{fig:vib_hcn_all}}
+\end{figure}
 
-\draw (o1) -- (c) -- (o2);
-\draw[->] (o1.north east) -- (o1.north west);
-\draw[<-] (o2.north east) -- (o2.north west);
-\draw[<-] (c.north east) -- (c.north west);
 
-\end{tikzpicture}
-\end{marginfigure}
+
+
+
 
 
 

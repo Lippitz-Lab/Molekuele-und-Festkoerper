@@ -1,0 +1,104 @@
+
+%\documentclass[notoc,nofonts,a4paper,twoside,nobib]{tufte-book}
+%\documentclass[nofonts,a4paper,twoside]{book}
+
+\documentclass{standalone}
+
+\usepackage[ngerman]{babel}
+\usepackage{currfile,hyperxmp}
+
+
+
+
+
+
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{modiagram}
+\usepackage{chemformula}
+\usepackage{chemfig}
+\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}
+
+
+\input{tikz_header}
+
+
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+
+
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{hyperref}
+
+\usepackage{units}
+
+\usepackage{chemformula}
+
+\usepackage{braket}
+\setcounter{secnumdepth}{0}
+
+% citations
+%\usepackage{natbib}
+%\bibliographystyle{plainnat}
+%\setcitestyle{round} 
+
+% pandoc syntax highlighting
+%\usepackage{color}
+%\usepackage{fancyvrb}
+
+
+
+% longtable
+\usepackage{longtable,booktabs}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+
+% morefloats
+\usepackage{morefloats}
+
+\usepackage{calc}
+
+
+%\input{tint_book_header}
+
+
+
+\begin{document}
+
+
+
+ \begin{modiagram}[labels, names, AO-width=12pt]
+% labels-fs=\footnotesize] 
+ 
+\atom[\ch{N_a}]{left}{1s, 2s, 2p = {;up,up,up}}
+
+ \atom[\ch{Nb+}]{right}{1s, 2s, 2p = {;up,up} }
+\molecule[\ch{N2}]{
+1sMO, 2sMO, 2pMO = {;pair,pair,pair,},
+      label = {
+      1sigma  = 1s$\sigma_g$,
+      1sigma* = 1s$\sigma_u^\star$,
+      2sigma  = 2s$\sigma_g$,
+      2sigma* = 2s$\sigma_u^\star$,
+      2psigma  = 2p$\sigma_g$,
+      2psigma* = 2p$\sigma_u^\star$,
+      2piy = \hspace*{5mm} 2p$\pi_u$,
+      2piz = \ ,
+      2piy* = \hspace*{5mm} 2p$\pi_g^\star$,
+      2piz* = \
+}
+    }
+    
+\end{modiagram}
+
+
+
+
+\end{document}

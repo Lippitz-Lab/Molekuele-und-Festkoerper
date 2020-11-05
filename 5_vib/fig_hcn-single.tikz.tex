@@ -1,0 +1,38 @@
+
+  
+\begin{tikzpicture}
+%\useasboundingbox (-1.0,-1.0) rectangle (10.2,4.2);
+%\draw (-1,-1.0) rectangle (10.2,4.2);
+%
+
+
+\pgfmathsetmacro\plotw{32mm} % width of subplots
+\pgfmathsetmacro\ploth{32mm} % height of smaller subplots
+\pgfmathsetmacro\vsep{15pt}  % vertical separation between subplots
+\pgfmathsetmacro\hsep{5pt}  % horizontal separation between subplots
+
+\begin{axis}[
+    height=40mm,
+    width=102mm,
+    ymax = 5,
+    ymin = 0,
+    xtick pos = bottom,
+    scale only axis,
+     xlabel = {Wellenzahl $\bar{\nu}$ (cm$^{-1}$)}, 
+      x tick label style={/pgf/number format/.cd,%
+          scaled x ticks = false,
+          set thousands separator={},
+          fixed},
+          ylabel = {Extinktion}, xmin=620,
+ xmax = 820, ytick pos = left, ytick = {0}
+    ]
+    
+ \addplot[no markers] table [x index=0, y index=1] {\currfiledir hcn.dat};
+ 
+ \end{axis}
+%
+%
+
+
+\end{tikzpicture}
+

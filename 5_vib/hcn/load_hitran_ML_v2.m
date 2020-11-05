@@ -34,7 +34,7 @@ const = phys_const_2();
 % wavenumber_samples_1_per_cm = 1 ./ wavelength_samples_nm * 1e7;
 wavenumber_samples_1_per_cm = (600:0.01:3800) ;
 
-resolution = 0.1;
+resolution = 2;
 convolution_function = (exp( -(wavenumber_samples_1_per_cm - mean(wavenumber_samples_1_per_cm)) .^ 2 / (resolution ^ 2))) ;
 convolution_function = convolution_function ./ sum(convolution_function);
 
@@ -74,33 +74,40 @@ transmission_16_times_ = exp(16 * log(hitran_struct.transmission_));
 blurred_transmission = conv(transmission_16_times_, convolution_function, 'same');
 absorbance =  -1 .* log10(blurred_transmission);
 
-
-x1 = (620:0.05:820) ;
-x2 = (1320:0.05:1520) ;
-x3 = (3200:0.05:3400) ;
-x4 = (2000:0.05:2200) ;
+plot(wavenumber_samples_1_per_cm, absorbance)
 
 
-y1 = interp1(wavenumber_samples_1_per_cm, absorbance, x1);
-y2 = interp1(wavenumber_samples_1_per_cm, absorbance, x2);
-y3 = interp1(wavenumber_samples_1_per_cm, absorbance, x3);
-y4 = interp1(wavenumber_samples_1_per_cm, absorbance, x4);
+x = (600:2:3800) ;
+y = interp1(wavenumber_samples_1_per_cm, absorbance, x);
+figure
+plot(x,y)
 
-% [~, a] = min(abs(wavenumber_samples_1_per_cm));
-% [~, b] = min(abs(wavenumber_samples_1_per_cm - 500));
+ out = [x; y]';
+ save('hcn-lowres.dat','out','-ascii')
+
+% x1 = (620:0.05:820) ;
+% x2 = (1320:0.05:1520) ;
+% x3 = (3200:0.05:3400) ;
 % 
-% wavenumber_samples_1_per_cm = wavenumber_samples_1_per_cm(a:b);
-% blurred_transmission = blurred_transmission(a:b);
-    
-	figure;
-    subplot(1,3,1)
-	plot(x1, y1);
-   
-       subplot(1,3,2)
-	plot(x4, y4);
-   
-   subplot(1,3,3)
-	plot(x3, y3);
-
-out = [x1; y1; x2; y2; x3; y3; x4; y4]';
-save('hcn.dat','out','-ascii')
+% y1 = interp1(wavenumber_samples_1_per_cm, absorbance, x1);
+% y2 = interp1(wavenumber_samples_1_per_cm, absorbance, x2);
+% y3 = interp1(wavenumber_samples_1_per_cm, absorbance, x3);
+% 
+% % [~, a] = min(abs(wavenumber_samples_1_per_cm));
+% % [~, b] = min(abs(wavenumber_samples_1_per_cm - 500));
+% % 
+% % wavenumber_samples_1_per_cm = wavenumber_samples_1_per_cm(a:b);
+% % blurred_transmission = blurred_transmission(a:b);
+%     
+% 	figure;
+%     subplot(1,3,1)
+% 	plot(x1, y1);
+%    
+%        subplot(1,3,2)
+% 	plot(x2, y2);
+%    
+%    subplot(1,3,3)
+% 	plot(x3, y3);
+% 
+% out = [x1; y1; x2; y2; x3; y3]';
+% save('hcn.dat','out','-ascii')

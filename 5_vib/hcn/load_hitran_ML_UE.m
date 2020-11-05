@@ -76,15 +76,15 @@ absorbance =  -1 .* log10(blurred_transmission);
 
 
 x1 = (620:0.05:820) ;
-x2 = (1320:0.05:1520) ;
-x3 = (3200:0.05:3400) ;
-x4 = (2000:0.05:2200) ;
+% x2 = (1320:0.05:1520) ;
+% x3 = (3200:0.05:3400) ;
+% x4 = (2000:0.05:2200) ;
 
 
 y1 = interp1(wavenumber_samples_1_per_cm, absorbance, x1);
-y2 = interp1(wavenumber_samples_1_per_cm, absorbance, x2);
-y3 = interp1(wavenumber_samples_1_per_cm, absorbance, x3);
-y4 = interp1(wavenumber_samples_1_per_cm, absorbance, x4);
+% y2 = interp1(wavenumber_samples_1_per_cm, absorbance, x2);
+% y3 = interp1(wavenumber_samples_1_per_cm, absorbance, x3);
+% y4 = interp1(wavenumber_samples_1_per_cm, absorbance, x4);
 
 % [~, a] = min(abs(wavenumber_samples_1_per_cm));
 % [~, b] = min(abs(wavenumber_samples_1_per_cm - 500));
@@ -93,14 +93,13 @@ y4 = interp1(wavenumber_samples_1_per_cm, absorbance, x4);
 % blurred_transmission = blurred_transmission(a:b);
     
 	figure;
-    subplot(1,3,1)
 	plot(x1, y1);
    
-       subplot(1,3,2)
-	plot(x4, y4);
-   
-   subplot(1,3,3)
-	plot(x3, y3);
-
-out = [x1; y1; x2; y2; x3; y3; x4; y4]';
-save('hcn.dat','out','-ascii')
+%        subplot(1,3,2)
+% 	plot(x4, y4);
+%    
+%    subplot(1,3,3)
+% 	plot(x3, y3);
+% 
+out = [x1; y1]';
+save('hcn_ue.dat','out','-ascii')

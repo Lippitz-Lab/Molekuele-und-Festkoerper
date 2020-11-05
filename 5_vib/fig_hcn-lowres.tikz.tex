@@ -1,0 +1,83 @@
+
+  
+  
+\begin{tikzpicture}
+%\useasboundingbox (-1.0,-1.0) rectangle (10.2,4.2);
+%\draw (-1,-1.0) rectangle (10.2,4.2);
+%
+
+
+\pgfmathsetmacro\plotw{32mm} % width of subplots
+\pgfmathsetmacro\ploth{32mm} % height of smaller subplots
+\pgfmathsetmacro\vsep{15pt}  % vertical separation between subplots
+\pgfmathsetmacro\hsep{5pt}  % horizontal separation between subplots
+
+\begin{groupplot}[
+    group style={
+       group size=3 by 2,
+       vertical sep=\vsep,
+       horizontal sep=\hsep,
+       x descriptions at=edge bottom},
+    height=\ploth,
+    width=\plotw,
+    ymax = 5,
+    ymin = 0,
+    xtick pos = bottom,
+    scale only axis,
+      x tick label style={/pgf/number format/.cd,%
+          scaled x ticks = false,
+          set thousands separator={},
+          fixed},
+    ]
+    
+
+
+%\nextgroupplot[ylabel = {Extinktion}, xmin=620,
+% xmax = 820, xtick = {712}, xticklabel = {712}, ytick pos = left, ytick = {0}]
+%
+% \addplot[no markers] table [x index=0, y index=1] {\currfiledir hcn.dat};
+
+
+
+\nextgroupplot[
+ylabel = {Extinktion},ytick pos = left, ytick = {0}, 
+ xmin=1320, xmax = 1520, xtick = {1415}, xticklabel = {1415}]
+ \addplot[no markers] table [x index=2, y index=3] {\currfiledir hcn.dat};
+
+	\draw [|-|] (axis cs:1365,3) -- node[above] {100 cm$^{-1}$} (axis cs: 1465,3);
+	
+	
+
+\nextgroupplot[ytick = \empty, yticklabel = \empty,
+ xmax = 2200, xtick = {2114}, xticklabel = {2114}]
+
+ \addplot[no markers] table [x index=6, y index=7] {\currfiledir hcn.dat};
+
+\node[anchor = north west] at (2000,5) {x 400};
+  
+
+\nextgroupplot[ytick = \empty,
+   yticklabel =\empty, xmin=3200, xmax=3400, xtick = {3312}, xticklabel = {3312}
+ %  height=2*\ploth + \vsep,
+ %  yshift=\ploth+\vsep
+  ]
+ \addplot[no markers] table [x index=4, y index=5] {\currfiledir hcn.dat};
+
+
+\nextgroupplot[group/empty plot]
+
+\nextgroupplot[ylabel = {Extinktion},xmin=600, xmax = 3600, ytick pos = left, width=3*\plotw  + 2 * \hsep,   
+   xlabel = {Wellenzahl $\bar{\nu}$ (cm$^{-1}$)}, 
+   ymax = 0.4, ytick = {0}
+   ]
+
+ \addplot[no markers] table [x index=0, y index=1] {\currfiledir hcn-lowres.dat};
+
+
+\nextgroupplot[group/empty plot]
+% second plot should be empty 
+\end{groupplot}
+
+
+\end{tikzpicture}
+
