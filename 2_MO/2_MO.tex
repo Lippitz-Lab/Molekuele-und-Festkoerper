@@ -24,16 +24,16 @@ Die Molekülorbitaltheorie  (MO) baut zunächst neue (Ein-Elektron-) Orbitale, d
 \section{Das Variationsprinzip}
 
  
-Wir schreiben die Schrödinger-Gleichung
+Die Schrödinger-Gleichung
 \begin{equation}
- \hat{H} \ket{\Psi} = E \, \ket{\Psi} 
+ \hat{H} \ket{\Phi} = E_0 \, \ket{\Phi} 
 \end{equation}
-um durch Multiplikation von links mit $\bra{\Psi}$ und erhalten
+ist eine Differentialgleichung und nicht immer einfach zu lösen. Hier hilft das Variationsprinzip. Für eine beliebige Wellenfunktion  $\ket{\Psi}$ gilt
 \begin{equation}
- E = \frac{\braket{\Psi | H | \Psi}} {\braket{\Psi | \Psi}}
+ E = \frac{\braket{\Psi | H | \Psi}} {\braket{\Psi | \Psi}} \ge E_0
  \label{eq:MO_variation}
 \end{equation}
-Den Term auf der rechten Seite kann man für beliebige Wellenfunktionen ausrechnen. Die Mathematik sagt aber, dass er minimal wird, wenn die Wellenfunktion eine Eigenfunktion von $\hat{H}$ ist, also die Schrödinger-Gleichung erfüllt. Wir probieren nun also verschiedene Test-Funktionen durch und versuchen, die Energie nach Gl.~\ref{eq:MO_variation} zu minimieren. Dadurch nähern wir uns der echten Eigenfunktion immer mehr an, die Lösung der Schrödinger-Gleichung ist.
+Die Mathematik sagt, dass $E$ minimal wird, wenn  $\ket{\Psi}$ die Schrödinger-Gleichung löst. Aber auch wenn $\ket{\Psi}$ keine Lösung der Schrödinger-Gleichung  ist, kann man Gl.~\ref{eq:MO_variation} einfach ausrechnen. Wir probieren  also verschiedene Test-Funktionen durch und versuchen, die Energie nach Gl.~\ref{eq:MO_variation} zu minimieren. Dadurch nähern wir uns der echten Eigenfunktion immer mehr an, die Lösung der Schrödinger-Gleichung ist. Leider wissen wir nicht, ob wir man nicht durch noch bessere Test-Funktionen noch kleinere Werte von $E$ erreichen würde.
 
 Sei die Testfunktion
 \begin{equation}
@@ -82,46 +82,51 @@ Da die beiden Kerne identisch sind, gibt es solche Lösungen $\ket{\phi_2}$ in d
 
 Wir folgen dem oben dargestellten Variationsprinzip und müssen nur die drei Integrale $S$, $ H_{11}$ und $H_{12}$ diskutieren.
 
-\paragraph{Überlappintegral $S$} Das Integral $S$ beschreibt den räumlichen Überlapp der beiden Atom-Wellenfunktionen, wenn die einen um Kern 1, die andere um Kern 2 zentriert ist:
-\begin{equation}
- S = \braket{\phi_1 | \phi_2} = \int \phi_1( \mathbf{r} - \mathbf{r}_1)  \, \phi_2( \mathbf{r} - \mathbf{r}_2)   \, d\mathbf{r}
-\end{equation}
-Dabei bezeichnet $\mathbf{r}$ die Position des Elektrons und  $\mathbf{r}_{1,2}$  die Position der Kerne.\sidenote{Wasserstoff-Wellenfunktionen sind reell-wertig.} Da die $\ket{\phi}$ normiert sind, liegt der Wert von $S$ zwischen $0$ und $1$.
-
-
+\paragraph{Überlappintegral $S$} 
 \begin{marginfigure}
 \inputtikz{\currfiledir integrals_s}
-
-\caption{Skizze des  Überlappintegrals $S$. }
+\caption{Skizze   Überlappintegral $S$. }
 \end{marginfigure}
+%
+Das Integral $S$ beschreibt den räumlichen Überlapp der beiden Atom-Wellenfunktionen, wenn die einen um Kern 1, die andere um Kern 2 zentriert ist:
+\begin{equation}
+ S = \braket{\phi_1 | \phi_2} = \int \phi_1^\star( \mathbf{r} )  \, \phi_2( \mathbf{r})   \, d\mathbf{r}
+\end{equation}
+Dabei bezeichnet $\mathbf{r}$ die Position des Elektrons. Die Wellenfunktion $\phi_i$ ist um den Kern an Position $\mathbf{r}_{i}$ zentriert.\sidenote{Wasserstoff-Wellenfunktionen sind reell-wertig.} Da die $\ket{\phi}$ normiert sind, liegt der Wert von $S$ zwischen $0$ und $1$.
 
 
-\paragraph{Coulomb-Wechselwirkung $H_{11}$}  Dieser Term beschreibt die Coulomb-Energie des Elektrons in der atomaren Wellenfunktion $\phi_1$, aber in Gegenwart beider Kerne:
+
+
+
+\paragraph{Coulomb-Wechselwirkung $H_{11}$}  
+\begin{marginfigure}
+\inputtikz{\currfiledir integrals_c}
+\caption{Skizze Coulomb-Integral $C$ }
+\end{marginfigure}
+%
+Dieser Term beschreibt die Coulomb-Energie des Elektrons in der atomaren Wellenfunktion $\phi_1$, aber in Gegenwart beider Kerne:
 \begin{eqnarray}
 H_{11} &= &  \braket{\phi_1 | \hat{H} | \phi_1} = \braket{\phi_1 | \hat{H}_1 | \phi_1}  - \braket{\phi_1 |  \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}} | \phi_1}  \\
  & = & E_1 - \frac{e^2}{4 \pi \epsilon_0} \int \frac{|\phi_1(\mathbf{r})|^2 }{|\mathbf{r} - \mathbf{r}_2  |} \, d\mathbf{r} = E_1 + C
 \end{eqnarray}
 Das Ergebnis ist die Eigen-Energie des Elektrons im Wasserstoff-\emph{Atom}, korrigiert im ein Überlappintegral der Ladungsdichte ${|\phi_1(\mathbf{r})|^2 }$ um den einen Kern im Coulomb-Potential des anderen Kerns. Der Korrekturterm $C$ ist negativ.
 
-\begin{marginfigure}
-\inputtikz{\currfiledir integrals_c}
-
-\caption{Skizze Coulomb-Integral $C$ }
-\end{marginfigure}
 
 
-\paragraph{Austausch-Wechselwirkung $H_{11}$} Die Austausch-Wechselwirkung ist ein rein quantenmechanischer Effekt.
-\begin{eqnarray}
-H_{12} &= &  \braket{\phi_1 | \hat{H} | \phi_2} = \braket{\phi_1 | \hat{H}_1 | \phi_2}  - \braket{\phi_1 |  \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}} | \phi_2}  \\
- & = & E_1 \, S - \frac{e^2}{4 \pi \epsilon_0} \int \frac{ \phi_1(\mathbf{r}) \, \phi_2(\mathbf{r})  }{|\mathbf{r} - \mathbf{r}_2  |} \, d\mathbf{r} = E_1 \, S + A
-\end{eqnarray}
-Die Austausch-Dichte $\phi_1(\mathbf{r}) \, \phi_2(\mathbf{r})$ ist ähnlich einer Ladungsdichte $|\phi(\mathbf{r})|^2$, nur dass zwei verschiedenen Wellenfunktionen eingehen. Das Elektron wechselt sozusagen zwischen der Zugehörigkeit zu Kern 1 und 2. Der Korrekturterm $A$ ist ebenfalls negativ.
 
+\paragraph{Austausch-Wechselwirkung $H_{12}$} 
 \begin{marginfigure}
 \inputtikz{\currfiledir integrals_a}
-
-\caption{Skizze Austausch-Integrals $A$.}
+\caption{Skizze Austausch-Integral $A$.}
 \end{marginfigure}
+%
+Die Austausch-Wechselwirkung ist ein rein quantenmechanischer Effekt.
+\begin{eqnarray}
+H_{12} &= &  \braket{\phi_1 | \hat{H} | \phi_2} = \braket{\phi_1 | \hat{H}_1 | \phi_2}  - \braket{\phi_1 |  \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}} | \phi_2}  \\
+ & = & E_1 \, S - \frac{e^2}{4 \pi \epsilon_0} \int \frac{ \phi_1^\star(\mathbf{r}) \, \phi_2(\mathbf{r})  }{|\mathbf{r} - \mathbf{r}_2  |} \, d\mathbf{r} = E_1 \, S + A
+\end{eqnarray}
+Die Austausch-Dichte $\phi_1^\star(\mathbf{r}) \, \phi_2(\mathbf{r})$ ist ähnlich einer Ladungsdichte $|\phi(\mathbf{r})|^2$, nur dass zwei verschiedenen Wellenfunktionen eingehen. Das Elektron wechselt sozusagen zwischen der Zugehörigkeit zu Kern 1 und 2. Der Korrekturterm $A$ ist ebenfalls negativ.
+
 
 
 Mit diesen Integralen wird die Gesamtenergie
@@ -133,11 +138,12 @@ Die zugehörigen Molekül-Orbitale sind die symmetrische und die anti-symmetrisc
 \ket{\Psi_\pm }= \frac{1}{\sqrt{2 (1 \pm  S)}} \, \left( \ket{\phi_1} \pm \ket{\phi_2} \right)
 \end{equation}
 
-Zur Berechnung der Bindungsenergie nehmen wir jetzt die nur vom Kern--Kern--Abstand $R$ abhängende Coulomb-Energie der Kerne wieder hinzu
+Zur Berechnung der Bindungsenergie nehmen wir jetzt die nur vom Kern--Kern--Abstand $R$ abhängende Coulomb-Energie der Kerne wieder hinzu. Diese ist allerdings auch Bestandteil von $H_{12}$, so dass $S$ hier mit eingeht\sidenote{Da ist \cite{Haken_wolf_II} sehr geschickt formuliert! In \cite{McQuarrie2008} findet sich die vollständige Rechnung.}
+%
 \begin{eqnarray}
  E_\text{Bindung} &=&  E_\text{Molekül} -  E_\text{Atom} \\
-  &=&   E_1 + \frac{C \pm A}{1 \pm S} + \frac{e^2}{4 \pi \epsilon_0} \frac{1}{R} - E_1 \\
-   &=&\frac{C }{1 \pm S}  + \frac{e^2}{4 \pi \epsilon_0} \frac{1}{R}  \pm \frac{ A}{1 \pm S}  \label{eq:MO_E_bindung_h2p}
+  &=&   E_1 + \frac{C \pm A}{1 \pm S} + \frac{e^2}{4 \pi \epsilon_0} \frac{1 + S}{R} - E_1 \\
+   &=&\frac{C }{1 \pm S}  + \frac{e^2}{4 \pi \epsilon_0} \frac{1 + S }{R}  \pm \frac{ A}{1 \pm S}    \label{eq:MO_E_bindung_h2p}
 \end{eqnarray}
 Numerische Rechnungen zeigen, dass das Überlapp-Integral $S$ keinen Entscheidenden Einfluss auf das Ergebnis hat, wir es hier also nicht weiter betrachten müssen.\sidenote{Für H$_2^+$ lassen sich relativ einfache geschlossene Formen für die Integrale angeben, siehe \cite{McQuarrie2008} }
 
@@ -148,7 +154,9 @@ Das Coulomb-Integral $C$ ist für einen  großen Kern--Kern--Abstand $R$ quasi d
 \begin{marginfigure}
 \inputtikz{\currfiledir integrale_von_r}
 
-\caption{Abhängigkeit der Integrale vom Kern--Kern--Abstand $R$ }
+\caption{Abhängigkeit der Integrale vom Kern--Kern--Abstand $R$. Dargestellt ist 
+$C' = C  + \frac{e^2}{4 \pi \epsilon_0} \frac{1 }{R}$ bzw. $A' = A   + \frac{e^2}{4 \pi \epsilon_0} \frac{ S }{R}$.
+ }
 \end{marginfigure}
 
 

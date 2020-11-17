@@ -40,41 +40,41 @@ Es gibt die Maxwell-Gleichungen in einer mikroskopischen Form und in einer makro
 \text{makroskopische Form} \nonumber \\
 %
 %\text{Gaußsches Gesetz} &
- \vec\nabla\cdot\vec{E}= \frac{\rho}{\epsilon_0} & &
- \vec\nabla\cdot\vec{D}= \rho_{\text{frei}} \\
+ \nabla\cdot\mathbf{E}= \frac{\rho}{\epsilon_0} & &
+ \nabla\cdot\mathbf{D}= \rho_{\text{frei}} \\
 %
 %\text{Gaußsches Gesetz für Magnetfelder }&
-\vec\nabla\cdot\vec{B}=0
+\mathbf\nabla\cdot\mathbf{B}=0
  & &
-\vec\nabla\cdot\vec{B}=0 \\
+\mathbf\nabla\cdot\mathbf{B}=0 \\
 %
 %\text{Induktionsgesetz} &
-\vec\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}  
+\mathbf\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t}  
 & &
-\vec\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t} \\
+\mathbf\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t} \\
 %
 %\text{Erweitertes Durchflutungsgesetz} &
-\vec\nabla\times\vec{B}= \mu_0\vec{j}+\mu_0\epsilon_0\frac{\partial\vec{E}}{\partial t}  & &
-\vec\nabla\times\vec{H}= \vec{j}_{\text{frei}}+\frac{\partial\vec{D}}{\partial t}
+\mathbf\nabla\times\mathbf{B}= \mu_0\mathbf{j}+\mu_0\epsilon_0\frac{\partial\mathbf{E}}{\partial t}  & &
+\mathbf\nabla\times\mathbf{H}= \mathbf{j}_{\text{frei}}+\frac{\partial\mathbf{D}}{\partial t}
 \end{align}
 %
-Die makroskopische Form berücksichtigt dabei die Gegenwart von Medien, in dem die Größen dielektrische Verschiebung $\vec{D}$ und magnetische Feldstärke $\vec{H}$ eingeführt werden. Dies ist einerseits historisch bedingt, weil zur Zeit Maxwells der mikroskopische Aufbau der Materie noch unbekannt war. Andererseits ist es aber auch heute hilfreich, nicht alle Details der mikroskopischen Struktur der Materie explizit berücksichtigen zu müssen, sondern durch gemittelte, makroskopische Parameter beschreiben zu können.
+Die makroskopische Form berücksichtigt dabei die Gegenwart von Medien, in dem die Größen dielektrische Verschiebung $\mathbf{D}$ und magnetische Feldstärke $\mathbf{H}$ eingeführt werden. Dies ist einerseits historisch bedingt, weil zur Zeit Maxwells der mikroskopische Aufbau der Materie noch unbekannt war. Andererseits ist es aber auch heute hilfreich, nicht alle Details der mikroskopischen Struktur der Materie explizit berücksichtigen zu müssen, sondern durch gemittelte, makroskopische Parameter beschreiben zu können.
 
 Besonders deutlich wird dies bei der Unterscheidung zwischen freien Ladungen und Polarisationsladungen.  Vom modernen, mikroskopischen Standpunkt her trennt man die Elektronen in zwei Gruppen: von außen beispielsweise auf einen Kondensator aufgebrauchte (= freie) und durch Verschiebung der schon vorhandenen Elektronen in einem Dielektrikum an einem Ort neu hinzukommende Polarisationsladung. Letztere Verschiebung ist eine Konsequenz der Anwesenheit der freien Ladungen.
 
-Wenn wir ein Stück dielektrische Materie in einen Plattenkondensator halten, dann bewegt das elektrische Feld $\vec{E}$ des Kondensators die Ladungsträger der Ladung $q$ in der Materie um  die Distanz $\Delta  \vec{x}$ von der neutralisierenden Gegenladung $-q$ weg. Dadurch entsteht dadurch ein Dipolmoment $\vec{p} = q \Delta \vec{x}$. Oft werden Dipolmomente in der Einheit Debye angegeben ($1 D = 3{,}33564 \cdot 10^{-30} \ C \cdot m$). Ein Elektron im Abstand von 1~\AA\ von einem Proton produziert ein Dipolmoment von etwa 4.8~D. Bei $N$ Molekülen (Ladungsträgerpaaren) pro Volumen ergibt sich eine makroskopische Polarisation $\vec{P}$ zu
+Wenn wir ein Stück dielektrische Materie in einen Plattenkondensator halten, dann bewegt das elektrische Feld $\mathbf{E}$ des Kondensators die Ladungsträger der Ladung $q$ in der Materie um  die Distanz $\Delta  \mathbf{x}$ von der neutralisierenden Gegenladung $-q$ weg. Dadurch entsteht dadurch ein Dipolmoment $\mathbf{p} = q \Delta \mathbf{x}$. Oft werden Dipolmomente in der Einheit Debye angegeben ($1 D = 3{,}33564 \cdot 10^{-30}$ C  m). Ein Elektron im Abstand von 1~\AA\ von einem Proton produziert ein Dipolmoment von etwa 4.8~D. Bei $N$ Molekülen (Ladungsträgerpaaren) pro Volumen ergibt sich eine makroskopische Polarisation $\mathbf{P}$ zu
 \begin{equation}
-\vec{P} = N \, q \, \Delta \vec{x} = f(\vec{E})
+\mathbf{P} = N \, q \, \Delta \mathbf{x} = f(\mathbf{E})
 \end{equation}
-Der Zusammenhang zwischen angelegtem externen Feld $\vec{E}$ und resultierende 
-Polarisation $\vec{P}$ hängt ganz entscheidend vom mikroskopischen Aufbau der Materie ab. Alle Methoden der Spektroskopie vermessen diesen Zusammenhang. Oft wird er als 
+Der Zusammenhang zwischen angelegtem externen Feld $\mathbf{E}$ und resultierende 
+Polarisation $\mathbf{P}$ hängt ganz entscheidend vom mikroskopischen Aufbau der Materie ab. Alle Methoden der Spektroskopie vermessen diesen Zusammenhang. Oft wird er als 
 \begin{equation}
- \vec{P} =  (\epsilon - 1) \, \epsilon_0 \, \vec{E} = \epsilon_0 \,\chi \, \vec{E} 
+ \mathbf{P} =  (\epsilon - 1) \, \epsilon_0 \, \mathbf{E} = \epsilon_0 \,\chi \, \mathbf{E} 
  \label{eq:diel_p_lin}
 \end{equation}
 geschrieben, mit der relativen Permittivität\sidenote{Vorsicht, hier gibt es verschiedene Schreibweisen. Ich benutze die Form $D = \epsilon \epsilon_0 E$, mit einheiten-freiem $\epsilon$. Manchmal findet man $\epsilon_0 \epsilon_r$, manchmal auch nur $\epsilon$.} $\epsilon$ bzw. der elektrischen Suszeptibilität $\chi$. Dies ist aber nur eine Näherung. In allgemeiner Form ist der Zusammenhang
 \begin{equation}
-\vec{P}  = \epsilon_0 \left( \chi^{(1)} \vec{E} + \chi^{(2)} \vec{E}  \vec{E} +  \chi^{(3)} \vec{E}  \vec{E}  \vec{E}  + \dots \right)
+\mathbf{P}  = \epsilon_0 \left( \chi^{(1)} \mathbf{E} + \chi^{(2)} \mathbf{E}  \mathbf{E} +  \chi^{(3)} \mathbf{E}  \mathbf{E}  \mathbf{E}  + \dots \right)
 \end{equation}
 Zum einen muss der Polarisation-Vektor nicht unbedingt in die Richtung des elektrischen Feldes zeigen. Dies macht die $\chi^{(n)}$ zu Tensoren $(n+1)$ter Stufe und führt beispielsweise zu Doppelbrechung. Zum anderen muss der Zusammenhang zwischen Feld und Polarisation nicht unbedingt linear sein, wodurch verschieden Taylor-Koeffizienten notwendig werden. Dies ist Thema der nichtlinearen Optik.
 
@@ -83,21 +83,21 @@ Das Thema der folgenden Kapitel ist, wie man aus Vermessung von $\epsilon$ Aussa
 
 %In der makroskopischen Betrachtung entspricht diese Verschiebung einer Polarisationsladung $\rho_\text{pol}$
 %\begin{equation}
-%\rho_\text{pol} = \rho - \rho_\text{frei} = - \vec\nabla\cdot\vec{P}
+%\rho_\text{pol} = \rho - \rho_\text{frei} = - \mathbf\nabla\cdot\mathbf{P}
 %\end{equation}
 %
 %In der mikroskopischen Betrachtung sind alle Ladungen gleich, und es gilt
 %\begin{equation}
-% \vec\nabla\cdot\vec{E}= \frac{\rho}{\epsilon_0}  =  \frac{\rho_\text{frei} + \rho_\text{pol} }{\epsilon_0} 
+% \mathbf\nabla\cdot\mathbf{E}= \frac{\rho}{\epsilon_0}  =  \frac{\rho_\text{frei} + \rho_\text{pol} }{\epsilon_0} 
 %\end{equation}
 
 \section{Unpolare Moleküle: Verschiebungspolarisation}
 
 Betrachten wir zunächst unpolare Moleküle, also solche, die kein permanentes Dipolmoment  besitzen\sidenote{siehe auch \cite[Kapitel 3]{Haken_wolf_II}}. Dies sind insbesondere zentro-symmetrische Moleküle wie \ch{H2}, \ch{O2}, \ch{N2}, \ch{CCl4}. Aber ein externes angelegtes elektrisches Feld verschiebt die Ladungen\sidenote{Elektronen gegenüber Kernen, aber auch Kationen gegenüber Anionen} relativ zueinander und induziert ein Dipolmoment
 \begin{equation}
- \vec{p}_\text{ind} = \alpha \, \vec{E}_\text{lokal}
+ \mathbf{p}_\text{ind} = \alpha \, \mathbf{E}_\text{lokal}
 \end{equation}
-mit der Polarisierbarkeit $\alpha$ und dem Feld am Ort der Ladungen $\vec{E}_\text{lokal}$
+mit der Polarisierbarkeit $\alpha$ und dem Feld am Ort der Ladungen $\mathbf{E}_\text{lokal}$
 
 \paragraph{Verdünntes molekulares Gas} Wenn die Moleküle sehr weit voneinander entfernt sind, beispielsweise in einem verdünnten Gas, dann haben die anderen Moleküle keinen Einfluss auf das Feld, das das eine betrachtete Molekül sieht. Das lokale Feld ist gleich dem externen Feld.
  Damit gilt
@@ -108,7 +108,7 @@ mit der Teilchenzahldichte $N$, dem Molekulargewicht $M$, der (Masse-)DIchte $\r
 \begin{equation}
  \epsilon = 1 +  \frac{\rho \, N_A } {M} \, \alpha  
 \end{equation}
-Man kann also die dielektrische Konstante $\epsilon$ messen und die die Polarisierbarkeit $\alpha$ bestimmen. Oft wird $\alpha' = \alpha / 4 \pi \epsilon_0$ angegeben, was die Einheit eines Volumens hat, das Polarisierbarkeitsvolumen. Beides sind Tensoren, also Richtungsabhängig.
+Man kann also die dielektrische Konstante $\epsilon$ messen und die die Polarisierbarkeit $\alpha$ bestimmen. Oft wird $\alpha' = \alpha / 4 \pi \epsilon_0$ angegeben, was die Einheit eines Volumens hat, das Polarisierbarkeitsvolumen. Beides sind Tensoren, also richtungsabhängig.
 
 \begin{marginfigure}
 \begin{tabular}{llll}
@@ -121,7 +121,7 @@ Man kann also die dielektrische Konstante $\epsilon$ messen und die die Polarisi
 
 \paragraph{Flüssigkeiten} Bei höherer Dichte, also beispielsweise in einer Flüssigkeit, muss man die anderen, ebenfalls polarisierten Moleküle berücksichtigen. Verschiedene Methoden sind dabei möglich\footcite{Parson}, die unter dem Stichwort \emph{local field correction} zusammengefasst sind.
 
-Wir betrachten hier die Lorentz-Methode. Alle Moleküle zusammen werden als  ein homogenes Medium mit der  dielektrische Konstante $\epsilon$  angesehen. Aus diesem Medium schneidet man eine Kugel aus, die gerade das einzelne, zu betrachtende Molekül umschließt. In die so entstandene Aushöhlung setzt man das Molekül in Vakuum, also wieder in einem sehr verdünnten Gas. Das externe elektrische Feld induziert eine Polarisation  $\mathbf{P}$, nur kennen wir deren Größe noch nicht. Diese Polarisation bewirkt  Oberflächenladung am Rand der Kugel, die das lokale Feld in der Kugel modifizieren:
+Wir betrachten hier die Lorentz-Methode. Alle Moleküle zusammen werden als  ein homogenes Medium mit der  dielektrische Konstante $\epsilon$  angesehen. Aus diesem Medium schneidet man eine Kugel aus, die gerade das einzelne, zu betrachtende Molekül umschließt. In die so entstandene Aushöhlung setzt man das Molekül in Vakuum, also wieder in einem sehr verdünnten Gas. Das externe elektrische Feld induziert eine Polarisation  $\mathbf{P}$, nur kennen wir deren Größe noch nicht. Diese Polarisation bewirkt  Oberflächenladungen am Rand der Kugel, die das lokale Feld in der Kugel modifizieren:
 \begin{equation}
 \mathbf{E}_\text{lokal} = \mathbf{E} + \frac{1}{3 \, \epsilon_0} \, \mathbf{P}
 \end{equation}
@@ -134,7 +134,6 @@ Damit können wird dann mit Gl.\ref{eq:diel_pind} das induzierte Dipolmoment ber
 \end{align}
  $\mathbf{P}$ kürzt sich heraus und wir erhalten durch Umstellen die 
 \emph{Clausius-Mosotti-Gleichung}
- stellen etwas um
  \begin{equation}
  \frac{\epsilon - 1}{\epsilon + 2} \frac{M}{\rho} = \frac{1}{3} \frac{N_A}{\epsilon
 _0} \, \alpha \label{eq:diel_Clausius-Mosotti}
@@ -202,7 +201,7 @@ Die Federkonstante $k$ ist dann die Ableitung dieser Kraft nach $R$. Für das Mo
 \begin{equation}
   h \nu = R_H \, \left( \frac{1}{n^2} - \frac{1}{m^2} \right)
 \end{equation}
-Für Atome liegt die Frequenz $\nu$ im Bereich von $10^{15}$~Hz $= 1$~PHz. Bei Molekülen liegt sie etwas niedriger, also $nu \approx 10^{14} \cdots 10^{15}$~Hz, also $100 \cdots 1000$~THz.
+Für Atome liegt die Frequenz $\nu$ im Bereich von $10^{15}$~Hz $= 1$~PHz. Bei Molekülen liegt sie etwas niedriger, also $\nu \approx 10^{14} \cdots 10^{15}$~Hz, also $100 \cdots 1000$~THz.
 
 
 \section{Lorentz-Oszillator-Modell}
@@ -214,7 +213,7 @@ Für Atome liegt die Frequenz $\nu$ im Bereich von $10^{15}$~Hz $= 1$~PHz. Bei M
 \caption{Frequenzabhängigkeit des Real- und Imaginärteils des Lorentz-Oszillators.}
 \end{marginfigure}
 
-Alle oben diskutieren Phänomene sind Resonanzen. Das Lorentz-Oszillator-Modell ist ein einfaches Modell, mit dem die Frequenzabhängigkeit der dielektrischen Funktion in der Nähe solcher Resonanzen beschrieben werden kann. In einem gedämpften harmonischen Oszillator (Masse $m$, Dämpfungskonstante $\gamma$, Eigenfrequenz $\omega_0$) wird die Masse durch ein periodisches Elektrisches Feld (Amplitude $E_0$, Frequenz $\omega$) um $x$ ausgelenkt, da die Masse eine Ladung $e$ trägt. Alles zusammen
+Alle oben diskutieren Phänomene sind Resonanzen. Das Lorentz-Oszillator-Modell ist ein einfaches Modell, mit dem die Frequenzabhängigkeit der dielektrischen Funktion in der Nähe solcher Resonanzen beschrieben werden kann. In einem gedämpften harmonischen Oszillator (Masse $m$, Dämpfungskonstante $\gamma$, Eigenfrequenz $\omega_0$) wird die Masse durch ein periodisches elektrisches Feld (Amplitude $E_0$, Frequenz $\omega$) um $x$ ausgelenkt, da die Masse eine Ladung $e$ trägt. Alles zusammen
 \begin{equation}
  m \ddot{x} + \gamma \dot{x} + m \omega_0^2  x = e E_0 e^{+ i \omega t}
 \end{equation}
@@ -273,7 +272,7 @@ Wir haben bisher den Zusammenhang zwischen dem angelegten externen Feld $E(t)$ u
 \begin{equation}
 P(t) = \chi(\omega) \epsilon_0 E(t) \quad \text{für} \quad E(t) = E_0 e^{i \omega t}
 \end{equation}
-Daraus ergab sich dann die Frequenzabhängigkeit von $\chi(\omega)$ Wir können dies Verallgemeinern für einen beliebigen zeitlichen Verlauf des Feldes  $E(t)$. Die Suszeptibilität ist nämlich die  \emph{Impulsantwort} des Materials, sozusagen das Gedächtnis:
+Daraus ergab sich dann die Frequenzabhängigkeit von $\chi(\omega)$ Wir können dies verallgemeinern für einen beliebigen zeitlichen Verlauf des Feldes  $E(t)$. Die Suszeptibilität ist nämlich die  \emph{Impulsantwort} des Materials, sozusagen das Gedächtnis:
 \begin{equation}
 P(t) = \epsilon_0 \int_{-\infty}^{+\infty} \chi( \Delta t = t - t') \, E(t') \, dt' \quad \text{für} \quad E(t) = \text{beliebig}
 \end{equation}
@@ -282,7 +281,7 @@ Die Polarisation $P$ jetzt, also zum Zeitpunkt $t$ hängt vom elektrischen Feld 
 Diese Konsequenzen lassen sich mit Hilfe der Funktionentheorie herleiten\sidenote{siehe auch Anhang A von \cite{Yariv1989}} und sind die Kramers-Kronig-Relationen. Es besteht folgender Zusammenhang zwischen Real- ($\chi'$) und Imaginärteil  ($\chi''$) der Suszeptibilität, wenn dieser der Kausalität gehorcht:
 \begin{align}
  \chi'(\nu) = & \frac{2}{\pi} \, CH \int_0^\infty \frac{s  \, \chi''(s)}{s^2 - \nu^2} \, ds \\
- \chi''(\nu) = & \frac{2}{\pi}\,  CH \int_0^\infty \frac{\nu \, \chi''(s)}{\nu^2 - s^2} \, ds 
+ \chi''(\nu) = & \frac{2}{\pi}\,  CH \int_0^\infty \frac{\nu \, \chi'(s)}{\nu^2 - s^2} \, ds 
  \label{eq:diel_KK}
 \end{align}
 $CH$ kennzeichnet dabei das Cauchy'sche Hauptwertintegral. Ähnliche Beziehung existieren auch für $\chi(\omega)$ und $\epsilon(\omega)$ sowie für alle anderen Größen, die der Kausalität unterliegen.

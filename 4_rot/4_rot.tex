@@ -97,11 +97,14 @@ wobei $B = h / (8 \pi^2 c \, \Theta)$ Rotationskonstante genannt wird. Die Linie
 
 
 Im Spektrum sieht man weiterhin einen charakteristischen, nicht-monotonen Verlauf der Amplituden der Linien mit der Übergangsfrequenz. Zunächst wächst die Linien-Stärke (oder Amplitude) mit steigende Übergangsfrequenz, um dann wieder abzufallen. Die Ursache dafür sind zwei gegenläufige Effekte. Zum einen steigt der Entartungsgrad mit $J$, da ja $M_J = 0, \pm 1, ... \pm J$. Es gibt also $2J+1$ Zustände mit gleicher Quantenzahl $J$.
-Zum anderen fällt die Besetzung des Ausgangszustands mit steigendem $J$. Um überhaupt einen Übergang machen zu können muss ja der Ausgangszustand besetzt sein. Dies geschieht durch thermische Anregung und folgt einer Boltzmann-Verteilung. Die thermische Energie $k_B T$ bei Raumtemperatur entspricht  $\bar{\nu}_{k T} \approx 200$~cm$^{-1}$, liegt also im hier relevanten Energiebereich. Zusammen ergibt sich so für die Übergangswahrscheinlichkeit und damit die Linien-Stärke
+Zum anderen fällt die Besetzung des Ausgangszustands mit steigendem $J$. Um überhaupt einen Übergang machen zu können muss ja der Ausgangszustand besetzt sein. Dies geschieht durch thermische Anregung und folgt einer Boltzmann-Verteilung. Die thermische Energie $k_B T$ bei Raumtemperatur entspricht  $\bar{\nu}_{k T} \approx 200$~cm$^{-1}$, liegt also im hier relevanten Energiebereich. Zusammen ergibt sich so für die Besetzung $N_J$ von Zustand $J$
 \begin{equation}
- S= (2J+1) \, e^{- E(J) / k_B T} = (2J+1) \, e^{- B hc J (J+1) / k_B T} 
+ \frac{N_J}{N_0}= (2J+1) \, e^{- E(J) / k_B T} = (2J+1) \, e^{- B hc J (J+1) / k_B T} 
 \end{equation}
-Damit haben wir Lage und Amplitude der Linien erklärt.
+Die Besetzung beeinflusst wesentlich die Amplitude der Linien. Um sie wirklich zu berechnen, müsste man noch stimulierte Emission und das nicht konstante Matrixelement des Übergangsdipols berücksichtige. Dies führt hier zu weit, ist aber in \citep{Demtröder_molekuelphysik} dargestellt.
+
+
+
 
 
 \section{Nicht-Starrer Rotator}
@@ -120,7 +123,7 @@ Im Gleichgewicht kompensieren sich Fliehkraft und Federkraft, also
 \begin{equation}
  m \, R \, \omega^2 = k \, ( R - R_0)
 \end{equation} 
-mit dem Ruhe-Abstand $R_0$ und $m$ hier als \emph{reduziert} Masse. Wir stellen um und benutzen $L = m R \omega$
+mit dem Ruhe-Abstand $R_0$ und $m$ hier als \emph{reduziert} Masse. Wir stellen um und benutzen $L = m R^2 \omega$
 \begin{equation}
 R - R_0 = \frac{L^2}{m \, k \, R^3  } 
 %\approx \frac{L^2}{m \, k \, R_0^3  }
@@ -145,7 +148,7 @@ Nun benutzen wir die Definition der Rotationskonstanten $B = h / (8 \pi^2  m  c 
 \end{equation}
 Die Konstante vor dem Korrekturterm nennt sich Zentrifugal-Dehnungskonstante $D$
 \begin{equation}
-D = \frac{4 B^2}{k \, R_0^2}
+D = \frac{4 \, h c \, B^2}{k \, R_0^2}
 \end{equation}
 Sie ist klein ($D/B \approx 10^{-4}$), aber messbar, insbesondere beim großem\sidenote{Bei $J = 100$ wären beide Terme gleich groß.} $J$. Die Auswahlregeln bleiben durch die Dehnung der Bindungslänge unverändert, da sich die Form oder Symmetrie der Moleküle nicht ändert. Die Äquidistanz der Linien im Spektrum wird dadurch aufgehoben. Mit steigendem $J$ rücken die Linien etwas näher zusammen.
 
