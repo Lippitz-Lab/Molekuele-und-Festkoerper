@@ -33,7 +33,7 @@
 
 
    % Energie-Achse
-	\draw[->] (0,\ylu) -- (2.7,\ylu) node[anchor = north east,xshift=2mm]{  E. Übergang};  
+	\draw[->] (0,\ylu) -- (2.7,\ylu) node[anchor = north east,xshift=2mm]{  E. Photon};  
  	\draw[-] (0,-1.6) -- (0,-1.8) node[below]{0};  
 
 	\draw[->] (-0.4,0) -- (-0.4,2.5) node[anchor = south east, rotate=90 ]{ E. Zustand};  
@@ -50,6 +50,10 @@
   \draw[->, blue] (ta)  --  (linieas);
  \draw[->, blue] (ts)  --  (linies);
  \draw[->, blue] (tr)  .. controls (1, -0.7) ..  (linier);
+ 
+\draw[white, line width= 2pt]  (-0.5,1.6 ) -- (\x2, 1.6 );
+\draw[line width=0.3pt] (-0.4,1.6 +0.02) -- ++ (30:0.07) -- ++ (-150:0.14);
+\draw[line width=0.3pt] (-0.4,1.6 -0.02) -- ++ (30:0.07) -- ++ (-150:0.14);
 
 \end{tikzpicture}
 

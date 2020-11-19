@@ -24,11 +24,14 @@
 \tikzmath{\y0 = 0; \y1 = 0.3; \y2 =2 ;}
 
 
+
    \draw[line width=1pt] (\x1,\y0) -- (\x2,\y0) node[anchor=west] {$0$};    		
   \draw[line width=1pt] (\x1,\y1) -- (\x2,\y1) node[anchor=west]  {$1$};   
   \draw[line width=1pt, dashed] (\x1,\y2) -- (\x2,\y2);    		
 
  \node[anchor=west, yshift=3mm]  at (\x2,\y1) {$\nu$};   
+ 	
+ 	
  	
 \tikzmath{\a1= 0.3; \a2 = 1.2; \a3 =2.1 ;}
  	\draw[->] (\a1,\y0) --  (\a1,\y2) ;  
@@ -48,7 +51,7 @@
 
 
    % Energie-Achse
-	\draw[->] (0,\ylu) -- (2.7,\ylu) node[anchor = north east,xshift=2mm]{  E. Übergang};  
+	\draw[->] (0,\ylu) -- (2.7,\ylu) node[anchor = north east,xshift=2mm]{  E. Photon};  
  	\draw[-] (0,-1.6) -- (0,-1.8) node[below]{0};  
 
 	\draw[->] (-0.4,0) -- (-0.4,2.5) node[anchor = south east, rotate=90 ]{ E. Zustand};  
@@ -65,6 +68,11 @@
   \draw[->, blue] (ta)  --  (linieas);
  \draw[->, blue] (ts)  --  (linies);
  \draw[->, blue] (tr)  .. controls (1, -0.7) ..  (linier);
+
+
+\draw[white, line width= 2pt]  (-0.5,1.6 ) -- (\x2, 1.6 );
+\draw[line width=0.3pt] (-0.4,1.6 +0.02) -- ++ (30:0.07) -- ++ (-150:0.14);
+\draw[line width=0.3pt] (-0.4,1.6 -0.02) -- ++ (30:0.07) -- ++ (-150:0.14);
 
 \end{tikzpicture}
 

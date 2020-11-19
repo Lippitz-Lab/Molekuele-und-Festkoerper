@@ -63,7 +63,7 @@
 %
   
    % Energie-Achse
-	\draw[->] (0,\ylu) -- (3,\ylu) node[anchor = north east,xshift=2mm]{  E. Übergang};  
+	\draw[->] (0,\ylu) -- (3,\ylu) node[anchor = north east,xshift=2mm]{  $\Delta$E Stokes};  
  	\draw[-] (0,-1.6) -- (0,-1.8) node[below]{0};  
 
 	\draw[->] (-0.4,0) -- (-0.4,5.5) node[anchor = south east, rotate=90 ]{ Energie des Zustands};  
@@ -88,4 +88,7 @@
   \draw[->, blue] (nr) .. controls (linieR1.north)  ..  (linieR1);
  
 % 
+\draw[white, line width= 2pt]  (-0.5,4.6 ) -- ++(3, 0 );
+\draw[line width=0.3pt] (-0.4,4.6 +0.02) -- ++ (30:0.07) -- ++ (-150:0.14);
+\draw[line width=0.3pt] (-0.4,4.6 -0.02) -- ++ (30:0.07) -- ++ (-150:0.14);
 \end{tikzpicture}
