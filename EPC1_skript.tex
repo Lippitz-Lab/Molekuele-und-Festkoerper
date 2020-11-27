@@ -145,6 +145,10 @@
   \renewcommand\eqref[1]{{\let\my@tag@font\relax\amsmath@eqref{#1}}}
 \makeatother
 
+\usepackage[titletoc]{appendix}
+\renewcommand{\appendixname}{Anhang}
+\renewcommand{\appendixtocname}{Anhang}
+\renewcommand{\appendixpagename}{Anhang}
 
 %\includeonly{1_VB/1_VB}
 %\includeonly{2_MO/2_MO}
@@ -154,6 +158,7 @@
 %\includeonly{5_vib/5_vib}
 %\includeonly{6_raman/6_raman}
 %\includeonly{7_elec/7_elec}
+%\includeonly{anhang/anhang}
 
 
 \begin{document}
@@ -192,8 +197,29 @@
 \include{6_raman/6_raman}
 \include{7_elec/7_elec}
 %
-%\part{Festkörperphysik I}
+\part{Festkörperphysik I}
+%
 
+
+\part{Anhang}
+
+\appendix
+%\appendixpage
+%\addappheadtotoc
+
+
+\titleformat{\chapter}%
+  [display]% shape
+  {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
+  %{\itshape\huge\thechapter}% label
+  {\huge Anhang \thechapter}% label
+  {0pt}% horizontal separation between label and title body
+  %{\huge\rmfamily\itshape}% before the title body
+  {\fontseries{b}\selectfont\huge}% before the title body
+  [\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
+
+
+\include{anhang/anhang}
 
 %-------
 %

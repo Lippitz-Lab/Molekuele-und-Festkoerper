@@ -1,0 +1,70 @@
+
+  %  \tdplotsetmaincoords{50}{30}
+    \tdplotsetmaincoords{85}{105}
+    \begin{tikzpicture}[tdplot_main_coords]%
+        %% Coordinate of the vertices:
+        %%
+        %\useasboundingbox (0,0) rectangle (5,5);
+%\draw (0,0) rectangle (5,5);
+
+\begin{scope}
+      \coordinate (one) at (0,{1/sqrt(2)},1/2);
+     \coordinate (two) at (0,{1/sqrt(2)},-1/2);
+     \coordinate (sum) at (0,{2/sqrt(2)},0);
+ 
+        %% 
+        \coordinate (O) at (0,0,0);
+        \coordinate (x) at (1.7,0,0);
+        \coordinate (y) at (0,1.7,0);
+        \coordinate (z) at (0,0,1);
+       \coordinate (zm) at (0,0,-0.7);
+
+        %% Axes
+        \draw[->] (O) -- (x) ; %node [left] {$x$};
+        \draw[->] (O) -- (y); % node [right] {$y$};
+        \draw[->] (zm) -- (z) node [right] {$z$};
+
+       \draw (0,-0.05,1/2) -- ++ (0,+0.1,0);
+       \draw (0,-0.05,-1/2) -- ++ (0,+0.1,0);
+    %  \draw (0,{1/sqrt(2)},-0.05) -- ++ (0,0,+0.1);
+ 
+        \draw[->,thick] (O) -- (one);
+        \draw[->,thick] (O) -- (two);
+        \draw[->,very thick] (O) -- (sum);
+
+        \draw[line width = 0.5pt] (0,0,1/2) circle ({1/sqrt(2)});
+       \draw[line width = 0.5pt] (0,0,-1/2) circle ({1/sqrt(2)});
+\end{scope}
+
+
+\begin{scope}[xshift=25mm]
+      \coordinate (one) at (0,{1/sqrt(2)},1/2);
+     \coordinate (two) at (0,{-1/sqrt(2)},-1/2);
+     \coordinate (sum) at (0,{2/sqrt(2)},0);
+ 
+        %% 
+        \coordinate (O) at (0,0,0);
+        \coordinate (x) at (1.7,0,0);
+        \coordinate (y) at (0,1.1,0);
+        \coordinate (z) at (0,0,1);
+       \coordinate (zm) at (0,0,-0.7);
+
+        %% Axes
+        \draw[->] (O) -- (x) ; %node [left] {$x$};
+        \draw[->] (O) -- (y); % node [right] {$y$};
+        \draw[->] (zm) -- (z) node [right] {$z$};
+
+       \draw (0,-0.05,1/2) -- ++ (0,+0.1,0);
+       \draw (0,-0.05,-1/2) -- ++ (0,+0.1,0);
+    %  \draw (0,{1/sqrt(2)},-0.05) -- ++ (0,0,+0.1);
+ 
+        \draw[->,thick] (O) -- (one);
+        \draw[->,thick] (O) -- (two);
+     %   \draw[->,very thick] (O) -- (sum);
+
+        \draw[line width = 0.5pt] (0,0,1/2) circle ({1/sqrt(2)});
+       \draw[line width = 0.5pt] (0,0,-1/2) circle ({1/sqrt(2)});
+\end{scope}
+
+
+    \end{tikzpicture}

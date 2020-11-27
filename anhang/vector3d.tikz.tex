@@ -1,0 +1,30 @@
+
+    \tdplotsetmaincoords{85}{105}
+    \begin{tikzpicture}[tdplot_main_coords]%
+        %% Coordinate of the vertices:
+        %%
+        %\useasboundingbox (0,0) rectangle (5,5);
+%\draw (0,0) rectangle (5,5);
+
+      \coordinate (one) at (0,{1/sqrt(2)},1/2);
+ 
+        %% 
+        \coordinate (O) at (0,0,0);
+        \coordinate (x) at (1,0,0);
+        \coordinate (y) at (0,1,0);
+        \coordinate (z) at (0,0,1);
+
+        %% Axes
+        \draw[->] (O) -- (x) node [left] {$x$};
+        \draw[->] (O) -- (y) node [right] {$y$};
+        \draw[->] (O) -- (z) node [right] {$z$};
+
+       \draw (0,-0.05,1/2) -- ++ (0,+0.1,0);
+      \draw (0,{1/sqrt(2)},-0.05) -- ++ (0,0,+0.1);
+ 
+        \draw[->,thick] (O) -- (one);
+
+        \draw[line width = 0.5pt] (0,0,1/2) circle ({1/sqrt(2)});
+
+
+    \end{tikzpicture}

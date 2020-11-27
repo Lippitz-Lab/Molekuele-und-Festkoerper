@@ -1,0 +1,68 @@
+
+  
+
+\begin{tikzpicture}[
+declare function={ 
+	radius(\L) = sqrt( \L * (\L +1) );
+	xcomp(\L,\zz) = sqrt( radius(\L)^2 - (\zz)^2 );
+	  }
+]
+%\useasboundingbox (0,0) rectangle (5,5);
+%\draw (0,0) rectangle (5,5);
+ 		
+  	 \begin{axis}
+            [  width= 45mm,
+                axis x line=center,
+                axis y line=center,
+                ymin=-1.1, ymax=1.1,
+                xmin=0, xmax=1.1,
+                axis equal image,
+                 ymajorgrids,
+                 ytick distance=0.5,
+    grid style={line width=.2pt,draw=gray!50},
+    xlabel = {$x$},
+    ylabel = {$z$},
+    yticklabels  = {},
+    xticklabels  = {},     x label style={anchor=north west},
+     y label style={anchor=north east},
+            ]
+            ]	
+            
+           \tikzmath{ \myl = 0.5;}  
+  
+  			\draw[->,thick] (0,0) -- ( {xcomp(\myl, 0.5)} ,0.5);
+  			\draw[->,thick] (0,0) -- ( {xcomp(\myl, -0.5)} ,-0.5);
+                
+            \draw (0,0) circle ( {radius(\myl)} ); 
+     \end{axis}  		
+  		
+  		 \begin{axis}
+            [ width= 45mm,
+            	xshift=25mm,
+                axis x line=center,
+                axis y line=center,
+                ymin=-3.1, ymax=3.1,
+                xmin=0, xmax=3.1,
+                axis equal image,
+                 ymajorgrids,
+                 ytick distance=1,
+   % grid style={draw=gray!50},
+    xlabel = {$x$},
+    ylabel = {$z$},   yticklabels  = {},
+    xticklabels  = {},
+      x label style={anchor=north west},
+     y label style={anchor=north east},
+            ]
+            
+            \tikzmath{ \myl = 2;}  
+  
+  			\draw[->,thick] (0,0) -- ( {xcomp(\myl, 2)} ,2);
+  			\draw[->,thick] (0,0) -- ( {xcomp(\myl, 1)} ,1);
+  			\draw[->,thick] (0,0) -- ( {xcomp(\myl, 0)} ,0);
+  			\draw[->,thick] (0,0) -- ( {xcomp(\myl, -1)} ,-1);
+  			\draw[->,thick] (0,0) -- ( {xcomp(\myl, -2)} ,-2);
+  		            
+            \draw (0,0) circle ( {radius(\myl)} ); 
+     \end{axis}  	
+  		
+\end{tikzpicture}

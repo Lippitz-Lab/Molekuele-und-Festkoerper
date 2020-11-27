@@ -1,0 +1,155 @@
+%\renewcommand{\lastmod}{April 29, 2020}
+
+\chapter{Addition von Drehimpulsen}
+
+
+
+\section{Überblick}
+
+Der ausführliche Titel des Kapitels sollte wohl sein 'Eigenwerte und Eigenfunktionen eines Operators, der die Summe von quantenmechanischen Drehimpulsoperatoren ist'. Dieses Thema findet sich in quasi allen Büchern zur Quantenmechanik. Ich folge hier \cite{Nolting-QM}, Kap. 5.4. Mit diesem Formalismus kann man beispielsweise die möglichen Werte der Gesamtspin-Quantenzahl $S$ bestimmen, wenn die Orientierung der Einzel-Spins bekannt ist. Oder man kann in der Atomphysik den Gesamt-Drehimpuls-Quantenzahl $J$ aus der Spin-QZ $S$ und der Bahndrehimpuls-QZ $L$ bestimme. Ebenso erhält man die Eigenfunktionen eines Singulett- oder Triplett-Zustands.
+
+\section{Der Drehimpuls-Operator}
+
+In der Quantenmechanik definiert man einen Drehimpuls-Operator $\hat{L}$, der den Betrag eines Drehimpulses misst, sowie einen Operator $\hat{L}_z$, der eine der drei Vektor-Komponenten misst. Die Eigenwerte sind 
+\begin{align}
+	\hat{L}^2 \ket{l, m}  = & \hbar^2 \, l (l +1 ) \ket{l, m} \quad 
+	\text{mit} \quad l = 0, 1, \dots \\
+	\hat{L}_z \ket{l, m} = & \hbar \, m \ket{l, m} \quad 
+	\text{mit} \quad m = -l, -l +1, \dots , l
+\end{align}
+Die Quantenzahl $m$ nennt man auch magnetische Quantenzahl (daher das Symbol), weil die z-Achse in Atomen oft durch die Richtung eines externen Magnetfelds vorgegeben ist.
+
+Die Kommutator-Relationen sind so, dass $\hat{L}$ und $\hat{L}_z$ gleichzeitig messbar sind, aber die  einzelnen Vektor-Komponenten nicht. Die Unschärfe in den verbleibenden Komponenten beträgt dann
+\begin{equation}
+\Delta L_x \, \Delta L_y \ge \frac{\hbar}{2} \left| \braket{\hat{L}_z} \right|
+\end{equation}
+
+Man kann sich einen Drehimpuls-Vektor in der Quantenmechanik also als einen Vektor der Länge $\hbar \sqrt{l (l+1)}$ vorstellen, dessen z-Komponente $\hbar m$ ist. Glücklicherweise ist der Maximalwert von $m$, also $l$, immer kleiner als $\sqrt{l (l+1)}$, und $l+1$ immer größer als das.
+Die x- und y-Komponenten ist unbekannt, bis auf dass sie gerade die erforderliche Länge des Vektors liefern müssen. Mögliche Werte dieser beiden Komponenten liegen damit auf einem Kreis in der xy-Ebene.
+
+\begin{marginfigure}
+\inputtikz{\currfiledir vector3d}
+\caption{Skizze eines Drehimpulsvektors mit unbekannter xy-Komponente.}
+\end{marginfigure}
+
+Es gibt nicht nur Vektoren, die einem klassischen Drehimpuls entsprechen, sondern auch anderen Größen, die sich sehr ähnlich einem Drehimpuls verhalten, wie beispielsweise der Spin. Erstere haben immer ganzzahlige Quantenzahlen $l$,$m$, letztere können auch halbzahlig sein. Immer ist der Abstand zwischen benachbarten Quanten zahlen aber eins. Ich benutze das Wort Drehimpuls hier immer als Oberbegriff für beides.
+
+\begin{marginfigure}
+\inputtikz{\currfiledir vector2d}
+
+\caption{Mögliche Orientierung von  Drehimpuls-artiger Vektoren mit $l=1/2$ (links) und $l=2$ (rechts). Der Abstand der Hilfslinien beträgt $1/2 \hbar$ bzw. $1\hbar$.}
+\end{marginfigure}
+
+\section{Addition von Drehimpulsen}
+
+
+Jetzt haben wir zwei Sätze von Drehimpuls-artigen Operatoren, und kennen deren Eigenwerte und Eigenfunktionen, also
+\begin{align}
+	\hat{L}^2_1 \ket{l_1, m_1}  = & \hbar^2 \, l_1 (l_1 +1 ) \ket{l_1, m_1} &
+	\hat{L}_{z,1} \ket{l_1, m_1} = & \hbar \, m_1 \ket{l_1, m_1} \\
+	%
+		\hat{L}^2_2 \ket{l_2, m_2}  = & \hbar^2 \, l_2 (l_2 +1 ) \ket{l_2, m_2} &
+	\hat{L}_{z,2} \ket{l_2, m_2} = & \hbar \, m_2 \ket{l_2, m_2} 
+\end{align}
+Wir können dann Summen-Operatoren bilden
+\begin{equation}
+\hat{L} = \hat{L}_1 + \hat{L}_2 \quad \text{und} \quad\hat{L}_{z} = \hat{L}_{z,1} + \hat{L}_{z,2}
+\end{equation}
+Diese neuen Operatoren sind glücklicherweise wieder Drehimpuls-Operatoren, folgen also den üblichen Anforderungen der Quantenmechanik an solche Operatoren in Bezug auf die Kommutator-Relationen und die Form der Eigenwerte. Die Frage ist nun, wie man aus bekannten Eigenwerten $l_i$, $m_i$ und dazugehörigen Eigenfunktionen auf die neuen Eigenwerten $l$, $m$ der Summen-Operatoren schließen kann, und welche Werte eigentlich gleichzeitig messbar sind.
+
+Man findet, dass die Gesamt-Länge zusammen mit den beiden Einzel-Längen, aber nur mit der Orientierung des Gesamt-Drehimpulses gleichzeitig messbar ist. Gute\sidenote{'Gut' ist in diesem Zusammenhang ein Fachbegriff und bedeutet 'Konstante der Bewegung', also unveränderlich.} Quantenzahlen sind also 
+\begin{equation}
+\ket{l_1, l_2; l , m }
+\end{equation} 
+Die neue Orientierungs-Quantenzahl $m$ ist gerade die Summe der Einzeln-Orientierungs-Quantenzahlen
+\begin{equation}
+ m  = m_1 + m_2
+\end{equation}
+Für die  neue Gesamt-Länge gilt
+\begin{equation}
+ | l_1 - l_2 | \le l \le l_1 + l_2
+\end{equation}
+Mehr lässt sich dazu leider nicht sagen. Es ist etwas unbefriedigend, die Summe von zwei Vektoren nicht nennen zu können, obwohl man beide Summanden kennt. Allerdings kennt man die Ausgangs-Vektoren nicht vollständig. Die unbekannte xy-Komponenten sind gerade der Ursprung dieses Spielraums im Wert von $l$.
+
+
+\section{Beispiel: $\vec{\mathbf{J}} \mathbf{=} \vec{\mathbf{S}} \mathbf{+}  \vec{\mathbf{L}} $}
+
+Was bedeutet es, dass die guten Quantenzahlen $\ket{l_1, l_2; l , m }$ sind? Ich möchte das Anhang des Beispiels der Addition von Bahndrehimpuls $\vec{L}$ und Spin $\vec{S}$ zum Gesamtdrehimpuls $\vec{J}$ diskutieren (und passe dabei die Bezeichnungen leicht an). Gute Quantenzahlen sind also $\ket{L, S; J , m_J }$. Die großen Buchstaben sind die Quantenzahlen, die die Länge der Vektoren in der Form $\hbar \sqrt{l (l+1)}$ angeben, $m_J$ ist die magnetische Quantenzahl zu $J$.
+
+
+Bei der Kopplung von Spin und Bahndrehimpuls gibt es einen Energiebeitrag des Spins im Magnetfeld der Bahnbewegung. Klassisch würde dieser vom Winkel zwischen den beiden abhängen. Dieser Winkel ist aber nicht die Quantenzahl, sondern das such aus $\vec{S}$, $\vec{L}$ und $\vec{J}$ bildende Dreieck wird vollständig durch die Längen der Seiten bestimmt. Das beinhaltet den Winkel zwischen $\vec{S}$ und $\vec{L}$, aber auch deren Amplitude. Gleichzeitig ist nur $m_J$ eine gute Quantenzahl. Bei der Wechselwirkung mit einem äußeren Feld spielt also nur die Orientierung von $\vec{J}$ eine Rolle. Die Spitze von $\vec{J}$ kann wieder auf einem Kreis in der xy-Ebene liegen, solange die Länge von $\vec{J}$ erhalten bleibt. Bei $\vec{S}$ und $\vec{L}$ ist nun aber \emph{nur} die Länge eine gute Quantenzahl, die z-Komponenten nicht mehr. Die Spitze von $\vec{S}$ kann damit auf einem Kreis liegen, dessen Symmetrieachse durch $\vec{J}$ gegeben ist. Alles andere ist unbekannt, kann nicht gleichzeitig gemessen werden. Insbesondere ist die Aufteilung zwischen $m_S$ und $m_L$ nicht fix, nur die Summe, also $m_J$.
+
+\section{Beispiel: Addition von zwei Vektoren mit Spin 1/2 }
+
+Als Beispiel wollen wir die beiden kürzesten Drehimpulse addieren, was die Zeichnungen einfacher macht. Dies entspricht der Addition von zwei Elektronen-Spins zu einem Gesamtspin. Der allgemeine Formalismus folgt dann unten.
+Es sei
+\begin{equation}
+l_{1,2} = \frac{1}{2} \quad \text{und} \quad m_{1,2} = \pm \frac{1}{2} 
+\end{equation}
+Welche Werte können nun die Quantenzahlen  $l$ und $m$ der Summe annehmen? Die magnetische Quantenzahl $m  = m_1 + m_2$ ist einfach und in nebenstehender Tabelle skizziert.
+%
+\begin{marginfigure}
+\begin{tabular}{r|rr}
+                           & $-\frac{1}{2} $  & $+\frac{1}{2} $ \\
+                           \hline
+ $+\frac{1}{2} $    &     $0$              & $1$ \\
+ $-\frac{1}{2} $    &     $-1$              & $0$ 
+\end{tabular}
+\caption{Die möglichen Kombinationen von $m_1$ und $m_2$ zu $m = m_1 + m_2$.}
+\end{marginfigure}
+%
+Falls $m_1 = m_2$, also $|m| = 1$, dann muss auch $l = 1$ sein, da $l$ nie kleiner als $m$ sein kann. Dies sind die Zustände\sidenote{$l_1$ und $l_2$ sind nicht angegeben, weil in diesem Abschnitt immer $1/2$.} $\ket{l, m} = \ket{1, -1} $ und $\ket{1, +1} $.
+
+Damit verbleiben noch die beiden Fälle $m_1 = - m_2$, also die Diagonale in der Tabelle. Diese müssen die Zustände $\ket{1, 0}$ und $\ket{0,0}$ bilden. Die Gesamtzahl der Zustände passt schon einmal. Wie oft in der Quantenmechanik, wenn die Zuordnung nicht einfach entschieden werden kann, werden hier wieder die symmetrische und antisymmetrische Superposition der Ausgangszustände, also der Einträge in der Matrix, gebildet. Welche davon wird $\ket{1, 0}$? Die schon gefundenen Zustände $\ket{1, \pm 1} $ sind symmetrisch bei Vertauschen $1 \leftrightarrow 2$, also wird auch $\ket{1, 0}$ symmetrisch sein, also 
+\begin{equation}
+\ket{1, 0} = \frac{1}{\sqrt{2}} \left( \ket{\uparrow \downarrow} +  \ket{\downarrow \uparrow} \right)
+\end{equation}
+wobei der Pfeil an Position $i$ das Vorzeichen von $m_i$ anzeigt.
+Damit gibt es einen anti-symmetrischen Zustand mit $l = 0$, und drei symmetrische mit $l=1$
+\begin{align}
+\ket{0, 0} = & \frac{1}{\sqrt{2}} \left( \ket{\uparrow \downarrow} -  \ket{\downarrow \uparrow} \right) \\
+\ket{1, +1} =& \ket{\uparrow \uparrow}  \\
+\ket{1, 0} = &\frac{1}{\sqrt{2}} \left( \ket{\uparrow \downarrow} +  \ket{\downarrow \uparrow} \right) \\
+\ket{1, -1} = &\ket{\downarrow \downarrow}  
+\end{align}
+Die Vorfaktoren, mit denen man die Zustände auf der linken Seite in der Basis der Zustände auf der rechten Seite darstellen kann, nennt man \emph{Clebsch-Gordan-Koeffizienten}. 
+
+Wie kann man sich vorstellen, dass die Addition von zwei Vektoren gleicher Länge aber unterschiedlicher Orientierungs-Quantenzahl $m_i$ einmal zu einem Vektor der Länge Null und einmal zu einem Vektor der beinahe doppelten Länge führt? Ein Teil der Wahrheit sind die nicht gleichzeitig messbaren anderen Vektor-Komponenten.\sidenote{Ein anderer Teil ist 'so ist die QM eben'.} Die Spitze beider Vektoren liegt auf eine Kreis. Wenn die Position 'in Phase' ist, dann addieren sie sich zu einem Vektor mit verschwindender z-Komponente und der Länge $\hbar \sqrt{2}$, was in diesem Bild dem Zustand $\ket{1,0}$ entspricht. Wenn die beiden Ausgangs-Vektoren 'außer Phase' sind, dann addieren sie sich zu Null, ergeben also  $\ket{0,0}$. Bei bekannten, aber unterschiedlichen $m_i$, also beispielsweise $\ket{\uparrow \downarrow}$ ist also nicht eindeutig, welcher Summenvektor sich ergibt. Die Eigenfunktionen des Summen-Operators $\hat{L}$ sind nur Linearkombinationen aus $\ket{\uparrow \downarrow}$ und $\ket{\downarrow \uparrow}$.
+
+\begin{marginfigure}
+\inputtikz{\currfiledir vector3d_summe}
+
+\caption{Die Addition von zwei Vektoren $\ket{s=1/2, m_s = 1/2}$ und  $\ket{s=1/2, m_s = -1/2}$ kann sowohl einen Vektor   $\ket{S=1, m_S = 0}$ ergeben (links) als auch $\ket{S=0, m_S = 0}$ (rechts).}
+\end{marginfigure}
+
+
+
+
+\section{Allgemeiner Fall: Clebsch-Gordan-Koeffizienten}
+
+Im allgemeinen Fall der Addition von zwei Drehimpuls-artigen Vektoren mit den Quantenzahlen $l_i$ und $m_i$ bleiben nur die oben schon genannten Regeln
+\begin{align}
+   m =  m_1 + m_2 \\
+   |l_1 - l_2 | \le l \le l_1 + l_2
+\end{align}
+Insgesamt sind es $(2 l_1 + 1) (2 l_2 +1)$ Eigenfunktionen. Die Parität ist
+\begin{equation}
+\mathcal{P} = (-1)^{l - l_1 - l_2}
+\end{equation}
+Die Clebsch-Gordan-Koeffizienten zur Darstellung der Eigenfunktionen des Summen-Operators in den Eigenfunktionen der beiden Einzel-Drehimpuls-Operatoren kann man sich mit einer Rekursionsregel herleiten. Einfacher ist es aber, diese nachzuschlagen, beispielsweise in \cite{ParticleDataGroup20}, bzw. online \href{ https://pdg.lbl.gov/2020/reviews/rpp2020-rev-clebsch-gordan-coefs.pdf}{hier}.
+ Für unsere Zwecke reicht es aber aus, die Faktoren für das obige Spin-$1/2$-System zu kennen.
+
+\begin{marginfigure}
+\includegraphics[scale=1]{\currfiledir clebsch-gordan-1x1.pdf}
+\caption{Clebsch-Gordan-Koeffizienten für $l_1 = l_2 = 1$. Die QZ des Gesamt-Drehimpulses sind hier als $J$ und $M$ bezeichnet. Aus \cite{ParticleDataGroup20}.}
+\end{marginfigure}
+
+Als Beispiel zeigt nebenstehende Abbildung die Koeffizienten für den Fall $l_1 = l_2 = 1$. Die QZ des Gesamt-Drehimpulses sind  als $J$ und $M$ bezeichnet. Die Koeffizienten sind, um Platz zu sparen, ohne die Wurzel geschrieben. $-1/3$ ist also als $-\sqrt{1/3}$ zu verstehen, bzw.
+\begin{equation}
+\ket{J = 0, M= 0} = \frac{1}{\sqrt{3}} \ket{+1, -1} - \frac{1}{\sqrt{3}} \ket{0,0} + \frac{1}{\sqrt{3}} \ket{-1, +1} 
+\end{equation}
+Man muss also immer eine Linearkombination aus allen Möglichkeiten bilden, die das gewünschte $  m =  m_1 + m_2 $ ergeben.
+
+
+
+\printbibliography[segment=\therefsegment,heading=subbibliography]
