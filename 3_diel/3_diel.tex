@@ -210,7 +210,7 @@ Für Atome liegt die Frequenz $\nu$ im Bereich von $10^{15}$~Hz $= 1$~PHz. Bei M
 \begin{marginfigure}
 \inputtikz{\currfiledir lorentz_oszillator}
 
-\caption{Frequenzabhängigkeit des Real- und Imaginärteils des Lorentz-Oszillators.}
+\caption{Frequenzabhängigkeit des Real- und Imaginärteils des Lorentz-Oszillators. \label{fig:diel_lorentz}}
 \end{marginfigure}
 
 Alle oben diskutieren Phänomene sind Resonanzen. Das Lorentz-Oszillator-Modell ist ein einfaches Modell, mit dem die Frequenzabhängigkeit der dielektrischen Funktion in der Nähe solcher Resonanzen beschrieben werden kann. In einem gedämpften harmonischen Oszillator (Masse $m$, Dämpfungskonstante $\gamma$, Eigenfrequenz $\omega_0$) wird die Masse durch ein periodisches elektrisches Feld (Amplitude $E_0$, Frequenz $\omega$) um $x$ ausgelenkt, da die Masse eine Ladung $e$ trägt. Alles zusammen
@@ -256,7 +256,7 @@ Wenn in einem Medium mehrere Resonanzen vorhanden sind, so addieren sich die Sus
 \begin{marginfigure}
 \inputtikz{\currfiledir multiple_lorentz_oszillator}
 
-\caption{Addition der Suszeptibilitäten}
+\caption{Addition der Suszeptibilitäten. \label{fig:diel_multiple_lorentz}}
 \end{marginfigure}
 
 Für Fensterglas liegt die elektronische Resonanz im Ultravioletten. Sichtbares Licht ist also im Frequenzbereich etwas unterhalb dieser Resonanz. Die sogenannte 'normale' Dispersion des Brechungsindex (ansteigend mit fallender Wellenlänge / steigender Frequenz) rührt gerade von dem Anstieg der dielektrischen Funktion zur elektronischen Resonanz hin her.
@@ -283,6 +283,20 @@ Diese Konsequenzen lassen sich mit Hilfe der Funktionentheorie herleiten\sidenot
 $CH$ kennzeichnet dabei das Cauchy'sche Hauptwertintegral. Ähnliche Beziehung existieren auch für $\chi(\omega)$ und $\epsilon(\omega)$ sowie für alle anderen Größen, die der Kausalität unterliegen.
 
 Es reicht also im Prinzip aus, den Realteil der Suszeptibilität $\chi(\omega)$ zu messen, um daraus den Imaginärteil und somit die komplette komplexwertige Funktion zu bestimmen. Leider laufen die Integrale in Gl~\ref{eq:diel_KK} aber über den ganzen Frequenzbereich von Null bis Unendlich, der experimentell natürlich nicht zugänglich ist. Man kann die Kramers-Kronig-Relationen trotzdem sinnvoll benutzen, indem man über den Verlauf außerhalb des gemessenen Intervalls passende Annahmen macht.
+
+
+\section{Demonstrationsexperiment zur anomalen Dispersion}
+
+Man kann die Lorentz-förmige Resonanz in einem Demonstrationsexperiment zeigen. Der Imaginärteil des dielektrischen Funktion Abb.~\ref{fig:diel_lorentz} bestimmt dier Absorption und somit die Linienform im Absorptionsspektrum von Atome oder Molekülen. Der Realteil bestimmt die Dispersion, also den Brechungsindex eines Mediums. Eine einfache Methode den Brechungsindex zu bestimmen ist ein Prisma aus dem zu untersuchenden Material. In einem Prisma ist die Ablenkung des Lichtstrahls proportional zum Unterschied des Brechungsindex innen vergleichen mit außen (eigentlich immer Luft $\approx$ Vakuum). Es muss aber auch die elektronische Resonanz in Abb.~\ref{fig:diel_multiple_lorentz} aus dem Ultravioletten ins Sichtbare verschoben werden. Im Experiment benutzt man dazu ein Prisma aus Natrium-Dampf. Die starke Absorption der Natrium-D-Linien bei etwa 589~nm Wellenlänge bewirkt einen gut sichtbaren Effekt. 
+
+
+\begin{marginfigure}
+\includegraphics[width=\textwidth]{\currfiledir dispersion.png}
+\caption{Anormale Dispersion in Natrium-Dampf. }
+\end{marginfigure}
+
+
+In einem evakuierter Röhre wird Natrium-Dampf durch starkes Erhitzen von festem Natrium erzeugt.  Dabei wird die Röhre von unten geheizt und von oben gekühlt, so dass die Dampf-Dichte nach oben hin abnimmt. Dies entspricht einem Prisma, dessen Spitze nach oben zeigt. Auch dort nimmt die effektive Glas-Dicke, bei Mittelung über den ganzen Strahlweg, nach oben hin ab. Danach wird der Lichtstrahl noch durch ein Glas-Prisma mit vertikaler Achse geleitet, um  eine horizontale Wellenlängen-Achse zu erzeugen. Im Ergebnis sieht man ein Spektrum wie in nebenstehender Abbildung. Die horizontale Achse ist proportional zur Wellenlänge, die vertikale Achse zur Abweichung des Brechungsindexes von Eins. An der Absorptionslinie selbst ist das Spektrum unterbrochen, weil dort der Natrium-Dampf das Licht vollständig absorbiert. Man erkennt, dass höherenergetisch der Resonanz der Brechungsindex unter Eins fällt.
 
 
 

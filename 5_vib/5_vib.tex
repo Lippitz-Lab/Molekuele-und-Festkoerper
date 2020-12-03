@@ -190,7 +190,7 @@ Das anharmonische Bindungspotential erklärt auch die Expansion von Festkörpern
 
 Nun soll auch die Rotation des Moleküls erlaubt sein. Zunächst gehen wir davon aus, dass diese beiden Bewegungen sich nicht gegenseitig beeinflussen, also nicht gekoppelt sind. Die Energie-Eigenwerte sind dann gerade die Summe der Zustandsenergien aus Rotation und Schwingung\sidenote{Wir nehmen hier einen harmonischen Oszillator und einen starren Rotator an!}
 \begin{equation}
-E (\nu, J) = E_\text{vib}(\nu) + E_\text{rot}(J) = \hbar \omega_0 \left(\nu + \frac{1}{2} \right) + B J \left( J+1 \right) \label{eq:vib_rot_simple}
+E (\nu, J) = E_\text{vib}(\nu) + E_\text{rot}(J) = \hbar \omega_0 \left(\nu + \frac{1}{2} \right) + h c \, B J \left( J+1 \right) \label{eq:vib_rot_simple}
 \end{equation}
 mit der Rotations-Quantenzahl $J$ und der Vibrations-Quantenzahl $\nu$. Der energetische Abstand der Vibrationszustände ist mit etwa $1000$~cm$^{-1}$  größer als der der Rotationszustände mit etwa $100$~cm$^{-1}$. Man kann sich also vorstellen, dass nun jeder Schwingungszustand mit einer Sequenz von Rotationszuständen dekoriert ist.
 
@@ -214,7 +214,7 @@ Wir erhalten also eine äquidistante Schar von Linien, völlig analog dem reinen
 
 \paragraph{R-Zweig} Analog zum P-Zweig, nur mit  $\Delta J = +1$ nur mit den Linienpositionen
 \begin{equation}
- \frac{\Delta E}{h c} =  \bar{\nu}_0   + 2 B J
+ \frac{\Delta E}{h c} =  \bar{\nu}_0   + 2 B ( J +1)
 \end{equation}
 also in der gleichen Orientierung wie das THz-Spektrum und bei $\bar{\nu}_0 $ beginnend.
 
@@ -237,7 +237,7 @@ Um Gleichung \ref{eq:vib_rot_simple} zu verbessern, nehmen wir jetzt sowohl die 
 \begin{align}
  E(\nu, J) = & \hbar \omega_0 \left( \nu  + \frac{1}{2} \right)
  - \chi_e \, \hbar \omega_0  \left( \nu  + \frac{1}{2} \right)^2 \\
- & + B(\nu) J (J+1) - D(\nu) J^2 (J+1)^2  \nonumber
+ & + h c \, B(\nu) J (J+1) - h c \, D(\nu) J^2 (J+1)^2  \nonumber
 \end{align}
 mit
 \begin{equation}
@@ -436,7 +436,7 @@ Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden
 Ein lineares Molekül mit $f=9 - 5 = 4$ Schwingungsfreiheitsgraden, analog zu Kohlendioxid oben. Das Spektrum am Anfang des Kapitels zeigt die Biegeschwingung bei $\bar{\nu} = 712$~cm$^{-1}$.  Abbildung \ref{fig:vib_hcn_all} gibt einen Überblick über einen größeren Spektralbereich. Man sieht zusätzlich den 
 ersten Oberton der Biegeschwingung bei ungefähr der doppelten Frequenz  $\bar{\nu} = 1415$~cm$^{-1}$
 . Die Mode bei  $\bar{\nu} = 3312$~cm$^{-1}$ ist die  asymmetrische Streckschwingung. Die symmetrische Streckschwingung  bei $\bar{\nu} = 2114$~cm$^{-1}$.
- Im Gegensatz zu \ch{CO2} bewegt sich in dieser Mode das Kohlenstoffatom ebenfalls, da die Massen von H und N verschieden sind, und sich ansonsten der  Schwerpunkt bewegen würde. Dies macht diese Mode sehr schwach IR-aktiv.  Nur für den Grundton der Biegeschwingung und die  symmetrische Streckschwingung ist der P-Zweig erlaubt.
+ Im Gegensatz zu \ch{CO2} bewegt sich in dieser Mode das Kohlenstoffatom ebenfalls, da die Massen von H und N verschieden sind, und sich ansonsten der  Schwerpunkt bewegen würde. Dies macht diese Mode sehr schwach IR-aktiv.  Nur für den Grundton der Biegeschwingung und die  symmetrische Streckschwingung ist der Q-Zweig erlaubt.
 
 \begin{figure}
 \inputtikz{\currfiledir fig_hcn-lowres}
