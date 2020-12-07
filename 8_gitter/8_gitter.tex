@@ -52,7 +52,9 @@ Ein dreidimensionales (mathematische) Gitter ist eine Anordnung von (mathematisc
 wobei die $n_i$ beliebige ganze Zahlen sind und die \emph{Basis-Vektoren} $\mathbf{a}_i$ nicht alle in einer Ebene liegen. Das 'Basis' in diesen Basis-Vektoren hat nichts mit der oben genannten Basis zu tun, die die Physik beinhaltet. Ein beliebiger Vektor aus der Menge der möglichen Translationen $\mathbf{T}$ wird als \emph{Gittervektor} bezeichnet. Die Länge der Basis-Vektoren   $\mathbf{a}_i$, also  $a_i$, wird \emph{Gitterkonstante} genannt.
 
 \begin{marginfigure}
-\caption{Primitive und nicht-primitive Basis-Vektoren und Einheitszellen in 2D Gitter, see AM fig.4.4}
+\inputtikz{\currfiledir einheitszelle}
+
+\caption{Primitive(dinkelgrau) und nicht-primitive (hellgrau) Basis-Vektoren und Einheitszellen.}
 \end{marginfigure}
 
 
@@ -104,9 +106,12 @@ Dies führt auf die 14 Bravais-Gitter, die in Abbildung \ref{fig:gitter_bravais1
 
 
 \begin{figure}
-\includegraphics[height=\textheight]{\currfiledir kristall/bravais.pdf}
-\caption{Die 14 Bravais-Gitter \label{fig:gitter_bravais14}. Modifiziert nach Wikipedia. Gezeigt sind die konventionellen Einheitszellen, die die Symmetrie  des Gitters möglichst gut wiedergeben, aber im Falle der zentrierten Gitter nicht primitiv sind.
-%https://commons.wikimedia.org/wiki/Category:Crystal_system_(image_set) 
+%\includegraphics[height=\textheight]{\currfiledir kristall/bravais.pdf}
+\inputtikz{\currfiledir bravais_ML}
+
+
+
+\caption{Die 14 Bravais-Gitter \label{fig:gitter_bravais14}.  Gezeigt sind die konventionellen Einheitszellen, die die Symmetrie  des Gitters möglichst gut wiedergeben, aber im Falle der zentrierten Gitter nicht primitiv sind.
 }
 \end{figure}
 
@@ -132,6 +137,8 @@ Als Beispiel betrachten wir ein zweidimensionales Honigwaben-Gitter wie in neben
 
 
 \begin{marginfigure}
+\inputtikz{\currfiledir honigwabe}
+
 \caption{Honigwaben-Gitter}
 \end{marginfigure}
 
@@ -145,6 +152,8 @@ Man wähle einen Gitterpunkt und konstruiere Verbindungslinien zu allen benachba
 Diese Zelle ist primitiv, da sie nur einen Gitterpunkt beinhaltet. Sie hat außerdem die gleiche Symmetrie wie das Gitter selbst. Die Konstruktionsvorschrift ist unabhängig von der konkreten Wahl der Gittervektoren. Die Abbildung XXX zeigt als Beispiel die Konstruktion in einem schiefwinkligen zweidimensionalen Gitter sowie die Wigner-Seitz-Zelle des kubisch-raumzentrierten Gitters.
 
 \begin{marginfigure}
+\inputtikz{\currfiledir wsz-2d}
+
 \caption{WSZ analog Hunklinger Fig. 3.30}
 \end{marginfigure}
 

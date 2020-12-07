@@ -1,0 +1,177 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+ \pgfplotsset{compat=newest}
+
+
+\usepackage{currfile,hyperxmp}
+\usetikzlibrary{math,calc,matrix,fit,positioning,intersections}
+
+
+
+\newcommand{\crystal}{%
+
+ \begin{axis}[
+   axis lines=none,
+    xmin=-2.1,
+    xmax=2.1,
+    ymin=-2.1,
+    ymax=2.1,
+    zmin=-2.1,
+    zmax=2.1,
+    xtick=\empty,
+    ytick=\empty,
+    ztick=\empty,
+    axis equal , rotate around z=40 ,rotate around x=-2 ,
+    font=\footnotesize
+    ]
+
+	
+			
+			\tikzmath{	\sy1 =  cos(\wxy) * sin(\wyz);
+							    \sy2 =  sin(\wxy) * sin(\wyz);
+							    \sy3 =				        cos(\wyz);
+							}
+	
+	
+		\tikzmath{	\sz1 =  cos(\wxz) ;
+							\sz2 =   0;
+							\sz3 =  sin(\wxz) ;				
+							}
+							
+							
+							
+		% basis vectors
+		\coordinate (O)  at         (axis cs: 0 ,  0,    0) ;
+		\coordinate (X2)  at         (axis cs: \lx ,  0,   0) ;
+		\coordinate (Y2)  at         (axis cs: \sy1 * \ly ,  \sy2 * \ly,   \sy3 * \ly)  ;
+		\coordinate (Z2)  at         (axis cs: \sz1 * \lz ,  \sz2 * \lz,   \sz3 * \lz) ;
+		%
+		\coordinate (X) at ( $ (X2) + (X2) - (O) $);
+		\coordinate (Y) at ( $ (Y2) + (Y2) - (O) $);
+		\coordinate (Z) at ( $ (Z2) + (Z2) - (O) $);
+		
+		% NB: cooridnates are transformed into canvas coordinates,
+		% vector sums need to be corrected ... 
+		
+		% remaining corners
+		\coordinate (XY)  at        ($ (X) + (Y) - (O)$) ;
+		\coordinate (XZ)  at        ($ (X) + (Z) - (O)$) ;
+		\coordinate (YZ)  at        ($ (Y) + (Z) - (O)$) ;
+		\coordinate (XYZ)  at        ($ (X) + (Y) + (Z) -(O) - (O)$) ;
+		
+		%face centers
+		\coordinate (fXY)  at        ( $  (X2) + (Y2) - (O)   $) ;
+		\coordinate (fYZ)  at        ( $  (Z2) + (Y2) - (O)   $) ;
+		\coordinate (fXZ)  at        ( $  (Z2) + (X2) - (O)   $) ;
+		\coordinate (fXY2)  at        ( $  (X2) + (Y2) - (O) + (Z) - (O)  $) ;
+		\coordinate (fYZ2)  at        ( $  (Z2) + (Y2) - (O)  + (X) - (O)  $) ;
+		\coordinate (fXZ2)  at        ( $  (Z2) + (X2) - (O)  + (Y) - (O)  $) ;
+			
+		%body center
+		\coordinate (bc)  at        ( $  (X2) + (Y2) + (Z2) - (O) - (O)  $) ;
+
+
+    %WSC
+ 
+   \tikzmath{\dx = 0.5;}
+	\coordinate (wXZ1)  at        ( $  (fXZ) + (\dx,0,0) - (O)   $) ;
+	\coordinate (wXZ2)  at        ( $  (fXZ) + (0,0, \dx) - (O)   $) ;
+	\coordinate (wXZ3)  at        ( $  (fXZ) + (-\dx,0,0) - (O)   $) ;
+	\coordinate (wXZ4)  at        ( $  (fXZ) + (0,0, -\dx) - (O)   $) ;
+
+	\coordinate (wYZ1)  at        ( $  (fYZ) + (0,\dx,0) - (O)   $) ;
+	\coordinate (wYZ2)  at        ( $  (fYZ) + (0,0, \dx) - (O)   $) ;
+	\coordinate (wYZ3)  at        ( $  (fYZ) + (0,-\dx,0) - (O)   $) ;
+	\coordinate (wYZ4)  at        ( $  (fYZ) + (0,0, -\dx) - (O)   $) ;
+	
+	\coordinate (wXY1)  at        ( $  (fXY2) + (\dx,0,0) - (O)   $) ;
+	\coordinate (wXY2)  at        ( $  (fXY2) + (0, \dx,0) - (O)   $) ;
+	\coordinate (wXY3)  at        ( $  (fXY2) + (-\dx,0,0) - (O)   $) ;
+	\coordinate (wXY4)  at        ( $  (fXY2) + (0, -\dx,0) - (O)   $) ;
+
+		% draw cube
+		\draw[gray] (XY) -- (XYZ);
+		\draw[gray]  (Y) -- (XY) --(X) ;
+		
+
+		
+		% body center
+
+%		\draw[gray] (O) -- (XYZ);
+%		\draw[gray] (X) -- (YZ);
+%		\draw[gray] (Y) -- (XZ);
+%		\draw[gray] (Z) -- (XY);
+		
+		
+		% draw cube
+		\draw (O) -- node[anchor=north] (na) {} (X) -- node[anchor=west] (nc) {} (XZ) --   (Z) -- (O);
+		\draw (Z) -- (XZ) -- (XYZ) -- (YZ) -- (Z);
+		\draw (O) -- node[anchor=east] (nb) {} (Y) -- (YZ) ;
+
+	
+		
+
+
+		
+\end{axis}
+		
+		\tikzmath{\atom=0.03;}
+		
+
+		
+		% body center atom
+		% body center
+	
+		\fill [gray] (bc) circle (\atom);
+	
+		
+		% corner atom
+		\fill [gray] (XY) circle (\atom);
+		
+     \fill[gray] 		(wXZ1)  --  (wXZ2) --(wXZ3) -- (wXZ4) -- cycle;
+    \fill[gray] 		(wXY1)  --  (wXY2) --(wXY3) -- (wXY4) -- cycle;
+	 \fill[gray] 		(wYZ1)  --  (wYZ2) --(wYZ3) -- (wYZ4) -- cycle;
+		
+   \fill 		(wXZ1) --  (wXZ4) -- (wYZ2) --(wYZ1)   -- cycle;
+		
+%	\fill [black] (wXY1) circle (\atom);
+%	\fill [black] (wXY2) circle (\atom);
+%	\fill [black] (wXY3) circle (\atom);
+%	\fill [black] (wXY4) circle (\atom);
+%	
+%	\fill [black] (wYZ1) circle (\atom);
+%	\fill [black] (wYZ2) circle (\atom);
+%	\fill [black] (wYZ3) circle (\atom);
+%	\fill [black] (wYZ4) circle (\atom);
+%
+		
+		\fill [black] (O) circle (\atom);
+		\fill [black] (X) circle (\atom);
+		\fill [black] (Z) circle (\atom);
+		\fill [black] (XZ) circle (\atom);
+		\fill [black] (XYZ) circle (\atom);
+		\fill [black] (YZ) circle (\atom);
+		\fill [black] (Y) circle (\atom);
+}
+
+
+\begin{document}
+
+\begin{tikzpicture}[declare function = {kreis(\s)=sqrt( \s^2 - x^2) ;} ]
+	   \tikzmath{\lx=0.8; \xs=27mm; \ys=23mm;}
+		
+		\begin{scope}[xshift=0*\xs,yshift=-1*\ys]
+			\tikzmath{\ly = \lx; \lz=\lx;}
+			\tikzmath{\wxz=90; \wxy=90; \wyz=90;}
+			\tikzmath{\fc=0; \bc=1;\sc=0;}
+	       \crystal
+	                  	    
+       \end{scope}
+
+  
+  \end{tikzpicture}
+
+\end{document}
+
+
