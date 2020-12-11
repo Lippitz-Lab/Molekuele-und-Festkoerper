@@ -1,0 +1,32 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+
+each beam is
+\begin{equation}
+E = E_i \, \cos (\omega_i t + \phi_i)
+\end{equation}
+
+We measure
+\begin{align}
+ I = &  \left| E_1 \cos (\omega_1 t + \phi_1) + E_2 \cos (\omega_2 t + \phi_2) \right|^2 \\
+  = & |E_1|^2 + |E_2|^2 
+  + E_1 E_2 \left( \cos(\omega_1 t + \phi_1 + \omega_2 t + \phi_2) + 
+  \cos(\omega_1 t + \phi_1 - \omega_2 t - \phi_2) \right) \\
+  \approx & A_0 + \cos(\Delta\omega t + \Delta \phi) 
+\end{align}
+where we assumed that the sum frequency is so fast that it averages to zero.
+
+
+But the low frequency average of this result is only
+\begin{equation}
+I \approx A_0
+\end{equation}
+as $\Delta \phi$ only shifts  the oscillatory part.
+
+
+\end{document}
