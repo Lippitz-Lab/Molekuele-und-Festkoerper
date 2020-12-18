@@ -1,0 +1,82 @@
+
+
+\begin{tikzpicture}
+%\useasboundingbox (0,0) rectangle (5,5);
+%\draw (2,2) rectangle ++(5,5);
+
+
+ \begin{axis}[
+   axis lines=none,
+    xmin=-2.5,
+    xmax=5.5,
+    ymin=-2.5,
+    ymax=5.5,
+    zmin=-2.5,
+    zmax=5.5,
+    xtick=\empty,
+    ytick=\empty,
+    ztick=\empty,
+    axis equal , rotate around z=40 ,rotate around x=-2 ,
+    font=\footnotesize]
+
+   
+\newcommand{\Naatom}{0.6mm}
+\newcommand{\Clatom}{0.5mm}
+
+%\shade [ball color=red](1,0,1) circle (\Naatom);
+%\shade [ball color=red](1,1,0) circle (\Naatom);
+%\shade [ball color=red](0,1,1) circle (\Naatom);
+%\shade [ball color=red](1,2,1) circle (\Naatom);
+%\shade [ball color=red](1,1,2) circle (\Naatom);
+%\shade [ball color=red](2,1,1) circle (\Naatom);
+
+
+ \foreach \u in {0,2,4}{%  
+ \foreach \v in {0,2,4}{%  
+     \edef\temp{%
+	    \noexpand\draw[gray] (\u,\v,0) -- (\u,\v,4);
+	    \noexpand\draw[gray] (\u,0,\v) -- (\u,4,\v);
+	   \noexpand\draw[gray] (0,\v,\u) -- (4,\v,\u);
+			 }
+    \temp
+  } } 
+
+ \foreach \u in {1,3}{%  
+ \foreach \v in {1,3}{%  
+     \edef\temp{%
+	    \noexpand\draw[thin,gray!60!white] (\u,\v,1) -- (\u,\v,3);
+	    \noexpand\draw[thin,,gray!60!white] (\u,1,\v) -- (\u,3,\v);
+	   \noexpand\draw[thin,,gray!60!white] (1,\v,\u) -- (3,\v,\u);
+			 }
+    \temp
+  } } 
+
+
+ \foreach \u in {0,2,4}{%  
+ \foreach \v in {0,2,4}{%  
+ \foreach \w in {0,2,4}{%  
+
+     \edef\temp{%
+	   \noexpand\shade [ball color=red](\u,\v,\w) circle (\Naatom);
+			 }
+    \temp
+  } } }
+  
+ \foreach \u in {1,3}{%  
+ \foreach \v in {1,3}{%  
+ \foreach \w in {1,3}{%  
+
+     \edef\temp{%
+	    \noexpand\shade [ball color=green](\u,\v,\w) circle (\Clatom);
+			 }
+    \temp
+  } } }
+  
+
+  \end{axis}
+
+  
+  \end{tikzpicture}
+
+
+

@@ -57,7 +57,7 @@ wobei die $n_i$ beliebige ganze Zahlen sind und die \emph{Basis-Vektoren} $\math
 \begin{marginfigure}
 \inputtikz{\currfiledir einheitszelle}
 
-\caption{Primitive(dinkelgrau) und nicht-primitive (hellgrau) Basis-Vektoren und Einheitszellen.}
+\caption{Primitive (dunkelgrau) und nicht-primitive (hellgrau) Basis-Vektoren und Einheitszellen.}
 \end{marginfigure}
 
 
@@ -124,7 +124,7 @@ Dies führt auf die 14 Bravais-Gitter, die in Abbildung \ref{fig:gitter_bravais1
 
 Während das Gitter ein mathematisches Konstrukt ist, eine symmetrische Anordnung von mathematischen Punkten im dreidimensionalen Raum, kommt durch die \emph{Basis} die Natur ins Spiel. Die Basis beschreibt die Position der Atome relativ zum Gitterpunkt. Es kann dabei ein oder mehrere Atome in einer Basis sein. Die Position des Atoms $j$ relativ zum zugehörigen Gitterpunkt ist dann 
 \begin{equation}
- \mathbf{r}_j = x_{1,j} \mathbf{a}_1 + x_{2,j} \mathbf{a}_2 + x_{3,j} \mathbf{3}_1  
+ \mathbf{r}_j = x_{1,j} \mathbf{a}_1 + x_{2,j} \mathbf{a}_2 + x_{3,j} \mathbf{a}_3  
 \end{equation}
 mit $0 \le x_{i,j} \le 1$. Die Lage der Atome in der Basis relativ zu 'ihrem' Gitterpunkt ist nicht eindeutig, da die Gitterpunkte ja mathematische Konstrukte und daher nicht messbar sind.
 
@@ -180,6 +180,11 @@ Kristallines \ch{NaCl} besteht aus einem flächen-zentrierten kubischen Gitter (
 wenn die $\mathbf{a}_i$ so gewählt sind, dass sie die konventionelle Einheitszelle aufspannen, also kartesisch sind. Dies ist auch die Struktur von \ch{LiF}, \ch{MgO}, \ch{CaTe}.
 
 
+\begin{marginfigure}
+\inputtikz{\currfiledir nacl}
+
+\caption{Kristallstruktur von \ch{NaCl}.}
+\end{marginfigure}
 
 \paragraph{\ch{CsCl}}
 Dies ist ein primitives kubisches Gitter (engl. simple cubic, sc), ebenfalls mit einer zwei-atomigen Basis mit 
@@ -187,6 +192,12 @@ Dies ist ein primitives kubisches Gitter (engl. simple cubic, sc), ebenfalls mit
  \mathbf{r}_{Cl} = \frac{1}{2} \left(\mathbf{a}_1 + \mathbf{a}_2 +  \mathbf{a}_3  \right)
 \end{equation}
 Dies ist auch die Struktur von \ch{CsI}, \ch{TlBr}.
+
+\begin{marginfigure}
+\inputtikz{\currfiledir cscl}
+
+\caption{Kristallstruktur von \ch{CsCl}.}
+\end{marginfigure}
 
 \paragraph{\ch{Fe}} Eisen bildet ein kubisch-raumzentriertes Gitter (engl. body-centered cubic, bcc) mit nur einem Atom in der Basis.
 
@@ -196,6 +207,12 @@ Dies ist auch die Struktur von \ch{CsI}, \ch{TlBr}.
  \mathbf{r}_{C_2} = & \frac{1}{4} \left(\mathbf{a}_1 + \mathbf{a}_2 +  \mathbf{a}_3  \right)
 \end{align}
 Die Atome sind untereinander in der tetraederförmigen Bindung der $sp^3$-Hybridisierung verbunden. Dies ist auch die Struktur von \ch{Si}, \ch{Ge}.
+
+\begin{marginfigure}
+\inputtikz{\currfiledir diamant}
+
+\caption{Kristallstruktur von  Diamant (beide Atomsorten identisch) und Zinkblende (Atomsorten verschieden). Die Atome sind jeweils tetragonal gebunden, wie in dem Beispiel gezeigt.}
+\end{marginfigure}
 
 \paragraph{\ch{ZnS}} Zinkblende (\ch{ZnS}) hat die gleiche Struktur wie Diamant. Jede Atomsorte bildet für sich ein fcc-Gitter. Gegeneinander sind die Gitter um ein Viertel der Raum-Diagonalen verschoben. Dies ist auch die Struktur von \ch{CdTe}, \ch{GaAs}, \ch{InP}.
 
@@ -236,9 +253,9 @@ Die kubische dichteste Kugelpackung wird beispielsweise von \ch{Au} und \ch{Ag} 
 Wie bei den Molekülen  sind es auch in den Festkörpern die Elektronen der Atome, die die Bindung bewirken. Man kann die verschiedenen Bindungen also nach der Verteilung der Elektronen unterscheiden. Im Gegensatz zu Molekülen bilden sich Festkörper auch aus Atomen mit abgeschlossenen Schalen. Die schwache van-der-Waals-Kraft bildet beispielsweise Edelgaskristalle bei niedrigen Temperaturen. In Ionenkristallen wird ein Elektron transferiert und die Coulomb-Anziehung  bestimmt die Bindung. Die kovalente Bildung in Festkörpern ist analog zur der in Molekülen. Als Extremfall gibt es die metallische Bindung, bei der manche Elektronen über den ganzen Kristall gleichmäßig verteilt sind und  ein freies Elektronengas bilden. Ein Sonderfall ist die Wasserstoff-Brückenbindung, die aber in der Biologie eine große Rolle spielt. Im Folgenden werden wir die für uns neuen  Bindungen besprechen.
 
 \begin{marginfigure}
-%\inputtikz{\currfiledir stacking}
+\inputtikz{\currfiledir bindung}
 
-\caption{Skizze Bindungstypen}
+\caption{Skizzenhafte Darstellung der Bindungstypen im Unterschied der Verteilung der Elektronen.}
 \end{marginfigure}
 
 

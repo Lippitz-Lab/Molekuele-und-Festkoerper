@@ -9,24 +9,37 @@
 \section{Ziele}
 
 \begin{itemize}
-\item Sie dewe
+\item Sie können das Konzept des reziproken Raums und die Streutheorie benutzen, um Beugungsbilder wie das untenstehende zu erklären und daraus Eigenschaften des Gitters zu bestimmen.
 
-\item S.
-
+\item Sie können in der Darstellung von Eigenschaften wie beispielsweise der Streudichte zwischen Realraum und reziprokem Raum wechseln, also die Fourier-Transformation intuitiv anwenden.
 \end{itemize}
 
 
-%\begin{figure}
-%\inputtikz{\currfiledir fig_bodipy}
-%  \caption{Absorptions- und Fluoreszenz-Spektrum des Farbstoffs BODIPY  (\href{https://www.thermofisher.com/de/de/home/life-science/cell-analysis/labeling-chemistry/fluorescence-spectraviewer.html?SID=srch-svtool&UID=10001moh}{thermofischer.com}).}
-%\end{figure}
+\begin{figure}
+\inputtikz{\currfiledir debye_scherrer_film}
+  \caption{Skizze des Beugungsbilds in einem Pulver-Diffraktometer nach Debye-Scherrer.}
+\end{figure}
 
 
 
-\section{Überblick}
 
-Von den in Ka
+\section{Wie miss man das?}
 
+
+
+
+
+
+In einem  Pulver-Diffraktometers  nach Debye-Scherrer wird ein Pulver einer kristallinen Substanz von einem monochromatischen Röntgenstrahl durchleuchtet. Die gebeugte Strahlung wird von einem Film detektiert, der in einem Ring um die Probe liegt. Daher sind im Film bei $0^\circ$ und $180^\circ$ Aussparungen, um den Röntgenstrahl durchzulassen. Es finden sich konzentrische elliptische Linien mit jeweils konstantem Ablenkwinkel, der $2\Theta$ genannt wird.
+
+\begin{marginfigure}
+\inputtikz{\currfiledir setup}
+  \caption{Skizze  eines Pulver-Diffraktometers nach Debye-Scherrer.}
+\end{marginfigure}
+
+Dieses Verfahren ist einfacher als das historisch ältere Laue-Verfahren, in dem ein einziger, homogener Kristall als beugendes Element verwendet wird. Im Pulver sind alle Orientierungen  des Kristalls zum einlaufenden Strahl vorhanden. Wie wir unten bei der Ewald-Kugel sehen werden ist es eher unwahrscheinlich, dass die Kombination von Wellenlänge, Einfallsrichtung und Gitter zu konstruktiver Interferenz führt. Im Laue-verfahren muss der Kristall daher passend orientiert werden und / oder Röntgenstrahlung mit einem breiten Spektrum verwendet werden.
+
+Der in diesem Kapitel vorgestellte Formalismus ist nicht auf die Beugung von Röntgenstrahl beschränkt. Man kann völlig analog auch sichtbares Licht, Elektronen oder Neutronen beugen. Der Zusammenhang zwischen Energie pro Teilchen und Wellenlänge unterscheidet sich. Kurze Wellenlängen sind mit massereichen Teilchen bei niedrigeren Energien zu erreichen.  Auch kann man durch die Wahl des Strahls entscheiden, ob man die Verteilung der Elektronen (Röntgenstrahlen) oder der Kerne (Neutronenstrahlen) untersucht. 
 
 
 \section{Grundidee der Streutheorie}
@@ -45,16 +58,23 @@ wird durch die Amplitude $A_0$, Kreisfrequenz $\omega_0$ und Wellenvektor $\math
 wobei  die Kugelwelle nur noch vom Abstand $R = |\mathbf{R}|$ zum Kugelmittelpunkt und dem Betrag $k_0 = | \mathbf{k}_0| $ des Wellenvektors abhängt. Die Amplitude $\tilde{A}$ hängt von der Effizienz des Prozesses ab.
 
 \begin{marginfigure}
+
+\inputtikz{\currfiledir kugelwelle}
+
 \caption{Skizze Streuung am Punkt}
 \end{marginfigure}
 
 
+
+
+Eine ausgedehnte Probe besteht damit aus vielen Streuzentren, deren Dichte als \emph{Streudichte} $\rho(\mathbf{r})$ bezeichnet wird. Allerdings muss man die Phasendifferenz der einzelnen Wellen beachten, wenn man über viele Streuzentren integriert. Für zwei Streuzentren, eines im Ursprung, das andere bei $\mathbf{r}$, findet man durch geometrische Überlegungen die Phasendifferenz
+%
 \begin{marginfigure}
-\caption{Skizze Phasendifferenz 2 Punkte}
+\inputtikz{\currfiledir two-points-interference}
+
+\caption{Skizze zur  Wegdifferenz $dx =  \Delta \phi / | \mathbf{k}|=  ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r} / |\mathbf{k}| $ bei zwei Streuzentren.}
 \end{marginfigure}
-
-
-Eine ausgedehnte Probe besteht damit auf vielen Streuzentren, deren Dichte als \emph{Streudichte} $\rho(\mathbf{r})$ bezeichnet wird. Allerdings muss man die Phasendifferenz der einzelnen Wellen beachten, wenn man über viele Streuzentren integriert. Für zwei Streuzentren, eines im Ursprung, das andere bei $\mathbf{r}$, findet man durch geometrische Überlegungen die Phasendifferenz
+%
 \begin{equation}
 \Delta \phi = ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r}
 \end{equation}
@@ -66,7 +86,7 @@ wenn $\mathbf{k}$ der Wellenvektor der auslaufenden gestreuten ebenen Welle ist.
 \end{align}
 mit der \emph{Streuamplitude} 
 \begin{equation}
-\mathcal{A}(\mathbf{K}) =  \int_{V_\text{Probe}} \, \rho( \mathbf{r}) \,   e^{- i \,  ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r}} \, dV  = \mathcal{FT} \left\{ \rho( \mathbf{r})  \right\}
+\mathcal{A}(\mathbf{K}) =  \int_{V_\text{Probe}} \, \rho( \mathbf{r}) \,   e^{- i \,  ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r}} \, dV  = \mathcal{FT} \left\{ \rho( \mathbf{r})  \right\} \label{eq:rezi_streuamplitude}
 \end{equation}
 und dem \emph{Streuvektor} $\mathbf{K} = \mathbf{k} - \mathbf{k}_0$. In Streuexperimenten misst man also die Fourier-Transformierte der Streudichte. Dies gilt sowohl für die Beugung am Doppelspalt wie für die Beugung von Röntgen-Strahlen an der Elektronenverteilung in einem Kristall. 
 
@@ -99,7 +119,7 @@ also
 \begin{equation}
  e^{i \, \mathbf{G}_{hkl} \cdot  \mathbf{R}} = 1 \quad \text{und} \quad \mathbf{G}_{hkl} \cdot  \mathbf{R} = 2 \pi \, m
 \end{equation}
-mit einer ganzen Zahl $m$. Diese Bedingung muss für jede Wahl von $h,k,l$ erfpllt sein. Dies geht nur, wenn
+mit einer ganzen Zahl $m$. Diese Bedingung muss für jede Wahl von $h,k,l$ erfüllt sein. Dies geht nur, wenn
 \begin{align}
  \mathbf{b}_i \cdot \mathbf{a}_j & = \delta_{ij}  \\
   \mathbf{b}_1 = &\frac{2 \pi}{V_\text{PEZ}} \left(  \mathbf{a}_2 \times \mathbf{a}_3 \right)  \quad \text{und } \, 1,2,3 \, \,\text{ zyklisch} \\
@@ -108,7 +128,7 @@ mit einer ganzen Zahl $m$. Diese Bedingung muss für jede Wahl von $h,k,l$ erfpl
 Damit haben wir unser reziprokes Gitter definiert. Die Einheitsvektoren stehen in einem gewissen Sinne senkrecht aufeinander, auch wenn  sie unterschiedliche Einheiten besitzen.
 
 
-Wir haben nun also zwei Gitter. Im Ortsraum gibt es das Gitter aus dem letzten Kapitel. Die Länge der Vektoren hat die Einheit Meter. Das reziproke Gitter befindet sich im reziproken Raum, auch Impulsraum genannt, weil $\mathbf{p} = \hbar \mathbf{k}$. Die Länge der Vektoren hat die Einheit einer reziproken (oder inversen) Länge, also 1/Meter. Vektoren im reziproken Raum werden auch Wellenvektoren $\mathbf{k}$ genannt. Die Wigner-Seitz-Zone des reziproken Raums wird (erste) Brillouin-Zone genannt, doch dazu unten mehr.
+Wir haben nun also zwei Gitter. Im Ortsraum gibt es das Gitter aus dem letzten Kapitel. Die Länge der Vektoren hat die Einheit Meter. Das reziproke Gitter befindet sich im reziproken Raum, auch Impulsraum genannt, weil $\mathbf{p} = \hbar \mathbf{k}$. Die Länge der Vektoren hat die Einheit einer reziproken (oder inversen) Länge, also 1/Meter. Vektoren im reziproken Raum werden auch Wellenvektoren $\mathbf{k}$ genannt. Die Wigner-Seitz-Zelle des reziproken Raums wird (erste) Brillouin-Zone genannt, doch dazu unten mehr.
 
 
 \section{Beispiele}
@@ -124,10 +144,10 @@ Die Einheitsvektoren des reziproken Gitters sind dann also
 \begin{equation}
   \mathbf{b}_1 = \frac{2 \pi}{V_\text{PEZ}} \left(  \mathbf{a}_2 \times \mathbf{a}_3 \right)  = \frac{2 \pi}{a^3} \, a^2  \, \hat{\mathbf{x}} = \frac{2 \pi}{a}  \, \hat{\mathbf{x}} 
 \end{equation}
-Das reziproke Gitter eines kubisch primitiven Gitters ist also wieder ein kubisch primitives Gitter, nur eben mit reziproker Gitterkonstante.
+Das reziproke Gitter eines kubisch primitiven Gitters ist also wieder ein kubisch primitives Gitter, nur eben mit reziproker Gitterkonstante $2 \pi / a$.
 
 
-\paragraph{Kubisch zentrierte  Gitter} Das kubisch flächenzentrierte Gitter wird im reziproken Raum zu einem kubisch-raumzentrierten Gitter und andersherum. Wir starten von kubisch raumzentrierten Gitter. In kartesischen Koordinaten sind die primitiven Einheitsvektoren bei einer Kantenlänge $a$ der konventionellen Einheitszelle
+\paragraph{Kubisch zentrierte  Gitter} Das kubisch flächenzentrierte Gitter wird im reziproken Raum zu einem kubisch-raumzentrierten Gitter und andersherum. Wir starten vom kubisch raumzentrierten Gitter. In kartesischen Koordinaten sind die primitiven Einheitsvektoren bei einer Kantenlänge $a$ der konventionellen Einheitszelle
 \begin{align}
  \mathbf{a}_1 = & \frac{a}{2} \left( - \hat{\mathbf{x}} + \hat{\mathbf{y}} +\hat{\mathbf{z}} \right) \\
   \mathbf{a}_2 = & \frac{a}{2} \left( + \hat{\mathbf{x}} - \hat{\mathbf{y}} +\hat{\mathbf{z}} \right) \\
@@ -149,14 +169,22 @@ Das reziproke Gitter es ebenfalls ein Bravais-Gitter. Daher sind alle Definition
 V_\text{PEZ, reziprok} = \frac{(2 \pi)^3}{V_\text{PEZ, real} }
 \end{equation}
 
-Ein Unterschied ist, dass im reziproken Raum die Wigner-Seitz-Zelle Brillouin-Zone (BZ) genannt wird, und dass bei der Brillouin-Zone nicht nur das innerste Volumen interessant ist, sondern auch weiter außenliegende Schalen. Alle  Brillouin-Zonen haben aber das gleioche Voluemn wie die innerste, erste  Brillouin-Zone.
+Ein Unterschied ist, dass im reziproken Raum die Wigner-Seitz-Zelle Brillouin-Zone (BZ) genannt wird, und dass bei der Brillouin-Zone nicht nur das innerste Volumen interessant ist, sondern auch weiter außenliegende Schalen. Alle  Brillouin-Zonen haben aber das gleiche Volumen wie die innerste, erste  Brillouin-Zone.
 
 
 \begin{marginfigure}
-\caption{Brillouin-Zone Lineare Ketter und / oder 2D Konstruzktion WSZ}
+
+\inputtikz{\currfiledir bz-1d}
+\caption{Die ersten drei Brillouin-Zonen in einer Dimension}
 \end{marginfigure}
 
-Punkte hoher Symmetrie in der Brillouin-Zone werden durch große lateinische und griechische Buchstaben bezeichnet ($\Gamma$, L, U, X, etc). Der $\Gamma$-Punkt ist das Zentrum der ersten Brillouin-Zone, also $\mathbf{k} = 0$. Oft betrachtet man Größen als Funktion des Wellenvektors  $\mathbf{k} $ und damit als Funktion des Ortes in der Brillouin-Zone. Dabei tritt das Problem auf, dass eine skalare Größe als Funktion einer dreidimensionalen Position dargestellt werden müsste. Dies löst man, in dem man als horizontale Achse die Position entlang eines Pfades durch die Brillouin-Zone angibt. Dabei wird der Pfad so gewählt, dass die relevanten Punkte und Symmetrien berücksichtigt werden.
+\begin{marginfigure}
+
+\inputtikz{\currfiledir bz-2d}
+\caption{Die ersten drei Brillouin-Zonen in zwei Dimension. Alle Zonen haben die gleiche Fläche.}
+\end{marginfigure}
+
+Punkte hoher Symmetrie in der Brillouin-Zone werden durch große lateinische und griechische Buchstaben bezeichnet ($\Gamma$, L, U, X, etc). Der $\Gamma$-Punkt ist das Zentrum der ersten Brillouin-Zone, also $\mathbf{k} = 0$. Oft betrachtet man Größen als Funktion des Wellenvektors  $\mathbf{k} $ und damit als Funktion des Ortes in der Brillouin-Zone. Dabei tritt das Problem auf, dass eine skalare Größe als Funktion einer dreidimensionalen Position dargestellt werden müsste. Dies löst man, in dem man als horizontale Achse die Position entlang eines Pfades durch die Brillouin-Zone angibt. Dabei wird der Pfad so gewählt, dass die relevanten Punkte und Symmetrien berücksichtigt werden. Beispiel dazu werden wir im folgenden Kapitel sehen.
 
 
 
@@ -164,7 +192,7 @@ Punkte hoher Symmetrie in der Brillouin-Zone werden durch große lateinische und
 
 In Kristallen spielen oft einzelne Ebenen von Atomen eine Rolle, beispielsweise bei der Röntgen-Beugung. In einer dreidimensionalen Anordnung von Atomen lassen sich aber viele solche Ebenen finden. Die Miller'sche Indizes sind die Methode, um eine Gitterebene eindeutig zu bezeichnen.
 
-Die Miller'sche Indizes werden wie folgt konturiert:
+Die Miller'sche Indizes werden wie folgt konstruiert:
 \begin{enumerate} \setlength{\itemsep}{0pt}
 \item Man bestimmt die Achsenabschnitte $x,y,z$ der Ebene im \emph{Realraum}, also beispielsweise $(x,y,z) = (2,3,2)$. Wenn die Achse nicht geschnitten wird, so wird $\infty$ als Achsenabschnitt genommen.
 \item Man bildet den Kehrwert jeden Eintrags, hier $(\frac{1}{2},\frac{1}{3}, \frac{1}{2})$.
@@ -172,16 +200,16 @@ Die Miller'sche Indizes werden wie folgt konturiert:
 \end{enumerate}
 Die Indizes werden in verschiedenen Schreibweisen verwendet:
 \begin{description} \setlength{\itemsep}{0pt}
-\item $(323)$ runde Klammern ohne keine Kommas bezeichnet eine  Schar von parallelen Ebenen, da das Gitter ja translationsinvariant ist.
+\item $(323)$ runde Klammern ohne  Kommas bezeichnet eine  Schar von parallelen Ebenen, da das Gitter ja translationsinvariant ist.
 \item $(\bar{3}23)$ ein Überstrich bezeichnet einen negativen Index
-\item $\{hkl\}$ geschweifte\sidenote{spitze Klammern $\braket{hkl}$ analog für Richtungen } Klammern bezeichnen Ebenen gleicher Symmetrie. So entspricht beispielsweise  $\{100l\}$ den Ebenen $(100)$, $(010)$ und $(001)$.
+\item $\{hkl\}$ geschweifte\sidenote{spitze Klammern $\braket{hkl}$ analog für Richtungen } Klammern bezeichnen Ebenen gleicher Symmetrie. So entspricht beispielsweise  $\{100\}$ den Ebenen $(100)$, $(010)$ und $(001)$.
 \item $[uvw]$ eckige Klammern bezeichnen eine Richtung im Realraum. Aber allein im kubischen Gitter ist $[uvw]$ senkrecht auf der Ebene $(uvw)$.
 \end{description}
 Die Indizes hängen immer von der Wahl der Einheitszelle ab. In kubischen Gittern wird aber immer die kubisch-primitive Zelle gewählt.
 
 \paragraph{Sonderfall vier Indizes} Im hexagonalen Gitter benutzt man vier Indizes $(hkil)$ mit $i = - (h + k)$, weil die Symmetrie der Ebenen  dann in den Indizes offensichtlicher ist.\sidenote{Beispiel siehe \cite{Hunklinger2014}}
 
-\paragraph{Sonderfall größerer Indizes} Manchmal wird nicht die kleinste Zahl gewählt, um die reziproken Achsenabschnitte ganzzahlig zu machen. Anstatt die Ebene also beispielsweise durch $(100)$ zu beschrieben wird sie als $(200)$ bezeichnet. Damit meint man eine Ebene parallel zu $(100)$, aber in der Mitte der Einheitszelle und nicht an deren Rand. Der Index kodierte also auch die Lage in einer (großen) Einheitszelle. Analog kann auch dir Beugungsordnung in einem Streuexperiment kodiert werden. $(200)$  bezeichnet dann die zweite Beugungsordnung eines Reflexes von der $(100)$-Ebene.\sidenote{siehe weiter unten}
+\paragraph{Sonderfall größerer Indizes} Manchmal wird nicht die kleinste Zahl gewählt, um die reziproken Achsenabschnitte ganzzahlig zu machen. Anstatt die Ebene also beispielsweise durch $(100)$ zu beschrieben wird sie als $(200)$ bezeichnet. Damit meint man eine Ebene parallel zu $(100)$, aber in der Mitte der Einheitszelle und nicht an deren Rand. Der Index kodierte also auch die Lage in einer (großen) Einheitszelle. Analog kann auch die Beugungsordnung in einem Streuexperiment kodiert werden. $(200)$  bezeichnet dann die zweite Beugungsordnung eines Reflexes von der $(100)$-Ebene.\sidenote{siehe weiter unten}
 
 
 \section{Miller'sche Indizes und das reziproke Gitter}
@@ -218,7 +246,9 @@ In welche Richtung $\mathbf{K} = \mathbf{k} - \mathbf{k}_0$ finden sich in Streu
 
 
 \begin{marginfigure}
-\caption{ Phasendifferenz 2 Ebenen}
+\inputtikz{\currfiledir bragg}
+
+\caption{Phasendifferenz bei der Reflexion an zwei Ebenen.}
 \end{marginfigure}
 
 
@@ -230,20 +260,21 @@ Dabei bezeichnet $n$ die Beugungsordnung, $\lambda$ die Wellenlänge der (Materi
 $\mathbf{K}$ des Wellenvektors  steht senkrecht auf den reflektierenden Gitterebenen. Für den  Betrag gilt
 \begin{equation}
 |\mathbf{K}| = |\mathbf{k} - \mathbf{k}_0| = 2 | \mathbf{k}_0| \, \sin \Theta
+\label{eq:rezi_def_k_sin_theta}
 \end{equation}
 Es gibt in einem Kristall natürlich viele Möglichkeiten, Ebenen zu finden, und damit auch viele Richtungen, die die Bragg-Bedingung erfüllen, also viele Streu-Peaks.
  
  
-\section{von Laue-Theorie der Beugung} 
+\section{Von Laue-Theorie der Beugung} 
  
 Die Bragg-Bedingung sagt nur voraus, ob es in eine bestimmte Richtung einen Peak gibt, nicht jedoch dessen Intensität. Die Bragg-Theorie benutzt ja auch nur die Gitter-Periodizität der Streudichte $\rho( \mathbf{r})$, nicht deren genaue Form. Beides geschieht in der von Laue-Theorie.
 
-Die Intensität eines Streu-Peaks ist proptiotional zum Quadrat der Streu-Amplitude. Mit Gl XXX erhalten wir
+Die Intensität eines Streu-Peaks ist proportional zum Quadrat der Streu-Amplitude. Mit Gl.~\ref{eq:rezi_streuamplitude} erhalten wir
 \begin{equation}
 I(\mathbf{K}) \propto \left| \mathcal{A}(\mathbf{K}) \right|^2 
 = \left|   \int_{V_\text{Probe}} \, \rho( \mathbf{r}) \,   e^{- i \,   \mathbf{K} \cdot \mathbf{r}} \, dV \right|^2
 \end{equation}
-Wir widerhgilen nioch einbmal die Schritte vom Anfang des Kapitels und schreiben die Sterudichte als Fourier-Summe mit den Koffezienten $\rho_{hkl}$
+Wir wiederholen noch einmal die Schritte vom Anfang des Kapitels und schreiben die Streudichte als Fourier-Summe mit den Koeffizienten $\rho_{hkl}$
 \begin{equation}
   \rho(\mathbf{r}) = \sum_{h,k,l} \, \rho_{hkl} \, e^{i \, \mathbf{G}_{hkl} \cdot \mathbf{r}}
 \end{equation}
@@ -251,7 +282,7 @@ mit $h,k,l$ ganzen Zahlen, den Fourier-Koeffizienten $\rho_{hkl}$ und den  rezip
 \begin{equation}
 \mathbf{G}_{hkl} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_3 
 \end{equation}
-Im folgenden lasse ich die Indizes an $\mathbf{G}$ manchmal weg. Damit erhalten wir für die Streu-Intensität 
+Im Folgenden lasse ich die Indizes an $\mathbf{G}$ manchmal weg. Damit erhalten wir für die Streu-Intensität 
 \begin{equation}
 I(\mathbf{K}) \propto \left| \mathcal{A}(\mathbf{K}) \right|^2 
 = \left| 
@@ -269,10 +300,10 @@ Die Änderung des Wellenvektors muss einem Gittervektor entsprechen. Oder anders
 I(\mathbf{K} = \mathbf{G}_{hkl} ) \propto \left| \mathcal{A}(\mathbf{K} = \mathbf{G}_{hkl} ) \right|^2 
 = \left| \rho_{hkl} \right|^2   V_\text{Probe}^2 \label{eq:rezi_laue_peak}
 \end{equation}
-Ein einziger Fourier-Koeffizient bestimmt also die Intensität des Peak in Richtung $(hkl)$
+Ein einziger Fourier-Koeffizient bestimmt also die Intensität des Peaks in Richtung $(hkl)$.
 
 
-Einen Nebenbemerkung noch zur Form der Peaks im reziproken Raum. Die Lage ist durch $\mathbf{G}$ bestimmt. Die Breite ist endlich, also nicht deltaförmig, da die Probe endlich groß ist. Dies ist analog zur Breite der Beugungspeaks am Gitter, die ebenfalls mit $1/N_\text{Striche}$ fällt. Im Dreidimensionalen ist die Breite des Peak also $1/V_\text{Probe}$. Da die Höhe des Peaks proportional zu $ V_\text{Probe}^2$ ist, ist das Integral über einen Peak proportional zu $ V_\text{Probe}$. Dies ist sehr praktisch, da die Intensität des Effekts linear mit der verursachenden Menge Materie gehen sollte, und nicht quadratisch, wie Gl.~\ref{eq:rezi_laue_peak} suggeriert.
+Einen Nebenbemerkung noch zur Form der Peaks im reziproken Raum. Die Lage ist durch $\mathbf{G}$ bestimmt. Die Breite ist endlich, also nicht deltaförmig, da die Probe endlich groß ist. Dies ist analog zur Breite der Beugungspeaks am Strich-Gitter, die ebenfalls mit $1/N_\text{Striche}$ fällt. Im Dreidimensionalen ist die Breite des Peaks also $1/V_\text{Probe}$. Da die Höhe des Peaks proportional zu $ V_\text{Probe}^2$ ist, ist das Integral über einen Peak proportional zu $ V_\text{Probe}$. Dies ist sehr praktisch, da die Intensität des Effekts linear mit der verursachenden Menge Materie gehen sollte, und nicht quadratisch, wie Gl.~\ref{eq:rezi_laue_peak} suggeriert.
 
 
 \section{Äquivalenz der beiden Bedingungen}
@@ -281,9 +312,9 @@ Wir starten von der von Laue-Bedingung $\mathbf{G} =  \mathbf{K}$ und leiten dar
 \begin{equation}
  | \mathbf{K} | =  |\mathbf{k} - \mathbf{k}_0| = 2 | \mathbf{k}_0| \, \sin \Theta = \frac{4 \pi}{ \lambda} \, \sin \Theta = | \mathbf{G} | = n \, | \mathbf{G} | 
 \end{equation}
-Die ersten Schritte sind Gl. XXX und rein geometrische Überlegungen zur Reflexion, also noch nicht die Bragg-Bedingung. Im letzten Schritt haben wir ausgenutzt, dass auch jedes ganzzahlige Vielfache eines Gittervektor wieder ein Gittervektor ist.\sidenote{$\mathbf{G}$ ist ja mit vollem Namen $\mathbf{G}_{hkl}$, also eine Menge von Vektoren}
+Die ersten Schritte sind Gl.~\ref{eq:rezi_def_k_sin_theta} und rein geometrische Überlegungen zur Reflexion, also noch nicht die Bragg-Bedingung. Im letzten Schritt haben wir ausgenutzt, dass auch jedes ganzzahlige Vielfache eines Gittervektor wieder ein Gittervektor ist.\sidenote{$\mathbf{G}$ ist ja mit vollem Namen $\mathbf{G}_{hkl}$, also eine Menge von Vektoren}
 
-Wie wir bei den Miller'schen Indizes gesehen hatten, beschreibt Jeder Gittervektor eine ebene Welle und damit eine Schar von Ebenen im Abstand 
+Wie wir bei den Miller'schen Indizes gesehen hatten, beschreibt jeder Gittervektor eine ebene Welle und damit eine Schar von Ebenen im Abstand 
 \begin{equation}
  d = \frac{2 \pi}{|\mathbf{G} | }
 \end{equation}
@@ -296,33 +327,38 @@ Wie wir bei den Miller'schen Indizes gesehen hatten, beschreibt Jeder Gittervekt
 
 \section{Ewald-Kugel} 
  
-\begin{marginfigure}
-\caption{ Konstruktion Ewald-Kugel}
-\end{marginfigure}
 
  
  
-Nur wenige Orientierungen eine Kristalls relativ zum einfallenden Strahl liefern überhaupt Reflexe. Diese und die dann sichtbaren Reflexe zu identifizieren ermöglicht die Konstruktion der Ewald-Kugel:
+Nur wenige Orientierungen eines Kristalls relativ zum einfallenden Strahl liefern überhaupt Reflexe. Diese Orientierung und die dann sichtbaren Reflexe zu identifizieren ermöglicht die Konstruktion der Ewald-Kugel:
 \begin{enumerate} \setlength{\itemsep}{0pt}
 \item das Gitter als Punktgitter im reziproken Raum zeichnen
 
-\item den einfallenden Strahl mit dem Wellenvektor $\mathbf{k}_0$ so einzeichnen, dass die Pfeilspitze am Gitterpunkt $(000)$ endet. Dies definiert die Orientierung des Strahls relativ zum Kristall .
+\item den einfallenden Strahl mit dem Wellenvektor $\mathbf{k}_0$ so einzeichnen, dass die Pfeilspitze am Gitterpunkt $(000)$ endet. Dies definiert die Orientierung des Strahls relativ zum Kristall.
 
 \item einen Kreis / eine Kugel um den Anfang von  $\mathbf{k}_0$  mit dem Radius $|\mathbf{k}_0|$ zeichnen. Dies gibt alle Punkte, die $|\mathbf{k}| = |\mathbf{k}_0|$ erfüllen
 
 \item Alle Punkte des reziproken Gitters, die auf dem Kreis / der Kugel liegen, erfüllen die Streu-Bedingung $\mathbf{G} =\mathbf{K} $.
 \end{enumerate}
 
-In einem endlichen Kristall sind die Gitterpunkte nicht mathematische Punkte, sondern durch die Fourier-Unschärfe zwischen Realraum und reziproken Raum ausgedehnt. Ebenso ist keine (Materie-)Welle exakt deltaförmig im Frequenzraum, da auch hier die Fourier-Unschärfe zwischen Zeit und Frequenz zum tragen kommt. Für physikalische Systeme gibt es also Punkte, die auf dem Kreis liegen.
+\begin{marginfigure}
+\inputtikz{\currfiledir ewald}
 
+\caption{ Konstruktion der Ewald-Kugel}
+\end{marginfigure}
+
+
+In einem endlichen Kristall sind die Gitterpunkte nicht mathematische Punkte, sondern durch die Fourier-Unschärfe zwischen Realraum und reziproken Raum ausgedehnt. Ebenso ist keine (Materie-)Welle exakt deltaförmig im Frequenzraum, da auch hier die Fourier-Unschärfe zwischen Zeit und Frequenz zum Tragen kommt. Für physikalische Systeme gibt es also Punkte, die auf dem Kreis liegen.
+
+Trotzdem sind natürlich viele Ewald-Kugeln denkbar, bei denen allein der Punkt $(000)$ auf der Kugel liegt. Laue-Beugung tritt also nicht immer auf bzw. der Kristall muss dazu genauer orientiert werden. Die Verwendung von breitbandiger Strahlung beispielsweise Bremsstrahlung macht dies einfacher, verliert aber die Möglichkeit, die Gitterkonstante zu messen.
 
 \section{Strukturfaktor}
 
-Bisher haben wir nur das mathematische Gitter und dessen Beugungsbild betrachtet. Jetzt berücksichtigen wir auch die Basis, also insbesondere, wenn diese mehr als ein Atom beinhaltet. Die Kurfassung ist: Das Gitter bestimmt, in welche Richtung Reflexe auftreten können. Die Basis bestimmt die Intensität dieser Reflexe, die insbesondere auch Null sein kann. Der Grund dafür ist destruktive Interferenz zwischen den Beugung an dem Untergitter aus dem einem Atom mit dem aus dem anderen.
+Bisher haben wir nur das mathematische Gitter und dessen Beugungsbild betrachtet. Jetzt berücksichtigen wir auch die Basis, also insbesondere, wenn diese mehr als ein Atom beinhaltet. Die Kurfassung ist: Das Gitter bestimmt, in welche Richtung Reflexe auftreten können. Die Basis bestimmt die Intensität dieser Reflexe, die insbesondere auch Null sein kann. Der Grund dafür ist destruktive Interferenz zwischen der Beugung an dem Untergitter aus dem einem Atom mit der an dem anderen.
 
-Gleichzeitig wird hier das 'reziprok' im reziproken Raum auch noch einmal deutlich. Das mathematische Gitter ist im Realraum 'größer' in dem Sinne, dass es durch ganzzahlige Faktoren (also $\ge 1$) vor den primitiven Einheitsvektoren beschrieben wird. Die Basis wird durch Faktoren zwischen Null und Eins beschrieben. Im reziproken Raum geht alles mit dem Kehrwert. Das mathematische Gitter ist dann 'kleiner' als die Fourier-Transformierte der Basis. In Einheiten der primitiven reziproken Vektors des Gitters ist die Basis jetzt verantwortlich für Effekte nicht mehr zwischen Null und Eins, sondern für solche bei ganzen Zahlen $\ge 1$, also der Modulation der Amplitude der Beugungspeaks.
+Gleichzeitig wird hier das 'reziprok' im reziproken Raum auch noch einmal deutlich. Das mathematische Gitter ist im Realraum 'größer' in dem Sinne, dass es durch ganzzahlige Faktoren (also $\ge 1$) vor den primitiven Einheitsvektoren beschrieben wird. Die Basis wird durch Faktoren zwischen Null und Eins beschrieben. Im reziproken Raum geht alles mit dem Kehrwert. Das mathematische Gitter ist dann 'kleiner' als die Fourier-Transformierte der Basis. In Einheiten des primitiven reziproken Vektors des Gitters ist die Basis jetzt verantwortlich für Effekte nicht mehr zwischen Null und Eins, sondern für solche bei ganzen Zahlen $\ge 1$, also der Modulation der Amplitude der Beugungspeaks.
 
-Wir starten vin Gl. XXX und setzen die Defintion der Fouroer-Komponenten Gl \ref{eq:rezi_rho_hkl} ein. Damit erhakten wir
+Wir starten von Gl.~\ref{eq:rezi_streuamplitude} und setzen die Definition der Fourier-Komponenten Gl.~\ref{eq:rezi_rho_hkl} ein. Damit erhalten wir
 \begin{equation}
 \mathcal{A}(\mathbf{K} = \mathbf{G}_{hkl} ) 
 =  \rho_{hkl} V_\text{Probe}
@@ -380,9 +416,34 @@ Bei Röntgenstreuung ist $  f_\text{\ch{Cs}}  \approx f_\text{\ch{Cl}}$, also nu
 
 Ein kubisch-raumzentriertes Gitter  kann als kubisch-primitives Gitter mit einer zweiatomigen Basis gesehen werden. Beides beschreibt die gleiche Lage der Atome im Raum. Allerdings sind es unterschiedliche mathematische Gitter und damit unterschiedliche $\mathbf{G}_{hkl}$. Dies hat scheinbar unterschiedliche Peaks im Beugungsbild zur Folge, was natürlich nicht sein darf.
 
-Die Auflösung findet sich wieder im Strukturfaktor. Die Basis, die benötigt wird, um aus einem  kubisch-primitiven ein kubisch-raumzentriertes Gitter  zu machen, ist wieder die halbe Raumdiagonale, wie im letzten Abschnitt. Im Unterschied zum letzten Abschnitt sind nun aber beide Positionen mit den selben Atomen besetzt. Damit verschwinden alle Peaks bei ungeradem $ h+k+l $. Dies sind gerade die, die den Unterschied zwischen $\mathbf{G}_{bcc} $ und  $\mathbf{G}_{sc} $ ausmachen.
+Die Auflösung findet sich wieder im Strukturfaktor. Die Basis, die benötigt wird, um aus einem  kubisch-primitiven ein kubisch-raumzentriertes Gitter  zu machen, ist wieder die halbe Raumdiagonale, wie im letzten Abschnitt. Im Unterschied zum letzten Abschnitt sind nun aber beide Positionen mit den selben Atomen besetzt. Damit verschwinden alle Peaks bei ungeradem $ h+k+l $. Dies sind gerade die, die den Unterschied zwischen $\mathbf{G}_{bcc} $ und  $\mathbf{G}_{sc} $ ausmachen. Eine ähnliche Bedingung gibt es für das kubisch flächenzentrierte Gitter.
 
 
+\begin{figure}
+\inputtikz{\currfiledir strukturfaktor}
+  \caption{Wenn Peaks nach der konventionellen Einheitszelle indiziert werden, dann sind manche in den zentrierten Gittern nicht sichtbar. }
+\end{figure}
+
+
+\section{Auswertung der Pulver-Diffraktometrie}
+
+Aus dem Experiment erhält man die Position der Peaks als Funktion des doppelten Streuwinkels $2\Theta$ bei bekannter Wellenlänge $\lambda$ der Strahlung. Daraus möchte man die möglichen Werte der Länge des Gittervektors $|\mathbf{G}|$ bestimmen und so eine Aussage über das Bravais-Gitter, die Basis und die Gitterkonstante zu treffen. Im Allgemeinen ist dies nicht trivial. In einfachen Fällen, wie dem Beispiel am Anfang des Kapitels, kann man wie folgt vorgehen:
+
+Wir betrachten den reziproken Abstand der Gitterebenen
+\begin{equation}
+\frac{1}{d} = \frac{|\mathbf{G}|}{2 \pi} = \frac{2 \sin \Theta}{\lambda}
+\end{equation}
+In kubischen Gittern wird dies
+\begin{equation}
+ \sqrt{h^2 + k^2 + l^2} = \frac{a \, \sin \Theta}{\lambda}
+\end{equation}
+mit der Gitterkonstante $a$ der konventionellen Einheitszelle im Realraum. Somit also 
+\begin{equation}
+ h^2 + k^2 + l^2 = \left(\frac{a }{\lambda} \right)^2 \, \sin^2 \Theta
+\end{equation}
+Man versucht also die Position aller Peaks durch eine einzige\sidenote{im Rahmen der Messgenauigkeit} Wahl von $a/\lambda$ und je einen Satz von ganzen Zahlen $(hkl)$ zu beschreiben. Somit erhält man die Gitterkonstante $a$ und aus der An- bzw. Abwesenheit der Peaks den Strukturfaktor und damit das Gitter.
+
+ 
 %-------------------
 
 \printbibliography[segment=\therefsegment,heading=subbibliography]

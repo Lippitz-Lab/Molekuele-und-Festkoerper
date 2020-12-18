@@ -1,0 +1,104 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+ \pgfplotsset{compat=newest}
+
+
+\usepackage{currfile,hyperxmp}
+\usetikzlibrary{math,calc,matrix,fit,positioning,intersections}
+
+\usepackage{tikz-3dplot}
+ 
+\usepackage{xfp}
+
+
+\begin{document}
+
+
+
+
+\begin{tikzpicture}
+%\useasboundingbox (0,0) rectangle (5,5);
+%\draw (2,2) rectangle ++(5,5);
+
+
+ \begin{axis}[
+   axis lines=none,
+    xmin=-0.5,
+    xmax=2.5,
+    ymin=-0.5,
+    ymax=2.5,
+    zmin=-0.5,
+    zmax=2.5,
+    xtick=\empty,
+    ytick=\empty,
+    ztick=\empty,
+    axis equal , rotate around z=40 ,rotate around x=-2 ,
+    font=\footnotesize]
+
+   
+\newcommand{\Naatom}{1.2mm}
+\newcommand{\Clatom}{1mm}
+
+\shade [ball color=red](1,0,1) circle (\Naatom);
+\shade [ball color=red](1,1,0) circle (\Naatom);
+\shade [ball color=red](0,1,1) circle (\Naatom);
+\shade [ball color=red](1,2,1) circle (\Naatom);
+\shade [ball color=red](1,1,2) circle (\Naatom);
+\shade [ball color=red](2,1,1) circle (\Naatom);
+
+
+ \foreach \u in {0,2}{%  
+ \foreach \v in {0,2}{%  
+
+     \edef\temp{%
+	    \noexpand\draw[gray,thick] (\u,\v,0) -- (\u,\v,2);
+	    \noexpand\draw[gray,thick] (\u,0,\v) -- (\u,2,\v);
+	   \noexpand\draw[gray,thick] (0,\u,\v) -- (2,\u,\v);
+
+			 }
+    \temp
+
+  } } 
+
+
+
+ \foreach \u in {0,2}{%  
+ \foreach \v in {0,2}{%  
+ \foreach \w in {0,2}{%  
+
+     \edef\temp{%
+	   \noexpand\shade [ball color=red](\u,\v,\w) circle (\Naatom);
+			 }
+    \temp
+  } } }
+  
+\shade [ball color=red](1,0,1) circle (\Naatom);
+\shade [ball color=red](1,1,0) circle (\Naatom);
+\shade [ball color=red](0,1,1) circle (\Naatom);
+\shade [ball color=red](1,2,1) circle (\Naatom);
+\shade [ball color=red](1,1,2) circle (\Naatom);
+\shade [ball color=red](2,1,1) circle (\Naatom);
+  
+\foreach \u in {0,2}{%  
+ \foreach \v in {0,2}{%  
+
+     \edef\temp{%
+	    \noexpand\shade [ball color=green](\u,\v,1) circle (\Clatom);
+	    \noexpand\shade [ball color=green](\u,1,\v) circle (\Clatom);
+	    \noexpand\shade [ball color=green](1,\u,\v) circle (\Clatom);
+			 }
+    \temp
+  } } 
+  
+  
+  	\shade [ball color=green](1,1,1) circle (\Clatom);
+
+  \end{axis}
+
+  
+  \end{tikzpicture}
+
+\end{document}
+
+
