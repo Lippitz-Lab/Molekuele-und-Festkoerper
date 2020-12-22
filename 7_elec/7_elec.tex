@@ -130,12 +130,14 @@ Die Energien der quantenmechanischen Eigenzustände sind
 \begin{eqnarray}
   E_{g, n} &=&  (n + 1/2) \, \hbar \omega  \\
   E_{e, m} &=&  (m + 1/2) \, \hbar \omega  +  E_{eg} - \frac{A^2}{2 m \omega^2} =
-   (m + 1/2 - S^2) \, \hbar \omega  +  E_{eg}  \nonumber
+   (m + 1/2 - S) \, \hbar \omega  +  E_{eg}  \nonumber
 \end{eqnarray}
-Wir führen den Huang-Rhys-Faktor $S$ als dimensionslose Kopplungskonstanten ein
+Wir führen den Huang-Rhys-Faktor $S$ als dimensionslose Kopplungskonstanten\sidenote{Kuzmany definiert  $S$ als Wurzel des hier verwendeten $S$.} ein
 \begin{equation}
- S = \frac{A}{\hbar \omega} \sqrt{\frac{\hbar}{2 m \omega}} \quad .
+ S = \frac{A^2}{\hbar \omega} \frac{1}{2 m \omega^2}
+ = \frac{1}{2} \, \left( R \, \sqrt{\frac{m \, \omega}{\hbar}}\, \right)^2 \quad ,
 \end{equation}
+wobei der Term in Klammern die Verschiebung des Minimums in reduzierten Koordinaten ist.
 Die Eigenfunktionen $\chi_n$ der Kernvibrationen sind Hermite'sche Polynome. Der Franck-Condon-Faktor beschreibt das Überlappungsintegral der Schwingungswellenfunktion von Grund- und angeregtem Zustand. Da der elektronische Übergang im Vergleich zur Kernbewegung schnell ist, kann sich die Kernkoordinate während des Übergangs nicht ändern (Born-Oppenheimer-Näherung), und sowohl der Grund- als auch der angeregte Zustand benötigen eine nicht verschwindende Wahrscheinlichkeit, um auf der gleichen Koordinate $r$ zu liegen. Wenn sich einer der Zustände in einem schwingenden Grundzustand befindet, d.h. $n$ oder $m$ gleich null ist, nimmt der Franck-Condon-Faktor die Form\sidenote{Diese Notation ist schlampig in dem Sinne, dass die Bra-Wellenfunktion ein elektronischer angeregter Zustand ist, die Ket-Funktion ein elektronischer Grundzustand!}
 \begin{equation}
  | \braket{ \chi_0 | \chi_m } | ^2  =  | \braket{ \chi_m | \chi_0 } | ^2 = \frac{S^m \exp(-S)}{m!}

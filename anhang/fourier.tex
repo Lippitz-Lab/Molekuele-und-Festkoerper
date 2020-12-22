@@ -1,0 +1,205 @@
+%\renewcommand{\lastmod}{April 29, 2020}
+
+\chapter{Fourier-Transformation}
+
+
+
+\section{Überblick}
+
+Der reziproke Raum in der Festkörperphysik ist die Fourier-Transformierte des Realraums. Es ist daher sinnvoll und hilfreich, einen intuitiven Zugang zur Fourier-Transformation zu haben. Im Endeffekt muss man in der Experimentalphysik nur selten eine Fourier-Transformation wirklich ausrechnen. Sehr oft reicht es, ein paar oft vorkommende Fourier-Paare zu kennen und diese mit einfachen Regeln zu kombinieren. Dies möchte ich hier kurz vorstellen. Eine sehr schöne und viel detailliertere Darstellung findet sich in \cite{Butz2011}. Ich folge hier seiner Notation.
+
+Bevor wir zu den Fourier-Paare kommen, müssen allerdings doch erst ein paar Grundlagen gelegt werden.
+
+\section{Fourier-Reihen: eine periodische Funktion und deren Fourier-Koeffizienten}
+
+Wir betrachten hier alles erst einmal eindimensional im Zeit- bzw. Frequenzraum mit den Variablen $t$ und $\omega = 2 \pi \nu$. Die Funktion $f(t)$ sei periodisch in der Zeit mit der Periodendauer $T$, also 
+\begin{equation}
+ f(t) = f (t + T)
+\end{equation}
+Dann kann man diese als Fourier-Reihe schreiben
+\begin{equation}
+ f(t) = \sum_{k=-\infty}^{\infty} \, C_k \, e^{i \, \omega_k \, t}
+ \quad \text{mit} \quad \omega_k = \frac{2 \pi \, k}{T}
+\end{equation}
+und den Fourier-Koeffizienten
+\begin{equation}
+ C_k = \frac{1}{T} \, \int_{-T/2}^{T/2} \, f(t) \, \, e^{-i \, \omega_k \, t} \, dt
+\end{equation}
+Man beachte das negative Vorzeichen in der Exponentialfunktion im Gegensatz zur Gleichung davor. Für reelwertige Funktionen $f(t)$ sind 'gegenüberliegende' $C_k$ konjugiert-komplex, also  $C_k = C_{-k}^\star$. Für $k<0$ sind die Frequenzen $\omega_k$ negativ, was aber kein Problem darstellt\sidenote{Man könnte alternativ $k\ge 0$ verlangen und eine $\sin$ und $\cos$ Reihe ansetzen.} Der nullte Koeffizient $C_0$ ist also gerade der zeitliche Mittelwert der Funktion $f(t)$.
+
+
+
+\section{Eine beliebige Funktion und deren Fourier-Transformierte}
+
+Nun heben wir die Einschränkung auf periodische Funktionen $f/t)$ auf, indem wir die Periodendauer $T$ gegen unendlich gegen lassen. Dadurch wird aus der Summe ein Integral und die diskreten $\omega_k$ werden kontinuierlich. Damit wird
+\begin{align}
+ F(\omega) = & \int_{-\infty}^{+\infty} \, f(t) \, e^{- i \omega\, t} \, dt \\
+ f(t) = & \frac{1}{2 \pi } \int_{-\infty}^{+\infty} \, F(\omega) \, e^{+ i \omega\, t} \, dt 
+\end{align}
+Die erste Gleichung ist dabei die Hintransformation (minus-Zeichen im Exponenten), die zweite die Rücktransformation (plus-Zeichen im Exponenten). Die Symmetrie wird durch das $2 \pi$ gebrochen. Dies ist aber notwendig, wenn man weiterhin $F(\omega = 0)$ als Mittelwert behalten will. Alternativ könnte man das alles mit $\nu$ statt $\omega$  formulieren, hätte dann aber an viel mehr Stellen ein $2 \pi$, wenn auch nicht vor dem Integral.
+
+Mit dieser Form werden wir gleich weiterarbeiten.
+
+\section{Diskrete FT: eine periodische Zahlenfolge und deren Fourier-Transformierte Zahlenfolge}
+
+Zunächst noch eine Nebenbemerkung zur diskreten Fourier-Transformation. Insbesondere wenn man mit einem Computer Messwerte erfasst und auswertet, dann kennt man die gemessene Funktion $f(t)$ weder auf einer kontinuierliche Achse $t$, sondern nur zu diskreten Zeiten $t_k = k \, \Delta t$, noch kennt man die Funktion von $t = - \infty$ bis $t = + \infty$. Als Ausgangspunkt hat man also nur eine Zahlenfolge $f_k$ endlicher Länge.
+
+Weil wir die Zahlenfolge außerhalb des gemessenen Intervalls nicht kennen machen wir die Annahme, dass die periodisch ist. Bei $N$ gemessenen Werte ist die Periodendauer also $T = N \Delta t$. Der Einfachheit halber definieren wir auch $f_k = f_{k + N}$ und somit $f_{-k} = f_{N - k}$ mit $k= 0, 1, \dots, N-1$. Damit wird die Fourier-Transformation
+\begin{align}
+ F_j = & \frac{1}{N} \, \sum_{k=0}^{N-1} \, f_k \, e^{- k \, j \, 2 \pi i / N } \\
+  f_k = &  \sum_{j=0}^{N-1} \, F_j \, e^{+ k \,  j \, 2 \pi i / N } 
+\end{align}
+Die Definition ist wieder so, dass $F_0$ dem Mittelwert entspricht. Wegen $f_{-k} = f_{N - k}$ liegen die positiven Frequenz mit steigender Frequenz in der ersten Hälfte von $F_j$. Danach kommen die negativen Frequenz, beginnend bei der 'negativsten' Frequenz steigend mit zur letzten Frequenz vor der Frequenz Null. Die maximal darstellbare Frequenz ist also die Nyquist-(Kreis-)Frequenz
+\begin{equation}
+\Omega_\text{Nyquist} = \frac{\pi}{\Delta t}
+\end{equation}
+
+
+\section{Wichtige Fourier-Paare}
+
+Es ist sehr oft ausreichend, die folgenden Paare von Funktionen und deren Fourier-Transformierten zu kennen. Ich schreibe sie hier, Butz folgend, als Paare in $t$ und $\omega$ (nicht $\nu = \omega / (2 \pi)$). Genauso hätte man auch Paare in $x$ und $k$ schreiben können. Wichtig ist dabei die Frage, ob ein $2 \pi$ in der Exponentialfunktion der ebenen Welle auftaucht oder nicht. Also
+\begin{equation}
+e^{i \omega t} \quad \text{und} \quad e^{i k x} \quad \text{, aber} \quad 
+e^{i 2 \pi \nu t}
+\end{equation}
+
+\paragraph{Konstante und Delta-Funktion} Aus $f(t) = a$ wird $F(\omega) = a \, \delta(\omega)$, also eine Delta-Funktion bei $\omega = 0$ mit einer Amplitude, die dem zeitlichen Mittel von $f$ entspricht. Analog umgekehrt.
+
+\paragraph{Rechteck und sinc} Aus der Rechteckfunktion der Breite $b$ wird ein sinc, der sinus cardinalis. Also aus
+\begin{equation}
+ f(t) = \text{rect} _b (t) = \left\{ \begin{array}{ll}
+ 1 & \text{für} \quad |t| < b/2 \\
+ 0 & \text{sonst} \\
+ \end{array}
+ \right.
+\end{equation}
+wird \sidenote{Manchmal wird $\text{sinc}(x) = \sin (\pi x) / (\pi x)$ definiert, insbesondere wenn $\nu$ und nicht $\omega$ als konjugierte Variable benutzt wird.}
+\begin{equation}
+F(\omega) = b \,  \frac{\sin \omega b / 2}{\omega b /2} = b \, \text{sinc}( \omega b /2)
+\end{equation}
+
+
+
+\paragraph{Gauss} Die Gauss-Funktion bleibt unter Fourier-Transformation erhalten. Ihre Breite geht in den reziproken Wert über. Also aus einer Gauss-Funktion der Fläche Eins
+\begin{equation}
+ f(t) = \frac{1}{\sigma \sqrt{2 \pi}} \, e^{- \frac{1}{2} \left( \frac{t}{\sigma} \right)^2}
+\end{equation}
+wird
+\begin{equation}
+ F(\omega) =  e^{- \frac{1}{2} \left( \sigma \, \omega \right) ^2  }
+\end{equation}
+
+
+
+\paragraph{(beidseitiger) Exponentialzerfall und Lorentz-Kurve} Aus einer sowohl zu positiven als auch zu negativen Zeiten exponentiell abfallenden Kurve 
+\begin{equation}
+ f(t) = e^{- |t| / \tau}
+\end{equation}
+wird die Lorentz-Kurve
+\begin{equation}
+ F(\omega) = \frac{2 \tau}{1 + \omega^2 \, \tau^2}
+\end{equation}
+
+
+\paragraph{Einseitiger Exponentialzerfall} Als Nebenbemerkung hier der einseitige Exponentialzerfall, also
+\begin{equation}
+ f(t) = \left\{ \begin{array}{ll}
+e^{- \lambda t } & \text{für} \quad t > 0 \\
+ 0 & \text{sonst} \\
+ \end{array}
+ \right.
+\end{equation}
+Der wird zu
+\begin{equation}
+ F(\omega) = \frac{1}{\lambda + i \, \omega}
+\end{equation}
+ist also komplexwertig. Sein Betrags-Quadrat ist wieder eine Lorentz-Funktion
+\begin{equation}
+| F(\omega)|^2 = \frac{1}{\lambda^2 +  \omega^2}
+\end{equation}
+und die Phase ist $\phi = - \omega / \lambda$.
+
+\paragraph{Eindimensionales Punktgitter} Eine äquidistante Kette von Punkten bzw. Delta-Funktionen geht bei Fourier-Transformation wieder in eine solche über. Die Abstände nehmen dabei den reziproken Wert an. Also aus
+\begin{equation}
+ f(t) = \sum_n \, \delta (t - \Delta t \, n)
+\end{equation}
+wird
+\begin{equation}
+ F(\omega) = \frac{1}{\Delta t} \, \sum_n \, \delta \left(\omega - n\frac{2 \pi}{\Delta t} \right)
+\end{equation}
+
+
+\paragraph{Dreidimensionale kubische Gitter} Ein dreidimensionales primitives kubisches Gitter der Kantenlänge $a$ geht über in primitiv-kubisches Gitter der Kantenlänge $2 \pi/a$. Ein kubisch-flächenzentriertes Gitter mit der Gitterkonstante $a$ der konventionellen Einheitszelle geht über in ein kubisch-raumzentriertes Gitter mit der Gitterkonstanten $4 \pi / a$ und umgekehrt. 
+
+
+\section{Sätze und Eigenschaften der Fourier-Transformation}
+
+Neben den Fourier-Paaren braucht man noch ein paar Eigenschaften der Fourier-Transformation. Im Folgende seien  $f(t)$ und $F(\omega)$ Fourier-Transformierte  und ebenso $g$ und $G$.
+
+\paragraph{Linearität} Die Fourier-Transformation ist linear
+\begin{equation}
+a \, f(t) + b \, g(t) \quad \leftrightarrow \quad 
+a \, F(\omega) + b \, G(\omega) 
+\end{equation}
+
+\paragraph{Verschiebung}  Eine Verschiebung in der Zeit bedeutet eine Modulation in der Frequenz und andersherum
+\begin{align}
+ f(t - a) & \quad \leftrightarrow \quad 
+F(\omega) \, e^{-i \omega a} \\
+ f(t) \, \, e^{-i \omega_0 t} &  \quad \leftrightarrow \quad 
+F(\omega + \omega_0)  
+\end{align}
+
+\paragraph{Skalierung}  
+\begin{equation}
+ f( a \, t)  \quad \leftrightarrow \quad 
+\frac{1}{|a|} \, F \left( \frac{\omega}{a} \right)  
+\end{equation}
+
+
+\paragraph{Faltung und Multiplikation} Die Faltung geht in ein Produkt über, und andersherum.
+\begin{equation}
+ f(t) \otimes g(t) = \int f(\zeta) g(t- \zeta) d\zeta 
+ \quad \leftrightarrow \quad 
+ F(\omega) \, G(\omega)
+\end{equation}
+und
+\begin{equation}
+ f(t) \,  g(t) 
+ \quad \leftrightarrow \quad 
+\frac{1}{2 \pi} \,  F(\omega) \otimes G(\omega)
+\end{equation}
+
+\paragraph{Parsevals Theorem} Die Gesamt-Leistung ist im Zeit- wie im Frequenzraum die gleiche
+\begin{equation}
+ \int |f(t) |^2 \, dt = \frac{1}{2 \pi} \, \int | F (\omega ) | ^2 \, d\omega
+\end{equation}
+
+\paragraph{Zeitliche Ableitungen}
+\begin{equation}
+ \frac{d \, f(t)}{dt} 
+ \quad \leftrightarrow \quad 
+i \omega \,  F(\omega) 
+\end{equation}
+
+
+
+\section{Beispiel: Beugung am Doppelspalt}
+
+Als Beispiel betrachten wir die Fourier-Transformierte eines Doppelspalts, die gerade sein Beugungsbild beschreibt. Die Spalten haben eine Breite $b$ und einem Mitten-Abstand $d$. Damit wird der Spalt beschrieben durch eine Faltung der Rechteck-Funktion mit zwei Delta-Funktionen im Abstand $d$
+\begin{equation}
+f(x) = \text{rect} _b (x) \, \otimes \, \left( \delta (x - d/2) + \delta (x + d/2) \right)
+\end{equation}
+Die Fourier-Transformierte der Rechteck-Funktion ist der $\text{sinc}$, die der delta-Funktionen eine Konstante. Die Verschiebung im Ort bewirkt allerdings eine Modulation im $k$-Raum. Aus der Summe der beiden Delta-Funktionen wird also 
+\begin{equation}
+\mathcal{FT}\left\{ \delta (x - d/2) + \delta (x + d/2)  \right\} =
+e^{-i k d/2} + e^{+i k d/2}  = 2 \cos ( k d/2)
+\end{equation}
+Die Faltung mit der Rechteck-Funktion geht über in eine Multiplikation mit dem $\text{sinc}$. Zusammen erhalten wir somit
+\begin{equation}
+\mathcal{FT}\left\{ f(x)  \right\} = b \frac{\sin (k b/2) }{kb/2} \, 2 \cos ( k d/2) = \frac{4}{k} \, \sin (k b/2) \,  \cos ( k d/2) 
+\end{equation}
+Die Intensität in Richtung $k$ ist dann das Betragsquadrat davon.
+
+%--------------------
+\printbibliography[segment=\therefsegment,heading=subbibliography]
