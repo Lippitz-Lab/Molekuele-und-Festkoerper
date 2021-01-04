@@ -118,6 +118,7 @@
   urlcolor=RoyalBlue
 }
 
+\newcommand{\kapitelname}{Kapitel\ }
 \newcommand{\chapterauthors}{Markus Lippitz}
 \newcommand{\lastmod}{\Filemodtoday{\currfilepath}}
 
@@ -185,8 +186,8 @@
 
 %\include{preface}
 
-%
-\part{Theorie der molekularen Bindung}
+
+%\part{Theorie der molekularen Bindung}
 
 \include{1_VB/1_VB}
 
@@ -201,7 +202,7 @@
 \include{5_vib/5_vib}
 \include{6_raman/6_raman}
 \include{7_elec/7_elec}
-%
+
 \part{Festkörperphysik I}
 %
 \include{8_gitter/8_gitter}
@@ -209,27 +210,35 @@
 %\include{10_phonon/10_phonon}
 %\include{11_wk/11_wk}
 
-\part{Anhang}
 
-\appendix
-%\appendixpage
+
+%%-----------------------
+%\cleardoublepage
+%
+%\thispagestyle{empty}
+%\begin{center}
+%\vspace*{8cm}
+%
+%
+%\Huge \textbf{Anhang}
+%
+%\addcontentsline{toc}{part}{Anhang} 
+%
+%\end{center}
+%
+%\renewcommand\thechapter{\Alph{chapter}}
+%\setcounter{chapter}{0}
+
+
+\renewcommand{\kapitelname}{Anhang\ }
+
+\addcontentsline{toc}{part}{Anhang} 
 %\addappheadtotoc
 
-
-\titleformat{\chapter}%
-  [display]% shape
-  {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
-  %{\itshape\huge\thechapter}% label
-  {\huge Anhang \thechapter}% label
-  {0pt}% horizontal separation between label and title body
-  %{\huge\rmfamily\itshape}% before the title body
-  {\fontseries{b}\selectfont\huge}% before the title body
-  [\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
-
+\appendix
+\appendixpage
 
 \include{anhang/drehimpuls}
-
-
 \include{anhang/fourier}
 
 %-------

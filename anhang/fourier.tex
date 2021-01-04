@@ -25,13 +25,13 @@ und den Fourier-Koeffizienten
 \begin{equation}
  C_k = \frac{1}{T} \, \int_{-T/2}^{T/2} \, f(t) \, \, e^{-i \, \omega_k \, t} \, dt
 \end{equation}
-Man beachte das negative Vorzeichen in der Exponentialfunktion im Gegensatz zur Gleichung davor. Für reelwertige Funktionen $f(t)$ sind 'gegenüberliegende' $C_k$ konjugiert-komplex, also  $C_k = C_{-k}^\star$. Für $k<0$ sind die Frequenzen $\omega_k$ negativ, was aber kein Problem darstellt\sidenote{Man könnte alternativ $k\ge 0$ verlangen und eine $\sin$ und $\cos$ Reihe ansetzen.} Der nullte Koeffizient $C_0$ ist also gerade der zeitliche Mittelwert der Funktion $f(t)$.
+Man beachte das negative Vorzeichen in der Exponentialfunktion im Gegensatz zur Gleichung davor. Für reelwertige Funktionen $f(t)$ sind 'gegenüberliegende' $C_k$ konjugiert-komplex, also  $C_k = C_{-k}^\star$. Für $k<0$ sind die Frequenzen $\omega_k$ negativ, was aber kein Problem darstellt.\sidenote{Man könnte alternativ $k\ge 0$ verlangen und eine $\sin$ und $\cos$ Reihe ansetzen.} Der nullte Koeffizient $C_0$ ist also gerade der zeitliche Mittelwert der Funktion $f(t)$.
 
 
 
 \section{Eine beliebige Funktion und deren Fourier-Transformierte}
 
-Nun heben wir die Einschränkung auf periodische Funktionen $f/t)$ auf, indem wir die Periodendauer $T$ gegen unendlich gegen lassen. Dadurch wird aus der Summe ein Integral und die diskreten $\omega_k$ werden kontinuierlich. Damit wird
+Nun heben wir die Einschränkung auf periodische Funktionen $f(t)$ auf, indem wir die Periodendauer $T$ gegen unendlich gehen lassen. Dadurch wird aus der Summe ein Integral und die diskreten $\omega_k$ werden kontinuierlich. Damit wird
 \begin{align}
  F(\omega) = & \int_{-\infty}^{+\infty} \, f(t) \, e^{- i \omega\, t} \, dt \\
  f(t) = & \frac{1}{2 \pi } \int_{-\infty}^{+\infty} \, F(\omega) \, e^{+ i \omega\, t} \, dt 
@@ -42,14 +42,14 @@ Mit dieser Form werden wir gleich weiterarbeiten.
 
 \section{Diskrete FT: eine periodische Zahlenfolge und deren Fourier-Transformierte Zahlenfolge}
 
-Zunächst noch eine Nebenbemerkung zur diskreten Fourier-Transformation. Insbesondere wenn man mit einem Computer Messwerte erfasst und auswertet, dann kennt man die gemessene Funktion $f(t)$ weder auf einer kontinuierliche Achse $t$, sondern nur zu diskreten Zeiten $t_k = k \, \Delta t$, noch kennt man die Funktion von $t = - \infty$ bis $t = + \infty$. Als Ausgangspunkt hat man also nur eine Zahlenfolge $f_k$ endlicher Länge.
+Zunächst noch eine Nebenbemerkung zur diskreten Fourier-Transformation. Insbesondere wenn man mit einem Computer Messwerte erfasst und auswertet, dann kennt man die gemessene Funktion $f(t)$ weder auf einer kontinuierlichen Achse $t$, sondern nur zu diskreten Zeiten $t_k = k \, \Delta t$, noch kennt man die Funktion von $t = - \infty$ bis $t = + \infty$. Als Ausgangspunkt hat man also nur eine Zahlenfolge $f_k$ endlicher Länge.
 
-Weil wir die Zahlenfolge außerhalb des gemessenen Intervalls nicht kennen machen wir die Annahme, dass die periodisch ist. Bei $N$ gemessenen Werte ist die Periodendauer also $T = N \Delta t$. Der Einfachheit halber definieren wir auch $f_k = f_{k + N}$ und somit $f_{-k} = f_{N - k}$ mit $k= 0, 1, \dots, N-1$. Damit wird die Fourier-Transformation
+Weil wir die Zahlenfolge außerhalb des gemessenen Intervalls nicht kennen machen wir die Annahme, dass sie periodisch ist. Bei $N$ gemessenen Werte ist die Periodendauer also $T = N \Delta t$. Der Einfachheit halber definieren wir auch $f_k = f_{k + N}$ und somit $f_{-k} = f_{N - k}$ mit $k= 0, 1, \dots, N-1$. Damit wird die Fourier-Transformation
 \begin{align}
  F_j = & \frac{1}{N} \, \sum_{k=0}^{N-1} \, f_k \, e^{- k \, j \, 2 \pi i / N } \\
   f_k = &  \sum_{j=0}^{N-1} \, F_j \, e^{+ k \,  j \, 2 \pi i / N } 
 \end{align}
-Die Definition ist wieder so, dass $F_0$ dem Mittelwert entspricht. Wegen $f_{-k} = f_{N - k}$ liegen die positiven Frequenz mit steigender Frequenz in der ersten Hälfte von $F_j$. Danach kommen die negativen Frequenz, beginnend bei der 'negativsten' Frequenz steigend mit zur letzten Frequenz vor der Frequenz Null. Die maximal darstellbare Frequenz ist also die Nyquist-(Kreis-)Frequenz
+Die Definition ist wieder so, dass $F_0$ dem Mittelwert entspricht. Wegen $f_{-k} = f_{N - k}$ liegen die positiven Frequenzen mit steigender Frequenz in der ersten Hälfte von $F_j$. Danach kommen die negativen Frequenz, beginnend bei der 'negativsten' Frequenz steigend mit zur letzten Frequenz vor der Frequenz Null. Die maximal darstellbare Frequenz ist also die Nyquist-(Kreis-)Frequenz
 \begin{equation}
 \Omega_\text{Nyquist} = \frac{\pi}{\Delta t}
 \end{equation}
@@ -134,7 +134,7 @@ wird
 
 \section{Sätze und Eigenschaften der Fourier-Transformation}
 
-Neben den Fourier-Paaren braucht man noch ein paar Eigenschaften der Fourier-Transformation. Im Folgende seien  $f(t)$ und $F(\omega)$ Fourier-Transformierte  und ebenso $g$ und $G$.
+Neben den Fourier-Paaren braucht man noch ein paar Eigenschaften der Fourier-Transformation. Im Folgende seien  $f(t)$ und $F(\omega)$ Fourier-konjugierte  und ebenso $g$ und $G$.
 
 \paragraph{Linearität} Die Fourier-Transformation ist linear
 \begin{equation}

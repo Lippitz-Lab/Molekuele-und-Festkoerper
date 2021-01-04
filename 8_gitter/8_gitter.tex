@@ -2,7 +2,8 @@
 
 \chapter{Kristallgitter}
 
-
+% see also CC content 
+%https://www.physics-in-a-nutshell.com/article/11/close-packed-structures-fcc-and-hcp
 
 
 
@@ -272,7 +273,7 @@ wobei die Konstante $B$ positiv und für das jeweilige Element charakteristisch 
 
 Bei kleine Atom--Atom--Abständen kommt die abstoßende Kraft aufgrund des Pauli-Verbots hinzu. Oft modelliert man sie als $A/r^{12}$. Insgesamt ergibt sich damit das \emph{Lenard-Jones-Potential}
 \begin{equation}
-\phi(r) = \frac{A}{r^{12}} - \frac{B}{r^{6}} = 4 \epsilon \left[ \frac{\sigma}{r^{12}} -  \frac{\sigma}{r^{6}} \right]
+\phi(r) = \frac{A}{r^{12}} - \frac{B}{r^{6}} = 4 \epsilon \left[ \frac{\sigma^{12}}{r^{12}} -  \frac{\sigma^{6}}{r^{6}} \right]
 \end{equation}
 wobei $\epsilon$ die Tiefe und $\sigma$ den Nulldurchgang des Potentials, sozusagen den Radius des Atomrumpfes, bestimmt. Der Gleichgewichtsabstand ist $r_0 = 2^{1/6} \sigma \approx 1.12 \sigma$.
 
@@ -281,7 +282,7 @@ In einem Kristall wirkt dieses Potential zwischen allen Paaren von Atomen, also 
 U_B = \frac{1}{2} \sum_{m,n}^N \phi_{n,m} = 
 2 N \epsilon \sum_{m=1,   \neq n}^N 
 \left[ 
-\frac{\sigma}{r_{nm}^{12}} -  \frac{\sigma}{r_{nm}^{6}} 
+\frac{\sigma^{12}}{r_{nm}^{12}} -  \frac{\sigma^6}{r_{nm}^{6}} 
 \right]
 \end{equation}
 Der Faktor $1/2$ kommt daher, dass man in der ersten Summe alle Bindungs-Paare doppelt zählt. Die zweite Summe läuft nur noch über einen Summanden, da der Kristall translationsinvariant ist und es daher ausreicht, von einem Atom ausgehend alle Bindungen zu betrachten.
@@ -314,7 +315,7 @@ Bei der Ionischen Bindung dominiert die Coulomb-Anziehung zwischen unterschiedli
 Zunächst müssen wir beide Atome ionisieren
 \begin{align}
  \ch{Na} + 5.14\text{ eV} \rightarrow  & \ch{Na+} + \ch{e-} \\
-  \ch{e-}  + \ch{Cl} \rightarrow  & \ch{Cl-} + 3.16\text{ eV}
+  \ch{e-}  + \ch{Cl} \rightarrow  & \ch{Cl-} + 3.61\text{ eV}
 \end{align}
 Wir müssen also netto 1.53 eV aufwenden, um ein Ionenpaar herzustellen.
 
