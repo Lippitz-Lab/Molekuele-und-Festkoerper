@@ -1,0 +1,70 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+ \pgfplotsset{compat=newest}
+
+
+\usepackage{currfile,hyperxmp}
+\usetikzlibrary{math,calc,matrix,fit,positioning,intersections}
+\usetikzlibrary{quotes,angles}
+
+
+\begin{document}
+
+
+
+  
+  
+  
+
+  
+\begin{tikzpicture}[font=\footnotesize]
+
+
+\begin{scope}[scale=0.8]
+   
+\clip (-1.3,-2.2) rectangle (5.3,1.5);
+
+ \foreach \u in {-1,0,...,5}{%  
+     \foreach \v in {-3,-2,...,1}{%  
+          \draw[fill=black]  (\u,\v)  circle (0.5mm) ;  
+     }
+  }
+  
+  
+  \tikzmath{\kx = 2.26; \ky = -1.8;}
+  \tikzmath{\x2 = \kx * \kx; \y2 = \ky * \ky;}
+  
+  \tikzmath{\kr = sqrt( \x2 + \y2 );}
+  
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (\kx,\ky);
+  \coordinate (B) at (3,1);
+  \coordinate (Bs) at (3.2,0.7);
+  
+  
+ 
+ \draw[<-,thick, shorten <=0.5mm] (O) -- node[right] {$\mathbf{k}_0$} (A); 
+ 
+ \draw[thick, gray]  (A) circle (\kr);
+ 
+ \draw[->,thick, shorten >=0.5mm] (O) -- node[above] {$\mathbf{G}$} (B); 
+ \draw[->,thick]  (A) -- node[right] {$\mathbf{k}$} (Bs); 
+ 
+  \draw[->,thick,red]  (B) -- node[right] {$\mathbf{q}$} (Bs); 
+  
+  \node[left] at (O) {(000)};
+  \node[above] at (B) {(310)};
+  
+  \pic [draw=black,<->,angle eccentricity=1.2,angle radius=0.5cm]
+           {angle=B--A--O };
+
+\node[xshift=-2mm, yshift=6mm] at (A) {$2 \Theta$};
+
+  \end{scope}
+  
+  \end{tikzpicture}
+
+\end{document}
+
+

@@ -1,0 +1,90 @@
+
+  
+\begin{tikzpicture}[style={mark = *}]
+%\useasboundingbox (-1.0,-1.0) rectangle (10.2,4.2);
+%\draw (-1,-1.0) rectangle (10.2,4.2);
+%
+
+
+\pgfmathsetmacro\plotw{29mm} % width of subplots
+\pgfmathsetmacro\ploth{32mm} % height of smaller subplots
+\pgfmathsetmacro\vsep{15pt}  % vertical separation between subplots
+\pgfmathsetmacro\hsep{1pt}  % horizontal separation between subplots
+
+\begin{groupplot}[clip=false ,
+ every axis plot post/.append style= { mark size = 1pt, black},
+    group style={
+       group size=3 by 1,
+       vertical sep=\vsep,
+       horizontal sep=\hsep,
+       x descriptions at=edge bottom},
+    height=\ploth,
+    width=\plotw,
+    ymax = 8,
+    ymin = 0,
+    xmin =0,
+    xtick pos = bottom,
+    scale only axis,
+      x tick label style={/pgf/number format/.cd,%
+          scaled x ticks = false,
+          set thousands separator={},
+          fixed},
+    ]
+    
+
+
+\nextgroupplot[ xmax=1, xlabel = {[00$\zeta$]}, 
+ylabel = {Frequenz (THz)}, xtick = {0,0.5, 1},
+%,ytick pos = left, ytick = {0}, 
+% xmin=1320, xmax = 1520, xtick = {1415}, xticklabel = {1415}
+ ]
+ \addplot[mark=*] table [x index=0, y index=1] {\currfiledir cu1.dat};
+ \addplot[mark=o] table [x index=0, y index=2] {\currfiledir cu1.dat};
+
+
+\node[above right] at (0,8) {$\Gamma$};
+\node[above ] at (1,8) {X};
+
+\node at (0.4, 1.7) {\footnotesize TA};
+\node at (0.4, 5.3) {\footnotesize LA};
+
+
+\nextgroupplot[    width=sqrt(2) * \plotw, xlabel = {[$\zeta\zeta$0]},xtick = {0,0.5, 0.71},
+yticklabel = \empty, xmax = 1,  x dir=reverse
+%ylabel = {Extinktion},ytick pos = left, ytick = {0}, 
+% xmin=1320, xmax = 1520, xtick = {1415}, xticklabel = {1415}
+ ]
+ \addplot[mark=*]  table [x index=0, y index=1] {\currfiledir cu2.dat};
+ \addplot[mark=*]  table [x index=0, y index=2] {\currfiledir cu2.dat};
+ \addplot[mark=o]  table [x index=0, y index=3] {\currfiledir cu2.dat};
+
+\draw[dashed]  (axis cs:0.71,0) --  (axis cs: 0.71,8);
+
+\node[above ] at (0,8) {$\Gamma$};
+\node[above] at (0.71,8) {K};
+%\node[above ] at (1,8) {X'};
+
+\nextgroupplot[ width=sqrt(3) / 2 * \plotw, yticklabel = \empty, xmax = 0.5,
+xlabel = {[$\zeta\zeta\zeta$]}, xtick = {0.25, 0.5}
+%ylabel = {Extinktion},ytick pos = left, ytick = {0}, 
+% xmin=1320, xmax = 1520, xtick = {1415}, xticklabel = {1415}
+ ]
+ \addplot[mark=o]  table [x index=0, y index=1] {\currfiledir cu3.dat};
+ \addplot[mark=*] table [x index=0, y index=2] {\currfiledir cu3.dat};
+
+
+%\node[above right] at (0,8) {$\Gamma$};
+\node[above left] at (0.5,8) {L};
+
+
+\node at (0.4, 2.5) {\footnotesize TA};
+\node at (0.4, 6.4) {\footnotesize LA};
+
+
+
+
+\end{groupplot}
+
+
+\end{tikzpicture}
+

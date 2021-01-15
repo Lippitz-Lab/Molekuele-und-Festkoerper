@@ -1,0 +1,46 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+ \pgfplotsset{compat=newest}
+
+
+
+
+\begin{document}
+
+
+\pgfplotsset{
+tufte line/.style={
+    axis line style={draw opacity=0},
+    ytick=\empty,
+    axis x line*=bottom,
+    x axis line style={
+      draw opacity=1,
+      gray,
+      thick
+},
+ %   yticklabel=\pgfmathprintnumber{\tick}
+  }
+  }
+  
+  
+\begin{tikzpicture}
+    \begin{axis}[   xlabel={Wellenvektor $q$ ($\pi/a$)},
+    ylabel={Frequenz  (THz)},
+   % xmin = 500,
+   % xmax = 800,  
+   xmin = 0, ymin=0, xmax = 1.,
+    width=6cm, height=6cm, mark size=1pt
+    ]
+    \addplot[color=black,mark=*]  table [ col sep=space, x index = 0, y index =1] {gaas1.dat};
+        \addplot[color=black,mark=*]  table [mark=square, col sep=space, x index = 0, y index =2] {gaas1.dat};
+
+    \addplot[color=black,mark=*]  table [col sep=space, x index = 0, y index =3] {gaas1.dat};
+
+    \addplot[color=black,mark=*]  table [col sep=space, x index = 0, y index =4] {gaas1.dat};
+
+  %  \addplot table [col sep=comma, x=Wavelength, y=Emission] {BODIPY_650_665.csv};	
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}
