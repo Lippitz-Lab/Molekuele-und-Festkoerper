@@ -34,9 +34,9 @@ Man beachte das negative Vorzeichen in der Exponentialfunktion im Gegensatz zur 
 Nun heben wir die Einschränkung auf periodische Funktionen $f(t)$ auf, indem wir die Periodendauer $T$ gegen unendlich gehen lassen. Dadurch wird aus der Summe ein Integral und die diskreten $\omega_k$ werden kontinuierlich. Damit wird
 \begin{align}
  F(\omega) = & \int_{-\infty}^{+\infty} \, f(t) \, e^{- i \omega\, t} \, dt \\
- f(t) = & \frac{1}{2 \pi } \int_{-\infty}^{+\infty} \, F(\omega) \, e^{+ i \omega\, t} \, dt 
+ f(t) = & \frac{1}{2 \pi } \int_{-\infty}^{+\infty} \, F(\omega) \, e^{+ i \omega\, t} \, d\omega 
 \end{align}
-Die erste Gleichung ist dabei die Hintransformation (minus-Zeichen im Exponenten), die zweite die Rücktransformation (plus-Zeichen im Exponenten). Die Symmetrie wird durch das $2 \pi$ gebrochen. Dies ist aber notwendig, wenn man weiterhin $F(\omega = 0)$ als Mittelwert behalten will. Alternativ könnte man das alles mit $\nu$ statt $\omega$  formulieren, hätte dann aber an viel mehr Stellen ein $2 \pi$, wenn auch nicht vor dem Integral.
+Die erste Gleichung ist dabei die Hintransformation (minus-Zeichen im Exponenten), die zweite die Rücktransformation (plus-Zeichen im Exponenten). Die Symmetrie wird durch das $2 \pi$ gebrochen. Dies ist aber notwendig, wenn man weiterhin $F(\omega = 0)$ als Mittelwert\sidenote{$F( 0) = \int f(t) \, dt$ ohne $1/T$ davor ist hier von Butz als Mittelwert gemeint!} behalten will. Alternativ könnte man das alles mit $\nu$ statt $\omega$  formulieren, hätte dann aber an viel mehr Stellen ein $2 \pi$, wenn auch nicht vor dem Integral.
 
 Mit dieser Form werden wir gleich weiterarbeiten.
 
@@ -55,6 +55,28 @@ Die Definition ist wieder so, dass $F_0$ dem Mittelwert entspricht. Wegen $f_{-k
 \end{equation}
 
 
+\section{Nebenbemerkung: Delta-Funktion}
+
+Die Delta-Funktion kann geschrieben werden als
+\begin{equation}
+  \delta(x) = \lim_{a \rightarrow 0} f_a(x) \quad
+   \text{mit} \quad
+    f_a(x) = \left\{ \begin{matrix}
+    a  & \text{falls } |x| < \frac{1}{2a} \\
+    0 & \text{sonst}
+    \end{matrix}
+    \right.
+\end{equation}
+oder als
+\begin{equation}
+\delta(x)  = \frac{1}{2 \pi}  \int_{-\infty}^{+\infty} \, e^{+ i\, x \, y} \, dy
+\end{equation}
+Eine wichtige Eigenschaft ist, dass die delta-Funktion einen Wert selektiert, also 
+\begin{equation}
+ \int_{-\infty}^{+\infty} \, \delta(x) \, f(x) \, dx = f(0)
+\end{equation}
+
+
 \section{Wichtige Fourier-Paare}
 
 Es ist sehr oft ausreichend, die folgenden Paare von Funktionen und deren Fourier-Transformierten zu kennen. Ich schreibe sie hier, Butz folgend, als Paare in $t$ und $\omega$ (nicht $\nu = \omega / (2 \pi)$). Genauso hätte man auch Paare in $x$ und $k$ schreiben können. Wichtig ist dabei die Frage, ob ein $2 \pi$ in der Exponentialfunktion der ebenen Welle auftaucht oder nicht. Also
@@ -63,7 +85,10 @@ e^{i \omega t} \quad \text{und} \quad e^{i k x} \quad \text{, aber} \quad
 e^{i 2 \pi \nu t}
 \end{equation}
 
-\paragraph{Konstante und Delta-Funktion} Aus $f(t) = a$ wird $F(\omega) = a \, \delta(\omega)$, also eine Delta-Funktion bei $\omega = 0$ mit einer Amplitude, die dem zeitlichen Mittel von $f$ entspricht. Analog umgekehrt.
+Weiterhin folge ich hier der oben gemachten Konvention zu asymmetrischen Verteilung der $2 \pi$ zwischen Hin- und Rück-Transformation. Wenn man die anders verteilt, dann ändern sich natürlich auch die Vorfaktoren. Eine gute Übersicht über noch viel mehr Fourier-Paare in diversen '$2 \pi$'-Konventionen findet sich in der englischen Wikipedia unter 'Fourier transform'. In deren Nomenklatur ist die hier benutzte Konvention von Butz 'non-unitary, angular frequency'.
+
+\paragraph{Konstante und Delta-Funktion} Aus $f(t) = a$ wird $F(\omega) = a \, 2 \pi \, \delta(\omega)$ und aus  $f(t) = a \, \delta(t)$  wird $F(\omega) = a $. Das ist wieder das asymmetrische $2 \pi$.
+
 
 \paragraph{Rechteck und sinc} Aus der Rechteckfunktion der Breite $b$ wird ein sinc, der sinus cardinalis. Also aus
 \begin{equation}
@@ -125,7 +150,7 @@ und die Phase ist $\phi = - \omega / \lambda$.
 \end{equation}
 wird
 \begin{equation}
- F(\omega) = \frac{1}{\Delta t} \, \sum_n \, \delta \left(\omega - n\frac{2 \pi}{\Delta t} \right)
+ F(\omega) = \frac{2 \pi}{\Delta t} \, \sum_n \, \delta \left(\omega - n\frac{2 \pi}{\Delta t} \right)
 \end{equation}
 
 

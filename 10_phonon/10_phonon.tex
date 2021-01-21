@@ -37,7 +37,7 @@ Um Phononen zu vermessen, muss man also andere Teilchen an ihnen stoßen und Ene
 
 \end{marginfigure}
 
-Im Experiment macht man das beispielsweise durch inelastische Neutronenstreuung. Ein Neutronenstrahl wird in einem Kernreaktor oder in einer Spallationsquelle  hergestellt. Wichtig ist dabei, dass die Neutronen 'thermisch' sind, die kinetische Energie pro  Neutron also in etwa $k_B T$, also einige 10 meV beträgt. Diesen Neutronenstrahl leitet man in ein 3-Achs-Spektrometer. Dabei wird drei mal die Bragg-Beugung benutzt und jedes Mal der Winkel $\Theta$ des Strahls zu einem Kristall eingestellt. Die erste Bragg-Beugung wird benutzt, um eine Energie / Wellenlänge des Neutronenstrahls durch ihren Beugungswinkel zu selektieren. Am zweiten Kristall findet dann die inelastische Streuung statt. Hier werden die Phononen untersucht, und Ausbreitungsrichtung und Energie der Neutronen ändert sich. Die Richtung wird durch eine Reihe von Abschirmungen geometrisch festgelegt. Die Energieänderung wird gemessen, in dem an einem dritten Kristall wieder Bragg-Beugung zur Energiebestimmung benutzt wird. Schließlich muss man nur die die ankommenden Neutronen zählen. Man trägt das Ergebnis wie in Abb.~\ref{fig:phonon_intro} auf, als Energieänderung des Neutronen (=Frequenz der Phononen) über die Richtungsänderung der Neutronen (= Wellenvektor der Phononen).
+Im Experiment macht man das beispielsweise durch inelastische Neutronenstreuung. Ein Neutronenstrahl wird in einem Kernreaktor oder in einer Spallationsquelle  hergestellt. Wichtig ist dabei, dass die Neutronen 'thermisch' sind, die kinetische Energie pro  Neutron also in etwa $k_B T$, also einige 10 meV beträgt. Diesen Neutronenstrahl leitet man in ein 3-Achs-Spektrometer. Dabei wird dreimal die Bragg-Beugung benutzt und jedes Mal der Winkel $\Theta$ des Strahls zu einem Kristall eingestellt. Die erste Bragg-Beugung wird benutzt, um eine Energie / Wellenlänge des Neutronenstrahls durch ihren Beugungswinkel zu selektieren. Am zweiten Kristall findet dann die inelastische Streuung statt. Hier werden die Phononen untersucht, und Ausbreitungsrichtung und Energie der Neutronen ändert sich. Die Richtung wird durch eine Reihe von Abschirmungen geometrisch festgelegt. Die Energieänderung wird gemessen, in dem an einem dritten Kristall wieder Bragg-Beugung zur Energiebestimmung benutzt wird. Schließlich muss man nur die die ankommenden Neutronen zählen. Man trägt das Ergebnis wie in Abb.~\ref{fig:phonon_intro} auf, als Energieänderung des Neutronen (=Frequenz der Phononen) über die Richtungsänderung der Neutronen (= Wellenvektor der Phononen).
 
 \section{Einfaches Modell: lineare Kette}
 
@@ -84,7 +84,7 @@ Nun machen wir zusätzlich die Annahme, dass nur nächste Nachbarn miteinander w
 \end{marginfigure}
 
 
-\paragraph{Grenzfall langer Wellenlänge} Falls die Wellenlänge der ebenen Welle gegen unendlich geht, dann geht $k = 2 \pi \ \lambda$  gegen Null. Damit wird das Argument des Sinus sehr klein gegen Eins und wir können die Kleinwinkelnäherung anwenden:
+\paragraph{Grenzfall langer Wellenlänge} Falls die Wellenlänge der ebenen Welle gegen unendlich geht, dann geht $k = 2 \pi / \lambda$  gegen Null. Damit wird das Argument des Sinus sehr klein gegen Eins und wir können die Kleinwinkelnäherung anwenden:
 \begin{equation}
 \omega = \sqrt{\frac{4 \, c_1}{M}} \frac{1}{2}  |\mathbf{k}| | \mathbf{a}| \propto k
 \end{equation}
@@ -135,7 +135,7 @@ An den Grenzen der Brillouin-Zone, bei $k = \pm \pi / a$ wird damit die Gruppeng
 
 \section{Lineare zweiatomige Kette}
 
-Nun heben wir die Annahme auf, dass alle Atome identisch sind. Wir betrachten eine Kette, die abwechselnd aus zwei Atomsorten besteht. In der Sprache eines Gitters ist hat diese also eine zweiatomige Basis. Die Gitterkonstante $a$ ist der (kürzest) Abstand zwischen \emph{identischen} Atomen. Hier nehmen wir an, dass sich die Atome in ihrer Masse unterscheiden. Die Federn seien aber wieder nur zwischen nächsten Nachbarn (also verschiedenen Atomsorten) und sie seine alle identisch\sidenote{Man könnte auch identische Massen und alternierende Federn annehmen.} Der Index $s$ bezeichnet nun die Einheitszelle (nicht das Atom). Wir unterscheiden zwischen den Atomen, in dem die eine Sorte um $u_s$, die andere um $v_s$ ausgelenkt sein soll.  Die Reihenfolge entlang der Kette ist also $u_{s-1}$ ---  $v_{s-1}$ --- $u_{s}$ ---  $v_{s}$ --- $u_{s+1}$ ---  $v_{s+1}$. Damit werden die Bewegungsgleichungen
+Nun heben wir die Annahme auf, dass alle Atome identisch sind. Wir betrachten eine Kette, die abwechselnd aus zwei Atomsorten besteht. In der Sprache eines Gitters ist hat diese also eine zweiatomige Basis. Die Gitterkonstante $a$ ist der (kürzest) Abstand zwischen \emph{identischen} Atomen. Hier nehmen wir an, dass sich die Atome in ihrer Masse unterscheiden. Die Federn seien aber wieder nur zwischen nächsten Nachbarn (also verschiedenen Atomsorten) und sie seine alle identisch.\sidenote{Man könnte auch identische Massen und alternierende Federn annehmen.} Der Index $s$ bezeichnet nun die Einheitszelle (nicht das Atom). Wir unterscheiden zwischen den Atomen, in dem die eine Sorte um $u_s$, die andere um $v_s$ ausgelenkt sein soll.  Die Reihenfolge entlang der Kette ist also $u_{s-1}$ ---  $v_{s-1}$ --- $u_{s}$ ---  $v_{s}$ --- $u_{s+1}$ ---  $v_{s+1}$. Damit werden die Bewegungsgleichungen
 \begin{align}
  M_1 \frac{d^2 u_s}{dt^2} = & c \, \left( v_s + v_{s-1} - 2 u_s \right) \\
  M_2 \frac{d^2 v_s}{dt^2} = & c \, \left( u_s + u_{s-1} - 2 v_s \right) 
@@ -158,8 +158,8 @@ und erhalten zwei Lösungen für die Eigenfrequenz $\omega$ und damit die Disper
 \end{equation}
 mit der reduzierten Masse $\mu = (M_1  M_2)/(M_1 + M_2)$. Die Dispersionsrelation besteht also aus zwei Zweigen, je nach Vorzeichen des $\pm$: Das negative Vorzeichen beschreibt den \emph{akustischen Zweig}. Er geht exakt in die einatomige Kette über, wenn man $M_1 = M_2$ setzt und $a$ entsprechend anpasst. Auch für $M_1 \neq M_2$ ist der akustische Zweig sehr ähnlich der einatomigen Kette, insbesondere linear zu $k$ in der Nähe von $k=0$. Das positive Vorzeichen beschreibt den \emph{optischen Zweig}. Für $k \rightarrow 0$ geht hier die Frequenz $\omega$ nicht gegen Null sondern gegen $\sqrt{2 c / \mu}$. Am Rand der Brillouin-Zone, also bei $k = \pi /a $ wird der Sinus Eins und damit\sidenote{Man zieht den Term $M_1 - M_2$ aus der Wurzel und macht dabei die Annahme $M_1 > M_2$.}
 \begin{align}
-\omega_+ = & \frac{2 c}{M_2} \\
-\omega_- = & \frac{2 c}{M_1} 
+\omega_+ = & \sqrt{\frac{2 c}{M_2}} \\
+\omega_- = & \sqrt{\frac{2 c}{M_1} }
 \end{align}
 Die Aufspaltung der Äste am Rand der Brillouin-Zone geht also mit dem Verhältnis der Massen $M_1 / M_2$. Diese Aufspaltung führt zu einer \emph{Bandlücke}: Im Frequenzbereich zwischen $\omega_- $ und $\omega_+$ gibt es keine Lösung der Bewegungsgleichung, unabhängig vom Wellenvektor $\mathbf{k}$. In einer solchen Kette von mit Federn verbundenen Massen können sich keine Wellen ausbreiten, deren Frequenz wischen $\omega_- $ und $\omega_+$ liegt. Wenn eine Masse von außen mit einer solchen Frequenz getrieben würde, dann bliebe diese Bewegung auf die nähere Umgebung beschränkt und weit entfernte Massen würden in Ruhe bleiben.
 
@@ -223,7 +223,7 @@ Die Amplitude der auslaufenden ebenen Welle mit der Richtungsänderung $\mathbf{
 A_S(t) \propto e^{-i \omega_0 t} \, \sum_m e^{-i \mathbf{K} \cdot \mathbf{r}_m(t)} =
 e^{-i \omega_0 t} \, \sum_m e^{-i \mathbf{K} \cdot \mathbf{R}_m}  e^{-i \mathbf{K} \cdot \mathbf{u}_m(t)}
 \end{equation}
-Da die Amplitude der Schwingung $\mathbf{u}_m(t)$ klein ist gegenüber der Gitterkonstanten und gilt für den interessanten Bereich von $\mathbf{K}$ dass  $\mathbf{K} \cdot\mathbf{u}_m(t) \ll 1 $. Daher können wir die zweite Exponentialfunktion in einer Reihe entwickeln und nach dem ersten Glied abbrechen.\sidenote{Das zweite Glied braucht man unten für den Debye-Waller-Faktor.}
+Da die Amplitude der Schwingung $\mathbf{u}_m(t)$ klein ist gegenüber der Gitterkonstanten  gilt für den interessanten Bereich von $\mathbf{K}$, dass  $\mathbf{K} \cdot\mathbf{u}_m(t) \ll 1 $. Daher können wir die zweite Exponentialfunktion in einer Reihe entwickeln und nach dem ersten Glied abbrechen\sidenote{Das zweite Glied braucht man unten für den Debye-Waller-Faktor.}
 \begin{equation}
  e^{-i \mathbf{K} \cdot \mathbf{u}_m(t)} \approx 1 - i \mathbf{K} \cdot \mathbf{u}_m(t)
 \end{equation}
@@ -242,7 +242,7 @@ e^{-i \omega_0 t}
  e^{-i (\mathbf{K} \pm \mathbf{q} ) \cdot \mathbf{R}_m}  
 e^{-i (\omega_0 \pm \omega_\mathbf{q})  t} 
 \end{equation}
-Der erste Term ist die schon aus dem letzten Kapitel bekannte elastische Streuung. Hier geht die Bewegung der Streuzentren nicht ein. der zweite Term ist die inelastische Streuung, die proportional zur Amplitude $\mathbf{U}_\mathbf{q}$ der Schwingung der Streuzentren ist. Für die elastische Streuung hatten wir im letzten Kapitel gesehen, dass die Summe über alle Atompositionen nur dann einen Beitrag liefert, wenn die Bedingung $\mathbf{K} = \mathbf{G}$ erfüllt ist. Für die inelastische Streuung liefert die gleiche Argumentation die Bedingung
+Der erste Term ist die schon aus dem letzten Kapitel bekannte elastische Streuung. Hier geht die Bewegung der Streuzentren nicht ein. Der zweite Term ist die inelastische Streuung, die proportional zur Amplitude $\mathbf{U}_\mathbf{q}$ der Schwingung der Streuzentren ist. Für die elastische Streuung hatten wir im letzten Kapitel gesehen, dass die Summe über alle Atompositionen nur dann einen Beitrag liefert, wenn die Bedingung $\mathbf{K} = \mathbf{G}$ erfüllt ist. Für die inelastische Streuung liefert die gleiche Argumentation die Bedingung
 \begin{equation}
  \mathbf{K} \pm \mathbf{q} = \mathbf{G} \quad \text{und} \quad \omega_\text{out} = \omega_0 \pm \omega_\mathbf{q}
 \end{equation}
@@ -284,7 +284,7 @@ Man kann inelastische Streuung genauso wie elastische Streuung mit diversen Arte
  \caption{Typische Energien und Wellenlängen}
  \end{table}
 
-Bei der Dispersionsrelation der Phononen ist der relevante Bereich des Wellenvektors $q$ durch die erste Brillouin-Zone, also $| q | \le \pi / a$ gegeben.  Die Änderung des Wellenvektors der (Materie-)Welle $\mathbf{K}$ ist vom Betrag her maximal $4 \pi / \lambda$ (von $+\mathbf{k}_0$ zu $-\mathbf{k}_0$). Daher muss die Wellenlänge $\lambda$ sinnvollerweise kleiner als $2a$ sein, also im Bereich von wenigen Angstrom liegen.
+Bei der Dispersionsrelation der Phononen ist der relevante Bereich des Wellenvektors $q$ durch die erste Brillouin-Zone, also $| q | \le \pi / a$ gegeben.  Die Änderung des Wellenvektors der (Materie-)Welle $\mathbf{K}$ ist vom Betrag her maximal $4 \pi / \lambda$ (von $+\mathbf{k}_0$ zu $-\mathbf{k}_0$). Daher muss die Wellenlänge $\lambda$ sinnvollerweise kleiner als $2a$ sein, also im Bereich von wenigen Ångström liegen.
  Die Wellenlänge von sichtbarem Licht ist also viel zu lang, um die gesamte Brillouin-Zone abzudecken. Energieänderungen  von einigen meV sind im Sichtbaren aber noch gut zu messen. Bei Röntgenstrahlen wird dies sehr schwierig, so dass Neutronenstreuung die Methode der Wahl ist, da hier die Energie der Phononen eine deutliche Änderung der Energie der Neutronen bewirkt.
 
 
@@ -295,7 +295,7 @@ Bei der Dispersionsrelation der Phononen ist der relevante Bereich des Wellenvek
 
 Die Streubedingung konstruiert man auch im inelastischen Fall mit der Ewald-Kugel, wie im letzten Kapitel. Nur kommt hier nun zusätzlich der Vektor $\mathbf{q}$ des Phonons hinzu, der entweder zu $\mathbf{k}_0$ addiert oder subtrahiert wird. Je nach dem liegt $\mathbf{k}$ dann entweder innerhalb\sidenote{$|k|$ kleiner, $\lambda$ größer, $\omega$ kleiner als im einfallenden Strahl, also Emission eines Phonons} oder außerhalb der Kugel, aber nicht mehr auf der Ewald-Kugel wie im elastischen Fall.
 
-Man misst also für jede Richtungsänderung $\mathbf{K}$ die Änderung der Energie / Frequenz des Neutronenstrahls. Zusammen mit der bekannten Struktur und Orientierung des Kristallgitters und damit der Gittervektoren $\mathbf{G}$ kann man so die vollständige Dispersionrelation der Phononen bestimmen.
+Man misst also für jede Richtungsänderung $\mathbf{K}$ die Änderung der Energie / Wellenlänge des Neutronenstrahls. Zusammen mit der bekannten Struktur und Orientierung des Kristallgitters und damit der Gittervektoren $\mathbf{G}$ kann man so die vollständige Dispersionrelation der Phononen bestimmen.
 
 \begin{marginfigure}
 \inputtikz{\currfiledir ewald_inelastisch}
@@ -318,8 +318,9 @@ Man misst also für jede Richtungsänderung $\mathbf{K}$ die Änderung der Energ
 \end{marginfigure}
 
 
-Kupfer bildet einen kubisch-flächenzentrierten Kristall mit einatomiger Basis. Der reziproke Raum ist also kubisch-raumzentriert. Die Gitterkonstante beträgt 3.6~\AA. Abb. \ref{fig:phonon_kupfer} zeigt die Dispersionsrelation der Phononen, die durch inelastische Neutronenstreuung gemessen wurde. Aufgetragen ist die Frequenz $\nu$ des Phonons (aus der Änderung der Energie der Neutronen) über dem Wellenvektor $\mathbf{q}$, der sich aus der Änderung des Wellenvektors des Neutronenstrahls ergibt. Der Wellenvektor $\mathbf{q}$ ist in Form seines Miller-Indexes angegeben, der ja gerade den Vorfaktoren vor den primitiven reziproken Gittervektoren $\mathbf{b}_i$ entspricht. Die horizontale Achse ist mit dem Wert $\zeta$ beschriftet, der ein- oder mehrmals im Miller-Index vorkommt. Alle
- dargestellten Wellenvektoren sind damit entweder parallel zu einem reziproken Gittervektor (erstes Intervall), parallel zur Flächendiagonalen (zweites Intervall) oder parallel zur Raumdiagonalen (drittes Intervall). Die horizontale Achse ist entsprechend dem Betrag des Wellenvektors 
+Kupfer bildet einen kubisch-flächenzentrierten Kristall mit einatomiger Basis. Der reziproke Raum ist also kubisch-raumzentriert. Die Gitterkonstante beträgt 3.6~\AA. Abb. \ref{fig:phonon_kupfer} zeigt die Dispersionsrelation der Phononen, die durch inelastische Neutronenstreuung gemessen wurde. Aufgetragen ist die Frequenz $\nu$ des Phonons (aus der Änderung der Energie der Neutronen) über dem Wellenvektor $\mathbf{q}$, der sich aus der Änderung des Wellenvektors des Neutronenstrahls ergibt. 
+Der Wellenvektor  $\mathbf{q}$  ist in Form seiner Miller-Indizes angegeben, die sich hier wie  in allen kubischen  Gittern üblich auf die konventionelle, also primitiv kubische  Zelle  beziehen. Die horizontale Achse ist mit dem Wert  $\zeta$  beschriftet, der ein- oder mehrmals in den Miller-Indizes vorkommt. Alle dargestellten Wellenvektoren liegen damit entweder auf der Achse, der 
+Flächen- oder der  Raumdiagonalen der konventionellen Zelle (erstes bis drittes Intervall). Die horizontale Achse ist entsprechend dem Betrag des Wellenvektors 
  $|\mathbf{q}|$ skaliert, d.h. der Abstand $\zeta = 0 \dots 0.5$ verhält sich wie $1$ zu $\sqrt{2}$ zu $\sqrt{3}$. Die gesamte Abbildung stellt die Frequenz der Phononen entlang einem Pfad im reziproken Raum dar, der in Abbildung \ref{fig:phonon_pfad}  dargestellt ist. Dabei kann man ausnutzen, dass reziproke Gittervektoren $\mathbf{G}$ addiert werden können ohne etwas  zu verändern (siehe Abb. \ref{fig:phonon_k_plus_g})
  
 	\begin{figure}
@@ -338,7 +339,7 @@ Galliumarsenid (\ch{GaAs}) besitzt ebenfalls eine kubisch-flächenzentrierte Kri
 
 \begin{figure}
 \inputtikz{\currfiledir fig_gaas_all}
-\caption{Phononen-Dispersion in \ch{GaAs} (Daten aus \cite{Strauch_gaas} ).}
+\caption{Phononen-Dispersion in \ch{GaAs} (Daten aus \cite{Strauch_gaas}).}
 \end{figure}
 
 
@@ -358,7 +359,7 @@ Akustische Phononen finden in Form des  akusto-optischen Modulators eine wichtig
 
 Dies kann auf verschiedene Weisen genutzt werden. In einfachsten Fall als Schalter: nur wenn die Ultraschallwelle anliegt existiert eine erste Beugungsordnung. Damit kann ein Strahl schnell (ns) an- und aus-geschaltet werden, wenn man den Ultraschall-Generator schaltet. Durch Variation der Amplitude der Ultraschallwelle kann eine beliebige Amplituden-Modulation des Lichtstahls erreicht werden.
 
-Die Beugung in die erste Ordnung entspricht der Absorption eines Ultraschall-Phonons, die in die minus erste Ordnung der Emission. Damit ist klar, dass die Beugung auch mit einer Frequenzverschiebung einher geht. Es muss schließlich Energie- und Impuls-Erhaltung gelten. Auf diese Weise ist es möglich, sehr schmalbandige und frequenzstabile Laser im sichtbaren Spektralbereich (Frequenz ca. 300 THz) um die Frequenz des Phonons (ca. 10--100 MHz) zu verstimmen. Wenn man die Frequenz des  Ultraschall-Generators kontinuierlich ändert, dann kann man so einen kleinen Frequenzbereich kontrolliert abfahren.
+Die Beugung in die plus erste Ordnung entspricht der Absorption eines Ultraschall-Phonons, die in die minus erste Ordnung der Emission. Damit ist klar, dass die Beugung auch mit einer Frequenzverschiebung einher geht. Es muss schließlich Energie- und Impuls-Erhaltung gelten. Auf diese Weise ist es möglich, sehr schmalbandige und frequenzstabile Laser im sichtbaren Spektralbereich (Frequenz ca. 300 THz) um die Frequenz des Phonons (ca. 10--100 MHz) zu verstimmen. Wenn man die Frequenz des  Ultraschall-Generators kontinuierlich ändert, dann kann man so einen kleinen Frequenzbereich kontrolliert abfahren.
 
 Gleichzeitig ändert sich damit auch der Beugungswinkel. So kann ein Lichtstrahl sehr schnell in verschiedene, kontinuierlich änderbare Richtungen abgelenkt werden, was in manchen optischen Mikroskopen Verwendung findet.
 
