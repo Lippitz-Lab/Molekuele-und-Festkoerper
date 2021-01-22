@@ -1,0 +1,105 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+ \pgfplotsset{compat=newest}
+
+
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{calc, math,matrix,fit,positioning}
+
+\usepackage{currfile,hyperxmp}
+\usepgfplotslibrary{groupplots}
+
+\begin{document}
+
+
+
+  
+  
+
+\begin{tikzpicture}
+
+%\omega^2 =  \frac{c}{\mu}
+%\pm c \sqrt{ \frac{1}{\mu^2} - \frac{4}{M_1 M_2}  \sin^2 \left( %\frac{1}{2}  \mathbf{k} \cdot \mathbf{a} \right) } 
+
+
+%\useasboundingbox (0,0) rectangle (5,5);
+%\draw (0,0) rectangle (5,5);
+
+
+\pgfmathsetmacro\plotw{45mm} % width of subplots
+\pgfmathsetmacro\ploth{32mm} % height of smaller subplots
+\pgfmathsetmacro\vsep{15pt}  % vertical separation between subplots
+\pgfmathsetmacro\hsep{15mm}  % horizontal separation between subplots
+
+\begin{groupplot}[%clip=false ,
+ every axis plot post/.append style= { mark size = 1pt, black},
+    group style={
+       group size=3 by 1,
+       vertical sep=\vsep,
+       horizontal sep=\hsep,
+       x descriptions at=edge bottom},
+    height=\ploth,
+    width=\plotw,
+    xtick pos = bottom,
+    scale only axis,
+            separate axis lines,
+  axis x line=bottom,
+  axis x line shift=0pt,
+  %xlabel shift=10pt,
+  axis y line=left,
+  axis y line shift=0pt,
+%  ylabel shift=10pt    
+    ]
+    
+\nextgroupplot[ xlabel = {Frequenz $\nu$ (THz)}, xmin = 0, xmax = 18.3,
+ylabel = {Zustandsdichte  $D(\nu)$},
+  axis y line=left, clip=false,
+  ytick = \empty,
+%  xtick = \empty,
+%,ytick pos = left, ytick = {0}, 
+% xmin=1320, xmax = 1520, xtick = {1415}, xticklabel = {1415}
+ ]
+
+           
+ \addplot[thick]  table [x index=0, y index=1] {\currfiledir dos_si_all.dat};
+ \addplot[]  table [x index=0, y index=2] {\currfiledir dos_si_all.dat};
+
+\draw[<-,thick] (13.44,0) -- ++ (0,-0.3) node[below] {$\nu_D$};
+   \node at (11,1.9) {$\nu^2$};
+
+
+\nextgroupplot[ xmode=log, ymode=log ,xlabel = {Temperatur $T$ (K)}, 
+ylabel = {Wärmekapazität $C_p$  }, xmax = 2000, ymax = 1.1, ymin = 2e-6,
+yticklabels = {},
+% xtick = {0,0.5, 1}, 
+ ytick = {1e-7,1e-6,1e-5,1e-4,1e-3,1e-2,1e-1,1}, 
+%,ytick pos = left, ytick = {0}, 
+% xmin=1320, xmax = 1520, xtick = {1415}, xticklabel = {1415}
+ ]
+
+ \addplot[mark=*,thick]  table [x index=0, y index=1] {\currfiledir cp_si_joined.dat};
+
+ \addplot[]  table [x index=0, y index=1] {\currfiledir cv_si_model.dat};
+ \addplot[dashed]  table [x index=0, y index=2] {\currfiledir cv_si_model.dat};
+ \addplot[dashed]  table [x index=0, y index=3] {\currfiledir cv_si_model.dat};
+ 
+ %\draw[dashed] (1,0.1) -- (2e3,0.1);
+ 
+ % \draw[dashed] (1,1.9644e-07) -- (1e3,1.9644e-07 * 1e9);
+ % \node at (5,2e-6) {$T^3$};
+ 
+ \draw[<-,thick] (645, 4e-6) -- (645,1e-5) node[above] {$\Theta_D$};
+
+% \addplot[]  table [x index=0, y index=2] {\currfiledir dos_2atom.dat};
+% 
+%\addplot[  mark=*]  table [x index=0, y expr=0,each nth point={100}] {\currfiledir dos_2atom.dat};
+%\addplot[  mark=*]  table [x expr=0, y index=1,each nth point={100}] {\currfiledir dos_2atom.dat};
+%\addplot[  mark=*]  table [x expr=0, y index=2,each nth point={100}] {\currfiledir dos_2atom.dat};
+
+ \end{groupplot}
+
+\end{tikzpicture}
+
+
+\end{document}

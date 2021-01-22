@@ -16,10 +16,10 @@
 \end{itemize}
 
 
-%\begin{figure}
-%\inputtikz{\currfiledir fig_bodipy}
-%  \caption{Absorptions- und Fluoreszenz-Spektrum des Farbstoffs BODIPY  (\href{https://www.thermofisher.com/de/de/home/life-science/cell-analysis/labeling-chemistry/fluorescence-spectraviewer.html?SID=srch-svtool&UID=10001moh}{thermofischer.com}).}
-%\end{figure}
+\begin{figure}
+\inputtikz{\currfiledir dos_cv_Cu}
+  \caption{ \textit{links:} Zustandsdichte von Phononen in Kupfer (dick) verglichen mit dem Debye-Modell (dünn). Daten digitalisiert aus \cite{Svensson_cu}. \textit{rechts:} Wärmekapazität von Kupfer verglichen mit der $T^3$-Abhängigkeit des Debye-Modells. Daten aus \cite{Data_notebook}. \label{fig:wk_kupfer}}
+\end{figure}
 
 
 
@@ -71,7 +71,7 @@ D(k) = \frac{N_\text{EZ}}{V_{BZ}}  =
 \frac{V_\text{Kristall}} {(2 \pi)^d} =
  \left(\frac{L}{2 \pi} \right)^d 
 \end{equation}
-mit der Dimensionalität $d$ und der Anzahl der Einheitszellen $N_\text{EZ}$.
+mit der Dimensionalität $d$ und der Anzahl der Einheitszellen $N_\text{EZ}$. Das ist wie oben die Zustandsdichte für eine Art der Bewegung. Bei $p$ Atomen je Einheitszelle gibt es $3p$ Äste in der Dispersionsrelation und die Gesamt-Zustandsdichte ist entsprechen größer.
 
 Was ist hier passiert? Die physikalisch sinnvollen Werte von $k$ waren schon im letzten Kapitel nach oben beschränkt, weil es nicht hilft, wenn die Welle schneller oszilliert als der Abstand der Atome ist. Bei einem Ring von Atomen ist nun aber auch nicht jede Wellenlänge wählbar, da nur stehende Wellen auf dem Ring möglich sind.\sidenote{Analog stehende Wellen auf einer endlichen Kette mit freien / festen Randbedingungen} Mögliche Werte der Wellenlänge haben die Form $\lambda_0 / n$, und damit mögliche Werte des Wellenvektors $n / \lambda_0$. Dadurch wird die $k$-Achse diskret. Dies spielt aber nur bei der Zustandsdichte eine Rolle, da die Punkte so dicht liegen, dass dies höchstens bei sehr kleinen Kristallen auflösbar ist.
 
@@ -115,17 +115,14 @@ D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, k^2 
 \end{equation} 
 wobei $k$ hier als $k(\omega)$ zu verstehen ist.
 
-Sowohl im eindimensionalen als auch im dreidimensionalen Fall geht die Gruppengeschwindigkeit als Kehrwert ein. In der zweiatomigen Kette beispielsweise geht diese asymptotisch gegen Null in der Nähe der Bandlücke, wodurch der Integrand in Gl.~\ref{eq:WK_dos_omega} divergiert. Diese Punkte nennt man \emph{van Hove Singularitäten}. Im Eindimensionalen divergiert hier die Zustandsdichte. In zwei und drei Dimensionen finden sich davon noch endlich hohe Spitzen und $D(\omega) \propto \sqrt{\omega_\text{van Hove} - \omega}$.
-
-
-\section{Beispiele}
+Sowohl im eindimensionalen als auch im dreidimensionalen Fall geht die Gruppengeschwindigkeit als Kehrwert ein. In der zweiatomigen Kette beispielsweise geht diese asymptotisch gegen Null in der Nähe der Bandlücke, wodurch der Integrand in Gl.~\ref{eq:WK_dos_omega} divergiert. Diese Punkte nennt man \emph{van Hove Singularitäten}. Im Eindimensionalen divergiert hier die Zustandsdichte. In zwei und drei Dimensionen finden sich davon noch endlich hohe Spitzen (siehe Abbildung \ref{fig:wk_kupfer} am Anfang des Kapitels).
 
 \begin{marginfigure}
-\caption{1D zweiatomige Kette und Zustandsdichte}
+\inputtikz{\currfiledir dos_kette_2atom}
+
+\caption{Lineare zweiatomige Kette:  Zustandsdichte (links) und Dispersionsrelation (rechts). Zustände (Kreise) sind äquidistant auf der $k$-Achse, aber nicht mehr auf de $\omega$-Achse. Die Zustandsdichte divergiert an den van-Hove-Singularitäten, wenn die Gruppengeschwindigkeit Null wird.}
 \end{marginfigure}
 
-
-Kupfer und SIlizium
 
 
 \section{Einstein-Modell der Wärmekapazität}
@@ -199,9 +196,49 @@ C_V = \frac{12 \pi^4}{5} \, N \, k_B \, \left(\frac{T}{\Theta} \right)^3
 \end{equation}
 Also eine $T^3$-Abhängigkeit der Wärmekapazität. Mit fallender Temperatur fällt also die Wärmekapazität im Debye-Modell nicht so schnell, nicht exponentiell, wie im Einstein-Modell. Es gibt auch bei tiefen Temperaturen noch populierte Zustände, die zur Wärmekapazität beitragen.
 
-Dies findet man auch experimentell in sehr vielen Materialien, solange der Beitrag der Elektronen zur Wärmekapazität keine Rolle spielt.
+Dies findet man auch experimentell in sehr vielen Materialien, solange der Beitrag der Elektronen zur Wärmekapazität keine Rolle spielt (siehe Abbildung \ref{fig:wk_kupfer} am Anfang des Kapitels). Für Kupfer beträgt die Debye-Temperatur $\Theta = 343$~K, was einer Debye-Frequenz $\nu_D = 7.14$~THz entspricht.
 
 
+
+\section{Silizium}
+
+
+
+
+
+\begin{figure}
+\inputtikz{\currfiledir dos_cv_Si}
+  \caption{ \textit{links:} Zustandsdichte von Phononen in Silizium (dick) verglichen mit dem Debye-Modell (dünn). Daten digitalisiert aus XXX. \textit{rechts:} Wärmekapazität von Silizium verglichen mit dem Debye-Modells (durchgezogen) und dem EInstein-Modell ($\nu_0=10$ bzw. 15~THz). Daten aus XXX. \label{fig:wk_Si}}
+\end{figure}
+
+
+
+\section{Photonen und Phononen}
+
+Es ist sicherlich hilfreich, Unterschiede und Gemeinsamkeiten zwischen  Photonen und Phononen zu diskutieren. Photonen sind wie Phononen quantisiert, tragen die Energie $\hbar \omega$, aber einen echten Impuls $\hbar \mathbf{k}$, nicht 'nur' einen Quasiimpuls. Der physikalisch sinnvolle Bereich des Wellenvektors ist auch nicht auf die erste Brillouin-Zone limitiert sondern kann beliebige Werte annehmen. Die Dispersionsrelation ist linear, zumindest im Vakuum: $\omega = c_0 \, | \mathbf{k} |$. In Medien ändert sich aber die Lichtgeschwindigkeit, so dass dann $\omega = c_0 \, | \mathbf{k} | / n$ mit dem Brechungsindex $n$.
+
+Die Zustandsdichte leitet man beispielsweise über stehende Wellen in einem kubischen Resonator her. Man erhält das gleiche Ergebnis wie für Phononen in drei Dimensionen
+\begin{equation}
+D(k) dk = \left( \frac{L}{2 \pi} \right)^3
+\end{equation}
+Die Gruppengeschwindigkeit ist in diesem Fall die Lichtgeschwindigkeit $c_0$ und im Vakuum konstant. Damit erhält man
+\begin{equation}
+D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \, \frac{4 \pi \omega^2}{c_0^3} \, d\omega 
+= L^3 \, \frac{\omega^2}{2 \, \pi^2 \, c_0^3} \, d\omega
+\end{equation}
+Oft schreibt man dies als Zustandsdichte\sidenote{hier $\tilde{D}$ genannt} pro Frequenzintervall und Raumelement, teil also durch $L^3$. Ebenso findet man Darstellungen mit der Frequenz $\nu = \omega / 2 \pi$
+\begin{equation}
+\tilde{D}(\nu) d\nu 
+= \frac{4 \pi \, \nu^2}{ c_0^3} \, d\omega
+\end{equation}
+Ebenso wie bei den Phononen muss man diese Zustandsdichte noch mit der Zahl der Ästen in der Dispersionsrelation multiplizieren. Es sind hier nicht $3p$ (bei $p$ Atomen in der Einheitszelle), sondern nur $2$ wegen den beiden orthogonalen Polarisationsrichtungen.
+
+Die innere Energie eines Lichtfelds berechnet sich genauso wie bei den Phononen (Gl. \ref{eq:wk_u_allg}), nur dass hier nun schon der Faktor $2$ für die Polarisationsrichtungen berücksichtigt ist und die Energiedichte pro Volumen angegeben ist
+\begin{equation}
+\tilde{U}(T) = 2  \int_{\omega=0}^{\infty} \, \hbar \omega \, 
+\frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1}
+\, \frac{\omega^2}{2 \, \pi^2 \, c_0^3} \, d\omega
+\end{equation}
 
 %-------------------
 
