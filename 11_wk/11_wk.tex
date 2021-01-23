@@ -9,9 +9,9 @@
 \section{Ziele}
 
 \begin{itemize}
-\item Sie dewe
+\item Sie können das Konzept der Zustandsdichte benutzen, um damit die Wärmekapazität fester Stoffe zu erklären, wie unten für Kupfer gezeigt.
 
-\item S.
+\item Sie können die Modelle von Einstein und Debye erklären und vergleichen, beispielsweise unter welchen Umständen welches bessere Ergebnisse liefert.
 
 \end{itemize}
 
@@ -32,37 +32,37 @@ Die Wärmekapazität eines Stoffes beschreibt den Zusammenhang zwischen der Änd
 \end{equation}
 bei konstantem Volumen $V$ des Stoffes. Messtechnisch ist $C_P$, also die Wärmekapazität bei konstantem Druck $P$ einfacher, jedoch ist die theoretische Beschreibung von $ C_V $ einfacher. Bei Festkörpern ist der Unterschied gering, da diese sich (zumindest im Vergleich zu Gasen) wenig mit steigender Temperatur ausdehnen.
 
-Im Experiment findet man, dass die Wärmekapazität fester Stoffe mit der Temperatur steigt und sich dem Wert des Gesetze von Dulong-Petit annähert
+Im Experiment findet man, dass die Wärmekapazität fester Stoffe mit der Temperatur steigt und sich dem Wert des Gesetzes von Dulong-Petit annähert
 \begin{equation}
- C_V = 3 \, N_A \, k_B \approx 25 \text{~J} \text{~mol}^{-1} \text{~K}^{-1}
+ C_V = 3 \, N_A \, k_B \approx 25 \text{~J} \text{~mol}^{-1} \text{~K}^{-1} \quad .
 \end{equation}
-Der Verlauf von $ C_V$ bei niedrigeren Temperaturen ist eine einfach zu bestimmende makroskopische Größe, die viel über den mikroskopischen Aufbau des Festkörpers aussagt. Wir werden sehen, dass sie zumindest bei Nichtleitern vollständig durch die quantisierte  Gitterschwingungen und so die Teilcheneigenschaft der Phononen bestimmt ist. Das Modell dazu geht auf A. Einstein zurück, auch wenn er bei der Zustandsdichte $D(\omega)$ vereinfachende Annahmen getroffen hat. Die Innere Energie $U(T)$ ist
+Der Verlauf von $ C_V$ bei niedrigeren Temperaturen ist eine einfach zu bestimmende makroskopische Größe, die viel über den mikroskopischen Aufbau des Festkörpers aussagt. Wir werden sehen, dass sie zumindest bei Nichtleitern vollständig durch die quantisierte  Gitterschwingungen und so die Teilcheneigenschaft der Phononen bestimmt ist. Das Modell dazu geht auf A.~Einstein zurück, auch wenn er bei der Zustandsdichte $D(\omega)$ vereinfachende Annahmen getroffen hat. Die Innere Energie $U(T)$ ist
 \begin{equation}
-U(T) = \int_{\omega=0}^{\infty} \, \hbar \omega \, \braket{ n (\omega, T) } \, D(\omega) \, d\omega \label{eq:wk_u_allg}
+U(T) = \int_{\omega=0}^{\infty} \, \hbar \omega \, \braket{ n (\omega, T) } \, D(\omega) \, d\omega \label{eq:wk_u_allg} \quad .
 \end{equation}
 Bei jeder Frequenz $\omega$ existieren Phononen in der Dichte $D(\omega)$ der möglichen Zustände pro Frequenzintervall, der Energie pro Phonon $\hbar \omega$ und der Besetzung $\braket{ n (\omega, T) } $. Die Innere Energie ist dann das Integral über alle Frequenzen, und die Wärmekapazität die Ableitung davon nach der Temperatur $T$.
 
 
 \section{Zustandsdichte im reziproken Raum $D(k) \, dk$ }
 
-Zunächst betrachten wir nicht die eigentlich benötigte Zustandsdichte im Frequenzraum $D(\omega) d\omega$ sondern die im reziproken Raum $D(\k) dk$. Die Argumentation und die Rechenschritte sind dabei die selben, die auch bei der Herleitung der optischen Modendichte bei der Schwarzkörperstrahlung verwendet wurde\sidenote{z.B. Vorlesung EPB2 Atome, Kerne, Teilchen}, auf die wir weiter unten eingehen werden.
+Zunächst betrachten wir nicht die eigentlich benötigte Zustandsdichte im Frequenzraum $D(\omega) d\omega$ sondern die im reziproken Raum $D(k) dk$. Die Argumentation und die Rechenschritte sind dabei dieselben, die auch bei der Herleitung der optischen Modendichte bei der Schwarzkörperstrahlung verwendet wurde\sidenote{z.B. Vorlesung EPB2 Atome, Kerne, Teilchen}, auf die wir weiter unten eingehen werden.
 
-Bisher hatten wir uns über die Länge unsere ein- oder mehratomigen Kette keine Gedanken gemacht. Wenn sie endlich lang sein soll, was ja notgedrungen der Fall ist, dann können die Enden entweder frei sein, also keine Kraft auf sie wirken, also $\ddot{u} = 0$ sein. Oder sie können fest sein, also ohne Bewegung, also $u=0$. Eine dritte Möglichkeit sind periodische Randbedingungen, also eine ringförmige Kette mit $u_0 = U_N$ bei $N$ Atomen in der Kette. Wir benutzen hier diese Randbedingung, die anderen geben ähnliche Ergebnisse. Die Auslenkung der Masse am Index $s$ ist mit dem Ansatz der ebenen Welle
+Bisher hatten wir uns über die Länge unsere ein- oder mehratomigen Kette keine Gedanken gemacht. Wenn sie endlich lang sein soll, was ja notgedrungen der Fall ist, dann können die Enden entweder frei sein, also keine Kraft auf sie wirken, also $\ddot{u} = 0$ sein. Oder sie können fest sein, also ohne Bewegung, also $u=0$. Eine dritte Möglichkeit sind periodische Randbedingungen, also eine ringförmige Kette mit $u_0 = u_N$ bei $N$ Atomen in der Kette. Wir benutzen hier diese Randbedingung, die anderen geben das gleiche Ergebnis. Die Auslenkung der Masse am Index $s$ ist mit dem Ansatz der ebenen Welle
 \begin{equation}
  u_s = u \, e^{- i \omega \, t} \, e^{i s \mathbf{k} \cdot \mathbf{a}}
 \end{equation}
-mit dem Wellenvektor $\mathbf{k} $ im reziproken Raum und dem Gittervektor $\mathbf{a}$ im  Realraum. Die Randbedingung $u_0 = U_N$ erfordert dann
+mit dem Wellenvektor $\mathbf{k} $ im reziproken Raum und dem Gittervektor $\mathbf{a}$ im  Realraum. Die Randbedingung $u_0 = u_N$ erfordert dann
 \begin{equation}
- N \, k \, a = 2 \pi \, n
+ N \, k \, a = 2 \pi \, n \quad ,
 \end{equation}
-wobei $n$ eine beliebige ganze Zahl ist und wie die Beträge der Vektoren eingesetzt haben.
-Die Gesamtlänge der Kette ist $L = N a$ und damit kann $k$ nur diskrete Werte annehmen, die den Abstand $\Delta k$ haben
+wobei $n$ eine beliebige ganze Zahl ist und wir die Beträge der Vektoren eingesetzt haben.
+Die Gesamtlänge der Kette ist $L = N a$. Damit kann $k$ nur diskrete Werte annehmen, die den Abstand $\Delta k$ haben
 \begin{equation}
-\Delta  k = \frac{2 \pi }{L} 
+\Delta  k = \frac{2 \pi }{L}  \quad .
 \end{equation}
 Die Dichte $ D(k) \, dk$ der möglichen Werte von $k$ auf der $k$-Achse ein Wert pro $\Delta k$, also
 \begin{equation}
- D(k) \, dk = \frac{L}{2 \pi} \, dk
+ D(k) \, dk = \frac{L}{2 \pi} \, dk  \quad .
 \end{equation}
 Die Zustandsdichte ist im $k$-Raum also konstant.
 Analog kann man im Zwei- oder Dreidimensionalen verfahren, also bei Quadraten oder Kuben der Kantenlänge $L$. Die Zustandsdichte ist
@@ -71,11 +71,11 @@ D(k) = \frac{N_\text{EZ}}{V_{BZ}}  =
 \frac{V_\text{Kristall}} {(2 \pi)^d} =
  \left(\frac{L}{2 \pi} \right)^d 
 \end{equation}
-mit der Dimensionalität $d$ und der Anzahl der Einheitszellen $N_\text{EZ}$. Das ist wie oben die Zustandsdichte für eine Art der Bewegung. Bei $p$ Atomen je Einheitszelle gibt es $3p$ Äste in der Dispersionsrelation und die Gesamt-Zustandsdichte ist entsprechen größer.
+mit der Dimensionalität $d$ und der Anzahl der Einheitszellen $N_\text{EZ}$. Das ist wie oben die Zustandsdichte für eine Art der Bewegung. Bei $p$ Atomen je Einheitszelle gibt es $3p$ Äste in der Dispersionsrelation und die Gesamt-Zustandsdichte ist entsprechend größer.
 
 Was ist hier passiert? Die physikalisch sinnvollen Werte von $k$ waren schon im letzten Kapitel nach oben beschränkt, weil es nicht hilft, wenn die Welle schneller oszilliert als der Abstand der Atome ist. Bei einem Ring von Atomen ist nun aber auch nicht jede Wellenlänge wählbar, da nur stehende Wellen auf dem Ring möglich sind.\sidenote{Analog stehende Wellen auf einer endlichen Kette mit freien / festen Randbedingungen} Mögliche Werte der Wellenlänge haben die Form $\lambda_0 / n$, und damit mögliche Werte des Wellenvektors $n / \lambda_0$. Dadurch wird die $k$-Achse diskret. Dies spielt aber nur bei der Zustandsdichte eine Rolle, da die Punkte so dicht liegen, dass dies höchstens bei sehr kleinen Kristallen auflösbar ist.
 
-Aus dem Blickwinkel der Normalmoden findet sich das gleiche Ergebnis. Bei $p$ Atomen je Einheitszelle und $N_\text{EZ}$ Einheitszellen im Kristall erwarten wir $3 p \, N_\text{EZ}$ Normalmoden. In der Dispersionsrelation der Phononen gibt es dann $3p$ Äste und $N_\text{EZ}$ diskrete Werte auf der $k$-Achse, also ebensoviele Zustände für Phononen wie Normalmoden.
+Aus dem Blickwinkel der Normalmoden findet sich das gleiche Ergebnis. Bei $p$ Atomen je Einheitszelle und $N_\text{EZ}$ Einheitszellen im Kristall erwarten wir $3 p \, N_\text{EZ}$ Normalmoden. In der Dispersionsrelation der Phononen gibt es dann $3p$ Äste und $N_\text{EZ}$ diskrete Werte auf der $k$-Achse, also ebenso viele Zustände für Phononen wie Normalmoden.
 
 
 
@@ -92,31 +92,6 @@ D(k) \, dk  =  \frac{L}{2 \pi}\, \frac{dk}{d\omega} \, d\omega
 \end{equation}
 mit der Gruppengeschwindigkeit $v_g = d\omega / dk$.
 
-Im Zwei- oder Dreidimensionalen gehen wir einen anderen Weg. Wir nutzen aus, das im reziproken Raum die Zustände äquidistant sind, die Zustandsdichte also konstant ist. Alle Zustände bei gegebenem, festem $\omega$ bilden die Fläche\sidenote{in 3D, sonst Kurve in 2D} $S(\omega)$. Die Zustände bei $\omega + d\omega$ bilden eine weitere Fläche. Wir zählen somit die Zustände im Intervall $d\omega$, indem wir das Volumen zwischen den beiden Flächen bestimmen in mit der Zustandsdichte im $k$-Raum multiplizieren
-\begin{equation}
-D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^d \, \int_{\omega = \text{const.}}^{\omega + d\omega = \text{const.}} \, d \mathbf{k}
-\end{equation}
-Das Volumenelement $d \mathbf{k}$ teilen wir auf in einen Teil entlang der Fläche konstanter Frequenz $S(\omega)$ und einem Teil senkrecht dazu:  $d \mathbf{k} = dk_\perp \, dS_\omega$. Damit kann man dann die Gruppengeschwindigkeit schreiben als
-\begin{equation}
-v_g = \left| \frac{d\omega}{d \mathbf{k}} \right| 
-=\left| \frac{d\omega}{d k_\perp} \right|
-\end{equation}
-und so
-\begin{equation}
-d \mathbf{k} = dk_\perp \, dS_\omega = dS_\omega \frac{d \omega}{|v_g|}
-\end{equation}
-Damit erhalten wir
-\begin{equation}
-D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^d \, d\omega \, \int_{\omega = \text{const.}}\,   \frac{1}{|v_g|} \, dS_\omega
-\end{equation}
-Wir müssen also nur noch ein Oberflächenintegral über eine Fläche Konstanter Frequenz $\omega$ ausführen und dabei den Kehrwert der Gruppengeschwindigkeit integrieren. Einfach wird dies im isotropen Fall, wenn die Frequenz $\omega$ der Phononen nur vom Betrag des Wellenvektors $k$ abhängt und nicht von seiner Richtung. Damit sind die Flächen konstanter Frequenz Kugeln mit dem Radius $k$. Und Die Gruppengeschwindigkeit ist dann natürlich auch konstant über die Kugeloberfläche. Wir erhalten dann
-\begin{equation}
-D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, k^2 }{|v_g|}   \, d\omega \label{eq:WK_dos_omega}
-\end{equation} 
-wobei $k$ hier als $k(\omega)$ zu verstehen ist.
-
-Sowohl im eindimensionalen als auch im dreidimensionalen Fall geht die Gruppengeschwindigkeit als Kehrwert ein. In der zweiatomigen Kette beispielsweise geht diese asymptotisch gegen Null in der Nähe der Bandlücke, wodurch der Integrand in Gl.~\ref{eq:WK_dos_omega} divergiert. Diese Punkte nennt man \emph{van Hove Singularitäten}. Im Eindimensionalen divergiert hier die Zustandsdichte. In zwei und drei Dimensionen finden sich davon noch endlich hohe Spitzen (siehe Abbildung \ref{fig:wk_kupfer} am Anfang des Kapitels).
-
 \begin{marginfigure}
 \inputtikz{\currfiledir dos_kette_2atom}
 
@@ -124,14 +99,52 @@ Sowohl im eindimensionalen als auch im dreidimensionalen Fall geht die Gruppenge
 \end{marginfigure}
 
 
+Im Zwei- oder Dreidimensionalen gehen wir einen anderen Weg. Wir nutzen aus, dass im reziproken Raum die Zustände äquidistant sind, die Zustandsdichte also konstant ist. Alle Zustände bei gegebenem, festem $\omega$ bilden die Fläche\sidenote{in 3D, sonst Kurve in 2D} $S(\omega)$. Die Zustände bei $\omega + d\omega$ bilden eine weitere Fläche. Wir zählen somit die Zustände im Intervall $d\omega$, indem wir das Volumen zwischen den beiden Flächen bestimmen und mit der Zustandsdichte im $k$-Raum multiplizieren
+\begin{equation}
+D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^d \, \int_{\omega = \text{const.}}^{\omega + d\omega = \text{const.}} \, d \mathbf{k} \quad .
+\end{equation}
+Das Volumenelement $d \mathbf{k}$ teilen wir auf in einen Teil entlang der Fläche konstanter Frequenz $S(\omega)$ und einem Teil senkrecht dazu:  $d \mathbf{k} = dk_\perp \, dS_\omega$. Weil sich $\omega$ in Richtung $ dS_\omega$ nicht ändert,  kann man dann die Gruppengeschwindigkeit schreiben als
+\begin{equation}
+v_g = \left| \frac{d\omega}{d \mathbf{k}} \right| 
+=\left| \frac{d\omega}{d k_\perp} \right|
+\end{equation}
+und so
+\begin{equation}
+d \mathbf{k} = dk_\perp \, dS_\omega = dS_\omega \frac{d \omega}{|v_g|} \quad .
+\end{equation}
+Damit erhalten wir
+\begin{equation}
+D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^d \, d\omega \, \int_{\omega = \text{const.}}\,   \frac{1}{|v_g|} \, dS_\omega \quad . \label{eq:WK_dos_omega}
+\end{equation}
+\begin{marginfigure}
+\inputtikz{\currfiledir dos_sketch}
+
+\caption{Skizze zur Bestimmung der Zustandsdichte im Frequenzraum.}
+\end{marginfigure}
+Wir müssen also nur noch ein Oberflächenintegral über eine Fläche konstanter Frequenz $\omega$ ausführen und dabei den Kehrwert der Gruppengeschwindigkeit integrieren. Einfach wird dies im isotropen Fall, wenn die Frequenz $\omega$ der Phononen nur vom Betrag des Wellenvektors $k$ abhängt und nicht von seiner Richtung. Damit sind die Flächen konstanter Frequenz Kugeln mit dem Radius $k$.  Die Gruppengeschwindigkeit ist dann natürlich auch konstant über die Kugeloberfläche. Wir erhalten dann
+\begin{equation}
+D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, k^2 }{|v_g|}   \, d\omega  \quad ,
+\end{equation} 
+wobei $k$ hier als $k(\omega)$ zu verstehen ist.
+
+Sowohl im eindimensionalen als auch im dreidimensionalen Fall geht die Gruppengeschwindigkeit als Kehrwert ein. In der zweiatomigen Kette beispielsweise geht diese asymptotisch gegen Null in der Nähe der Bandlücke, wodurch der Integrand in Gl.~\ref{eq:WK_dos_omega} divergiert. Diese Punkte nennt man \emph{van Hove Singularitäten}. Im Eindimensionalen divergiert hier die Zustandsdichte. In zwei und drei Dimensionen finden sich davon noch endlich hohe Spitzen (siehe Abbildung \ref{fig:wk_kupfer} am Anfang des Kapitels).
+
+
+
+
 
 \section{Einstein-Modell der Wärmekapazität}
 
 Gehen wir zurück zur inneren Energie als Summe über die Energien der Phononen in Gl.~\ref{eq:wk_u_allg}. Wir hatten dazu (wie auch im Kapitel davor) die Phonnen als die Quanten der Gitterschwingung angenommen. Jedes Phonon trägt die Energie $\hbar \omega$ bei. Phononen sind Bosonen, d.h. jede Gitterschwingung ist mehrfach anregbar, was die unterschiedliche Auslenkung beschreibt. Damit wird die Besetzungsfunktion $\braket{n (\omega,T) }$ eine Bose-Einstein-Verteilung
 \begin{equation}
-\braket{n (\omega,T) } = \frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1}
+\braket{n (\omega,T) } = \frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1} \quad .
 \end{equation}
 
+\begin{marginfigure}
+\inputtikz{\currfiledir BE_stat}
+
+\caption{Die mittlere Besetzung $\braket{n}$ eines Zustands nach der Bose-Einstein-Verteilung (dick) im Vergleich zur Maxwell-Boltzmann-Verteilung (dünn) der klassischen Physik.}
+\end{marginfigure}
 
 
 Einstein macht nun auch die weitergehende Annahme, dass nur ein Oszillator zur  Zustandsdichte beiträgt, also $D(\omega) \propto \delta(\omega_0 - \omega)$. Damit wird Gl.~\ref{eq:wk_u_allg}.
@@ -143,22 +156,22 @@ bei $N$ Atomen im Kristall. Die Wärmekapazität ist die Ableitung davon nach de
 C_V = \frac{\partial U}{\partial T }  =3 N \, k_B \, 
 \left( \frac{\hbar \omega_0}{k_B \, T} \right)^2 
 \, \frac{e^{\frac{\hbar \omega_0}{k_B \, T} }}
-{\left( e^{\frac{\hbar \omega_0}{k_B \, T} }- 1 \right)^2}
+{\left( e^{\frac{\hbar \omega_0}{k_B \, T} }- 1 \right)^2} \quad .
 \end{equation}
 Bei großen und kleinen Temperaturen $T$ geht dies gegen
 \begin{align}
-\text{für } k_B \, T \gg \hbar \omega_0  \quad & C_V \approx 3 N \, k_B \\
-\text{für } k_B \, T \ll \hbar \omega_0  \quad & C_V \approx e^{-\frac{\hbar \omega_0}{k_B \, T} }
+\text{für } k_B \, T \gg \hbar \omega_0  \quad & C_V \approx 3 N \, k_B \quad , \\
+\text{für } k_B \, T \ll \hbar \omega_0  \quad & C_V \propto e^{-\frac{\hbar \omega_0}{k_B \, T} } \quad .
 \end{align}
 Damit haben wir glücklicherweise das Dulong-Petit-Gesetz bei hohen Temperaturen wiedergefunden. Bei niedrigen Temperaturen steigt die Wärmekapazität exponentiell mit der Temperatur.
 
-Experimentell findet man auch diesen exponentiellen Anstieg, insbesondere wenn die wirkliche Zustandsdichte $D(\omega)$ im relevanten Energie- / Temperatur-Bereich durch einen starken Peak dominiert wird. Ein gutes Beispiel ist Diamant. Insbesondere bei noch tieferen Temperaturen findet man dann aber auch eine Abweichung vom Einstein-Modell, wenn eben die breite Verteilung der Zustände beiträgt und die Zustände im Peak selbst nicht mehr populiert sind.
+Experimentell findet man auch diesen exponentiellen Anstieg, insbesondere wenn die wirkliche Zustandsdichte $D(\omega)$ im relevanten Energie- / Temperatur-Bereich durch einen starken Peak dominiert wird. Ein gutes Beispiel ist Diamant oder Silizium (siehe unten). Insbesondere bei noch tieferen Temperaturen findet man dann aber auch eine Abweichung vom Einstein-Modell, wenn eben die breite Verteilung der Zustände beiträgt und die Zustände im Peak selbst nicht mehr besetzt sind.
 
 
 
 \section{Debye-Modell der Wärmekapazität}
 
-Die Näherung der Zustandsdichte als deltaförmig ist schon weitgehend. Im Modell von P. Debye wird ein größerer Frequenzbereich erlaubt. Es macht die Annahme, dass die Phasengeschwindigkeit $v$ für alle Wellenvektoren $k$ konstant ist. Im letzten Kapitel hatten wir gesehen, dass dies für die akustischen Phononen in der Nähe von $k \approx 0$ gilt. Hier wird nun angenommen, dass es bis zu $k = \pi / a$ gilt, und dass nur akustische Phononen vorhanden sind, also nur ein Atom in der Basis.
+Die Näherung der Zustandsdichte als deltaförmig ist schon weitgehend. Im Modell von P. Debye wird ein größerer Frequenzbereich erlaubt. Es macht die Annahme, dass die Phasengeschwindigkeit $v$ für alle Wellenvektoren $k$ konstant ist. Im letzten Kapitel hatten wir gesehen, dass dies für die akustischen Phononen in der Nähe von $k \approx 0$ gilt. Hier wird nun angenommen, dass es bis zu $k \approx \pi / a$ gilt, und dass nur akustische Phononen vorhanden sind, also nur ein Atom in der Basis ist.
 
 Die Dispersionsrelation ist also $\omega = v \, | \mathbf{k} |$ und somit die Zustandsdichte
 \begin{equation}
@@ -166,11 +179,11 @@ D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \ome
 \end{equation} 
 quadratisch in der Frequenz $\omega$. Die maximale Frequenz, bis zu der die Zustandsdichte quadratisch steigt, wird Debye-Frequenz $\omega_D$ genant und ergibt sich aus dem Gesamtzahl der Zustände, also der Zahl $N$ der Atome im Kristall
 \begin{equation}
-N = \int_0^{\omega_{D}}  \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}   \, d\omega 
+N = \int_0^{\omega_{D}}  \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}   \, d\omega  \quad .
 \end{equation}
 Man erhält mit $N = (L / a)^3$
 \begin{equation}
-\omega_{D} = v \, \frac{\pi}{a} \, \sqrt[3]{6 / \pi}
+\omega_{D} = v \, \frac{\pi}{a} \, \sqrt[3]{6 / \pi} \quad .
 \end{equation}
 Der Term $\sqrt[3]{6 / \pi}$ verdient etwas Aufmerksamkeit. Wir haben in diesem Modell Zustände angenommen, die alle innerhalb einer Kugel im reziproken Raum mit Radius $k_{D} = \omega_{D} / v$ liegen. In manche Richtungen ragt diese Kugel über den Rand der ersten Brillouin-Zone hinaus, der bei $k = \pi / a$ liegt. In den  Ecken der kubischen Brillouin-Zone hat der Wellenvektor  aber den Betrag $k = \pi / a \sqrt{3}$. Diese Ecken liegen außerhalb der Kugel, da $\sqrt{3} \approx 1.73 > 1.24 \approx \sqrt[3]{6 / \pi}$.
 
@@ -178,7 +191,7 @@ Der Term $\sqrt[3]{6 / \pi}$ verdient etwas Aufmerksamkeit. Wir haben in diesem 
 Die inneren Energie  (Gl.~\ref{eq:wk_u_allg}) wird im Debye-Modell
 \begin{equation}
 U = \int_0^{\omega_D} \, \hbar \omega \,  \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}  \,
-\frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1} \, d\omega
+\frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1} \, d\omega \quad .
 \end{equation}
 Wir führen die Debye-Temperatur $\Theta$ ein mit $k_B \, \Theta = \hbar \omega_D$ und die Abkürzungen
 \begin{equation}
@@ -188,57 +201,60 @@ x_D = \frac{\hbar \omega_D}{k_B T}  = \frac{\Theta}{T}
 und erhalten für die Wärmekapazität
 \begin{equation}
 C_V = 9 N \, k_B \, \left(\frac{T}{\Theta} \right)^3 \,
-\int_0^{x_D} \frac{x^4 \, e^x}{\left(  e^x - 1 \right)^2} \, dx
+\int_0^{x_D} \frac{x^4 \, e^x}{\left(  e^x - 1 \right)^2} \, dx \quad .
 \end{equation}
 Für hohe Temperaturen, also $x_D \rightarrow 0$, also $\hbar  \omega_D \ll k_B \, T$ finden wir wie erwartet das Dulong-Petit-Gesetzt. Für tiefe Temperaturen also $x_D \rightarrow \infty$, also $\hbar  \omega_D \gg k_B \, T$  erhalten wir
 \begin{equation}
-C_V = \frac{12 \pi^4}{5} \, N \, k_B \, \left(\frac{T}{\Theta} \right)^3
+C_V = \frac{12 \pi^4}{5} \, N \, k_B \, \left(\frac{T}{\Theta} \right)^3 \quad .
 \end{equation}
-Also eine $T^3$-Abhängigkeit der Wärmekapazität. Mit fallender Temperatur fällt also die Wärmekapazität im Debye-Modell nicht so schnell, nicht exponentiell, wie im Einstein-Modell. Es gibt auch bei tiefen Temperaturen noch populierte Zustände, die zur Wärmekapazität beitragen.
+Also eine $T^3$-Abhängigkeit der Wärmekapazität. Mit fallender Temperatur fällt also die Wärmekapazität im Debye-Modell nicht so schnell, nicht exponentiell, wie im Einstein-Modell. Es gibt auch bei tiefen Temperaturen noch besetzte Zustände, die zur Wärmekapazität beitragen.
 
 Dies findet man auch experimentell in sehr vielen Materialien, solange der Beitrag der Elektronen zur Wärmekapazität keine Rolle spielt (siehe Abbildung \ref{fig:wk_kupfer} am Anfang des Kapitels). Für Kupfer beträgt die Debye-Temperatur $\Theta = 343$~K, was einer Debye-Frequenz $\nu_D = 7.14$~THz entspricht.
 
 
 
-\section{Silizium}
+\section{Beispiel Silizium}
 
+In manchen Materialien ist die Übereinstimmung der experimentell gefundenen Zustandsdichte mit den Annahmen des Debye-Modells nicht ganz so gut. Ein Beispiel ist Silizium. Trotzdem findet man in der Wärmekapazität den $T^3$-Verlauf bei tiefen Temperaturen ($\Theta_D = 645$~K). Bei höheren Temperaturen passt aber das Einstein-Modell ebenso gut. Man findet in der Zustandsdichte Peaks, die sich gut durch Delta-Funktionen annähern lassen.  In die Abbildung sind zwei Modelle mit $\nu_0 = 10$~THz, bzw. 15~THz eingezeichnet.
 
 
 
 
 \begin{figure}
 \inputtikz{\currfiledir dos_cv_Si}
-  \caption{ \textit{links:} Zustandsdichte von Phononen in Silizium (dick) verglichen mit dem Debye-Modell (dünn). Daten digitalisiert aus XXX. \textit{rechts:} Wärmekapazität von Silizium verglichen mit dem Debye-Modells (durchgezogen) und dem EInstein-Modell ($\nu_0=10$ bzw. 15~THz). Daten aus XXX. \label{fig:wk_Si}}
+  \caption{ \textit{links:} Zustandsdichte von Phononen in Silizium (dick) verglichen mit dem Debye-Modell (dünn). Daten digitalisiert aus \cite{dolling66_si}. \textit{rechts:} Wärmekapazität von Silizium verglichen mit dem Debye-Modells (durchgezogen) und dem Einstein-Modell ($\nu_0=10$ bzw. 15~THz). Daten aus \cite{Flubacher59_si} und \cite{Okhotin72_si}. \label{fig:wk_Si}}
 \end{figure}
 
 
 
 \section{Photonen und Phononen}
 
-Es ist sicherlich hilfreich, Unterschiede und Gemeinsamkeiten zwischen  Photonen und Phononen zu diskutieren. Photonen sind wie Phononen quantisiert, tragen die Energie $\hbar \omega$, aber einen echten Impuls $\hbar \mathbf{k}$, nicht 'nur' einen Quasiimpuls. Der physikalisch sinnvolle Bereich des Wellenvektors ist auch nicht auf die erste Brillouin-Zone limitiert sondern kann beliebige Werte annehmen. Die Dispersionsrelation ist linear, zumindest im Vakuum: $\omega = c_0 \, | \mathbf{k} |$. In Medien ändert sich aber die Lichtgeschwindigkeit, so dass dann $\omega = c_0 \, | \mathbf{k} | / n$ mit dem Brechungsindex $n$.
+Es ist sicherlich hilfreich, Unterschiede und Gemeinsamkeiten zwischen  Photonen und Phononen zu diskutieren. Photonen sind wie Phononen quantisiert, tragen die Energie $\hbar \omega$, aber einen echten Impuls $\hbar \mathbf{k}$, nicht 'nur' einen Quasiimpuls. Der physikalisch sinnvolle Bereich des Wellenvektors ist auch nicht auf die erste Brillouin-Zone limitiert, sondern kann beliebige Werte annehmen. Die Dispersionsrelation ist linear, zumindest im Vakuum: $\omega = c_0 \, | \mathbf{k} |$. In Medien ändert sich aber die Lichtgeschwindigkeit, so dass dann $\omega = c_0 \, | \mathbf{k} | / n$ wird, mit dem Brechungsindex $n$.
 
 Die Zustandsdichte leitet man beispielsweise über stehende Wellen in einem kubischen Resonator her. Man erhält das gleiche Ergebnis wie für Phononen in drei Dimensionen
 \begin{equation}
-D(k) dk = \left( \frac{L}{2 \pi} \right)^3
+D(k) dk = \left( \frac{L}{2 \pi} \right)^3 \quad .
 \end{equation}
 Die Gruppengeschwindigkeit ist in diesem Fall die Lichtgeschwindigkeit $c_0$ und im Vakuum konstant. Damit erhält man
 \begin{equation}
 D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \, \frac{4 \pi \omega^2}{c_0^3} \, d\omega 
-= L^3 \, \frac{\omega^2}{2 \, \pi^2 \, c_0^3} \, d\omega
+= L^3 \, \frac{\omega^2}{2 \, \pi^2 \, c_0^3} \, d\omega \quad .
 \end{equation}
-Oft schreibt man dies als Zustandsdichte\sidenote{hier $\tilde{D}$ genannt} pro Frequenzintervall und Raumelement, teil also durch $L^3$. Ebenso findet man Darstellungen mit der Frequenz $\nu = \omega / 2 \pi$
+Oft schreibt man dies als Zustandsdichte\sidenote{hier $\tilde{D}$ genannt} pro Frequenzintervall und Raumelement, teilt also durch $L^3$. Ebenso findet man Darstellungen mit der Frequenz $\nu = \omega / 2 \pi$
 \begin{equation}
 \tilde{D}(\nu) d\nu 
-= \frac{4 \pi \, \nu^2}{ c_0^3} \, d\omega
+= \frac{4 \pi \, \nu^2}{ c_0^3} \, d\nu \quad .
 \end{equation}
-Ebenso wie bei den Phononen muss man diese Zustandsdichte noch mit der Zahl der Ästen in der Dispersionsrelation multiplizieren. Es sind hier nicht $3p$ (bei $p$ Atomen in der Einheitszelle), sondern nur $2$ wegen den beiden orthogonalen Polarisationsrichtungen.
+Ebenso wie bei den Phononen muss man diese Zustandsdichte noch mit der Zahl der Äste in der Dispersionsrelation multiplizieren. Es sind hier nicht $3p$ (bei $p$ Atomen in der Einheitszelle), sondern nur $2$ wegen den beiden orthogonalen Polarisationsrichtungen.
 
 Die innere Energie eines Lichtfelds berechnet sich genauso wie bei den Phononen (Gl. \ref{eq:wk_u_allg}), nur dass hier nun schon der Faktor $2$ für die Polarisationsrichtungen berücksichtigt ist und die Energiedichte pro Volumen angegeben ist
 \begin{equation}
 \tilde{U}(T) = 2  \int_{\omega=0}^{\infty} \, \hbar \omega \, 
 \frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1}
-\, \frac{\omega^2}{2 \, \pi^2 \, c_0^3} \, d\omega
+\, \frac{\omega^2}{2 \, \pi^2 \, c_0^3} \, d\omega \quad .
 \end{equation}
+Der Term unter dem Integral  ist das bekannte Schwarzkörper-Spektrum.
+
 
 %-------------------
 
