@@ -3,8 +3,8 @@
 \chapter{Phononen}
 
 
-
-
+% Gute Augaben und Ideen hier
+%http://lampx.tugraz.at/~hadley/ss1/introduction/introduction.php
 
 \section{Ziele}
 
@@ -138,7 +138,7 @@ An den Grenzen der Brillouin-Zone, bei $k = \pm \pi / a$ wird damit die Gruppeng
 Nun heben wir die Annahme auf, dass alle Atome identisch sind. Wir betrachten eine Kette, die abwechselnd aus zwei Atomsorten besteht. In der Sprache eines Gitters ist hat diese also eine zweiatomige Basis. Die Gitterkonstante $a$ ist der (kürzest) Abstand zwischen \emph{identischen} Atomen. Hier nehmen wir an, dass sich die Atome in ihrer Masse unterscheiden. Die Federn seien aber wieder nur zwischen nächsten Nachbarn (also verschiedenen Atomsorten) und sie seine alle identisch.\sidenote{Man könnte auch identische Massen und alternierende Federn annehmen.} Der Index $s$ bezeichnet nun die Einheitszelle (nicht das Atom). Wir unterscheiden zwischen den Atomen, in dem die eine Sorte um $u_s$, die andere um $v_s$ ausgelenkt sein soll.  Die Reihenfolge entlang der Kette ist also $u_{s-1}$ ---  $v_{s-1}$ --- $u_{s}$ ---  $v_{s}$ --- $u_{s+1}$ ---  $v_{s+1}$. Damit werden die Bewegungsgleichungen
 \begin{align}
  M_1 \frac{d^2 u_s}{dt^2} = & c \, \left( v_s + v_{s-1} - 2 u_s \right) \\
- M_2 \frac{d^2 v_s}{dt^2} = & c \, \left( u_s + u_{s-1} - 2 v_s \right) 
+ M_2 \frac{d^2 v_s}{dt^2} = & c \, \left( u_s + u_{s+1} - 2 v_s \right) 
 \end{align}
 wobei $c$ hier die einzige Federkonstante bezeichnet ($c_1$ von oben) und die $M_{1,2}$ die Masse der beiden Atomsorten ist.
 Wir machen den Ansatz

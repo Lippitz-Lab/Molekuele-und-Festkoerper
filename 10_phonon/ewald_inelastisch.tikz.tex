@@ -16,7 +16,7 @@
   }
   
   
-  \tikzmath{\kx = 2.26; \ky = -1.8;}
+  \tikzmath{\kx = 2.4; \ky = -1.8;}
   \tikzmath{\x2 = \kx * \kx; \y2 = \ky * \ky;}
   
   \tikzmath{\kr = sqrt( \x2 + \y2 );}
@@ -35,7 +35,7 @@
  \draw[->,thick, shorten >=0.5mm] (O) -- node[above] {$\mathbf{G}$} (B); 
  \draw[->,thick]  (A) -- node[right] {$\mathbf{k}$} (Bs); 
  
-  \draw[->,thick,red]  (B) -- node[right] {$\mathbf{q}$} (Bs); 
+  \draw[<-,thick,red]  (B) -- node[right] {$\mathbf{q}$} (Bs); 
   
   \node[left] at (O) {(000)};
   \node[above] at (B) {(310)};
