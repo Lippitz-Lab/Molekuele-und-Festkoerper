@@ -36,7 +36,7 @@ Im Experiment findet man, dass die Wärmekapazität fester Stoffe mit der Temper
 \begin{equation}
  C_V = 3 \, N_A \, k_B \approx 25 \text{~J} \text{~mol}^{-1} \text{~K}^{-1} \quad .
 \end{equation}
-Der Verlauf von $ C_V$ bei niedrigeren Temperaturen ist eine einfach zu bestimmende makroskopische Größe, die viel über den mikroskopischen Aufbau des Festkörpers aussagt. Wir werden sehen, dass sie zumindest bei Nichtleitern vollständig durch die quantisierte  Gitterschwingungen und so die Teilcheneigenschaft der Phononen bestimmt ist. Das Modell dazu geht auf A.~Einstein zurück, auch wenn er bei der Zustandsdichte $D(\omega)$ vereinfachende Annahmen getroffen hat. Die Innere Energie $U(T)$ ist
+Der Verlauf von $ C_V$ bei niedrigeren Temperaturen ist eine einfach zu bestimmende makroskopische Größe, die viel über den mikroskopischen Aufbau des Festkörpers aussagt. Wir werden sehen, dass sie zumindest bei Nichtleitern vollständig durch die quantisierte  Gitterschwingungen und so die Teilcheneigenschaft der Phononen bestimmt ist. Das Modell dazu geht auf A.~Einstein zurück, auch wenn er bei der Zustandsdichte $D(\omega)$ vereinfachende Annahmen getroffen hat. Die Innere Energie $U(T)$ \textbf{pro Mode} ist
 \begin{equation}
 U(T) = \int_{\omega=0}^{\infty} \, \hbar \omega \, \braket{ n (\omega, T) } \, D(\omega) \, d\omega \label{eq:wk_u_allg} \quad .
 \end{equation}
@@ -67,15 +67,15 @@ Die Dichte $ D(k) \, dk$ der möglichen Werte von $k$ auf der $k$-Achse ein Wert
 Die Zustandsdichte ist im $k$-Raum also konstant.
 Analog kann man im Zwei- oder Dreidimensionalen verfahren, also bei Quadraten oder Kuben der Kantenlänge $L$. Die Zustandsdichte ist
 \begin{equation}
-D(k) = \frac{N_\text{EZ}}{V_{BZ}}  = 
+D(k) = \frac{N_\text{PEZ}}{V_{BZ}}  = 
 \frac{V_\text{Kristall}} {(2 \pi)^d} =
  \left(\frac{L}{2 \pi} \right)^d 
 \end{equation}
-mit der Dimensionalität $d$ und der Anzahl der Einheitszellen $N_\text{EZ}$. Das ist wie oben die Zustandsdichte für eine Art der Bewegung. Bei $p$ Atomen je Einheitszelle gibt es $3p$ Äste in der Dispersionsrelation und die Gesamt-Zustandsdichte ist entsprechend größer.
+mit der Dimensionalität $d$ und der Anzahl der \textbf{primitiven} Einheitszellen $N_\text{PEZ}$. Das ist wie oben die Zustandsdichte für eine Art der Bewegung. Bei $p$ Atomen je Einheitszelle gibt es $3p$ Äste in der Dispersionsrelation und die Gesamt-Zustandsdichte ist entsprechend größer.
 
 Was ist hier passiert? Die physikalisch sinnvollen Werte von $k$ waren schon im letzten Kapitel nach oben beschränkt, weil es nicht hilft, wenn die Welle schneller oszilliert als der Abstand der Atome ist. Bei einem Ring von Atomen ist nun aber auch nicht jede Wellenlänge wählbar, da nur stehende Wellen auf dem Ring möglich sind.\sidenote{Analog stehende Wellen auf einer endlichen Kette mit freien / festen Randbedingungen} Mögliche Werte der Wellenlänge haben die Form $\lambda_0 / n$, und damit mögliche Werte des Wellenvektors $n / \lambda_0$. Dadurch wird die $k$-Achse diskret. Dies spielt aber nur bei der Zustandsdichte eine Rolle, da die Punkte so dicht liegen, dass dies höchstens bei sehr kleinen Kristallen auflösbar ist.
 
-Aus dem Blickwinkel der Normalmoden findet sich das gleiche Ergebnis. Bei $p$ Atomen je Einheitszelle und $N_\text{EZ}$ Einheitszellen im Kristall erwarten wir $3 p \, N_\text{EZ}$ Normalmoden. In der Dispersionsrelation der Phononen gibt es dann $3p$ Äste und $N_\text{EZ}$ diskrete Werte auf der $k$-Achse, also ebenso viele Zustände für Phononen wie Normalmoden.
+Aus dem Blickwinkel der Normalmoden findet sich das gleiche Ergebnis. Bei $p$ Atomen je \textbf{primitiver} Einheitszelle und $N_\text{PEZ}$ \textbf{primitiver} Einheitszellen im Kristall erwarten wir $3 p \, N_\text{PEZ}$ Normalmoden. In der Dispersionsrelation der Phononen gibt es dann $3p$ Äste und $N_\text{PEZ}$ diskrete Werte auf der $k$-Achse, also ebenso viele Zustände für Phononen wie Normalmoden.
 
 
 
@@ -147,16 +147,17 @@ Gehen wir zurück zur inneren Energie als Summe über die Energien der Phononen 
 \end{marginfigure}
 
 
+
 Einstein macht nun auch die weitergehende Annahme, dass nur ein Oszillator zur  Zustandsdichte beiträgt, also $D(\omega) \propto \delta(\omega_0 - \omega)$. Damit wird Gl.~\ref{eq:wk_u_allg}.
 \begin{equation}
 U(T) =  3N \, \frac{\hbar \omega_0 }{e^{\frac{\hbar \omega_0}{k_B \, T} }- 1}
 \end{equation}
-bei $N$ Atomen im Kristall. Die Wärmekapazität ist die Ableitung davon nach der Temperatur $T$
+bei $N$ Atomen im Kristall. \textbf{Der zusätzliche Faktor 3 berücksichtigt die drei Schwingungs-Freiheitsgraden je Atom.} Die Wärmekapazität ist die Ableitung davon nach der Temperatur $T$
 \begin{equation}
 C_V = \frac{\partial U}{\partial T }  =3 N \, k_B \, 
 \left( \frac{\hbar \omega_0}{k_B \, T} \right)^2 
 \, \frac{e^{\frac{\hbar \omega_0}{k_B \, T} }}
-{\left( e^{\frac{\hbar \omega_0}{k_B \, T} }- 1 \right)^2} \quad .
+{\left( e^{\frac{\hbar \omega_0}{k_B \, T} }- 1 \right)^2} \quad . \label{eq:wk_einstein_full}
 \end{equation}
 Bei großen und kleinen Temperaturen $T$ geht dies gegen
 \begin{align}
@@ -175,7 +176,7 @@ Die Näherung der Zustandsdichte als deltaförmig ist schon weitgehend. Im Model
 
 Die Dispersionsrelation ist also $\omega = v \, | \mathbf{k} |$ und somit die Zustandsdichte
 \begin{equation}
-D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}   \, d\omega 
+D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}   \, d\omega \label{eq:wk_debye_dos}
 \end{equation} 
 quadratisch in der Frequenz $\omega$. Die maximale Frequenz, bis zu der die Zustandsdichte quadratisch steigt, wird Debye-Frequenz $\omega_D$ genant und ergibt sich aus dem Gesamtzahl der Zustände, also der Zahl $N$ der Atome im Kristall
 \begin{equation}
@@ -188,7 +189,7 @@ Man erhält mit $N = (L / a)^3$
 Der Term $\sqrt[3]{6 / \pi}$ verdient etwas Aufmerksamkeit. Wir haben in diesem Modell Zustände angenommen, die alle innerhalb einer Kugel im reziproken Raum mit Radius $k_{D} = \omega_{D} / v$ liegen. In manche Richtungen ragt diese Kugel über den Rand der ersten Brillouin-Zone hinaus, der bei $k = \pi / a$ liegt. In den  Ecken der kubischen Brillouin-Zone hat der Wellenvektor  aber den Betrag $k = \pi / a \sqrt{3}$. Diese Ecken liegen außerhalb der Kugel, da $\sqrt{3} \approx 1.73 > 1.24 \approx \sqrt[3]{6 / \pi}$.
 
 
-Die inneren Energie  (Gl.~\ref{eq:wk_u_allg}) wird im Debye-Modell
+Die inneren Energie \textbf{ pro Mode} (Gl.~\ref{eq:wk_u_allg}) wird im Debye-Modell
 \begin{equation}
 U = \int_0^{\omega_D} \, \hbar \omega \,  \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}  \,
 \frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1} \, d\omega \quad .
@@ -203,7 +204,7 @@ und erhalten für die Wärmekapazität
 C_V = 9 N \, k_B \, \left(\frac{T}{\Theta} \right)^3 \,
 \int_0^{x_D} \frac{x^4 \, e^x}{\left(  e^x - 1 \right)^2} \, dx \quad .
 \end{equation}
-Für hohe Temperaturen, also $x_D \rightarrow 0$, also $\hbar  \omega_D \ll k_B \, T$ finden wir wie erwartet das Dulong-Petit-Gesetzt. Für tiefe Temperaturen also $x_D \rightarrow \infty$, also $\hbar  \omega_D \gg k_B \, T$  erhalten wir
+\textbf{Der zusätzliche Faktor 3 berücksichtigt wieder die drei Schwingungs-Freiheitsgrade.}  Für hohe Temperaturen, also $x_D \rightarrow 0$, also $\hbar  \omega_D \ll k_B \, T$ finden wir wie erwartet das Dulong-Petit-Gesetzt. Für tiefe Temperaturen also $x_D \rightarrow \infty$, also $\hbar  \omega_D \gg k_B \, T$  erhalten wir
 \begin{equation}
 C_V = \frac{12 \pi^4}{5} \, N \, k_B \, \left(\frac{T}{\Theta} \right)^3 \quad .
 \end{equation}

@@ -74,7 +74,7 @@ Den hier gefundenen Zusammenhang zwischen Eigenfrequenz $\omega$ der Oszillation
 
 Nun machen wir zusätzlich die Annahme, dass nur nächste Nachbarn miteinander wechselwirken, dass es also nur Federn zwischen direkt benachbarten Atomen gibt. Damit sind nur dir $c_{\pm 1}$ von Null verschieden und die Summe fällt weg. Wir ziehen jetzt auch die Wurzel und erhalten
 \begin{equation}
-\omega = \sqrt{\frac{4 \, c_1}{M}} \left| \sin (\frac{1}{2} \, \mathbf{k} \cdot \mathbf{a}  ) \right|
+\omega = \sqrt{\frac{4 \, c_1}{M}} \left| \sin (\frac{1}{2} \, \mathbf{k} \cdot \mathbf{a}  ) \right| \label{eq:phonon_1atom}
 \end{equation}
 
 \begin{marginfigure}
@@ -154,7 +154,7 @@ und erhalten zwei Lösungen für die Eigenfrequenz $\omega$ und damit die Disper
 %oder
 \begin{equation}
 \omega^2 =  \frac{c}{\mu}
-\pm c \sqrt{ \frac{1}{\mu^2} - \frac{4}{M_1 M_2}  \sin^2 \left( \frac{1}{2}  \mathbf{k} \cdot \mathbf{a} \right) } 
+\pm c \sqrt{ \frac{1}{\mu^2} - \frac{4}{M_1 M_2}  \sin^2 \left( \frac{1}{2}  \mathbf{k} \cdot \mathbf{a} \right) }  \label{eq:phonon_2atom}
 \end{equation}
 mit der reduzierten Masse $\mu = (M_1  M_2)/(M_1 + M_2)$. Die Dispersionsrelation besteht also aus zwei Zweigen, je nach Vorzeichen des $\pm$: Das negative Vorzeichen beschreibt den \emph{akustischen Zweig}. Er geht exakt in die einatomige Kette über, wenn man $M_1 = M_2$ setzt und $a$ entsprechend anpasst. Auch für $M_1 \neq M_2$ ist der akustische Zweig sehr ähnlich der einatomigen Kette, insbesondere linear zu $k$ in der Nähe von $k=0$. Das positive Vorzeichen beschreibt den \emph{optischen Zweig}. Für $k \rightarrow 0$ geht hier die Frequenz $\omega$ nicht gegen Null sondern gegen $\sqrt{2 c / \mu}$. Am Rand der Brillouin-Zone, also bei $k = \pi /a $ wird der Sinus Eins und damit\sidenote{Man zieht den Term $M_1 - M_2$ aus der Wurzel und macht dabei die Annahme $M_1 > M_2$.}
 \begin{align}
@@ -239,12 +239,12 @@ A_S(t) \propto
 e^{-i \omega_0 t} 
 -
 \sum_m \sum_\mathbf{q}  i \mathbf{K} \cdot \mathbf{U}_\mathbf{q} \,
- e^{-i (\mathbf{K} \pm \mathbf{q} ) \cdot \mathbf{R}_m}  
+ e^{-i (\mathbf{K} \mp \mathbf{q} ) \cdot \mathbf{R}_m}  
 e^{-i (\omega_0 \pm \omega_\mathbf{q})  t} 
 \end{equation}
 Der erste Term ist die schon aus dem letzten Kapitel bekannte elastische Streuung. Hier geht die Bewegung der Streuzentren nicht ein. Der zweite Term ist die inelastische Streuung, die proportional zur Amplitude $\mathbf{U}_\mathbf{q}$ der Schwingung der Streuzentren ist. Für die elastische Streuung hatten wir im letzten Kapitel gesehen, dass die Summe über alle Atompositionen nur dann einen Beitrag liefert, wenn die Bedingung $\mathbf{K} = \mathbf{G}$ erfüllt ist. Für die inelastische Streuung liefert die gleiche Argumentation die Bedingung
 \begin{equation}
- \mathbf{K} \pm \mathbf{q} = \mathbf{G} \quad \text{und} \quad \omega_\text{out} = \omega_0 \pm \omega_\mathbf{q}
+ \mathbf{K} \mp \mathbf{q} = \mathbf{G} \quad \text{und} \quad \omega_\text{out} = \omega_0 \pm \omega_\mathbf{q}
 \end{equation}
 Die Energie / Frequenz der gestreuten Welle ändert sich also bei inelastischer Streuung, wie beim Raman-Effekt in der Molekülphysik.
 
