@@ -42,12 +42,11 @@ Die Molekülorbitaltheorie (MO) hingegen bildet die Gesamtwellenfunktion aufbaue
 
 \paragraph{Röntgenstreuung} Wenn sich viele identische Moleküle zu einem Kristall anordnen lassen (was nicht trivial ist), dann kann man kurzwellige elektromagnetische Strahlung an diesem  Kristall-Gitter beugen. Aus dem Beugungsbild erhält man durch Fourier-Transformation und ein paar Annahmen die Elektronendichte-Verteilung im Kristall. Es sind die Elektronen, die mit EM-Strahlung wechselwirken. Die Elektronendichte-Verteilung wird oft in Form von 'Höhenlinien' dargestellt. Damit ist klar, dass es nicht eine exakte 'Größe' eines Moleküls gibt.
 
-%\begin{marginfigure}
-%%\includegraphics[width=\textwidth]{\currfiledir Pentacene_on_Ni(111)_STM.jpg}
-%\caption{Ladungsdichte eines Moleküls
-%\href{https://commons.wikimedia.org/wiki/File:Pentacene_on_Ni(111)_STM.jpg}{L.~E.~Dinca et al.}  / \href{https://creativecommons.org/licenses/by/4.0}{CC BY}
-%}
-%\end{marginfigure}
+\begin{marginfigure}
+\includegraphics[width=\textwidth]{\currfiledir scattering.png}
+\caption{Beugung von Röntgenstrahlen liefert die Fourier-Transformierte der Elektronenverteilung.
+}
+\end{marginfigure}
 
 
 \paragraph{Raster-Tunnel-Mikroskopie} (engl. scanning tunneling microscope, STM) Direkter, ohne Fourier-Transformation, kann man einzelne Moleküle auf einer leitenden Oberfläche in einem sehr guten Vakuum abbilden, in dem man eine sehr scharfe Metallspitze nahe an die Oberfläche bringt. Bei einem Abstand im Bereich weniger Angstrom fließt ein Tunnelstrom, wenn eine Spannung zwischen Spitze und Oberfläche angelegt wird. Eine Elektronik hält den Tunnelstrom durch Regelung des Abstands konstant währen die Spitze über die Oberfläche gerastert wird. Man erhält ein Höhen-Bild konstanten Tunnelstroms. Da Strom nur fließen kann, wenn sich die Wellenfunktion der Elektronen in der Spitze und in der Oberfläche wenigstens etwas überlappen, kann man so die Elektronen-Wellenfunktion von Molekülen auf der Oberfläche abbilden. Die beobachtete Form hängt auch von der gewählten Spannung ab.
@@ -89,6 +88,13 @@ Atomkerne sind viel schwerer als Elektronen. In der Born-Oppenheimer Näherung b
 \Psi_{\text{Kerne}}( \mathbf{R}_1, \mathbf{R}_2, \dots)
 \end{equation}
 wobei $\mathbf{r}_i$ Elektronenkoordinaten sind und $\mathbf{R}_i$ Kernkoordinaten.
+
+
+\begin{marginfigure}
+\includegraphics[width=0.8\textwidth]{\currfiledir potential.png}
+\caption{Die Energie-Eigenwert der Elektronen liefert das Bindungspotential.
+}
+\end{marginfigure}
 
 
 Wir lösen also die Schrödingergleichung für freie Elektronen-Koordinaten, aber die Kern-Koordinaten werden als fix angenommen. Das \emph{Bindungspotential} stellt die Gesamtenergie des Systems dar, wenn für jeden Punkt der Kurve ein anderer aber jeweils fester Kern--Kern--Abstand angenommen wird.
@@ -177,6 +183,12 @@ Wenn drei oder mehr Atome ein Molekül bilden, dann kann man den Winkel einer Bi
 
 Insbesondere in der organischen Chemie der Kohlenwasserstoffe spielt die Hybridisierung der Kohlenstoff-Orbitale eine wichtige Rolle. Im Kohlenstoff-Atom besteht nur ein geringer Energieunterschied zwischen der energetisch niedrigsten Elektronenkonfiguration
 [He]2s$^2$2p$_x^1$2p$_y^1$2p$_z^0$ und der nächst höheren [He]2s$^1$2p$_x^1$2p$_y^1$2p$_z^1$. Dies bedeutet, dass der Energieunterschied zwischen dem 2s und dem 2p-Orbital in Kohlenstoff sehr gering ist, und insbesondere 
+%
+\begin{marginfigure}
+\includegraphics[width=0.9\textwidth]{\currfiledir hybrid.png}
+\caption{Elektronische Niveaus bei der Hybridisierung von Kohlenstoff. }
+\end{marginfigure}
+%
 ist der Energiegewinn durch die Bindung sehr oft größer als dieser Unterschied. Es ist daher oft energetisch günstiger, die Bindung ausgehend von einer Linearkombination von 2s und 2p-Orbitalen zu betrachten. Dies nennt man Hybridisierung der Orbitale. Wenn ein s-Orbital und drei p-Orbitale beteiligt sind, dann wird dies als sp$^3$-Hybridisierung bezeichnet. Ohne Hybridisierung könnte Kohlenstoff nur zwei Bindungen eingehen (mit den p$_x$ und p$_y$-Orbitalen), nach sp$^3$-Hybridisierung vier, so dass die Gesamtenergie stärker abgesenkt werden kann.\sidenote{Auch ist die Idee eines s- oder p-Orbitals ein Ein-Elektron-Konzept, das in Mehrelektronen-Atomen durch die anderen Elektronen gestört wird.}
 
 Die neuen Hybrid-Orbitale $h_{1 .. 4}$ sind so gewählt, dass $\braket{h_i | h_j} = \delta_{ij}$, also

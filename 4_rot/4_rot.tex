@@ -128,16 +128,21 @@ mit dem Ruhe-Abstand $R_0$ und $m$ hier als \emph{reduziert} Masse. Wir stellen 
 R - R_0 = \frac{L^2}{m \, k \, R^3  } 
 %\approx \frac{L^2}{m \, k \, R_0^3  }
 \end{equation}
-%wobei wir ausgenutzt haben, das die relative Änderung von $R_0$ nach $R$ nur sehr klein sein wird. 
-Die Rotationsenergie entwickeln wir jetzt in einer Taylor-Reihe nach der Änderung des Bindungsabstands, und brechen gleich nach dem ersten Korrekturterm ab
+Bei der Rotationsenergie müssen wir nun berücksichtigen, dass auch Energie in der Feder steckt. Zusammen ist das also 
+\begin{equation}
+ E_\text{rot} = \frac{L^2}{2 m R^2}  + \frac{1}{2} k ( R - R_0)^2 = 
+\frac{L^2}{2 m R^2}  + \frac{L^4}{2 m^2 \, k \, R^6  } 
+\end{equation}
+Dies entwickeln wir jetzt in einer Taylor-Reihe nach der Änderung des Bindungsabstands, und brechen gleich nach dem ersten Korrekturterm ab
 \begin{align}
- E_\text{rot} = \frac{L^2}{2 m R^2} \approx &
- \frac{L^2}{2 m R_0^2}  + \left. \frac{\partial E_\text{rot}}{\partial R}
+ E_\text{rot} \approx &
+ \left. \l E_\text{rot}  \right|_{R_0}  
+  + \left. \frac{\partial E_\text{rot}}{\partial R}
  \right|_{R_0}  (R - R_0) \\
- = & \frac{L^2}{2 m R_0^2}  -  \frac{L^2}{m \, R_0^3  }   \frac{L^2}{m \, k \, R^3  } \\
-  \approx & \frac{L^2}{2 m R_0^2}  -  \frac{L^4}{m^2 \, k\, R_0^6  }   
+ = & \frac{L^2}{2 m R_0^2}  -  \frac{L^2}{m \, R_0^3  }   \frac{L^2}{m \, k \, R^3  }  + \frac{L^4}{2 m^2 \, k \, R_0^6  } \\ 
+  \approx & \frac{L^2}{2 m R_0^2}  -  \frac{L^4}{2 \, m^2 \, k\, R_0^6  }   
 \end{align}
-Im letzten Schritt haben wir die  Annahme $1/R^3 \approx 1 / R_0^3$ gemacht.
+Dabei haben wir die  Annahme $1/R^3 \approx 1 / R_0^3$ gemacht.\sidenote{und damit auch $1/R^6 \approx 1 / R_0^6$}
 %\begin{align}
 %\frac{1}{R^3} \approx & \frac{1}{R_0^3} + \frac{3}{R_0^4}  ( R - R_0) \\
 %= & \frac{1}{R_0^3}  \left( 1 - \frac{3 L^2}{m \, R_0^4  } \right)
@@ -148,7 +153,7 @@ Nun benutzen wir die Definition der Rotationskonstanten $B = h / (8 \pi^2  m  c 
 \end{equation}
 Die Konstante vor dem Korrekturterm nennt sich Zentrifugal-Dehnungskonstante $D$
 \begin{equation}
-D = \frac{4 \, h c \, B^2}{k \, R_0^2}
+D = \frac{2 \, h c \, B^2}{k \, R_0^2}
 \end{equation}
 Sie ist klein ($D/B \approx 10^{-4}$), aber messbar, insbesondere beim großem\sidenote{Bei $J = 100$ wären beide Terme gleich groß.} $J$. Die Auswahlregeln bleiben durch die Dehnung der Bindungslänge unverändert, da sich die Form oder Symmetrie der Moleküle nicht ändert. Die Äquidistanz der Linien im Spektrum wird dadurch aufgehoben. Mit steigendem $J$ rücken die Linien etwas näher zusammen.
 

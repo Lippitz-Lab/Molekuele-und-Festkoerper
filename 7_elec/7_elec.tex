@@ -72,14 +72,21 @@ wobei die Kern- ($\mathbf{R}$) und Elektronen-Koordinaten ($\mathbf{r}$) jeweils
  D =  \iint  \chi_f(\mathbf{R}) \, \phi_f(\mathbf{r} , \mathbf{R}) \; \hat{\mu}
  \,  \chi_i(\mathbf{R}) \, \phi_i(\mathbf{r}, \mathbf{R}) \, d \mathbf{r} \, d \mathbf{R} \
 \end{equation}
-Wir nehmen nun an, dass die Elektronen-Wellenfunktion $ \phi(\mathbf{r}, \mathbf{R})$  nur schwach von $\mathbf{R}$ abhängt, wir also $ \phi(\mathbf{r}, \mathbf{R})$  vor das Integral ziehen können:
+
+
+Wir teilen den Dipol-Operator $\hat{\mu}$ jetzt auf in einen Teil, der nur auf die Position der negativen Ladungen, also der Elektronen wirkt, und einen Teil, der nur auf die Position der positiven Ladungen, also der Kerne wirkt
 \begin{equation}
- D =  \int   \phi_f(\mathbf{r} , \mathbf{R}_0) \; \hat{\mu}
- \,   \phi_i(\mathbf{r}, \mathbf{R}_0) \, d \mathbf{r} 
-%
- \int  \chi_f(\mathbf{R})  \,  \chi_i(\mathbf{R}) \, d \mathbf{R} 
+\hat{\mu} = \hat{\mu}_e + \hat{\mu}_k = q_e \mathbf{r} + q_k \mathbf{R}
 \end{equation}
-Den Faktor 
+Damit erhalten wir
+\begin{align}
+D = & \braket{ \chi_f, \phi_f  |  \hat{\mu}_e |  \chi_i \phi_i} 
++ \braket{ \chi_f, \phi_f  |  \hat{\mu}_k |  \chi_i \phi_i}  \\
+= & \braket{\chi_f | \chi_i} \,  \braket{ \phi_f  |  \hat{\mu}_e |   \phi_i} 
++ \braket{\phi_f | \phi_i} \,
+\braket{ \chi_f |  \hat{\mu}_k |  \chi_i }  
+\end{align} 
+Im zweiten Schritt haben wir angenommen,  dass die Elektronen-Wellenfunktion $ \phi(\mathbf{r}, \mathbf{R})$  nur schwach von $\mathbf{R}$ abhängt. Die  Elektronen-Wellenfunktionen $\phi_i$ sind orthogonal zueinander. Der zweite Summand verschwindet also. Der Vorfaktor vor dem ersten ist nicht Null, weil die Kern-Wellenfunktionen zu verschiedenen Gleichgewichtsabständen gehören. Diesen Faktor 
 \begin{equation}
  F =  \braket{\chi_f | \chi_i} =
  \int  \chi_f(\mathbf{R})  \,  \chi_i(\mathbf{R}) \, d \mathbf{R} 
