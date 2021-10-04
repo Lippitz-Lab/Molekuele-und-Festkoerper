@@ -74,6 +74,7 @@
 \usepackage{morefloats}
 
 \usepackage{calc}
+\usepackage{tcolorbox}
 
 
 \input{tint_book_header}
@@ -118,6 +119,16 @@
   urlcolor=RoyalBlue
 }
 
+
+\usepackage[theme=default-plain,charsperline=62]{jlcode}
+
+
+%default, default-plain, grayscale, grayscale-plain and darkbeamer.
+
+
+
+
+
 \newcommand{\kapitelname}{Kapitel\ }
 \newcommand{\chapterauthors}{Markus Lippitz}
 \newcommand{\lastmod}{\Filemodtoday{\currfilepath}}
@@ -126,7 +137,7 @@
 \newcommand{\addtochapter}{%
 \vspace*{-12mm}{
 \setlength{\parindent}{0pt}
-\chapterauthors \newline \lastmod
+\chapterauthors  \newline \lastmod
 }
 \vspace*{12mm}
 }
@@ -145,6 +156,31 @@
   \let\amsmath@eqref\eqref
   \renewcommand\eqref[1]{{\let\my@tag@font\relax\amsmath@eqref{#1}}}
 \makeatother
+
+\newcounter{questions}[chapter]
+
+\newenvironment{questions}{
+\subsection{\normalsize Fragen}
+\begin{enumerate} \small
+\setcounter{enumi}{\value{questions}}
+}{
+\setcounter{questions}{\value{enumi}}
+\end{enumerate} 
+}
+
+\newtcolorbox{zusammen}{%
+  breakable,
+  enhanced jigsaw,
+ % borderline west={1pt}{0pt}{black},
+  sharp corners,
+  %boxrule=0pt,
+  %frame hidden,
+  left=1ex,right=1ex,
+  fonttitle={\bfseries},
+  coltitle={black},
+  title={Zusammenfassung:\ },
+  attach title to upper}
+
 
 \usepackage[titletoc]{appendix}
 \renewcommand{\appendixname}{Anhang}
@@ -167,6 +203,7 @@
 %\includeonly{anhang/drehimpuls}
 %\includeonly{anhang/fourier}
 %\includeonly{anhang/1-2atom}
+%\includeonly{anhang/julia}
 %\includeonly{11_wk/11_wk, anhang/wk_einstein_debye}
 
 
@@ -198,20 +235,20 @@
 \include{2_MO/2_MO_teil2}
 
 
-\part{Spektroskopie von Molekülen}
-
-\include{3_diel/3_diel}
-\include{4_rot/4_rot}
-\include{5_vib/5_vib}
-\include{6_raman/6_raman}
-\include{7_elec/7_elec}
-
-\part{Festkörperphysik I}
+%\part{Spektroskopie von Molekülen}
 %
-\include{8_gitter/8_gitter}
-\include{9_rezi/9_rezi}
-\include{10_phonon/10_phonon}
-\include{11_wk/11_wk}
+%\include{3_diel/3_diel}
+%\include{4_rot/4_rot}
+%\include{5_vib/5_vib}
+%\include{6_raman/6_raman}
+%\include{7_elec/7_elec}
+%
+%\part{Festkörperphysik I}
+%%
+%\include{8_gitter/8_gitter}
+%\include{9_rezi/9_rezi}
+%\include{10_phonon/10_phonon}
+%\include{11_wk/11_wk}
 
 
 
@@ -241,10 +278,11 @@
 \appendix
 \appendixpage
 
+\include{anhang/julia}
 \include{anhang/drehimpuls}
-\include{anhang/fourier}
-\include{anhang/1-2atom}
-\include{anhang/wk_einstein_debye}
+%\include{anhang/fourier}
+%\include{anhang/1-2atom}
+%\include{anhang/wk_einstein_debye}
 
 %-------
 %
