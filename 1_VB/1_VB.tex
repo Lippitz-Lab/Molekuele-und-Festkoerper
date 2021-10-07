@@ -1,6 +1,6 @@
 %\renewcommand{\lastmod}{\today}
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{\Filemodtoday{\currfilepath}}
+\renewcommand{\lastmod}{5. Oktober 2021}
 
 \chapter{Die Valenzbindungstheorie und die Form von Molekülen}
 
@@ -68,6 +68,12 @@ Die Molekülorbitaltheorie (MO) hingegen bildet die Gesamtwellenfunktion aufbaue
 \end{marginfigure}
 
  
+\begin{questions} 
+\item Wie groß ist ein Molekül?
+\item Welche physikalische Eigenschaft eine Moleküls wird bei Röntgenstreuung, STM und AFM abgebildet?
+\end{questions}
+ 
+ 
 \section{Vorbereitung}
 
 
@@ -92,14 +98,18 @@ Atomkerne sind viel schwerer als Elektronen. In der Born-Oppenheimer Näherung b
 wobei $\mathbf{r}_i$ Elektronenkoordinaten sind und $\mathbf{R}_i$ Kernkoordinaten.
 
 
-\begin{marginfigure}
-\includegraphics[width=0.8\textwidth]{\currfiledir potential.png}
-\caption{Die Energie-Eigenwert der Elektronen liefert das Bindungspotential.
-}
-\end{marginfigure}
+%\begin{marginfigure}
+%\includegraphics[width=0.8\textwidth]{\currfiledir potential.png}
+%\caption{Die Energie-Eigenwert der Elektronen liefert das Bindungspotential.
+%}
+%\end{marginfigure}
 
 
 Wir lösen also die Schrödingergleichung für freie Elektronen-Koordinaten, aber die Kern-Koordinaten werden als fix angenommen. Das \emph{Bindungspotential} stellt die Gesamtenergie des Systems dar, wenn für jeden Punkt der Kurve ein anderer aber jeweils fester Kern--Kern--Abstand angenommen wird.
+
+\begin{questions} 
+\item Was ist im Bindungspotential gebunden?
+\end{questions}
 
 \section{Das Wasserstoff-Molekül: $\sigma$-Bindung}
 
@@ -124,7 +134,7 @@ Wenn die beiden Atome nahe beieinander sind, kann man nicht mehr sagen, ob Elekt
 \end{equation}
 genauso gut möglich. In der Quantenmechanik löst man dies auf durch die Superpostion der beiden Möglichkeiten. Die Gesamt-Wellenfunktion  ist daher 
 \begin{equation}
- \Psi_{\pm} = \phi_A(\mathbf{r}_1) \, \phi_B(\mathbf{r}_2) \, \pm \, \phi_A(\mathbf{r}_2) \, \phi_B(\mathbf{r}_1)
+ \Psi_{\pm} = \phi_A(\mathbf{r}_1) \, \phi_B(\mathbf{r}_2) \, \pm \, \phi_A(\mathbf{r}_2) \, \phi_B(\mathbf{r}_1) \label{eq:VB_psi_pm}
 \end{equation}
 Dies löst die Schrödinger-Gleichung mit dem Gesamt-Hamilton-Operator
 \begin{equation}
@@ -148,9 +158,13 @@ Die Ortswellenfunktion des Orbitals $\Psi_{+}$ ist wechselt nicht das Vorzeichen
 
 \begin{marginfigure}
 \inputtikz{\currfiledir gerade_ungerade}
-\caption{Molekülorbitale, die hier aus atomaren 2s oder 2p-Orbitalen aufgebaut sind. Die Farbe kodiert das Vorzeichen der Wellenfunktion. Die Symmetrie $g$ oder $u$ ergibt sich aus der Punktspiegelung an der Mitte des Moleküls, hier durch den kleinen Punkt markiert.}
+\caption{Molekülorbitale, die hier aus atomaren 2s oder 2p-Orbitalen aufgebaut sind. Die Farbe kodiert das Vorzeichen der Wellenfunktion. Die Symmetrie $g$ oder $u$ ergibt sich aus der Punktspiegelung an der Mitte des Moleküls, hier durch den kleinen Punkt markiert. \label{fig:VB_AO_zu_MO}}
 \end{marginfigure}
 
+
+\begin{questions} 
+\item Was bedeutet 'symmetrisch' für das Vorzeichen in Gl. \ref{eq:VB_psi_pm}? WIe sieht die dazu passende Spin-Wellenfunktion aus?
+\end{questions}
 
 
 \section{Die $\pi$-Bindung}
@@ -169,19 +183,27 @@ Aus den p$_x$ und p$_y$-Orbitalen erhält man je eine $\pi$-Bindung: Die hantelf
 Insgesamt ist \ch{N2} also aus einer $\sigma$-Bindung und zwei $\pi$-Bindungen aufgebaut.
 
 
-\section{Bindungswinkel}
+\begin{questions} 
+\item Decken sie die MO-Spalte in Abbildung  \ref{fig:VB_AO_zu_MO} ab und vergewissern Sie sich, dass Sie die Art der Bindung und die Bezeichnung der Orbitale angeben können.
 
-%
-\begin{marginfigure}
-\includegraphics[width=\textwidth]{\currfiledir h20.png}
-\caption{Bindungswinkel in  \ch{H2O}. }
-\end{marginfigure}
-%
-Wenn drei oder mehr Atome ein Molekül bilden, dann kann man den Winkel einer Bindung definieren und oft aus der Valenzbindungstheorie (näherungsweise) vorhersagen. Als Beispiel betrachten wir \ch{H2O}. Die Elektronenkonfiguration von Sauerstoff ist [He]2s$^2$2p$_x^1$2p$_y^1$2p$_z^2$. Für die Bindung relevant sind die ungepaarten Elektronen in den hier\sidenote{Typischerweise ist $z$ die Symmetrieachse. In diesem Beispiel also senkrecht auf die Bindungen, in zwei-atomigen Molekülen aber die Bindungsachse.} p$_x$ und p$p_y$ genannten Orbitalen. Diese gehen jeweils eine $\sigma$-Bindung mit dem 1s-Elektron des Wasserstoffs ein. Das p$_y$-Orbital steht senkrecht auf dem  p$_x$-Orbital von Sauerstoff. Daher erwarten wir einen Bindungswinkel von 90$^\circ$. Dies ist nahe aber nicht exakt am experimentellen Wert von 104.5$^\circ$.
+\item Schauen Sie ggf. noch einmal in der Atomphysik nach, was eigentlich [He]2s$^2$2p$_x^1$2p$_y^1$2p$_z^1$ bedeutet und wo man diese Information findet.
+\end{questions}
 
 
 
-\section{Hybridisierung}
+\section{Bindungswinkel  in  \ch{H2O}}
+
+
+\textit{Lesen Sie Kapitel 9.7.1 Das \ch{H2O}-Molekül in \cite{Demtröder_ep3}. Wie kann man den Bindungswinkel von \ch{H2O} verstehen? In erster Näherung ergibt sich 90 Grad, in zweiter Näherung ein Wert, der näher am experimentell gefundenen liegt. \newline Schrieben und skizzieren Sie hier Ihre Erkenntnisse. }
+
+\vspace*{10cm}
+
+\begin{questions} 
+\item Wie kommt es zur Form der Moleküle?
+\end{questions}
+
+
+\section{Hybridisierung von Kohlenstoff-Orbitalen}
 
 Insbesondere in der organischen Chemie der Kohlenwasserstoffe spielt die Hybridisierung der Kohlenstoff-Orbitale eine wichtige Rolle. Im Kohlenstoff-Atom besteht nur ein geringer Energieunterschied zwischen der energetisch niedrigsten Elektronenkonfiguration
 [He]2s$^2$2p$_x^1$2p$_y^1$2p$_z^0$ und der nächst höheren [He]2s$^1$2p$_x^1$2p$_y^1$2p$_z^1$. Dies bedeutet, dass der Energieunterschied zwischen dem 2s und dem 2p-Orbital in Kohlenstoff sehr gering ist, und insbesondere 
@@ -219,11 +241,16 @@ Analog gibt es auch die sp$^2$ und die sp-Hybridisierung.  Die sp$^2$-Hybridisie
 
 Ein Beispiel für die sp-Hybridisierung ist Ethin (\ch{C2H2}, \ch{HC+CH} ).
 
+\begin{questions} 
+\item Wie entscheidet sich, ob die 'normalen' oder die 'hybriden' Orbitale zum Einsatz kommen?
+\item Was ist bei der  Hybridisierung  so besonders an Kohlenstoff?
+\end{questions}
 
+\newpage
 
 \section{Zusammenfassung}
 
-Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte.
+\textit{Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte und die am Anfang genannten Ziele des Kapitels.}
 
 \vspace*{10cm}
 

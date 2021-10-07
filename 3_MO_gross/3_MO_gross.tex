@@ -1,5 +1,6 @@
 
-%\renewcommand{\lastmod}{\today}
+\renewcommand{\chapterauthors}{Markus Lippitz}
+\renewcommand{\lastmod}{5. Oktober 2021}
 
 \chapter{Molekülorbitaltheorie II -- Mehr Elektronen und mehr Kerne}
 
@@ -27,12 +28,16 @@ Wie benutzen die Molekülorbitaltheorie um Moleküle jenseits von \ch{H2+} zu be
 
 
 
+
+
+
 Bevor wir beginnen, weitere Elektronen in die Molekülorbitale einzufüllen, müssen wir kurz die Nomenklatur der Zustände diskutieren. Diese ist analog zu Mehrelektronen-Atomen. Ausführlich dargestellt ist sie beispielsweise in \cite{Demtröder_molekuelphysik} oder \cite{Demtröder_AMP}.
 
 
 
 In der Atomphysik gibt es für jedes Elektron die Quantenzahlen $n$, $l$, $m_l$, $s$, $m_s$, $j$, $m_j$, die (bis auf $n$) die Länge und die Orientierung eines Drehimpuls-artigen Vektors anzeigen. Die Größe des Bahndrehimpulses, also die 
-Quantenzahl $l$ wird als s,p,d,f, ... angegeben. In Mehrelektronen-Atomen bildet man vektorielle Summen über die einzelnen Vektoren der Elektronen. Je nach Kopplungsschema addiert man zunächst alle Bahndrehimpulse $\vec{l}$ und Spins $\vec{s}$, oder alle Gesamtdrehimpulse $\vec{j}$. Das Ergebnis wird dann wieder als Längen- und Orientierungsquantenzahl angegeben, also $L$, $M_L$, $S$, $M_S$, $J$ und $M_J$.
+Quantenzahl $l$ wird als s,p,d,f, ... angegeben. In Mehrelektronen-Atomen bildet man vektorielle Summen über die einzelnen Vektoren der Elektronen. Je nach Kopplungsschema addiert\sidenote{Zur Addition von Drehimpulses siehe Anhang \ref{chap:anhang_drehimpuls}}
+man zunächst alle Bahndrehimpulse $\vec{l}$ und Spins $\vec{s}$, oder alle Gesamtdrehimpulse $\vec{j}$. Das Ergebnis wird dann wieder als Längen- und Orientierungsquantenzahl angegeben, also $L$, $M_L$, $S$, $M_S$, $J$ und $M_J$.
 
 
 Der wichtigste Unterschied in Molekülen ist, dass die Vorzugsrichtung oder z-Achse durch die Kern--Kern--Achse immer gegeben ist. Da Drehimpulserhaltung Rotationssymmetrie voraussetzt, ist in Molekülen nur noch die Drehimpuls-Komponenten entlang der Kern--Kern--Achse eine gute Quantenzahl. $m_l$ übernimmt also die Rolle von $l$ in der Atomphysik. Manchmal werden noch $n$ und  $l$  angegeben, was dann  aber nur noch aussagt, in welchen Quantenzahlen $n$, $l$ das Elektron landen würde, wenn das Molekül zu einzelnen Atomen auseinandergezogen würde. Manchmal sind stattdessen auch die Orbitale eines Typs nach aufsteigender Energie durchnummeriert.
@@ -65,11 +70,14 @@ Alles zusammen
 
 So wie es hier dargestellt ist, gilt dies für di-atomare Moleküle. Bei größeren Molekülen wird auf die Symmetrie-Gruppe zurückgegriffen\sidenote{Etwas mehr dazu zu Beginn der Festkörperphysik, ansonsten Kristallographie.} Häufig wird dann nur noch die Multiplizität des Zustands als Singulett (S) oder Triplett (T) angegeben und die Zustände in energetisch aufsteigender Reihenfolge nummeriert.
 
+\begin{questions} 
+\item Gehen Sie noch einmal zurück zu Abbildung \ref{fig:VB_AO_zu_MO} ab und vergewissern Sie sich, dass Sie die Art der Bindung und die Bezeichnung der Molekül-Orbitale angeben können.
+\end{questions}
 
 
+\section{Beispiel: Sauerstoff}
 
-
-Als Beispiel betrachten wir das Sauerstoff-Molekül \ch{O2}. Atomarer Sauerstoff hat die Elektronenkonfiguration [He]2s$^2$2p$_x^2$2p$_y^1$2p$_z^1$. Die beiden ungepaarten p-Elektronen tragen zur Bindung bei. Im Molekül entstehen volle Orbitale, sowie zwei Elektronen in einem $2\pi_g^\star$-Orbital.\sidenote{siehe auch nächsten Abschnitt} Nur diese beiden Elektronen müssen wir betrachten, da volle Schalen bzw. volle Orbitale in Summe nicht beitragen. Die Orientierung der  Bahndrehimpulse ist  $\lambda = 1$ bzw. $m_l = \pm 1$, so dass die Orientierung des Gesamt-Bahndrehimpulses $M_L = 0$ oder $\pm 2$ sein kann ($\Sigma$ oder $\Delta$). Analog für den Spin $m_s = \pm 1/2$ und $M_S = 0 $ oder $\pm 1$. Dies ergibt zunächst  vier  Kombinationen. Es können die beiden Elektronen aber nicht sowohl im $m_l$ als auch in $m_s$ übereinstimmen. Dies schließt den Zustand $M_L = \pm 2$; $M_s = \pm 1$ aus.
+Als Beispiel betrachten wir das Sauerstoff-Molekül \ch{O2}. Atomarer Sauerstoff hat die Elektronenkonfiguration [He]2s$^2$2p$_x^2$2p$_y^1$2p$_z^1$. Die beiden ungepaarten p-Elektronen tragen zur Bindung bei. Im Molekül entstehen volle Orbitale, sowie zwei Elektronen in einem $2\pi_g^\star$-Orbital.\sidenote{wird im nächsten Abschnitt erklärt} Nur diese beiden Elektronen müssen wir betrachten, da volle Schalen bzw. volle Orbitale in Summe nicht beitragen. Die Orientierung der  Bahndrehimpulse ist  $\lambda = 1$ bzw. $m_l = \pm 1$, so dass die Orientierung des Gesamt-Bahndrehimpulses $M_L = 0$ oder $\pm 2$ sein kann ($\Sigma$ oder $\Delta$). Analog für den Spin $m_s = \pm 1/2$ und $M_S = 0 $ oder $\pm 1$. Dies ergibt zunächst  vier  Kombinationen. Es können die beiden Elektronen aber nicht sowohl im $m_l$ als auch in $m_s$ übereinstimmen. Dies schließt den Zustand $M_L = \pm 2$; $M_s = \pm 1$ aus.
 \begin{equation}
  ^1\Sigma \quad ^3\Sigma \quad ^1\Delta \qquad \text{Pauli-verboten:} \quad ^3\Delta  
 \end{equation}
@@ -79,6 +87,9 @@ Die Symmetrie ist bei allen drei Zuständen gerade, da alle aus  Elektronen in e
 \end{equation}
 Genau wie in der Atomphysik kann man mit den Hund'schen Regel den energetisch niedrigsten Zustand finden. Maximales $S$ gewinnt, also ist $^3\Sigma_g^- $ der Grundzustand. Es ist selten, dass der Grundzustand ein Triplett-Zustand ist. Quasi immer ist der Singulett-Zustand energetisch niedriger. Dies hängt davon ab, in welchem Orbital die letzten, energetisch höchsten Elektronen laden, die eingefüllt werden, wie wir im nächsten Abschnitt sehen.
 
+\begin{questions} 
+\item Warum ist der Zustand $^3\Delta $ Pauli-verboten?
+\end{questions}
 
 
 
@@ -87,7 +98,7 @@ Genau wie in der Atomphysik kann man mit den Hund'schen Regel den energetisch ni
 
 Um Moleküle mit mehr als einem Elektron zu beschreiben verfahren wir genauso wie in der Atomphysik bei dem Übergang von Wasserstoff-Atom zu Mehr-Elektronen-Atomen: wir ignorieren die Wechselwirkung der Elektronen untereinander und füllen nach und nach Elektronen in Ein-Elektronen-Molekül-Orbitale und multiplizieren mit einer passenden Spin-Wellenfunktion. Diese Idee ist mit den Namen Hund, Mulliken und Bloch verknüpft.
 
-Zunächst formen wir Molekül-Orbitale als Linearkombination vom Atom-Orbitalen, benutzen also LCAO. Beides sind Ein-Elektronen-Orbitale, also Raum-Anteile der Wellenfunktion. Wenn in den zu bindenden Atomen viele Elektronen vorhanden sind, dann tragen auch viele Orbitale bei.  Allerdings sind nicht alle Orbitale kombinierbar, sondern nur solche, die in der Gruppentheorie die gleiche Symmetrie aufweisen. Dies verallgemeinert die obige Diskussion zum verschwindenden Austausch-Integral. Vereinfachend kann man auch sagen, dass nur Orbitale ähnlicher Energie kombiniert werden, also 1s mit 1s, 2s mit 2s usw. 
+Zunächst formen wir Molekül-Orbitale als Linearkombination vom Atom-Orbitalen, benutzen also LCAO. Beides sind Ein-Elektronen-Orbitale, also Raum-Anteile der Wellenfunktion. Wenn in den zu bindenden Atomen viele Elektronen vorhanden sind, dann tragen auch viele Orbitale bei.  Allerdings sind nicht alle Orbitale kombinierbar, sondern nur solche, die in der Gruppentheorie die gleiche Symmetrie aufweisen. Dies verallgemeinert die  Diskussion in letzten Kapitel zum verschwindenden Austausch-Integral. Vereinfachend kann man auch sagen, dass nur Orbitale ähnlicher Energie kombiniert werden, also 1s mit 1s, 2s mit 2s usw. 
 
 %\tikzexternaldisable
 \begin{marginfigure}
@@ -163,6 +174,14 @@ mit $n$ ($n^\star$) der Anzahl der Elektronen\sidenote{nicht Paare !} in bindend
 
 In der optischen Molekül-Spektroskopie werden Übergänge zwischen verschiedenen Molekülorbitalen relevant werden. In diesem Zusammenhang bezeichnet man das niedrigste noch unbesetzte Orbital als LUMO (lowest unoccupied molecular orbital), das höchste besetzte als HOMO (highest occupied molecular orbital).
 
+\begin{questions} 
+\item Vergewissern Sie sich, dass Sie die vier Spin-Eigenfunktionen von zwei Spin-1/2-Systemen kennen und auch deren Symmetrie.
+
+\end{questions}
+
+
+\section{Noch einmal Sauerstoff}
+
 Betrachten wir noch einmal als Beispiel das Sauerstoff-Molekül \ch{O2}.
 Atomarer Sauerstoff hat die Elektronenkonfiguration [He]2s$^2$2p$_x^2$2p$_y^1$2p$_z^1$. Die atomaren 1s und 2s-Schalen sind komplett gefüllt. Damit sind auch bei den  molekularen 1s$\sigma$ und 2s$\sigma$-Orbitalen sowohl das bindende als auch das anti-bindende Orbital gefüllt. Die Bindungsordung ist Null und diese Elektronen tragen nicht zur Bindung bei. Es verbleiben 
 insgesamt 4 2p-Elektronen pro Atom, 8 pro Molekül. Entsprechend der in Abbildung
@@ -196,12 +215,19 @@ insgesamt 4 2p-Elektronen pro Atom, 8 pro Molekül. Entsprechend der in Abbildun
     }
     
 \end{modiagram}
-\caption{Molekülorbitale von Sauerstoff aufgebaut aus den Atomorbitalen.
+\caption{Orbitaldiagramm von Sauerstoff. Die Molekülorbitale sind aus   den Atomorbitalen aufgebaut.
  Die relative Lage der Orbitale 2p$\sigma_g$ und 2p$\pi_u$ hängt von der Kernladungszahl ab. Die hier gezeigte Lage gilt für \ch{O2} und \ch{F2}. \ch{N2} und leichtere Moleküle besitzen die getauschte Anordnung. \label{fig:MO_orbitaleX2}
 
 }
 \end{figure}
 %\tikzexternalenable
+
+\begin{questions} 
+\item Warum sind die beiden zuletzt eingefüllten Elektronen 'ungepaart', also in zwei verschiedenen Orbitalen? Worin unterscheiden sich diese beiden Orbitale?
+
+\end{questions}
+
+
 
 \newpage
 \section{Mehr als zwei Atom-Kerne: Hückel-Näherung}
@@ -259,10 +285,21 @@ Die Hückel-Näherung in der Molekülphysik entspricht der \emph{tight binding} 
 
 %https://en.wikipedia.org/wiki/H%C3%BCckel_method#Delocalization_energy,_%CF%80-bond_orders,_and_%CF%80-electron_populations
 
+\begin{questions} 
+\item Vergleichen Sie die Elektronen-Eigenfunktionen von Benzol in der Hückel-Näherung mit denen eines (ggf. ringförmigen) Kastens.
+\end{questions}
+
+
+\section{Unterschied VB --- MO}
+
+\textit{Was ist nun eigentlich der Unterschied zwischen der Valenzbindungstheorie (VB) und der Molekülorbitaltheorie (MO) ?  Lesen Sie eine Antwort dazu im Internet \href{ https://socratic.org/questions/what-is-the-basic-difference-between-valence-bond-theory-and-molecular-orbital-t}{hier}.  Würden Sie dem zustimmen? Würden Sie andere Schwerpunkte setzen? Machen Sie sich hier  Notizen dazu.}
+
+
+\vspace*{10cm}
 
 \section{Zusammenfassung}
 
-Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte.
+\textit{Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte und die am Anfang genannten Ziele des Kapitels.}
 
 \vspace*{10cm}
 

@@ -1,4 +1,5 @@
-%\renewcommand{\lastmod}{\today}
+\renewcommand{\chapterauthors}{Markus Lippitz}
+\renewcommand{\lastmod}{5. Oktober 2021}
 
 \chapter{Molekülorbitaltheorie I -- Das aller einfachste Molekül}
 
@@ -30,27 +31,27 @@ Die Schrödinger-Gleichung
 \end{equation}
 ist eine Differentialgleichung und nicht immer einfach zu lösen. Hier hilft das Variationsprinzip. Für eine beliebige Wellenfunktion  $\ket{\Psi}$ gilt
 \begin{equation}
- E = \frac{\braket{\Psi | H | \Psi}} {\braket{\Psi | \Psi}} \ge E_0
+ E = \frac{\braket{\Psi | H | \Psi}} {\braket{\Psi | \Psi}} \ge E_0 \quad .
  \label{eq:MO_variation}
 \end{equation}
-Die Mathematik sagt, dass $E$ minimal wird, wenn  $\ket{\Psi}$ die Schrödinger-Gleichung löst. Aber auch wenn $\ket{\Psi}$ keine Lösung der Schrödinger-Gleichung  ist, kann man Gl.~\ref{eq:MO_variation} einfach ausrechnen. Wir probieren  also verschiedene Test-Funktionen durch und versuchen, die Energie nach Gl.~\ref{eq:MO_variation} zu minimieren. Dadurch nähern wir uns der echten Eigenfunktion immer mehr an, die Lösung der Schrödinger-Gleichung ist. Leider wissen wir nicht, ob wir man nicht durch noch bessere Test-Funktionen noch kleinere Werte von $E$ erreichen würde.
+Die Mathematik sagt, dass $E$ minimal wird, wenn  $\ket{\Psi}$ die Schrödinger-Gleichung löst. Aber auch wenn $\ket{\Psi}$ keine Lösung der Schrödinger-Gleichung  ist, kann man Gl.~\ref{eq:MO_variation} einfach ausrechnen. Wir probieren  also verschiedene Test-Funktionen durch und versuchen, die Energie nach Gl.~\ref{eq:MO_variation} zu minimieren. Dadurch nähern wir uns der echten Eigenfunktion immer mehr an, die Lösung der Schrödinger-Gleichung ist. Leider wissen wir nicht, ob wir  nicht durch noch bessere Test-Funktionen noch kleinere Werte von $E$ erreichen würde.
 
 Sei die Testfunktion
 \begin{equation}
- \ket{\Psi} = c_1 \ket{\phi_1} + c_2 \ket{\phi_2}
+ \ket{\Psi} = c_1 \ket{\phi_1} + c_2 \ket{\phi_2} \label{eq:MO_psi}
 \end{equation}
 mit normierten  $\ket{\phi_i}$ und reell-wertigen Koeffizienten $c_i$. Damit erhält man
 \begin{eqnarray}
 \braket{\Psi | \Psi}  &= & c_1^2 + c_2^2  + 2 c_1 c_2 \underbrace{\braket{\phi_1 | \phi_2}}_{= S}\\
 \braket{\Psi |  H | \Psi} &=& c_1^2 \underbrace{\braket{\phi_1 |  H | \phi_1 }}_{= H_{11}} +
 										c_2^2 \underbrace{\braket{\phi_2 |  H | \phi_2 }}_{= H_{22}} +
-								2 c_1 c_2 \underbrace{\braket{\phi_1 |  H | \phi_2 }}_{= H_{12}} 
+								2 c_1 c_2 \underbrace{\braket{\phi_1 |  H | \phi_2 }}_{= H_{12}}  \quad .
 \end{eqnarray}
 Dabei bezeichnet $S$ das Überlapp-Integral der beiden Wellenfunktionen, und $H_{ij}$ die Matrix-Elemente des Hamilton-Operators. Die Diagonalelemente $H_{11}$ und $H_{22}$ geben die Coulomb-Energie an, die Außerdiagnoalelemente $H_{12} = H_{21}$ die Austausch-Energie\sidenote{mehr zu den Namen im nächsten Abschnitt}. Mit diesen Abkürzungen kann man die Eigen-Energie schreiben als
 \begin{equation}
-  E = \frac{c_1^2 H_{11} + c_2^2 H_{22} + 2 c_1 c_2 H_{12}}{c_1^2 + c_2^2 + 2 c_1 c_2 S}  \label{eq:MO_e_variation}
+  E = \frac{c_1^2 H_{11} + c_2^2 H_{22} + 2 c_1 c_2 H_{12}}{c_1^2 + c_2^2 + 2 c_1 c_2 S}  \quad . \label{eq:MO_e_variation}
 \end{equation}
-Für eine minimale Eigenen-Energie $E$ müssen die partiellen Ableitungen nach $c_i$ beide Null sein, oder
+Für eine minimale Eigenen-Energie $E$ müssen die partiellen Ableitungen nach $c_i$ beide Null sein. Nach ein paar Umformungen findet man zwei Lösungen $E_\pm$ für die minimale Energie $E$ als
 \begin{equation}
  \begin{vmatrix}
    H_{11} - E & H_{12} - E \, S \\  H_{12} - E \, S & H_{22} - E \\
@@ -58,9 +59,14 @@ Für eine minimale Eigenen-Energie $E$ müssen die partiellen Ableitungen nach $
 = 0
 \quad
 \text{oder} \quad
-E_\pm = \frac{H_{11} \pm H_{12}}{1 \pm S}
+E_\pm = \frac{H_{11} \pm H_{12}}{1 \pm S} \quad ,
 \end{equation}
 wobei wir im letzten Schritt angenommen haben, dass $H_{11} = H_{22}$.
+
+
+\begin{questions} 
+\item Vollziehen Sie Gl. \ref{eq:MO_psi} bis \ref{eq:MO_e_variation} nach.
+\end{questions}
 
 \section{Das Wasserstoff-Molekül-Ion H$_2^+$}
 
@@ -69,14 +75,14 @@ Als Beispiel für das Variationsprinzip in der Molekülorbitaltheorie betrachten
 Wir benutzen wie immer die Born-Oppenheimer-Näherung. Die Kerne bewegen sich also nicht und tragen somit auch nicht zur kinetischen Energie bei. Der Abstand des einzigen Elektrons zu den beiden Kernen sei $r_1$ und $r_2$. Der Hamilton-Operator des Gesamtsystems ist
 \begin{equation}
 \hat{H} =  - \frac{\hbar^2}{2 m} \nabla^2 - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{1}} - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}}
-= \hat{H}_1  - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}}
+= \hat{H}_1  - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}} \quad ,
 \end{equation} 
 wobei $\hat{H}_1 $ der Hamilton-Operator des Wasserstoff-\emph{Atoms} ist. Die Coulomb-Energie der beiden Kerne untereinander hängt nur vom Kern--Kern--Anstand ab und ist somit eine Konstante, die später zur Gesamtenergie addiert werden wird.
 
 Wir suchen Molekül-Orbitale $\ket{\Psi}$, die mit $\hat{H}$ die Schrödinger-Gleichung lösen, und kennen bereits die Lösungen für $\hat{H}_1$:
 \begin{equation}
 \hat{H} \ket{\Psi} = E \ket{\Psi} \quad \text{und} \quad 
-\hat{H}_1 \ket{\phi} = E_1 \ket{\phi} 
+\hat{H}_1 \ket{\phi} = E_1 \ket{\phi}  \quad .
 \end{equation}
 Da die beiden Kerne identisch sind, gibt es solche Lösungen $\ket{\phi_2}$ in der gleichen Form aber zentriert um eine andere Kernposition auch für den zweiten Kern. Linearkombinationen von diesen  $\ket{\phi_{1,2}}$ nehmen wir jetzt als Testfunktion $\ket{\Psi}$. Dies nennt man \emph{linear combination of atomic orbitals} (LCAO).
 
@@ -90,7 +96,7 @@ Wir folgen dem oben dargestellten Variationsprinzip und müssen nur die drei Int
 %
 Das Integral $S$ beschreibt den räumlichen Überlapp der beiden Atom-Wellenfunktionen, wenn die einen um Kern 1, die andere um Kern 2 zentriert ist:
 \begin{equation}
- S = \braket{\phi_1 | \phi_2} = \int \phi_1^\star( \mathbf{r} )  \, \phi_2( \mathbf{r})   \, d\mathbf{r}
+ S = \braket{\phi_1 | \phi_2} = \int \phi_1^\star( \mathbf{r} )  \, \phi_2( \mathbf{r})   \, d\mathbf{r} \quad .
 \end{equation}
 Dabei bezeichnet $\mathbf{r}$ die Position des Elektrons. Die Wellenfunktion $\phi_i$ ist um den Kern an Position $\mathbf{r}_{i}$ zentriert.\sidenote{Wasserstoff-Wellenfunktionen sind reell-wertig.} Da die $\ket{\phi}$ normiert sind, liegt der Wert von $S$ zwischen $0$ und $1$.
 
@@ -107,8 +113,8 @@ Dabei bezeichnet $\mathbf{r}$ die Position des Elektrons. Die Wellenfunktion $\p
 Dieser Term beschreibt die Coulomb-Energie des Elektrons in der atomaren Wellenfunktion $\phi_1$, aber in Gegenwart beider Kerne:
 \begin{eqnarray}
 H_{11} &= &  \braket{\phi_1 | \hat{H} | \phi_1} = \braket{\phi_1 | \hat{H}_1 | \phi_1}  - \braket{\phi_1 |  \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}} | \phi_1}  \\
- & = & E_1 - \frac{e^2}{4 \pi \epsilon_0} \int \frac{|\phi_1(\mathbf{r})|^2 }{|\mathbf{r} - \mathbf{r}_2  |} \, d\mathbf{r} = E_1 + C
-\end{eqnarray}
+ & = & E_1 - \frac{e^2}{4 \pi \epsilon_0} \int \frac{|\phi_1(\mathbf{r})|^2 }{|\mathbf{r} - \mathbf{r}_2  |} \, d\mathbf{r} = E_1 + C \quad .
+\end{eqnarray} 
 Das Ergebnis ist die Eigen-Energie des Elektrons im Wasserstoff-\emph{Atom}, korrigiert im ein Überlappintegral der Ladungsdichte ${|\phi_1(\mathbf{r})|^2 }$ um den einen Kern im Coulomb-Potential des anderen Kerns. Der Korrekturterm $C$ ist negativ.
 
 
@@ -123,7 +129,7 @@ Das Ergebnis ist die Eigen-Energie des Elektrons im Wasserstoff-\emph{Atom}, kor
 Die Austausch-Wechselwirkung ist ein rein quantenmechanischer Effekt.
 \begin{eqnarray}
 H_{12} &= &  \braket{\phi_1 | \hat{H} | \phi_2} = \braket{\phi_1 | \hat{H}_1 | \phi_2}  - \braket{\phi_1 |  \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r_{2}} | \phi_2}  \\
- & = & E_1 \, S - \frac{e^2}{4 \pi \epsilon_0} \int \frac{ \phi_1^\star(\mathbf{r}) \, \phi_2(\mathbf{r})  }{|\mathbf{r} - \mathbf{r}_2  |} \, d\mathbf{r} = E_1 \, S + A
+ & = & E_1 \, S - \frac{e^2}{4 \pi \epsilon_0} \int \frac{ \phi_1^\star(\mathbf{r}) \, \phi_2(\mathbf{r})  }{|\mathbf{r} - \mathbf{r}_2  |} \, d\mathbf{r} = E_1 \, S + A \quad .
 \end{eqnarray}
 Die Austausch-Dichte $\phi_1^\star(\mathbf{r}) \, \phi_2(\mathbf{r})$ ist ähnlich einer Ladungsdichte $|\phi(\mathbf{r})|^2$, nur dass zwei verschiedenen Wellenfunktionen eingehen. Das Elektron wechselt sozusagen zwischen der Zugehörigkeit zu Kern 1 und 2. Der Korrekturterm $A$ ist ebenfalls negativ.
 
@@ -131,11 +137,11 @@ Die Austausch-Dichte $\phi_1^\star(\mathbf{r}) \, \phi_2(\mathbf{r})$ ist ähnli
 
 Mit diesen Integralen wird die Gesamtenergie
 \begin{equation}
-E_\pm = \frac{H_{11} \pm H_{12}}{1 \pm S} = E_1 + \frac{C \pm A}{1 \pm S}
+E_\pm = \frac{H_{11} \pm H_{12}}{1 \pm S} = E_1 + \frac{C \pm A}{1 \pm S} \quad .
 \end{equation}
 Die zugehörigen Molekül-Orbitale sind die symmetrische und die anti-symmetrische Kombination der Atom-Orbitale
 \begin{equation}
-\ket{\Psi_\pm }= \frac{1}{\sqrt{2 (1 \pm  S)}} \, \left( \ket{\phi_1} \pm \ket{\phi_2} \right)
+\ket{\Psi_\pm }= \frac{1}{\sqrt{2 (1 \pm  S)}} \, \left( \ket{\phi_1} \pm \ket{\phi_2} \right) \quad .
 \end{equation}
 
 Zur Berechnung der Bindungsenergie nehmen wir jetzt die nur vom Kern--Kern--Abstand $R$ abhängende Coulomb-Energie der Kerne wieder hinzu. 
@@ -143,7 +149,7 @@ Zur Berechnung der Bindungsenergie nehmen wir jetzt die nur vom Kern--Kern--Abst
 \begin{eqnarray}
  E_\text{Bindung} &=&  E_\text{Molekül} -  E_\text{Atom} \\
   &=&   E_1 + \frac{C \pm A}{1 \pm S} + \frac{e^2}{4 \pi \epsilon_0} \frac{1}{R} - E_1 \\
-   &=&\frac{C }{1 \pm S}  + \frac{e^2}{4 \pi \epsilon_0} \frac{1 + S }{R}  \pm \frac{ A}{1 \pm S}    \label{eq:MO_E_bindung_h2p}
+   &=&\frac{C }{1 \pm S}  + \frac{e^2}{4 \pi \epsilon_0} \frac{1 + S }{R}  \pm \frac{ A}{1 \pm S}   \quad . \label{eq:MO_E_bindung_h2p}
 \end{eqnarray}
 Numerische Rechnungen zeigen, dass das Überlapp-Integral $S$ keinen Entscheidenden Einfluss auf das Ergebnis hat, wir es hier also nicht weiter betrachten müssen.\sidenote{Für H$_2^+$ lassen sich relativ einfache geschlossene Formen für die Integrale angeben, siehe \cite{McQuarrie2008} }
 
@@ -173,6 +179,15 @@ Der Bindungsabstand $R_0$ ist der Abstand minimaler Energie. Das Potential kann 
 
 \caption{Skizze des Bindungspotentials $E_{\text{Bindung}, \pm}$ vom Kern--Kern--Abstand $R$. Das bindende Potential $E_+$ zeigt ein Minimum bei $R_0$, das anti-bindende Potential $E_-$ hat nur ein Minimum im Unendlichen.}
 \end{marginfigure}
+
+
+
+
+\begin{questions} 
+\item Die drei Integrale $S$, $C$ und $A$ sind von zentraler Bedeutung. Sie sollten sie sowohl als Gleichung als auch als Skizze darstellen können.
+
+\item Warum sagt man 'Die Austausch-Wechselwirkung ist ein rein quantenmechanischer Effekt' ?
+\end{questions}
 
 
 
@@ -221,12 +236,22 @@ Unsere Rechnung ergibt ein qualitativ korrektes Bindungspotential für das  Wass
 
 Auch erfüllt unser Modell den Virialsatz nicht. Für ein Coulomb-Potential müsste der Mittelwert der potentiellen Energie $\braket{\hat{U}}$ genau $-2$ mal dem Mittelwert der kinetischen  Energie $\braket{\hat{T}}$ sein. In unserem Modell ist der Faktor\footcite{McQuarrie2008} aber nur ca. $-1.6$.
 
-Die Ursache für beides ist, dass unsere Testfunktion $c_1 \ket{\phi_1} + c_2 \ket{\phi_2}$ zwar die Schrödinger-Gleichung löst, aber nicht die geringste Energie in Gl. \ref{eq:MO_variation} liefert. Die Testfunktion ist zu einfach und muss weitere Terme enthalten. Damit kann die Übereinstimmung mit dem Experiment so gut werden, dass keine Unterschiede im Rahmen der Messgenauigkeit festgestellt werden können. Beispiele finden sich in \cite{McQuarrie2008} und \cite{Demtröder_AMP} .
+Die Ursache für beides ist, dass unsere Testfunktion $c_1 \ket{\phi_1} + c_2 \ket{\phi_2}$ zwar die Schrödinger-Gleichung löst, aber nicht die geringste Energie in Gl. \ref{eq:MO_variation} liefert. Die Testfunktion ist zu einfach und muss weitere Terme enthalten.
 
+\ \\
+
+\textit{Lesen Sie in \cite{Demtröder_AMP}  den Abschnitt '9.1.3 Improvements to the LCAO ansatz'. Welche Anpassung an der Testfunktion verbessert das Ergebnis? Wie kann man das verstehen? Machen Sie sich hier Notizen dazu.
+}
+
+\vspace*{10cm}
+
+
+\newpage
 
 \section{Zusammenfassung}
 
-Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte.
+\textit{Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte und die am Anfang genannten Ziele des Kapitels.}
+
 
 \vspace*{10cm}
 
