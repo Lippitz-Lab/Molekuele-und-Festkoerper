@@ -105,7 +105,7 @@ wobei $\mathbf{r}_i$ Elektronenkoordinaten sind und $\mathbf{R}_i$ Kernkoordinat
 %\end{marginfigure}
 
 
-Wir lösen also die Schrödingergleichung für freie Elektronen-Koordinaten, aber die Kern-Koordinaten werden als fix angenommen. Das \emph{Bindungspotential} stellt die Gesamtenergie des Systems dar, wenn für jeden Punkt der Kurve ein anderer aber jeweils fester Kern--Kern--Abstand angenommen wird.
+Wir lösen also die Schrödingergleichung für freie Elektronen-Koordinaten, aber die Kern-Koordinaten werden als fix angenommen. Das \emph{Bindungspotential} stellt die Gesamtenergie des Systems dar, wenn für jeden Punkt der Kurve ein anderer aber jeweils fester Kern--Kern--Abstand angenommen wird. Eine Bindung kommt dann zustande, wenn das Bindungspotential ein Minimum hat. Der Kern--Kern--Abstand ist dann der Bindungsabstand.
 
 \begin{questions} 
 \item Was ist im Bindungspotential gebunden?
@@ -136,17 +136,15 @@ genauso gut möglich. In der Quantenmechanik löst man dies auf durch die Superp
 \begin{equation}
  \Psi_{\pm} = \phi_A(\mathbf{r}_1) \, \phi_B(\mathbf{r}_2) \, \pm \, \phi_A(\mathbf{r}_2) \, \phi_B(\mathbf{r}_1) \label{eq:VB_psi_pm}
 \end{equation}
-Dies löst die Schrödinger-Gleichung mit dem Gesamt-Hamilton-Operator
+Der Hamilton-Operator beinhaltet die beiden einzelnen Wasserstoff-Hamilton-Operatoren und insgesamt 4 Coulomb-Terme, die jeweils kreuzweise Ladungen aus den beiden Wasserstoff-Atomen verbinden
 \begin{equation}
   \hat{H}_{ges} =  \hat{H}_A + \hat{H}_B  + \frac{e^2}{4 \pi \epsilon_0} \left( \frac{1}{r_{12}} + \frac{1}{r_{AB}} 
   - \frac{1}{r_{A2}}  - \frac{1}{r_{B1}} 
-  \right)
+  \right) \quad. \label{eq:VB_Hges}
 \end{equation}
-wobei der Term mit $r_{AB}$ auch zunächst weggelassen werden kann, weil die Kern-Positionen in der Born-Oppenheimer-Näherung ja als konstant angenommen werden.
+%Um das Bindungspomtentail zu bestimmen kann der Term Term mit $r_{AB}$ auch zunächst weggelassen werden kann, weil die Kern-Positionen in der Born-Oppenheimer-Näherung ja als konstant angenommen werden.
 
-
-
-Es zeigt sich\footcite[Kapitel 4.4.2]{Haken_wolf_II}, dass die symmetrische Superposition die niedrigere Gesamtenergie liefert. Die beiden Terme der Wellenfunktion interferieren konstruktiv und sorgen dafür, dass im Raum zwischen den beiden Kernen eine höhere Aufenthaltswahrscheinlichkeit der Elektronen zu finden ist. Diese kompensiert die Coulomb-Abstoßung der Kerne.
+Die Wellenfunktion Gl. \ref{eq:VB_psi_pm}  löst die Schrödinger-Gleichung mit dem Hamilton-Operator Gl. \ref{eq:VB_Hges} allerdings nicht. Man kann diese Wellenfunktion aber als Ausgangspunkt für das Variationsprinzip nehmen, das wir im nächsten Kapitel am Beispiel von \ch{H2+} besprechen werden. Es zeigt sich\footcite[Kapitel 4.4.2]{Haken_wolf_II}, dass die symmetrische Superposition die niedrigere Gesamtenergie liefert. Die beiden Terme der Wellenfunktion interferieren konstruktiv und sorgen dafür, dass im Raum zwischen den beiden Kernen eine höhere Aufenthaltswahrscheinlichkeit der Elektronen zu finden ist. Diese kompensiert die Coulomb-Abstoßung der Kerne.
 
 In der Valenzbindungstheorie entstehen Bindungen zwischen Atomen durch das 
 Paaren von zwei Elektronen. Zwei Kerne teilen sich also zwei Elektronen, die nicht mehr einem einzelnen Kern zugeordnet sind.
