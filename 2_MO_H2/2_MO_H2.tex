@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{5. Oktober 2021}
+\renewcommand{\lastmod}{21. Oktober 2021}
 
 \chapter{Molekülorbitaltheorie I -- Das aller einfachste Molekül}
 
@@ -149,11 +149,12 @@ Zur Berechnung der Bindungsenergie nehmen wir jetzt die nur vom Kern--Kern--Abst
 \begin{eqnarray}
  E_\text{Bindung} &=&  E_\text{Molekül} -  E_\text{Atom} \\
   &=&   E_1 + \frac{C \pm A}{1 \pm S} + \frac{e^2}{4 \pi \epsilon_0} \frac{1}{R} - E_1 \\
-   &=&\frac{C }{1 \pm S}  + \frac{e^2}{4 \pi \epsilon_0} \frac{1 + S }{R}  \pm \frac{ A}{1 \pm S}   \quad . \label{eq:MO_E_bindung_h2p}
+   &=&\frac{C \pm A}{1 \pm S} + \frac{e^2}{4 \pi \epsilon_0} \frac{1}{R}  = \frac{C' \pm A'}{1 \pm S}  \quad , \label{eq:MO_E_bindung_h2p}
 \end{eqnarray}
-Numerische Rechnungen zeigen, dass das Überlapp-Integral $S$ keinen Entscheidenden Einfluss auf das Ergebnis hat, wir es hier also nicht weiter betrachten müssen.\sidenote{Für H$_2^+$ lassen sich relativ einfache geschlossene Formen für die Integrale angeben, siehe \cite{McQuarrie2008} }
+mit der Definition  von $C'$ und $A'$ wie in Abbildung \ref{fig:MO_H2_integrale_r}.
+Numerische Rechnungen zeigen, dass das Überlapp-Integral $S$ keinen entscheidenden Einfluss auf das Ergebnis hat, wir es hier also nicht weiter betrachten müssen.\sidenote{Für H$_2^+$ lassen sich relativ einfache geschlossene Formen für die Integrale angeben, siehe \cite{McQuarrie2008} }
 
-Das Coulomb-Integral $C$ ist für einen  großen Kern--Kern--Abstand $R$ quasi die Energie einer Punkt-Ladung im Potential des anderen Kerns, da die Ausdehnung der Wellenfunktion $\phi_1$ vernachlässigt werden kann. Da $C$ negativ ist, kompensieren sich dann die ersten beiden Summanden in Gl. \ref{eq:MO_E_bindung_h2p}. Für kleine Kern--Kern--Abstände $R$ bleibt $C$ negativ und endlich, da die potentielle Energie eines Elektrons im Wasserstoff-Atom endlich ist. Der zweite Summand strebt aber mit $1/R$ gegen positiv unendlich. Die Summe der ersten beiden Terme ist also entweder Null oder positiv, so dass keine Bindung zustande kommt.
+Das Coulomb-Integral $C$ ist für einen  großen Kern--Kern--Abstand $R$ quasi die Energie einer Punkt-Ladung im Potential des anderen Kerns, da die Ausdehnung der Wellenfunktion $\phi_1$ vernachlässigt werden kann. Da $C$ negativ ist, geht $C'$ gegen Null. Für kleine Kern--Kern--Abstände $R$ bleibt $C$ negativ und endlich, da die potentielle Energie eines Elektrons im Wasserstoff-Atom endlich ist. Der zweite Summand von  $C'$ strebt aber mit $1/R$ gegen positiv unendlich. Die Summe der ersten beiden Terme ist also entweder Null oder positiv, so dass kein lokales Minimum zustande kommt.
 
 
 
@@ -161,13 +162,13 @@ Das Coulomb-Integral $C$ ist für einen  großen Kern--Kern--Abstand $R$ quasi d
 \inputtikz{\currfiledir integrale_von_r}
 
 \caption{Abhängigkeit der Integrale vom Kern--Kern--Abstand $R$. Dargestellt ist 
-$C' = C  + \frac{e^2}{4 \pi \epsilon_0} \frac{1 }{R}$ bzw. $A' = A   + \frac{e^2}{4 \pi \epsilon_0} \frac{ S }{R}$.
+$C' = C  + \frac{e^2}{4 \pi \epsilon_0} \frac{1 }{R}$ bzw. $A' = A   + \frac{e^2}{4 \pi \epsilon_0} \frac{ S }{R}$. \label{fig:MO_H2_integrale_r}
  }
 \end{marginfigure}
 
 
 
-Den entschiedenen Beitrag liefert der dritte Summand mit dem Austausch-Integral $A$. Für große $R$ ist das Austausch-Integral wieder Null. Für kleine Abstände $R$ ist das Austausch-Integral sehr ähnlich dem Coulomb-Integral und endlich negativ. Dazwischen ist es in einem gewissen Bereich von $R$ negativ genug, dass bei positivem Vorzeichen in Gl. \ref{eq:MO_E_bindung_h2p} die Bindungsenergie negativ wird, eine Bindung also zustande kommt.
+Den entschiedenen Beitrag liefert das Austausch-Integral $A$. Für große $R$ ist das Austausch-Integral und auch $A'$ wieder Null. Für kleine Abstände $R$ ist das Austausch-Integral sehr ähnlich dem Coulomb-Integral und endlich negativ. Dazwischen ist es in einem gewissen Bereich von $R$ negativ genug, dass bei positivem Vorzeichen in Gl. \ref{eq:MO_E_bindung_h2p} die Bindungsenergie negativ wird, eine Bindung also zustande kommt.
 
 Damit ist also $\Psi_+$ das bindende Orbital. Da es aus Wasserstoff-1s-Orbitalen zusammengesetzt ist, ist es ein $\sigma$-Orbital. $\Psi_-$ ist ein anti-bindendes $\sigma^\star$-Orbital. Die Skizze zeigt die Gesamt-Energie als Funktion des Kern--Kern--Abstands $R$. Dies wird als \emph{Bindungspotential} bezeichnet. Für das bindende Orbital sind sehr kleine $R$ durch das Pauli-Verbot ausgeschlossen.
 Der Bindungsabstand $R_0$ ist der Abstand minimaler Energie. Das Potential kann in seiner Umgebung durch eine harmonisches Parabel-Potential genähert werden. Die Energie $E(R_0)$ bestimmt die Stärke de Bindung, also wieviel Energie aufgebracht werden muss, um die beiden Atome zu trennen. Der zweite Block der Vorlesung zur Spektroskopie von Molekülen beschäftigt sich eigentlich nur mit Methoden, wie die verschiedenen Parameter dieses Bindungspotentials experimentell bestimmt werden können.
