@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{21. Oktober 2021}
+\renewcommand{\lastmod}{28. Oktober 2021}
 
 \chapter{Molekülorbitaltheorie I -- Das aller einfachste Molekül}
 
@@ -61,8 +61,11 @@ Für eine minimale Eigenen-Energie $E$ müssen die partiellen Ableitungen nach $
 \text{oder} \quad
 E_\pm = \frac{H_{11} \pm H_{12}}{1 \pm S} \quad ,
 \end{equation}
-wobei wir im letzten Schritt angenommen haben, dass $H_{11} = H_{22}$.
-
+wobei wir im letzten Schritt angenommen haben, dass $H_{11} = H_{22}$. In diesem Fall sind die Koeffizienten $c_i$
+\begin{equation}
+c_1 = \pm c_2 = \frac{1}{\sqrt{2 (1 \pm S)}} \quad ,
+\end{equation}
+weil  ja ${\braket{\Psi | \Psi}}  = c_1^2 + c_2^2 + 2 c_1 c_2 S = 1$ sein soll.
 
 \begin{questions} 
 \item Vollziehen Sie Gl. \ref{eq:MO_psi} bis \ref{eq:MO_e_variation} nach.
@@ -237,7 +240,11 @@ Unsere Rechnung ergibt ein qualitativ korrektes Bindungspotential für das  Wass
 
 Auch erfüllt unser Modell den Virialsatz nicht. Für ein Coulomb-Potential müsste der Mittelwert der potentiellen Energie $\braket{\hat{U}}$ genau $-2$ mal dem Mittelwert der kinetischen  Energie $\braket{\hat{T}}$ sein. In unserem Modell ist der Faktor\footcite{McQuarrie2008} aber nur ca. $-1.6$.
 
-Die Ursache für beides ist, dass unsere Testfunktion $c_1 \ket{\phi_1} + c_2 \ket{\phi_2}$ zwar die Schrödinger-Gleichung löst, aber nicht die geringste Energie in Gl. \ref{eq:MO_variation} liefert. Die Testfunktion ist zu einfach und muss weitere Terme enthalten.
+Die Ursache für beides ist, dass unsere Testfunktion $c_1 \ket{\phi_1} + c_2 \ket{\phi_2}$ zwar 
+Gl.  \ref{eq:MO_variation} minimiert, aber die Schrödinger-Gleichung nicht löst. 
+ Die Testfunktion ist zu einfach und muss weitere Terme enthalten, die dann zu einer noch kleineren Energie in Gl.  \ref{eq:MO_variation} führen und dann auch den Virialsatz erfüllen.
+
+
 
 \ \\
 
