@@ -1,0 +1,86 @@
+
+
+
+  
+\begin{tikzpicture}
+%\useasboundingbox (-1.3,-1.2) rectangle (11.2,4.7);
+%	\draw (-1.5,-2.5) rectangle (3.5,7.5);
+  \tikzmath{\x1 = 0;  \dx1 = 3;  \dx2 = 2.5; \wv = 2;  \brot = 0.05;  \bs = 0.8;  \ylu = -1.7; \ylo = -1; \arrowoffs = 0.12; }
+
+
+ % Zustände
+  \foreach \vib in {0,...,1}
+  {
+  		\tikzmath{\b = \wv * (\vib + 0.5);  }
+    	\draw[line width=1pt] (\x1,\b) -- ++ (\dx1,0) node[anchor=west]{\vib};
+    	
+    	  \foreach \rot in {1,...,4}
+     {
+    	 		\tikzmath{\br1 = \b + \brot * \rot * (\rot +1);  }
+  	\draw[line width=0.5pt] (\x1,\br1) -- ++ (\dx2,0) node[anchor=west]{\footnotesize \rot};
+ 
+    	}
+       }
+  
+   \node [anchor=west] at (\dx2,4.3) {$J$};
+   \node [anchor=west] at (\dx1,4.3) {$\nu$};
+
+  % Übergangs-Pfeile
+   \foreach \a in {1,...,4}
+   {
+  		\tikzmath{\xa1 = \x1 + (\a +1) * \arrowoffs;} 		 
+  		 \tikzmath{\br1 = \wv * (0 + 0.5) + \brot * \a * (\a +1);  
+  				 \br2 = \wv * (1 + 0.5) + \brot * \a * (\a - 1);  }
+    	\draw[->] (\xa1,\br1) -- node (P\a) {}  (\xa1,\br2) ;
+  }
+ 
+    \foreach \a in {0,...,4}
+   {
+  		\tikzmath{\xa1 =0.8 +  \x1 + (\a +1) * \arrowoffs;} 		 
+  		 \tikzmath{\br1 = \wv * (0 + 0.5) + \brot * \a * (\a +1);  
+  				 \br2 = \wv * (1 + 0.5) + \brot * \a * (\a + 1);  }
+    	\draw[->] (\xa1,\br1) -- node (Q\a) {}  (\xa1,\br2) ;
+  }
+
+    \foreach \a in {0,...,3}
+   {
+  		\tikzmath{\xa1 =1.6 +  \x1 + (\a +1) * \arrowoffs;} 		 
+  		 \tikzmath{\br1 = \wv * (0 + 0.5) + \brot * \a * (\a +1);  
+  				 \br2 = \wv * (1 + 0.5) + \brot * (\a+1) * (\a + 2);  }
+    	\draw[->] (\xa1,\br1) -- node (R\a) {}  (\xa1,\br2) ;
+  }
+  
+    \node [anchor=center, name=nl] at (\x1 +2.5 * \arrowoffs,0.6) {$-1$};
+    \node [anchor=center, name = nm] at (0.8 + \x1 +2.5 * \arrowoffs,0.6) {$0$};
+    \node [anchor=center, name = nr] at (1.6 + \x1 +2.5 * \arrowoffs,0.6) {$+1$};
+    \node [anchor=center] at (2.7,0.6) {$\Delta J$};
+%
+  
+   % Energie-Achse
+	\draw[->] (0,\ylu) -- (2.7,\ylu) node[anchor = north east,xshift=2mm]{  E. Übergang};  
+ 	\draw[-] (0,-1.6) -- (0,-1.8) node[below]{0};  
+
+	\draw[->] (-0.4,0) -- (-0.4,4.5) node[anchor = south east, rotate=90 ]{ Energie des Zustands};  
+	\draw[-] (-0.3,0) -- (-0.5,0) node[anchor = east]{0};  
+
+  
+  % linien
+   \foreach \a in {1,...,4}
+   {
+   		\tikzmath{\b =  2 * \brot * \a; \x0 = \wv;}
+
+    	\draw[line width = 0.1pt] (\x0+\b,\ylu) -- (\x0+\b,\ylo) node (linieR\a) {};
+     	\draw[line width = 0.1pt] (\x0-\b,\ylu) -- (\x0-\b,\ylo) node (linieP\a) {};
+}
+
+     	\draw[line width = 1pt] (\wv,\ylu) -- (\wv,\ylo) node (linieQ) {};
+
+
+     	
+  \draw[->, blue] (nl) .. controls (linieP3.north)  ..  (linieP3);
+  \draw[->, blue] (nm) .. controls  (linieQ.north)  ..  (linieQ);
+  \draw[->, blue] (nr) .. controls (linieR3.north)  ..  (linieR3);
+ 
+% 
+\end{tikzpicture}
+

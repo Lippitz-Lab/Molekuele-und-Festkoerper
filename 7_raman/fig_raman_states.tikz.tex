@@ -1,0 +1,59 @@
+
+  
+\begin{tikzpicture}
+%\useasboundingbox (-1.3,-1.2) rectangle (11.2,4.7);
+%	\draw (-1.5,-2.5) rectangle (3.5,7.5);
+  \tikzmath{\x1 = 0;  \x2 = 2.5 ; \w = 0.7; \bs = 0.8;  \ylu = -1.7; \ylo = -1; \arrowoffs = 0.12; \anh = 0.01;}
+
+
+ % Zustände
+
+\tikzmath{\y0 = 0; \y1 = 0.3; \y2 =2 ;}
+ \draw[line width=1pt] (\x1,\y0) -- (\x2,\y0) node[anchor=west] {$0$};    		
+  \draw[line width=1pt] (\x1,\y1) -- (\x2,\y1) node[anchor=west]  {$1$};   
+  \draw[line width=1pt, dashed] (\x1,\y2) -- (\x2,\y2);    		
+
+ \node[anchor=west, yshift=3mm]  at (\x2,\y1) {$\nu$};   
+ 	
+\tikzmath{\a1= 0.3; \a2 = 1.2; \a3 =2.1 ;}
+ 	\draw[->] (\a1,\y0) --  (\a1,\y2) ;  
+ 	\draw[->] (\a1 + \arrowoffs,\y2) --  (\a1 + \arrowoffs,\y1) ;  
+  
+   	\draw[->] (\a2,\y0) --  (\a2,\y2) ;  
+ 	\draw[->] (\a2 + \arrowoffs,\y2) --  (\a2 + \arrowoffs,\y0) ;  
+
+ 	\draw[->] (\a3,\y1) --  (\a3,\y2) ;  
+ 	\draw[->] (\a3 + \arrowoffs,\y2) --  (\a3 + \arrowoffs,\y0) ;  
+
+
+  
+   \node [anchor=north,yshift=-3mm, name = ts] at (\a1,0) {\footnotesize Stokes};
+   \node [anchor=north, name = tr] at (\a2,0) {\footnotesize Rayleigh};
+   \node [anchor=north,yshift=-3mm, name = ta] at (\a3,0) {\footnotesize Anti-Stokes};
+
+
+   % Energie-Achse
+	\draw[->] (0,\ylu) -- (2.7,\ylu) node[anchor = north east,xshift=2mm]{  E. Photon};  
+ 	\draw[-] (0,-1.6) -- (0,-1.8) node[below]{0};  
+
+	\draw[->] (-0.4,0) -- (-0.4,2.5) node[anchor = south east, rotate=90 ]{ E. Zustand};  
+	\draw[-] (-0.3,0) -- (-0.5,0) node[anchor = east]{0};  
+
+\tikzmath{\a2 = 2;  \da = 0.3;}
+\tikzmath{\a1= \a2 - \da;  \a3 =\a2 + \da ;}
+   	\draw[line width = 0.5pt] (\a1,\ylu) -- (\a1,\ylo) node (linies) {};
+  	\draw[line width = 1pt] (\a2,\ylu) -- (\a2,\ylo) node (linier) {};
+  	\draw[line width = 0.5pt] (\a3,\ylu) -- (\a3,\ylo) node (linieas) {};
+
+
+
+  \draw[->, blue] (ta)  --  (linieas);
+ \draw[->, blue] (ts)  --  (linies);
+ \draw[->, blue] (tr)  .. controls (1, -0.7) ..  (linier);
+ 
+\draw[white, line width= 2pt]  (-0.5,1.6 ) -- (\x2, 1.6 );
+\draw[line width=0.3pt] (-0.4,1.6 +0.02) -- ++ (30:0.07) -- ++ (-150:0.14);
+\draw[line width=0.3pt] (-0.4,1.6 -0.02) -- ++ (30:0.07) -- ++ (-150:0.14);
+
+\end{tikzpicture}
+

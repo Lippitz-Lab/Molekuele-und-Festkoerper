@@ -1,0 +1,56 @@
+
+
+  
+\begin{tikzpicture}
+%\useasboundingbox (-1.3,-1.2) rectangle (11.2,4.7);
+%	\draw (-1.5,-2.5) rectangle (3.5,7.5);
+ 
+  \tikzmath{\x1 = 0; \x2 = 2.5; \bs = 0.12;  \ylu = -1.7; \ylo = -1.3; \arrowoffs = 0.23; \zf = 0.002;}
+%  \tikzmath{\x1 = 0; \x2 = 2.4; \bs = 0.16;  \ylu = -1.7; \ylo = -1; \arrowoffs = 0.3;}
+
+ % Zustände
+  \foreach \a in {0,...,7}
+  {
+  		\tikzmath{\b = \a * (\a + 1) * \bs;}
+  		\tikzmath{\c =  \a * (\a + 1) * \bs - \bs * \zf * \a^2 * (\a + 1)^2;}
+    	\draw[line width=1pt] (\x1,\b) --  ++(1,0)  ;
+    	 \draw[line width=1pt, dotted] (\x1 +1,\b) --   (\x2-1,\c)  ;
+   	\draw[line width=1pt] (\x2,\c) node[anchor=west]{\a} -- ++(-1,0) ;
+  }
+  
+   \node [anchor=west] at (\x2,7.1) {J};
+   \node [anchor=west, xshift=-1mm, name=starr] at (\x1 ,-0.2) {starr};
+   \node [anchor=east,xshift=+1mm, name=dehn] at (\x2,-0.2) {dehnbar};
+
+%  % Übergangs-Pfeile
+%   \foreach \a in {0,...,6}
+%   {
+%  		\tikzmath{\b1 = (\a * (\a + 1)) * \bs;  \b2 = (\a +2)* (\a + 1) * \bs; \xa = \x1 + (\a +1) * \arrowoffs; \xn = \b2 - \b1;} 	
+%    	\draw[->] (\xa,\b1) -- node (trans\a) {}  (\xa,\b2) ;
+%  }
+
+   % Energie-Achse
+	\draw[->] (0,\ylu) -- (3.2,\ylu) node[anchor = north, xshift=-8mm ]{  E. Übergang};  
+ 	\draw[-] (0,-1.6) -- (0,-1.8) node[below]{0};  
+
+	\draw[->] (-0.4,0) -- (-0.4,7.0) node[anchor = south east, rotate=90 ]{ Energie des Zustands};  
+	\draw[-] (-0.3,0) -- (-0.5,0) node[anchor = east]{0};  
+
+  \tikzmath{\bs = 1.7 * \bs;}
+  
+  % linien
+   \foreach \a in {1,...,6}
+   {
+  		\tikzmath{\xn =  2 * \a * \bs ;
+		\yn =  		2 * \a * \bs  + \bs * \zf * \a^2 * (\a + 1)^2 -  \bs * \zf * (\a + 2)^2 * (\a + 1)^2;
+  		} 	
+    	\draw[line width = 1pt] (\xn,\ylu) -- node (LS\a) {} (\xn,\ylo) ;
+    	\draw[line width = 1pt] (\yn,\ylu + 0.6) -- node (Ld\a) {} (\yn,\ylo +0.6 ) ;
+    	\draw[line width = 1pt, dotted] (\xn,\ylo) -- (\yn,\ylu + 0.6) ;
+}
+
+   \draw[->, blue] (starr) .. controls (0,-1)    ..  (LS1);
+  \draw[->, blue] (dehn) .. controls (2.2,-0.7)    ..  (Ld6);
+
+\end{tikzpicture}
+
