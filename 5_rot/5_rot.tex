@@ -1,4 +1,6 @@
-%\renewcommand{\lastmod}{\today}
+\renewcommand{\chapterauthors}{Markus Lippitz}
+\renewcommand{\lastmod}{28. Oktober 2021}
+
 
 \chapter{Rotationsspektroskopie}
 
@@ -27,7 +29,7 @@ Nach Erzeugung der Strahlung durch Klystron oder Synchrotron wird diese durch ei
 Die Transmission $T$ (oder auch die Absorption) ist eine etwas unpraktische Größe, da sie immer im Bereich zwischen Null und Eins liegt, also beispielsweise nicht linear von der Konzentration des Gases abhängt. Daher betrachtet man eigentlich immer die Absorbanz oder Extinktion.\sidenote{Der Unterschied zwischen Absorbanz und Extinktion ist, dass letztere auch Streuung beinhaltet, was für uns aber keine Rolle spielt.} Die Extinktion $E$ ist
 %
 \begin{equation}
- E = - \log_{10} T
+ E = - \log_{10} T \quad .
 \end{equation}
 %
 Im Folgenden betrachten wir also Absorbanz- oder Extinktions-Spektren, die oft auch einfach Absorptionsspektren genannt werden, auch wenn nicht $1-T$ sondern $\log_{10} ( 1- T)$ dargestellt ist.
@@ -38,11 +40,16 @@ Im Folgenden betrachten wir also Absorbanz- oder Extinktions-Spektren, die oft a
 \end{marginfigure}
 
 
+\begin{questions} 
+\item Wo in  Abbildung  \ref{fig:rot_hcl} arbeitet ein Mikrowellenherd?
+\end{questions}
+
+
 \section{Modell des starren Rotators}
 
 Ein einfaches Modell, um Rotationsspektren zu beschreiben, ist das des starren Rotators. Wir nehmen eine klassische Hantel mit zwei Massen $m_1$ und $m_2$ an, die durch eine starre Achse der Länge $R$ miteinander verbunden sind. Das Trägheitsmoment der Hantel ist
 \begin{equation}
- \Theta = \frac{m_1 \, m_2}{m_1 + m_2} \, R^2 = m_\text{red} \, R^2
+ \Theta = \frac{m_1 \, m_2}{m_1 + m_2} \, R^2 = m_\text{red} \, R^2 \quad .
 \end{equation}
 Damit berechnet sich die Rotationsenergie $E_\text{rot}$ zu
 \begin{equation}
@@ -54,10 +61,16 @@ mit der Rotationsfrequenz $\omega$. Die Quantenmechanik kommt durch die Quantisi
 \end{equation}
 mit der Drehimpuls-Quantenzahl $J = 0, 1, \dots$. Die Rotationsenergie ist damit
 \begin{equation}
- E_\text{rot} = \frac{ | \mathbf{L} |^2}{2 \Theta} = \frac{\hbar^2 \, J (J+1)}{2 \Theta}
+ E_\text{rot} = \frac{ | \mathbf{L} |^2}{2 \Theta} = \frac{\hbar^2 \, J (J+1)}{2 \Theta} \quad .
 \end{equation}
 
 Dies sind die Energien der \emph{Zustände} des Systems, noch nicht die Lage der Peaks im Spektrum. Bei der Absorption eines Mikrowellen- oder THz-Photons ändert sich der Zustand. Wir suchen also die Energien der \emph{Übergänge} zwischen Zuständen, um die Lage der Peaks im Absorptionsspektrum zu beschreien.
+
+
+\begin{questions} 
+\item Um welche Achse dreht man die Hantel in diesem Modell?
+\end{questions}
+
 
 \section{Auswahlregeln bei Rotationsübergängen}
 
@@ -67,7 +80,7 @@ Zunächst muss die Rotationsbewegung überhaupt an das elektromagnetische Feld k
 
 Wenn optische Rotationsübergänge im Prinzip möglich sind, dann muss noch die Drehimpuls-Erhaltung erfüllt sein. Die Summe des Drehimpulses von Molekül und Photon muss erhalten bleiben. Der Drehimpuls des Photons ist $1 \hbar$. Bei der Absorption eines Photons muss sich also $J$ erhöhen, bei der Emission erniedrigen.\sidenote{Glücklicherweise passt das mit der Änderung der Energie zusammen.} Damit ergibt sich als Auswahlregel
 \begin{equation}
-\Delta J = \pm 1 \quad \text{und} \quad \Delta M_J = 0, \pm 1
+\Delta J = \pm 1 \quad \text{und} \quad \Delta M_J = 0, \pm 1 \quad .
 \end{equation}
 $M_J$ ist die Orientierungs-Quantenzahl zur Drehimpuls-Quantenzahl $J$ des Moleküls, wie immer bei Drehimpuls-artigen Größen.
 
@@ -84,9 +97,9 @@ Aus der Lage der Zustände $E_\text{rot}(J)$ und der Auswahlregel $\Delta J = \p
  \bar{\nu}_{J \rightarrow J + 1} =& \frac{1}{h c}  \, \left[ E_\text{rot}(J+1) - E_\text{rot}(J) \right]
  \\ 
  =  & \frac{1}{h c}\frac{\hbar^2}{2 \Theta} \, \left[ (J+1)(J+2) - J (J+1) \right] \\
- = & 2 \, \frac{h}{8 \pi^2 c \, \Theta} \, \left( J +1 \right) = 2 \, B \, (J+1)
+ = & 2 \, \frac{h}{8 \pi^2 c \, \Theta} \, \left( J +1 \right) = 2 \, B \, (J+1) \quad ,
 \end{align}
-wobei $B = h / (8 \pi^2 c \, \Theta)$ Rotationskonstante genannt wird. Die Linien sind im Spektrum also äquidistant, mit dem Abstand $2B$ und auch die erste Linie ist gerade im Abstand $2B$ vom Ursprung. Dies entspricht zumindest qualitativ dem in Abbildung \ref{fig:rot_hcl} gezeigtem Spektrum. Aus dem Abstand der Linien lässt sich der Gleichgewichts-Bindungsabstand $R_0$ bestimmen, wenn die Atom-Massen bekannt sind.
+wobei $B = h / (8 \pi^2 c \, \Theta)$ \emph{Rotationskonstante} genannt wird. Die Linien sind im Spektrum also äquidistant, mit dem Abstand $2B$ und auch die erste Linie ist gerade im Abstand $2B$ vom Ursprung. Dies entspricht zumindest qualitativ dem in Abbildung \ref{fig:rot_hcl} gezeigtem Spektrum. Aus dem Abstand der Linien lässt sich der Gleichgewichts-Bindungsabstand $R_0$ bestimmen, wenn die Atom-Massen bekannt sind.
 
 
 
@@ -99,9 +112,9 @@ wobei $B = h / (8 \pi^2 c \, \Theta)$ Rotationskonstante genannt wird. Die Linie
 Im Spektrum sieht man weiterhin einen charakteristischen, nicht-monotonen Verlauf der Amplituden der Linien mit der Übergangsfrequenz. Zunächst wächst die Linien-Stärke (oder Amplitude) mit steigende Übergangsfrequenz, um dann wieder abzufallen. Die Ursache dafür sind zwei gegenläufige Effekte. Zum einen steigt der Entartungsgrad mit $J$, da ja $M_J = 0, \pm 1, ... \pm J$. Es gibt also $2J+1$ Zustände mit gleicher Quantenzahl $J$.
 Zum anderen fällt die Besetzung des Ausgangszustands mit steigendem $J$. Um überhaupt einen Übergang machen zu können muss ja der Ausgangszustand besetzt sein. Dies geschieht durch thermische Anregung und folgt einer Boltzmann-Verteilung. Die thermische Energie $k_B T$ bei Raumtemperatur entspricht  $\bar{\nu}_{k T} \approx 200$~cm$^{-1}$, liegt also im hier relevanten Energiebereich. Zusammen ergibt sich so für die Besetzung $N_J$ von Zustand $J$
 \begin{equation}
- \frac{N_J}{N_0}= (2J+1) \, e^{- E(J) / k_B T} = (2J+1) \, e^{- B hc J (J+1) / k_B T} 
+ \frac{N_J}{N_0}= (2J+1) \, e^{- E(J) / k_B T} = (2J+1) \, e^{- B hc J (J+1) / k_B T}  \quad .
 \end{equation}
-Die Besetzung beeinflusst wesentlich die Amplitude der Linien. Um sie wirklich zu berechnen, müsste man noch stimulierte Emission und das nicht konstante Matrixelement des Übergangsdipols berücksichtige. Dies führt hier zu weit, ist aber in \citep{Demtröder_molekuelphysik} dargestellt.
+Die Besetzung beeinflusst wesentlich die Amplitude der Linien. Um sie wirklich zu berechnen, müsste man noch stimulierte Emission und das nicht konstante Matrixelement des Übergangsdipols berücksichtige. Dies führt hier zu weit, ist aber in \cite{Demtröder_molekuelphysik} dargestellt.
 
 
 
@@ -115,7 +128,7 @@ Nun werden wir die Annahme des \emph{starren} Rotators fallen lassen. Die Atome 
 \begin{marginfigure}
 \inputtikz{\currfiledir fig_states_zentrifugal}
 
-\caption{Schematische Darstellung der Verschiebung der Linien mit steigendem $J$ für eine hier übertrieben große Zentrifugal-Dehnungskonstante $D$.}
+\caption{Schematische Darstellung der Verschiebung der Linien mit steigendem $J$ für eine hier übertrieben große Zentrifugal-Dehnungskonstante $D$. \label{fig:rot_states_zentrifugal}}
 \end{marginfigure}
 
 
@@ -125,13 +138,13 @@ Im Gleichgewicht kompensieren sich Fliehkraft und Federkraft, also
 \end{equation} 
 mit dem Ruhe-Abstand $R_0$ und $m$ hier als \emph{reduziert} Masse. Wir stellen um und benutzen $L = m R^2 \omega$
 \begin{equation}
-R - R_0 = \frac{L^2}{m \, k \, R^3  } 
-%\approx \frac{L^2}{m \, k \, R_0^3  }
+R - R_0 = \frac{L^2}{m \, k \, R^3  }  \quad .
+%\approx \frac{L^2}{m \, k \, R_0^3  } 
 \end{equation}
 Bei der Rotationsenergie müssen wir nun berücksichtigen, dass auch Energie in der Feder steckt. Zusammen ist das also 
 \begin{equation}
  E_\text{rot} = \frac{L^2}{2 m R^2}  + \frac{1}{2} k ( R - R_0)^2 = 
-\frac{L^2}{2 m R^2}  + \frac{L^4}{2 m^2 \, k \, R^6  } 
+\frac{L^2}{2 m R^2}  + \frac{L^4}{2 m^2 \, k \, R^6  }  \quad .
 \end{equation}
 Dies entwickeln wir jetzt in einer Taylor-Reihe nach der Änderung des Bindungsabstands, und brechen gleich nach dem ersten Korrekturterm ab
 \begin{align}
@@ -140,7 +153,7 @@ Dies entwickeln wir jetzt in einer Taylor-Reihe nach der Änderung des Bindungsa
   + \left. \frac{\partial E_\text{rot}}{\partial R}
  \right|_{R_0}  (R - R_0) \\
  = & \frac{L^2}{2 m R_0^2}  -  \frac{L^2}{m \, R_0^3  }   \frac{L^2}{m \, k \, R^3  }  + \frac{L^4}{2 m^2 \, k \, R_0^6  } \\ 
-  \approx & \frac{L^2}{2 m R_0^2}  -  \frac{L^4}{2 \, m^2 \, k\, R_0^6  }   
+  \approx & \frac{L^2}{2 m R_0^2}  -  \frac{L^4}{2 \, m^2 \, k\, R_0^6  }    \quad .
 \end{align}
 Dabei haben wir die  Annahme $1/R^3 \approx 1 / R_0^3$ gemacht.\sidenote{und damit auch $1/R^6 \approx 1 / R_0^6$}
 %\begin{align}
@@ -149,20 +162,24 @@ Dabei haben wir die  Annahme $1/R^3 \approx 1 / R_0^3$ gemacht.\sidenote{und dam
 %\end{align}
 Nun benutzen wir die Definition der Rotationskonstanten $B = h / (8 \pi^2  m  c R_0^2)$ sowie $L = \hbar \sqrt{ J (J+1)}$ und erhalten alles zusammen
 \begin{equation}
-\frac{ E_\text{rot}}{h c} = B \, J (J+1) - D \, J^2 (J+1)^2
+\frac{ E_\text{rot}}{h c} = B \, J (J+1) - D \, J^2 (J+1)^2 \quad .
 \end{equation}
 Die Konstante vor dem Korrekturterm nennt sich Zentrifugal-Dehnungskonstante $D$
 \begin{equation}
-D = \frac{2 \, h c \, B^2}{k \, R_0^2}
+D = \frac{2 \, h c \, B^2}{k \, R_0^2} \quad .
 \end{equation}
 Sie ist klein ($D/B \approx 10^{-4}$), aber messbar, insbesondere beim großem\sidenote{Bei $J = 100$ wären beide Terme gleich groß.} $J$. Die Auswahlregeln bleiben durch die Dehnung der Bindungslänge unverändert, da sich die Form oder Symmetrie der Moleküle nicht ändert. Die Äquidistanz der Linien im Spektrum wird dadurch aufgehoben. Mit steigendem $J$ rücken die Linien etwas näher zusammen.
 
+
+\begin{questions} 
+\item Überlegen Sie sich eine anschauliche Erklärung, warum die Energien der  Zustände sich beim Übergang vom starren zum nicht-starren Rotator in Abb.\ref{fig:rot_states_zentrifugal} absenken.
+\end{questions}
 
 \section{Mehratomige Moleküle}
 
 Im allgemeinen Fall der mehratomigen Moleküle können wir auf die klassische Kreiseltheorie zurückgreifen und die mit dem Korrespondenzprinzip in die Quantenmechanik übertragen\sidenote{Eine  ausführliche Darstellung findet sich in Kapitel 11.2 von \cite{Haken_wolf_II} und in Kapitel 6.2 von \cite{Demtröder_molekuelphysik}}. Ein beliebig geformter Körper hat drei aufeinander senkrecht stehende Haupt-(Trägheits-)Achsen $x,y,z$. Die Rotation um jede dieser Achsen wird durch ein Trägheitsmoment $\Theta_{x,y,z}$ beschrieben. Die kinetische Energie der Rotation ist dann
 \begin{equation}
-E_\text{rot} = \frac{L_x^2}{2 \Theta_x} + \frac{L_y^2}{2 \Theta_y} + \frac{L_z^2}{2 \Theta_z} 
+E_\text{rot} = \frac{L_x^2}{2 \Theta_x} + \frac{L_y^2}{2 \Theta_y} + \frac{L_z^2}{2 \Theta_z}  \quad .
 \end{equation}
 Die verschiedenen Varianten des Kreisels unterscheiden sich nun darin, ob ggf. manche der $\Theta_i$ identisch sind.
 
@@ -174,15 +191,15 @@ Die verschiedenen Varianten des Kreisels unterscheiden sich nun darin, ob ggf. m
 \paragraph{Symmetrischer Kreisel} Zwei Trägheitsmomente sind identisch ($\Theta_y = \Theta_z$), das dritte Moment $\Theta_x$ davon verschieden. Ein Kinderkreisel ist solch ein Fall. Falls $\Theta_x$  < $\Theta_{y,z}$ spricht man von  einem gestreckten, prolaten oder zigarrenförmigen Kreisel. Im anderen Fall von abgeplattet, oblat oder diskusförmig. Die Rotationsenergie ist
 \begin{equation}
 E_\text{rot} = \frac{L_y^2 + L_z^2}{2 \Theta_y} + \frac{L_x^2}{2 \Theta_x} 
-= \frac{L^2 }{2 \Theta_y} + \left( \frac{1}{2 \Theta_x} - \frac{1}{2 \Theta_y} \right) \, L_x^2
+= \frac{L^2 }{2 \Theta_y} + \left( \frac{1}{2 \Theta_x} - \frac{1}{2 \Theta_y} \right) \, L_x^2 \quad .
 \end{equation}
 Beim Übergang in die Quantenmechanik gibt es also die übliche Drehimpuls-Quantenzahl $J$ mit $L^2 = \hbar^2 J (J+1)$ und eine Quantenzahl $K$ für die x-Komponente des Drehimpulses, also $L_x = \hbar K$ mit $K = 0, \pm 1, ... \pm J$. Im Unterschied zu $M_J$ ist $K$ die Projektion auf eine Molekülachse, nicht auf eine äußere Vorzugsrichtung. Damit wird 
 \begin{equation}
-\frac{E_\text{rot}}{hc} = B J (J + 1) + C K^2
+\frac{E_\text{rot}}{hc} = B J (J + 1) + C K^2 \quad ,
 \end{equation}
 wobei $\Theta_{y,z}$ die Rolle von $\Theta$ in unserer früheren Definition von $B$ übernimmt. $C$ ist analog, nur geht $1/\Theta$ in $1/ \Theta_x - 1/ \Theta_y$ über.
 
-Die Auswahlregeln für optische Übergange sind weiterhin $\Delta J = \pm 1$ und $\Delta K = 0$. Die Rotation um die $x$-Achse (die Symmetrieachse des Kinderkreisels) ist nicht mit einem rotierenden Dipolmoment verbunden und koppelt so nicht ans Lichtfeld. Die spektrale Lage der Übergangslinien ändert sich so also nicht gegenüber dem zweiatomigen Molekül, da sich $C$ heraus kürzt. Erst wenn man die einen nicht-starren symmetrischen Kreisel betrachtet, dann hat $C$ einen Einfluss auf die Lage der Linien. Beispiele sind \ch{C6H6}  (oblat) und \ch{CH3Cl} (prolat).
+Die Auswahlregeln für optische Übergange sind weiterhin $\Delta J = \pm 1$ und $\Delta K = 0$. Die Rotation um die $x$-Achse (die Symmetrieachse des Kinderkreisels) ist nicht mit einem rotierenden Dipolmoment verbunden und koppelt so nicht ans Lichtfeld. Die spektrale Lage der Übergangslinien ändert sich so also nicht gegenüber dem zweiatomigen Molekül, da sich $C$ heraus kürzt. Erst wenn man  einen nicht-starren symmetrischen Kreisel betrachtet, dann hat $C$ einen Einfluss auf die Lage der Linien. Beispiele sind \ch{C6H6}  (oblat) und \ch{CH3Cl} (prolat).
 
 \begin{marginfigure}
 \chemfig{C(-[2]Cl)(<:[5]H)(<[6]H)(-[7]H)}
@@ -206,8 +223,18 @@ Die Auswahlregeln für optische Übergange sind weiterhin $\Delta J = \pm 1$ und
 \chemfig{O(-[5]H)(-[7]H)}
 \end{marginfigure}
 
-%\section{Um welche Achsen dreht sich ein lineares Molekül?}
 
+\begin{questions} 
+\item Bedeutet $\Theta_z = 0$ beim linearen Kreisel, dass das Molekül sich sehr schnell oder gar nicht um die Molekül-Achse dreht? Wenn Sie einen Bleistift um seine drei Achsen drehen, welche dreht sich dann 'einfacher'?
+\end{questions}
+
+\newpage
+
+\section{Zusammenfassung}
+
+\textit{Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte und die am Anfang genannten Ziele des Kapitels.}
+
+\vspace*{10cm}
 
 
 

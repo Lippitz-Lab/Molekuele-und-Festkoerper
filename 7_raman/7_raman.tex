@@ -1,14 +1,9 @@
-%\renewcommand{\lastmod}{April 29, 2020}
+\renewcommand{\chapterauthors}{Markus Lippitz}
+\renewcommand{\lastmod}{28. Oktober 2021}
+
 
 \chapter{Raman-Streuung}
 
-
-
-%\begin{marginfigure}
-%\inputtikz{\currfiledir rot_vib}
-%\caption{Rotations-Vibrations-Übergänge liefert die P, Q, R-Zweige im Spektrum.}
-%\end{marginfigure}
-% 
 
 
 \section{Ziele}
@@ -21,8 +16,8 @@
 \end{itemize}
 
 \begin{figure}
-\includegraphics[width=\textwidth]{\currfiledir oe/OE_n2_fig1_v2.pdf}
-\caption{Raman-Spektrum von \ch{N2} in der Atmosphäre gemessen mit einem Laser der Wellenlänge 354.8~nm. Darstellung  modifiziert aus \cite{Liu14_OE_N2}. }
+\includegraphics[width=\textwidth]{\currfiledir raman_n2.pdf}
+\caption{Raman-Spektrum von \ch{N2} in der Atmosphäre gemessen mit einem Laser der Wellenlänge 354.8~nm \cite{Liu14_OE_N2}. }
 \end{figure}
 
 
@@ -44,17 +39,17 @@ Die hier als Stokes- bzw. Anti-Stokes-Linie bezeichneten 'Linien' besitzen eine 
 
 Wir beginnen mit einer klassischen, makroskopischen Erklärung des Raman-Effekts. Das Molekül habe kein permanentes Dipolmoment, sei aber polarisierbar mit der Polarisierbarkeit $\alpha$. Zunächst vernachlässigen wir auch Rotation und Vibration des Moleküls. Dann ist das induzierte Dipolmoment
 \begin{equation}
-p_\text{ind}(t) = \alpha E(t) = \alpha E_0 \cos \omega_0 t
+p_\text{ind}(t) = \alpha E(t) = \alpha E_0 \cos \omega_0 t \quad .
 \end{equation}
 Das Dipolmoment oszilliert also mit der Lichtfrequenz $\omega_0$. Laut den Maxwell-Gleichungen strahlen bewegte Ladungen elektromagnetische Felder ab, so auch dieses oszillierende Dipolmoment. Dies ist die Rayleigh-Streuung. Genauere Rechnungen zeigen, dass die Intensität proportional zu $\omega^4$ ist. Der Himmel ist also blau, weil blaues Licht besser Rayleigh-Streuung macht.
 
 Nun erlauben wir die Vibration des Moleküls. Die Polarisierbarkeit hängt dann, bei passenden Molekülen, vom Kern--Kern--Abstand $R$ ab. Dies nähern wie in einer Taylor-Reihe
 \begin{equation}
-\alpha = \alpha(R) = \alpha(R_0) + \left. \frac{\partial \alpha}{\partial R} \right|_{R_0}  \left( R - R_0 \right) + \dots
+\alpha = \alpha(R) = \alpha(R_0) + \left. \frac{\partial \alpha}{\partial R} \right|_{R_0}  \left( R - R_0 \right) + \dots \quad .
 \end{equation}
 Der Kern--Kern--Abstand $R$ ändert sich periodisch mit der Schwingungs-Frequenz $\omega_\text{vib}$ und der Amplitude $q$, also
 \begin{equation}
-\left( R - R_0 \right) = q \, \cos \omega_\text{vib} t
+\left( R - R_0 \right) = q \, \cos \omega_\text{vib} t \quad .
 \end{equation}
 Nun berechnen wir analog zu oben das induzierte Dipolmoment
 \begin{align}
@@ -66,14 +61,14 @@ p_\text{ind}(t) = & \alpha(t) E(t) \\
 \Bigl\{ 
 \underbrace{ \cos \left( [\omega_0 -\omega_\text{vib}] t \right)}_\text{Stokes}  +  \underbrace{\cos \left( [\omega_0 + \omega_\text{vib}] t \right)  
 }_\text{Anti-Stokes} 
-\Bigr\} 
+\Bigr\}  \quad .
 \nonumber
 \end{align}
 Das durch das oszillierende Dipolmoment abgestrahlte elektromagnetische Feld liefert wieder die Rayleigh-, jetzt aber auch die Stoks- und Anti-Stokes-Linie.
 
 Allgemein gilt, auch nach 'moderner' Rechnung, dass Schwingungsmoden dann Raman-aktiv sind, wenn die  Polarisierbarkeit von $R$ abhängt, also 
 \begin{equation}
-\left. \frac{\partial \alpha}{\partial R} \right|_{R_0} \neq 0
+\left. \frac{\partial \alpha}{\partial R} \right|_{R_0} \neq 0 \quad .
 \end{equation}
 Dies ist in zweiatomigen Molekülen \emph{immer} der Fall. In mehr-atomigen Molekülen \emph{mit Inversionssymmetrie} sind Raman-Aktivität und IR-Aktivität komplementär. Ein Beispiel dazu ist \ch{CO2}. Die symmetrische Streckschwingung ist nicht Infrarot-aktiv, aber im Raman-Spektrum sichtbar. Die asymmetrische Streckschwingung verhält sich genau umgekehrt.
 
@@ -103,7 +98,7 @@ Atome und Moleküle haben in der Quantenmechanik diskrete Energieniveaus. Photon
 
 Was passiert mit Photonen unpassender Frequenz? Diese können nicht absorbiert werden, dies würde schließlich die Energieerhaltung verletzten, aber sie werden gestreut. In der schematischen Darstellung zeichnet man dazu einen virtuellen Zustand als strichlierte horizontale Linie an das Ende des 'Photon'-Pfeils. Virtuelle Zustände können nicht bevölkert werden. Es gibt sie ja nicht wirklich. Auf der anderen Seite gibt es die Energie--Zeit--Unschärfe
 \begin{equation}
-\Delta E \cdot \Delta t \ge \hbar
+\Delta E \cdot \Delta t \ge \hbar \quad .
 \end{equation}
 Wenn die Zeitdauer $\Delta t $ nur klein genug ist, dann muss die Energie-Unschärfe $\Delta E $ sehr groß werden. Für sehr kurze Zeiten kann man sozusagen gar nicht wissen, ob das Photon die passende Energie hat. Das kann man quantenmechanisch korrekt mit der Dichtmatrix formulieren. Für uns reicht hier, dass auch 'unpassende' Photonen mit diskreten Niveaus in Atomen oder Molekülen wechselwirken können, wenn auch nur für sehr kurze Zeit, wenige Femtosekunden für sichtbares Licht.
 
@@ -113,7 +108,7 @@ Wenn die Zeitdauer $\Delta t $ nur klein genug ist, dann muss die Energie-Unsch�
 \end{marginfigure}
  
 
-Ein zweiter Gesichtspunkt kommt vom Lorentz-Oszillator aus Kapitel \ref{chap:3_diel}. Wir können diskrete atomare Übergänge als Lorentz-Oszillator beschreiben. Die Absorptionslinie hat das eben die bekannte Lorentz-Form. Sie fällt sehr schnell ab, wenn $| \omega  - \omega_0 |$ groß wird. Der Oszillator hat aber auch einen dispersiven Anteil, der den Realteil des Brechungsindexes beschreibt. Dieser fällt viel langsamer ab als der absorptive. Fern von der Resonanz ist er also wichtiger. Wir können uns ein Atom / Molekül fern von der Resonanz als als kleines Volumen mit einen etwas von Vakuum verschiedene Brechungsindex vorstellen, das aber nicht absorbiert. Solch eine Brechungsindex-Variation führt aber zu Streuung von Licht.
+Ein zweiter Gesichtspunkt kommt vom Lorentz-Oszillator aus Kapitel \ref{chap:4_diel}. Wir können diskrete atomare Übergänge als Lorentz-Oszillator beschreiben. Die Absorptionslinie hat das eben die bekannte Lorentz-Form. Sie fällt sehr schnell ab, wenn $| \omega  - \omega_0 |$ groß wird. Der Oszillator hat aber auch einen dispersiven Anteil, der den Realteil des Brechungsindexes beschreibt. Dieser fällt viel langsamer ab als der absorptive. Fern von der Resonanz ist er also wichtiger. Wir können uns ein Atom / Molekül fern von der Resonanz als als kleines Volumen mit einen etwas von Vakuum verschiedene Brechungsindex vorstellen, das aber nicht absorbiert. Solch eine Brechungsindex-Variation führt aber zu Streuung von Licht.
 
 \begin{marginfigure}%[-50mm]
 \inputtikz{\currfiledir fig_raman_states}
@@ -129,13 +124,13 @@ Damit lassen sich verschiedene Aspekte des Raman-Effekts erklären: er ist sehr 
 \begin{equation}
 \frac{I_\text{anti-Stokes}}{I_\text{Stokes}} = 
 \frac{N_{\nu = 1}}{N_{\nu = 0}} =
- e^{- \frac{\hbar \omega_\text{vib}}{k_b T}}
+ e^{- \frac{\hbar \omega_\text{vib}}{k_b T}} \quad .
 \end{equation}
 Bei Vibrationsfrequenzen von etwa $1000$~cm$^{-1}$ und $k_B T \approx 200 $~cm$^{-1}$ bei Raumtemperatur ist das Intensitätsverhältnis also $e^{-5} \approx 1 /150$. Man kann das Verhältnis der Linien also als lokales Thermometer benutzen.
 
 Die quantenmechanischen Rechnungen ergeben die selben Auswahlregeln wie für die Infrarot-Schwingungsspektroskopie, also 
 \begin{equation}
- \Delta \nu = \pm 1 \quad \text{falls harmonisch, sonst} \quad \pm 1, \pm 2, \dots  
+ \Delta \nu = \pm 1 \quad \text{falls harmonisch, sonst} \quad \pm 1, \pm 2, \dots   \quad .
 \end{equation}
 
 
@@ -144,11 +139,11 @@ Die quantenmechanischen Rechnungen ergeben die selben Auswahlregeln wie für die
 
 Ähnlich zu molekularen Schwingungen findet sich auch die Rotation der Moleküle im Raman-Spektrum. Wir beginnen wieder mit dem klassischen Modell. Elektromagnetisches Feld $E(t)$ und induziertes Dipolmoment $p_\text{ind}(t)$ sind wie oben
 \begin{equation}
-p_\text{ind}(t) = \alpha(t) E(t) = \alpha(t) E_0 \cos \omega_0 t \label{eq:raman_pind_rot}
+p_\text{ind}(t) = \alpha(t) E(t) = \alpha(t) E_0 \cos \omega_0 t \quad . \label{eq:raman_pind_rot}
 \end{equation}
 In die Zeitabhängigkeit der Polarisierbarkeit $\alpha(t)$ bauen wir jetzt die Rotation ein. Dazu nehmen wir an, dass die Polarisierbarkeit anisotrop ist, sich also für zwei senkrecht aufeinander stehende Richtungen unterscheidet: $\alpha_\parallel \neq \alpha_\perp$. Bei einem sich mit der Kreisfrequenz $\omega_R$ drehenden Molekül ist die Polarisierbarkeit also
 \begin{equation}
-\alpha(t) = \alpha_0 + \Delta \alpha \cos ( 2 \omega_R t) \quad \text{mit} \quad \Delta \alpha = \alpha_\parallel - \alpha_\perp
+\alpha(t) = \alpha_0 + \Delta \alpha \cos ( 2 \omega_R t) \quad \text{mit} \quad \Delta \alpha = \alpha_\parallel - \alpha_\perp \quad .
 \end{equation}
 Der Faktor $2$ kommt daher, dass das Molekül bereits nach $180^\circ$ wieder in sich übergeht. Dies setzen wir wieder in Gl. \ref{eq:raman_pind_rot} ein und multiplizieren aus. Wir bekommen analog zu oben
 \begin{align}
@@ -157,39 +152,37 @@ p_\text{ind}(t) = & \underbrace{  \alpha_0 E_0 \cos(\omega_0 t) }_\text{Rayleigh
 \Bigl\{ 
 \underbrace{ \cos \left( [\omega_0 -2 \omega_R] t \right)}_\text{Stokes}  +  \underbrace{\cos \left( [\omega_0 + 2 \omega_R] t \right)  
 }_\text{Anti-Stokes} 
-\Bigr\} 
+\Bigr\}  \quad .
 \nonumber
 \end{align}
 Die Linien sind also bei der doppelten Rotationsfrequenz ober- oder unterhalb der Rayleigh-Linie. Quantenmechanische Rechnungen ergeben als Auswahlregeln entweder
 \begin{equation}
-\Delta J = 0 \quad \text{und falls} \quad  \Delta \alpha \neq 0 \quad  \text{dann auch} \quad \Delta J = \pm 2
+\Delta J = 0 \quad \text{und falls} \quad  \Delta \alpha \neq 0 \quad  \text{dann auch} \quad \Delta J = \pm 2 \quad .
 \end{equation}
 Die Position der Linien in einem Rotations-Raman-Spektrum sind also
 \begin{equation}
  \bar{\nu} =  \bar{\nu}_\text{laser} \pm B \left[ (J+2) (J+3) - J(J+1) \right] = 
- \bar{\nu}_\text{laser} \pm B \left[ 4J + 6 \right]
+ \bar{\nu}_\text{laser} \pm B \left[ 4J + 6 \right] \quad ,
 \end{equation}
 wobei das $+$ die Anti-Stokes-Banden und das $-$ die Stokes-Banden liefert. Der Abstand der äquidistanten Linien ist damit nicht mehr $2B$ wie im Fall des THz-Absorptions-Spektrums, sondern $4B$. Da $B$ klein gegenüber $\bar{\nu}_\text{laser} $ ist, ist ein reines Rotations-Raman-Spektrum messtechnisch aufwändig. Eine sehr schwache Linie muss in kleinem spektralen Abstand zur starken Rayleigh-Linie detektiert werden. Dies erfordert einen hochauflösenden und stark unterdrückenden Monochromator, quasi immer durch die Hintereinanderschaltung von zwei oder drei Monochromatoren zu einem Doppel- bzw. Trippel-Monochromator realisiert.
-
-
-
 
 \begin{marginfigure}
 \inputtikz{\currfiledir rot_vib_raman}
 \caption{Rotations-Vibrations-Spektrum in Raman-Streuung. Alle gezeichneten Linien und Übergänge sind Stokes-Übergänge.  \label{fig:raman_rotvib}}
 \end{marginfigure}
 
+
+
+
  \section{Rotations-Vibrations-Raman-Effekt}
 
 Analog zum Rotations-Vibrations-Spektrum in Absorption lässt sich die kombinierte Anregung eines Rotations- und Schwingungsniveaus auch im Raman-Effekt beobachten. Abbildung \ref{fig:raman_rotvib} skizziert die beteiligten Zustände für die Stokes-Bande, also die Linien die niederenergetisch von der Rayleigh-Linie liegen. Die Linienpositionen sind 
 
 \begin{equation}
- \bar{\nu} =  \bar{\nu}_\text{laser} \pm \bar{\nu}_\text{vib} \pm B \left[ 4J + 6 \right] 
+ \bar{\nu} =  \bar{\nu}_\text{laser} \pm \bar{\nu}_\text{vib} \pm B \left[ 4J + 6 \right]  \quad .
 \end{equation}
 Das erste $\pm$ unterscheidet zwischen Stokes ($-$) und Anti-Stokes ($+$). Das zweite $\pm$ ist gerade andersrum als das Vorzeichen von $\Delta J$. Man beachte, dass die Sequenz von äquidistanten Rotations-Linien wieder mit dem Abstand $6B$ von der reinen Vibrationslinie  $\Delta J = 0$ beginnt. Ähnlich zum Absorptionsspektrum werden die Linien mit $\Delta J =-2$ als O-Zweig, die mit 
 $\Delta J =+2$ als S-Zweig bezeichnet.
-
-
 
 \begin{margintable}
 \begin{tabular}{rccccc}
@@ -198,6 +191,8 @@ Zweig & O & P & Q & R & S
 \end{tabular}
 \caption{Nomenklatur der Zweige bei Rotationsspektren. $\Delta J = \pm 1$ im Absorptionsspektrum, $\Delta J = \pm 2$ im Raman-Spektrum sichtbar.}
 \end{margintable}
+
+
 
 \section{Einfluss der Kernspins}
 
@@ -239,7 +234,7 @@ Atomkerne sind entweder Fermionen, haben also einen halbzahligen Spin, oder sie 
  
 Nach dieser Operationen haben wir effektiv die beiden Kerne vertauscht. Die Symmetrie ergibt sich damit aus dem Produkt der einzelnen aufgeführten Faktoren. Für Kerne mit ganzzahligem Spin, also Bosonen, muss die Gesamt-Wellenfunktion symmetrisch sein, also ein $+1$ am Ende der Rechnung herauskommen. In vielen Fällen sind dabei alle Parameter fest, bis auf die Rotations-Quantenzahl $J$ und der Spin-Zustand der Kerne. Beide bedingen sich dadurch gegenseitig. Wenn jeder einzelne Kern die Kernspin-Quantenzahl $I_1$ hat, dann kann die Gesamt-Kernspin-Quantenzahl $I$ zwischen $0$ und $2 I_1$ liegen. Für jedes $I$ gibt es $2 I +1$ Realisierungen mit unterschiedlichem $M_I$. Insgesamt gibt dies $(2 I_1 + 1)^2$ Möglichkeiten. Von diesen sind $(2 I_1 +1)( I_1 +1)$ symmetrisch und $(2 I_1 +1) I_1$ antisymmetrisch. Das Verhältnis der statistischen Gewichte $g$ beträgt also
 \begin{equation}
- \frac{g_\text{symmetrisch}}{g_\text{anti-symmetrisch}} = \frac{I_1 + 1}{I_1}
+ \frac{g_\text{symmetrisch}}{g_\text{anti-symmetrisch}} = \frac{I_1 + 1}{I_1} \quad .
 \end{equation}
 Dadurch ist die  'Geradheit' von $J$ mit einem unterschiedlichen statistischen Gewicht verknüpft.
 
@@ -262,7 +257,13 @@ Da die Auswahlregeln $\Delta J = 2$ bei Raman-Übergängen verlangen, sind Über
 
 \paragraph{Beispiel \ch{^{16}O2}} Jeder Kern hat $I_1 = 0$, ist also ein Boson und die Gesamt-Wellenfunktion muss symmetrisch unter Vertauschen der beiden Kerne sein.  Der elektronische Grundzustand ist $^3\Sigma_g^-$, die Spieglung an der Ebene tauscht also das Vorzeichen. Der Gesamt-Kernspin kann nur ein symmetrischer Zustand mit $I = 0$ sein. Damit die Gesamt-Wellenfunktion symmetrisch bleibt, muss die Rotations-Wellenfunktion anti-symmetrisch sein, also $J = \text{ungerade}$. In Sauerstoff-Molekül  \ch{^{16}O2} fehlen also die Rotationslinien mit geradem $J$ vollständig. Wenn man den Kernspin nicht berücksichtigen würde, dann würde man eine doppelt so große Rotationskonstante $B$ annehmen.
 
+\newpage
 
+\section{Zusammenfassung}
+
+\textit{Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte und die am Anfang genannten Ziele des Kapitels.}
+
+\vspace*{10cm}
 
 
 

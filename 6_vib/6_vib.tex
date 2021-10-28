@@ -1,10 +1,12 @@
-%\renewcommand{\lastmod}{\today}
+\renewcommand{\chapterauthors}{Markus Lippitz}
+\renewcommand{\lastmod}{28. Oktober 2021}
+
 
 \chapter{Schwingungsspektroskopie im Infraroten}
 
 \label{chap:vib}
 
-%https://webbook.nist.gov/cgi/cbook.cgi?ID=C74884&Type=IR-SPEC&Index=1#IR-SPEC
+
 
 \section{Ziele}
 
@@ -12,7 +14,6 @@
 \item Sie können Vibrationsspektren von Molekülen in der Gasphase wie das untenstehende von HCN erklären und daraus Eigenschaften des Moleküls wie die  Federkonstante der Bindung oder die  Molekülform bestimmen.
 \end{itemize}
 
-%\tikzexternaldisable
 
 \begin{figure}
 \inputtikz{\currfiledir fig_hcn-single}
@@ -20,16 +21,20 @@
 \label{fig:vib_hcn}}
 \end{figure}
 
-
+%other sources 
+%https://webbook.nist.gov/cgi/cbook.cgi?ID=C74884&Type=IR-SPEC&Index=1#IR-SPEC
 
 \section{Wie misst man das ?}
 
 Das Bindungspotential eines Moleküls kann in der Nähe des Minimums, also um den Gleichgewichts-Bindungsabstand $R_0$ herum, harmonisch genähert werden.
-Wie wir in Kapitel \ref{chap:3_diel} schon abgeschätzt hatten hat die Federkonstante dieses harmonischen Potentials einen Wert von etwas $k \approx 200$~N/m. Damit ergibt sich eine Eigenfrequenz des harmonischen Oszillators von $\omega = \sqrt{k / m}$ die einer optischen Wellenlänge von etwa $\lambda \approx 5$~\textmu m oder einer Wellenzahl $\bar{\nu} \approx 2000$~cm$^{-1}$ entspricht. 
+Wie wir in Kapitel \ref{chap:4_diel} schon abgeschätzt hatten hat die Federkonstante dieses harmonischen Potentials einen Wert von etwas $k \approx 200$~N/m. Damit ergibt sich eine Eigenfrequenz des harmonischen Oszillators von $\omega = \sqrt{k / m}$ die einer optischen Wellenlänge von etwa $\lambda \approx 5$~\textmu m oder einer Wellenzahl $\bar{\nu} \approx 2000$~cm$^{-1}$ entspricht. 
 
 Absorptionsspektren in diesen (Nah-)Infraroten Wellenlängenbereich misst man beispielsweise durch Fourier-Transformations-Infrarot-Spektroskopie (FTIR). Als Lichtquelle wird oft ein breitbandiger Infrarotstrahler benutzt, der aus einem Silizium-Carbid-Stab (Globar) besteht, durch den ein Strom fließt und so heizt. Das durch die Probe transmittierte Licht wird durch ein Michelson-Interferometer geleitet und mit einem infrarot-  also Wärme-empfindlichen Detektor (Bolometer) gemessen. Dieser Detektor selbst kann nur die Gesamt-Intensität messen. Das Michelson-Interferometer wirkt aber als spektraler Filter mit einer sinusförmigen Transmission. Die Periode der spektralen Modulation wird über den Armlängen-Unterschied eingestellt und kontinuierlich variiert. Aus der Fourier-Transformation der gemessenen Intensität als Funktion des Armlängen-Unterschieds erhält man das Spektrum des Infrarot-Lichts, also Intensität als Funktion der Wellenlänge.
 
 
+\begin{questions} 
+\item Bei welcher Wellenzahl $\bar{\nu$} liegt das Maximum des Sonnenspektrums?
+\end{questions}
 
 \section{Born-Oppenheimer-Näherung}
 
@@ -38,37 +43,37 @@ In der Schwingungsspektroskopie beobachtet man, dass sich im Molekül der Kern--
 Das Molekül habe $N$ Elektronen der Masse $m$ am Ort $\mathbf{r}_i$ und $K$ Kerne des Masse $M_k$ am Ort $\mathbf{R}_k$. Die Vektoren $\mathbf{r}$ und $\mathbf{R}$ (\emph{ohne} Index) fassen \emph{alle} Koordinaten aller Elektronen bzw. Kerne zusammen, haben also eine sehr hohe Dimension, vereinfachen aber die Schreibweise. Die Schrödinger-Gleichung ist dann
 \begin{equation}
  \hat{H} \, \Psi (\mathbf{r}, \mathbf{R}) = E \, \Psi (\mathbf{r}, \mathbf{R}) \quad \text{mit} \quad
-  \hat{H} =  \hat{T}_e + \hat{T}_k + V (\mathbf{r}, \mathbf{R}) 
+  \hat{H} =  \hat{T}_e + \hat{T}_k + V (\mathbf{r}, \mathbf{R})  \quad .
   \label{eq:vib_SG_allg}
 \end{equation}
 Die Operatoren $\hat{T}_{e,k}$ liefern die kinetische Energie und  $ V (\mathbf{r}, \mathbf{R}) $ \emph{alle} Coulomb-Potentiale, der Elektronen und Kerne untereinander und miteinander.
 
 Falls die Kerne ruhen, also $\mathbf{R} = const.$, dann ist $\hat{T}_k = 0$. Wir betrachten jetzt die Bewegung der Kerne als Störung auf den Fall der ruhenden Kerne, also
 \begin{equation}
- \hat{H} = \hat{H}_0 + \hat{H}' = \left( \hat{T}_e + V \right) +  \hat{T}_k
+ \hat{H} = \hat{H}_0 + \hat{H}' = \left( \hat{T}_e + V \right) +  \hat{T}_k \quad .
 \end{equation}
 Im ungestörten Fall lösen wir die Schrödinger-Gleichung
 \begin{equation}
-\hat{H}_0 \, \Phi_n^{el}  (\mathbf{r}, \mathbf{R})  = E_n^{(0)}  (\mathbf{R})  \, \Phi_n^{el}  (\mathbf{r}, \mathbf{R})    \label{eq:vib_SG_elec}
+\hat{H}_0 \, \Phi_n^{el}  (\mathbf{r}, \mathbf{R})  = E_n^{(0)}  (\mathbf{R})  \, \Phi_n^{el}  (\mathbf{r}, \mathbf{R})   \quad .  \label{eq:vib_SG_elec}
 \end{equation}
 In dieser Schreibweise ist $\mathbf{R}$ nur ein Parameter, der die stillstehende Kern-Positionen beschreibt. Weder differenzieren noch integrieren wir nach  $\mathbf{R}$. Die Lösungen der Schrödinger-Gleichung werden durch Quantenzahlen beschrieben, die hier alle in $n$ zusammengefasst sind. Die Eigenfunktionen $\Phi_n^{el}  (\mathbf{r}, \mathbf{R}) $ bilden ein vollständiges Orthonormalsystem, also können wir die eigentlich gesuchten $\Psi (\mathbf{r}, \mathbf{R})$ nach diesen entwickeln
 \begin{equation}
-\Psi (\mathbf{r}, \mathbf{R}) = \sum_m \chi_m (\mathbf{R}) \,\Phi_m^{el}  (\mathbf{r}, \mathbf{R}) 
+\Psi (\mathbf{r}, \mathbf{R}) = \sum_m \chi_m (\mathbf{R}) \,\Phi_m^{el}  (\mathbf{r}, \mathbf{R})  \quad .
 \end{equation}
-Die Koeffizienten $\chi_m (\mathbf{R}) $ sind die Kernwellenfunktionen. Zunächst setzen wir aber diesen Ansatz in die vollständige Schrödinger-Gleichung   \ref{eq:vib_SG_allg}ein und erhalten nach kurzer Rechnung\sidenote{siehe beispielsweise Kap. 2.1.2 in  \cite{Demtröder_molekuelphysik}}
+Die Koeffizienten $\chi_m (\mathbf{R}) $ sind die Kernwellenfunktionen. Zunächst setzen wir aber diesen Ansatz in die vollständige Schrödinger-Gleichung   \ref{eq:vib_SG_allg} ein und erhalten nach kurzer Rechnung\sidenote{siehe beispielsweise Kap. 2.1.2 in  \cite{Demtröder_molekuelphysik}}
 \begin{equation}
-\hat{H}' \, \chi_n (\mathbf{R}) + \sum_m \, c_{n m} \, \chi_m (\mathbf{R}) = \left( E - E_n^{(0)}(\mathbf{R})  \right) \chi_n (\mathbf{R})   \label{eq:vib_SG_kern}
+\hat{H}' \, \chi_n (\mathbf{R}) + \sum_m \, c_{n m} \, \chi_m (\mathbf{R}) = \left( E - E_n^{(0)}(\mathbf{R})  \right) \chi_n (\mathbf{R})   \quad . \label{eq:vib_SG_kern}
 \end{equation}
 Die Kopplung der Kern-Wellenfunktionen $\chi_i (\mathbf{R}) $ ($i = m,n$) untereinander wird durch die Koeffizienten $c_{nm}$ beschrieben. Diese hängen von den Elektronenwellenfunktionen $\Phi_i^{el}  (\mathbf{r}, \mathbf{R}) $   ab. Die genaue Form von $c_{nm}$  wird hier nicht benötigt. Die beiden Gleichungen   \ref{eq:vib_SG_elec} und   \ref{eq:vib_SG_kern} bilden also ein gekoppeltes Gleichungssystem.
 
 Die Born-Oppenheimer-Näherung entkoppelt dieses Gleichungssystem, in sie die Annahme macht
 \begin{equation}
-c_{n m } = 0
+c_{n m } = 0 \quad .
 \end{equation}
 Damit bleibt Gleichung \ref{eq:vib_SG_elec} unverändert und Gl. \ref{eq:vib_SG_kern} vereinfacht sich:
 \begin{align}
 \left( \hat{T}_e + V (\mathbf{r}, \mathbf{R}) \right) \, \Phi_n^{el}  (\mathbf{r}, \mathbf{R})  = &  \, E_n^{(0)}  (\mathbf{R})  \, \Phi_n^{el}  (\mathbf{r}, \mathbf{R})    \label{eq:vib_BO_el}\\
-\left( \hat{T}_k + E_n^{(0)}(\mathbf{R})  \right) \, \chi_n (\mathbf{R}) =  &   \, E  \, \chi_n (\mathbf{R})   \label{eq:vib_BO_kern}
+\left( \hat{T}_k + E_n^{(0)}(\mathbf{R})  \right) \, \chi_n (\mathbf{R}) =  &   \, E  \, \chi_n (\mathbf{R})  \quad .  \label{eq:vib_BO_kern}
 \end{align}
 Dabei ist in Gl. \ref{eq:vib_BO_el} die Kernposition $\mathbf{R}$ nur als Parameter zu verstehen, in Gl. \ref{eq:vib_BO_kern} aber als Variable. Der Energie-Eigenwert der elektronischen Gleichung \ref{eq:vib_BO_el}  bildet das Potential für die Kernbewegung in Gleichung  \ref{eq:vib_BO_kern}, da er ja von der Position der Kerne abhängt. Die Elektronen wiederum bewegen sich in ihrem eigenen Coulomb-Potential und in dem der stillstehenden Kerne, beides in 
 $V (\mathbf{r}, \mathbf{R}) $ zusammengefasst.
@@ -80,11 +85,11 @@ Wenn das Molekül nur aus zwei Atomen besteht, dann vereinfacht sich die Schröd
 
 Alles zusammen ist dies also die Bewegung eines einzelnen Teilchens in einem sphärischen Potential, und damit formal äquivalent zum Wasserstoff-Atom, wenn auch mit einer anderen Potentialform. Analog zum Wasserstoff-Atom schreiben wir die Wellenfunktion $\chi$ als
 \begin{equation}
- \chi (R, \theta, \phi) = \frac{U(R)}{R} \, Y_{l m} (\theta, \phi)
+ \chi (R, \theta, \phi) = \frac{U(R)}{R} \, Y_{l m} (\theta, \phi) \quad .
 \end{equation}
 Die Kugelflächenfunktionen $ Y_{l m} (\theta, \phi)$ geben die Winkelverteilung der Kernwellenfunktion an, die aus der im letzten Kapitel behandelten Rotation des Moleküls stammt. Wenn man dies alles in die Schrödinger-Gleichung für die Kernwellenfunktion einsetzt, vereinfacht sich diese zu
 \begin{equation}
- \frac{d^2}{d R^2} U(R) + \frac{2 \mu }{\hbar^2} \left( E - E_n^{(0)}(R) - \frac{\hbar^2 J (J+1)}{2 \mu R^2} \right) U(R) = 0
+ \frac{d^2}{d R^2} U(R) + \frac{2 \mu }{\hbar^2} \left( E - E_n^{(0)}(R) - \frac{\hbar^2 J (J+1)}{2 \mu R^2} \right) U(R) = 0 \quad .
  \label{eq:vib_zweiatom_U}
 \end{equation}
 Der letzte Term in der Klammer ist die Rotationsenergie der Kerne bei  Drehimpuls-Quantenzahl $J$ und reduzierter Masse $\mu$. Die Form des Bindungspotentials $E_n^{(0)}(R)$ bestimmt also $U(R)$ und damit die Kernwellenfunktion $\chi$.
@@ -98,7 +103,7 @@ E_n^{(0)}(R)  = \frac{1}{2} \, k \, (R - R_0 )^2 = \frac{1}{2} \, k \, r^2
 \end{equation}
 mit der Federkonstanten $k = \mu \, \omega_0^2$ und der Auslenkung $r$ aus dem Gleichgewicht. Weiterhin nehmen wir zunächst einmal an, dass das Molekül nicht rotiert, also $J=0$.  Damit wird Gl.\ref{eq:vib_zweiatom_U} zu
 \begin{equation}
- \frac{d^2}{d \xi^2} U(\xi) + \left( \frac{2 E }{\hbar \omega_0}  - \xi^2  \right) U(\xi) = 0 \quad \text{mit} \quad \xi =  r \, \sqrt{\frac{\mu \omega_0}{\hbar}  }
+ \frac{d^2}{d \xi^2} U(\xi) + \left( \frac{2 E }{\hbar \omega_0}  - \xi^2  \right) U(\xi) = 0 \quad \text{mit} \quad \xi =  r \, \sqrt{\frac{\mu \omega_0}{\hbar}  } \quad .
 \end{equation}
 Diese Differentialgleichung wird gelöst durch die Schwingungs-Wellenfunktion des eindimensionalen harmonischen Oszillators
 \begin{equation}
@@ -123,15 +128,15 @@ Aufenthaltswahrscheinlichkeit an den Umkehrpunkten des Oszillators besonders hoc
 
 \section{Auswahlregeln für reine Schwingungsübergänge}
 
-Lässt sich die Schwingung eines Moleküls (eigentlich der Kerne entlang der Bindungsachse) durch die Absorption eines Photons anregen? Oder andersherum: hinterlassen die Schwingungs-Energie-Eigenwerte $E_\nu$ von oben einen beobachtbaren Effekt? Hier wollen wir uns darauf beschränken, \emph{nur} die Schwingung anzuregen. Weiter unten werden wir Kombinationen mit anderen Anregungen (Rotation, Elektronisch) diskutieren.
+Lässt sich die Schwingung eines Moleküls (eigentlich der Kerne entlang der Bindungsachse) durch die Absorption eines Photons anregen? Oder andersherum: hinterlassen die Schwingungs-Energie-Eigenwerte $E_\nu$ von oben einen beobachtbaren Effekt? Hier wollen wir uns darauf beschränken, \emph{nur} die Schwingung anzuregen. Weiter unten werden wir Kombinationen mit anderen Anregungen (Rotation, elektronisch) diskutieren.
 
 Um diese Fragen zu beantworten hilft Fermis Goldene Regel zur Übergangsrate $\Gamma_{i \rightarrow f}$ vom Zustand $\ket{i}$ in den Zustand $\ket{f}$:
 \begin{equation}
-\Gamma_{i \rightarrow f} = \frac{2 \pi}{\hbar} \, |\braket{f | \hat{H}' | i} |^2 \, \rho(E_\textit{final})
+\Gamma_{i \rightarrow f} = \frac{2 \pi}{\hbar} \, |\braket{f | \hat{H}' | i} |^2 \, \rho(E_\textit{final}) \quad ,
 \end{equation}
 wobei $\hat{H}'$ den Stör-Operator beschreibt, der erst den Übergang verursacht, und $ \rho(E_\textit{final})$ die Dichte der Zustände, die erreicht werden können. Für optische Übergänge ist der Stör-Operator der Dipol-Operator, also
 \begin{equation}
-\hat{H}' = \hat{\mu} \cdot \mathbf{E}
+\hat{H}' = \hat{\mu} \cdot \mathbf{E} \quad ,
 \end{equation}
 wobei hier $\mathbf{E}$ das elektromagnetische Feld am Ort des Moleküls beschreibt. Das Übergangsdipolmoment $\mathbf{D}_{fi}$ ist dann 
 \begin{equation}
@@ -141,15 +146,15 @@ und die Auswahlregeln beantworten die Frage, unter welchen Umständen dieser Ter
 
 In der vollständigsten Form bestehen die Wellenfunktionen aus dem elektronischen Anteil $ \Phi_n^{el}  (\mathbf{r}, \mathbf{R})  $, dem Kern-Rotations-Anteil $ Y_{l m} (\theta, \phi)$ und dem radialen Kern-Anteil  $\Psi_\text{vib}$. Da wir nur an reinen Schwingungs-Anregungen interessiert sind, reicht es hier aus, diesen letzten Anteil zu betrachten. Genauso besteht der Dipol-Operator eigentlich aus der Summe über alle Ladungen mal deren Ortsvektor. Auch dies vereinfacht sich zu dem Radialanteil der Kernladungen $d_k(R)$. Weiterhin nähern wir den Operator in einer Taylor-Reihe um $R \approx R_0$ und behalten nur das erste Glied. Die vollständige Rechnung findet sich in Kapitel 4.2 von \cite{Demtröder_molekuelphysik}. Dabei verschwindet auch das nullte Glied der Taylor-Reihe, das das statische Dipolmoment beschreibt. Man findet schließlich, dass das Übergangsmatrixelement gegeben ist durch
 \begin{equation}
-D_{fi}^\text{vib} \propto  \left. \frac{\partial d_k}{\partial R} \right|_{R_0} \,  \int (\Psi_\text{vib}^\star (R) )_f \, R  \, \, (\Psi_\text{vib} (R) )_i \, dR
+D_{fi}^\text{vib} \propto  \left. \frac{\partial d_k}{\partial R} \right|_{R_0} \,  \int (\Psi_\text{vib}^\star (R) )_f \, R  \, \, (\Psi_\text{vib} (R) )_i \, dR \quad .
 \end{equation}
 Reine Schwingungsübergang sind also nur dann erlaubt, wenn sich das permanente Dipolmoment mit dem Kern-Kern-Abstand ändert. Solche Moleküle werden infrarotaktiv genannt. Dann  darf auch das Integral nicht verschwinden. Aufgrund einer Eigenschaft der Hermite'schen Polynome ist das nur dann der Fall, wenn sich die Quantenzahl $\nu$ zwischen den beiden Zuständen nur um eins unterscheidet, also 
 \begin{equation}
- \Delta \nu = \pm 1
+ \Delta \nu = \pm 1 \quad .
 \end{equation}
 Reine Schwingungsübergänge sind also nur zwischen benachbarten Zuständen möglich, und das auch nur für manche Moleküle, bei denen sich das Dipolmoment mit dem Kern-Kern-Abstand ändert. \ch{NO} ist also infrarotaktiv, \ch{H2} nicht. Da im harmonischen Oszillator die Zustände äquidistant sind, bestehen reine Schwingungsspektren in diesem Fall aus einer einzigen Linie bei 
 \begin{equation}
- \bar{\nu}_\text{vib} = \frac{\hbar \omega_0}{h c} = \frac{\sqrt{k / \mu} }{2 \pi  c}
+ \bar{\nu}_\text{vib} = \frac{\hbar \omega_0}{h c} = \frac{\sqrt{k / \mu} }{2 \pi  c} \quad .
 \end{equation}
 
 Das am Anfang des Kapitels gezeigte Spektrum ist deutlich komplexer. Unsere Annahme, dass sich allein die Schwingungs-Quantenzahl $\nu$ ändert, ist also (zu) weitreichend. Es wird sich zeigen, dass der scharfe Peak bei $\bar{\nu} = 715$~cm$^{-1}$ ein reiner Schwingungsübergang ist.
@@ -158,7 +163,7 @@ Das am Anfang des Kapitels gezeigte Spektrum ist deutlich komplexer. Unsere Anna
 
 Die harmonische Parabel ist nur eine erste Näherung für das Bindungspotential. Man kann verschiedene, besser zutreffende analytische Potentiale aufstellen. Oft wird das \emph{Morse-Potential} verwendet, weil auch mit ihm  die Schrödinger-Gleichung exakt lösbar ist. Das Potential habe die Form
 \begin{equation}
- V(R) = D_e \left( 1 - e^{-a (R - R_0)} \right)^2 \approx D_e \, a^2 (R - R_0)^2 + \cdots
+ V(R) = D_e \left( 1 - e^{-a (R - R_0)} \right)^2 \approx D_e \, a^2 (R - R_0)^2 + \cdots \quad .
 \end{equation}
 Dabei ist $D_e$ die Dissoziationsenergie des Moleküls, also die Tiefe des Minimums unter der Energie bei $R \rightarrow \infty$. In der harmonischen Näherung des Morse-Potentials entspricht $k = 2 D_e a^2$ der Federkonstanten bzw. $\omega_0 = a \sqrt{2 D_e / \mu}$ der Eigenfrequenz. Als Energie-Eigenwerte erhält man
 \begin{align}
@@ -196,7 +201,7 @@ mit der Rotations-Quantenzahl $J$ und der Vibrations-Quantenzahl $\nu$. Der ener
 
 Die Auswahlregeln sind zunächst dieselben wie wir sie bereits für die beiden Prozesse separat diskutiert hatten. Hinzu kommt die Möglichkeit, dass nichts passiert, also sich nur die andere Quantenzahl verändert. Damit haben wir
 \begin{equation}
- \Delta \nu = 0, \pm 1 \quad \text{und} \quad \Delta J = 0, \pm 1 
+ \Delta \nu = 0, \pm 1 \quad \text{und} \quad \Delta J = 0, \pm 1  \quad ,
 \end{equation}
 aber nicht alle Kombinationen sind möglich oder interessant.
 
@@ -208,7 +213,7 @@ aber nicht alle Kombinationen sind möglich oder interessant.
 
 \paragraph{P-Zweig} Falls $\Delta J = -1$ ist, und $\Delta \nu = +1$ (in Absorption eines IR Photons) oder $-1$ (in Emission eines IR Photons), dann führen diese Übergänge zum sogenannten P-Zweig. Die Linienpositionen sind
 \begin{equation}
- \frac{\Delta E}{h c} = \frac{1}{h c} \left( E(\nu +1, J -1) - E(\nu, J) \right) = \frac{\hbar \omega_0}{h c}   - 2 B J
+ \frac{\Delta E}{h c} = \frac{1}{h c} \left( E(\nu +1, J -1) - E(\nu, J) \right) = \frac{\hbar \omega_0}{h c}   - 2 B J \quad .
 \end{equation}
 Wir erhalten also eine äquidistante Schar von Linien, völlig analog dem reinen Rotationsspektrum, insbesondere auch im dort besprochenen Verlauf der Amplituden. Der einzige Unterschied ist das negative Vorzeichen. Die Linienschar ist also gespiegelt gegenüber dem THz-Spektrum und beginnt an der reinen Schwingungslinie $\bar{\nu}_0 $.
 
@@ -242,7 +247,7 @@ Um Gleichung \ref{eq:vib_rot_simple} zu verbessern, nehmen wir jetzt sowohl die 
 mit
 \begin{equation}
 B(\nu) = B_0 - \alpha \left(\nu + \frac{1}{2} \right) \quad \text{und} \quad
-D(\nu) = D_0 + \beta \left(\nu + \frac{1}{2} \right) 
+D(\nu) = D_0 + \beta \left(\nu + \frac{1}{2} \right)  \quad .
 \end{equation}
 Die (positiven) Koeffizienten $\alpha$ und $\beta$ beschreiben die  Rotations-Schwingungs-Kopplung. Das Vorreichen vor $\alpha$ ergibt sich aus der $\nu$-Abhängigkeit des mittleren Bindungsabstands $R$: dieser steigt mit $\nu$, wodurch das gemittelte $1/R^2$ und somit auch die gemittelte Rotationskonstante $B$ fällt, also $\alpha$ mit negativem Vorzeichen eingeht. Das Vorzeichen vor $\beta$ ist positiv, weil das anharmonische Bindungspotential mit $\nu$ weicher (also flacher) wird und so die Zentrifugalkraft einen größeren Einfluss auf die Rotation hat.
 
@@ -270,12 +275,12 @@ Wie handhabt man ein System aus $N$ Massen, die alle durch mehr oder weniger har
 Wir benutzen Masse-gewichtete generalisierte Koordinaten $q_i = \sqrt{m_i}  \Delta \tilde{q}_i$, wobei der Index $i$ über alle Atome und alle Raumrichtungen läuft, also von $1$ bis $3N$. $m_i$ ist die Masse des zugehörigen Atoms und 
 $\Delta \tilde{q}_i$ die Auslenkung aus der Gleichgewichtsposition. Damit wird  die kinetische Energie $T$ 
 \begin{equation}
-T = \frac{1}{2} \sum_{i=1}^{3N} \dot{q}_i^2
+T = \frac{1}{2} \sum_{i=1}^{3N} \dot{q}_i^2 \quad .
 \end{equation}
 Für das Potential setzen wir eine Taylor-Reihe nach $q_i$ an. Wir legen den Nullpunkt der Energieskala auf das Minimum des Potentials. Damit verschwinden die ersten beiden Terme der Taylor-Reihe und wir behalten nur den nächsten
 \begin{equation}
 V \approx \frac{1}{2} \sum_{i,k = 1}^{3N} \frac{\partial V}{\partial q_i \partial q_k} \, q_i \, q_k = 
- \frac{1}{2} \sum_{i,k = 1}^{3N} b_{ik} \, q_i \, q_k 
+ \frac{1}{2} \sum_{i,k = 1}^{3N} b_{ik} \, q_i \, q_k  \quad .
 \end{equation}
 Damit können wir die Lagrange--Funktion $L = T - V$ bilden und erhalten in diesem Formalismus die Bewegungsgleichungen
 \begin{equation}
@@ -283,13 +288,13 @@ Damit können wir die Lagrange--Funktion $L = T - V$ bilden und erhalten in dies
 \end{equation}
 oder als Matrix mit $\tilde{\mathbf{B}} = (b_{ik})$ und $\mathbf{q} = (q_i)$
 \begin{equation}
-\ddot{\mathbf{q}} + \tilde{\mathbf{B}}  \cdot  \mathbf{q} = 0
+\ddot{\mathbf{q}} + \tilde{\mathbf{B}}  \cdot  \mathbf{q} = 0 \quad .
 \end{equation}
 Dies ist ein System aus $3N$ gekoppelten Differentialgleichungen. Um sie zu entkoppeln diagonalisieren wir 
 $\tilde{\mathbf{B}} $, suchen also $3N$ Eigenvektoren   $\mathbf{q}_n^0$ und (potentiell entartete) Eigenwerte $\lambda_n$ so dass
 \begin{equation}
  \tilde{\mathbf{B}} \cdot \mathbf{q}_n^0 = \lambda_n \mathbf{q}_n^0 \quad \text{und damit} \quad
- \mathbf{q}_n(t) =  \mathbf{q}_n^0 \, e^{i \, t \, \sqrt{\lambda_n}}
+ \mathbf{q}_n(t) =  \mathbf{q}_n^0 \, e^{i \, t \, \sqrt{\lambda_n}} \quad .
 \end{equation}
 Die Eigenvektoren   $\mathbf{q}_n^0$ nennt man Normalmoden. Sie beschreiben also die gleichzeitige Bewegung aller Kerne in alle Raumrichtungen bei der Normal\-mode $n$ mit der Frequenz\sidenote{Manche $\lambda_n$ müssen Null sein, da es ja nur $3N - 5$ (oder 6) Normalmoden gebe kann.} $\omega_n = \sqrt{\lambda_n}$. Da die $b_{ik}$ reelwertig sind, schwingen in der Normalmode alle Atome in Phase, machen also gleichzeitig den Nulldurchgang, und natürlich mit der gleichen Frequenz. In der Basis der Normalmoden vereinfacht sich das Potential: es hat nur noch quadratische Formen der Art $\frac{1}{2} k q_i^2$ aber keine bi-linearen der Art $\frac{1}{2} k q_i q_k$, sonst wäre $\tilde{\mathbf{B}} $ ja nicht dialogisiert.
 
@@ -299,7 +304,7 @@ Q_n(t) = | \mathbf{q}_n (t) |
 \end{equation}
 also die masse-gewichtete Auslenkung aller Atome. Dieses $Q$ übernimmt in mehratomigen Molekülen die Rolle von $R$ im zweiatomigen Molekül. Die Energie einer Elementar-Anregung ist weiterhin 
 \begin{equation}
-E = \hbar \omega_n = \hbar	\sqrt{\lambda_n}
+E = \hbar \omega_n = \hbar	\sqrt{\lambda_n} \quad .
 \end{equation}
 Höhere Anregungen haben dann entsprechende Vielfache dieser Energie, und entsprechende Vielfache der Auslenkung 
  $\mathbf{q}_n^0$.
@@ -446,7 +451,13 @@ ersten Oberton der Biegeschwingung bei ungefähr der doppelten Frequenz  $\bar{\
 
 
 
+\newpage
 
+\section{Zusammenfassung}
+
+\textit{Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte und die am Anfang genannten Ziele des Kapitels.}
+
+\vspace*{10cm}
 
 
 

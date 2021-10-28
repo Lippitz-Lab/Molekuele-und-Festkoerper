@@ -1,9 +1,8 @@
-%\renewcommand{\lastmod}{April 29, 2020}
+\renewcommand{\chapterauthors}{Markus Lippitz}
+\renewcommand{\lastmod}{28. Oktober 2021}
+
 
 \chapter{Spektroskopie der elektronischen Übergänge}
-
-
-
 
 
 \section{Ziele}
@@ -25,7 +24,7 @@
 
 \section{Überblick}
 
-Von den in Kapitel \ref{chap:3_diel} diskutierten Formen der Anregung von Molekülen haben wir bis hier die Rotationsanregung mit der Quantenzahl $J$ und die Schwingungsanregung mit der Quantenzahl $\nu$ diskutiert. Nun kommt die ebenfalls schon in Kapitel  \ref{chap:3_diel} angesprochene elektronische Anregung hinzu. Es kann sich nun also auch die Wellenfunktion der Elektronen ändern. Die Gesamtenergie ist die Summe über die Energie in der Rotation, der Vibration und der im elektronischen System. Bei optischen Übergängen, also der Absorption und Emission von Licht, ändern sich damit potentiell diverse Quantenzahlen. Allerdings sind die drei Beiträge energetisch sehr unterschiedlich. Wenn der elektronische Anteil erfasst werden soll, dann können die anderen beiden nicht und nicht vollständig aufgelöst werden.\sidenote{Die relative Auflösung eines Spektrometers liegt im Bereich von etwa $10^{-4}$.} Insbesondere die Rotationsstruktur erscheint zu 'Banden' zusammengefasst.
+Von den in Kapitel \ref{chap:4_diel} diskutierten Formen der Anregung von Molekülen haben wir bis hier die Rotationsanregung mit der Quantenzahl $J$ und die Schwingungsanregung mit der Quantenzahl $\nu$ diskutiert. Nun kommt die ebenfalls schon in Kapitel  \ref{chap:4_diel} angesprochene elektronische Anregung hinzu. Es kann sich nun also auch die Wellenfunktion der Elektronen ändern. Die Gesamtenergie ist die Summe über die Energie in der Rotation, der Vibration und der im elektronischen System. Bei optischen Übergängen, also der Absorption und Emission von Licht, ändern sich damit potentiell diverse Quantenzahlen. Allerdings sind die drei Beiträge energetisch sehr unterschiedlich. Wenn der elektronische Anteil erfasst werden soll, dann können die anderen beiden nicht und nicht vollständig aufgelöst werden.\sidenote{Die relative Auflösung eines Spektrometers liegt im Bereich von etwa $10^{-4}$.} Insbesondere die Rotationsstruktur erscheint zu 'Banden' zusammengefasst.
 
 
 
@@ -36,11 +35,11 @@ Es ist hilfreich, sich zu überlegen, wie das Lichtspektrum wirklich gemessen wi
 
 Die Auflösung eines Gitterspektrometers wird durch die Breite der CCD-Pixel, die Größe der Diode oder des Eingangsspalts, durch die Größe eines monochromatischen Fokus oder einer Kombination aus allen bestimmt. In allen Fällen ist sie jedoch über das Spektrum konstant, wenn es in der Wellenlänge gemessen wird. Die natürliche Einheit eines Gitterspektrometers ist die Wellenlänge, nicht die Frequenz. Die reziproke Beziehung zwischen Wellenlänge und Frequenz führt zu 
 \begin{equation}
- \Delta \nu = \nu_2 - \nu_2 = \frac{c}{\lambda_2} - \frac{c}{\lambda_1}  = c \frac{\lambda_1 - \lambda_2}{\lambda_1 \lambda_2} \approx \frac{c}{\lambda^2} \, \Delta \lambda
+ \Delta \nu = \nu_2 - \nu_2 = \frac{c}{\lambda_2} - \frac{c}{\lambda_1}  = c \frac{\lambda_1 - \lambda_2}{\lambda_1 \lambda_2} \approx \frac{c}{\lambda^2} \, \Delta \lambda \quad .
 \end{equation}
 Im Frequenzbereich ist die spektrale Auflösung also nicht konstant, sondern proportional zu $\nu^2$. Bei der Konvertierung eines Datensatzes vom Wellenlängenbereich in den Frequenzbereich werden also nicht nur die $x$-Werte, sondern auch die $y$-Werte konvertiert. Das Integral oder die Gesamtzahl der Photonen muss gleich bleiben.
 \begin{equation}
- \left( \lambda \, ; \, F(\lambda) \right) \, \rightarrow  \left( \nu = \frac{c}{ \lambda} \, ; \,  F(\nu) = \frac{\lambda^2}{ c } \, F(\lambda) \right) 
+ \left( \lambda \, ; \, F(\lambda) \right) \, \rightarrow  \left( \nu = \frac{c}{ \lambda} \, ; \,  F(\nu) = \frac{\lambda^2}{ c } \, F(\lambda) \right)  \quad .
 \end{equation}
 Dieses Problem tritt nur bei Lichtspektren auf. Absorptionsspektren sind das Verhältnis zweier Lichtspektren, des Signal- und des Referenzstrahls. In diesem Fall heben sich die Vorfaktoren auf und es müssen nur die $x$-Werte umgerechnet werden. Die spektral integrierte Absorption hat im Gegensatz zum spektral integrierten Photonenfluss keine Bedeutung.
 
@@ -65,18 +64,18 @@ Auch für die elektronische Anregung gibt es Auswahlregeln, die wieder durch das
 \end{equation}
 zwischen den beiden Zuständen $\Psi_{f,i}$ und mit dem Dipol-Operator $ \hat{\mu}$. Die Born-Oppenheimer-Näherung erlaubt es nun, die Wellenfunktionen von Elektronen $ \phi(\mathbf{r}, \mathbf{R})$ und Kern $ \chi(\mathbf{R}) $ zu separieren:
 \begin{equation}
- \Psi = \chi(\mathbf{R}) \, \phi(\mathbf{r}, \mathbf{R}) \label{eq:elec_wf_FC}
+ \Psi = \chi(\mathbf{R}) \, \phi(\mathbf{r}, \mathbf{R}) \quad , \label{eq:elec_wf_FC}
 \end{equation}
 wobei die Kern- ($\mathbf{R}$) und Elektronen-Koordinaten ($\mathbf{r}$) jeweils die Koordinate von \emph{allen} Elektronen und Kernen beinhalten und die Kern-Koordinaten $\mathbf{R}$ in der elektronischen Wellenfunktion nur fixer Parameter sind. Damit ist das Übergangs-Matrixelement $D$
 \begin{equation}
  D =  \iint  \chi_f(\mathbf{R}) \, \phi_f(\mathbf{r} , \mathbf{R}) \; \hat{\mu}
- \,  \chi_i(\mathbf{R}) \, \phi_i(\mathbf{r}, \mathbf{R}) \, d \mathbf{r} \, d \mathbf{R} \
+ \,  \chi_i(\mathbf{R}) \, \phi_i(\mathbf{r}, \mathbf{R}) \, d \mathbf{r} \, d \mathbf{R}  \quad .
 \end{equation}
 
 
 Wir teilen den Dipol-Operator $\hat{\mu}$ jetzt auf in einen Teil, der nur auf die Position der negativen Ladungen, also der Elektronen wirkt, und einen Teil, der nur auf die Position der positiven Ladungen, also der Kerne wirkt
 \begin{equation}
-\hat{\mu} = \hat{\mu}_e + \hat{\mu}_k = q_e \mathbf{r} + q_k \mathbf{R}
+\hat{\mu} = \hat{\mu}_e + \hat{\mu}_k = q_e \mathbf{r} + q_k \mathbf{R} \quad .
 \end{equation}
 Damit erhalten wir
 \begin{align}
@@ -84,7 +83,7 @@ D = & \braket{ \chi_f, \phi_f  |  \hat{\mu}_e |  \chi_i \phi_i}
 + \braket{ \chi_f, \phi_f  |  \hat{\mu}_k |  \chi_i \phi_i}  \\
 = & \braket{\chi_f | \chi_i} \,  \braket{ \phi_f  |  \hat{\mu}_e |   \phi_i} 
 + \braket{\phi_f | \phi_i} \,
-\braket{ \chi_f |  \hat{\mu}_k |  \chi_i }  
+\braket{ \chi_f |  \hat{\mu}_k |  \chi_i }   \quad .
 \end{align} 
 Im zweiten Schritt haben wir angenommen,  dass die Elektronen-Wellenfunktion $ \phi(\mathbf{r}, \mathbf{R})$  nur schwach von $\mathbf{R}$ abhängt. Die  Elektronen-Wellenfunktionen $\phi_i$ sind orthogonal zueinander. Der zweite Summand verschwindet also. Der Vorfaktor vor dem ersten ist nicht Null, weil die Kern-Wellenfunktionen zu verschiedenen Gleichgewichtsabständen gehören. Diesen Faktor 
 \begin{equation}
@@ -120,7 +119,7 @@ Anhand des harmonischen Potentials wollen wir dies etwas genauer betrachten. Ein
 Wir nehmen an\footcite{Kuzmany}, dass das Potential dieser Schwingungen harmonisch ist, also
 \begin{eqnarray}
  U_g(R) &=& \frac{1}{2} \, k\, R^2 = \frac{1}{2} \, m \, \omega^2 \, R^2 \\
-  U_e(R) &=&  U_g(R) + E_{eg} - A \, R = E_{eg}  - A \, R + \frac{1}{2} \, m \, \omega^2 \, R^2 
+  U_e(R) &=&  U_g(R) + E_{eg} - A \, R = E_{eg}  - A \, R + \frac{1}{2} \, m \, \omega^2 \, R^2  \quad ,
  \end{eqnarray}
 wobei $E_{eg}$ der elektronische Beitrag zur Energiedifferenz ist. Wir nehmen an, dass beide Potentiale die gleiche Form, d.h. die gleiche Schwingungsfrequenz haben. Der Term $A \, R$ koppelt den elektronischen Zustand und die Kernbewegung. Er verschiebt das Potential des angeregten Zustands entlang der $R$-Koordinate. Während das Grundzustandspotential sein Minimum bei $R=0$ hat, liegt das Minimum für den angeregten Zustand bei
 %
@@ -131,13 +130,13 @@ wobei $E_{eg}$ der elektronische Beitrag zur Energiedifferenz ist. Wir nehmen an
 %
 %
 \begin{equation}
- A = m \, \omega^2 \,  R	 \quad \text{also} \quad R = \frac{A}{m \omega^2}
+ A = m \, \omega^2 \,  R	 \quad \text{also} \quad R = \frac{A}{m \omega^2} \quad .
 \end{equation}
 Die Energien der quantenmechanischen Eigenzustände sind 
 \begin{eqnarray}
   E_{g, n} &=&  (n + 1/2) \, \hbar \omega  \\
   E_{e, m} &=&  (m + 1/2) \, \hbar \omega  +  E_{eg} - \frac{A^2}{2 m \omega^2} =
-   (m + 1/2 - S) \, \hbar \omega  +  E_{eg}  \nonumber
+   (m + 1/2 - S) \, \hbar \omega  +  E_{eg}  \nonumber \quad .
 \end{eqnarray}
 Wir führen den Huang-Rhys-Faktor $S$ als dimensionslose Kopplungskonstanten\sidenote{Kuzmany definiert  $S$ als Wurzel des hier verwendeten $S$.} ein
 \begin{equation}
@@ -147,7 +146,7 @@ Wir führen den Huang-Rhys-Faktor $S$ als dimensionslose Kopplungskonstanten\sid
 wobei der Term in Klammern die Verschiebung des Minimums in reduzierten Koordinaten ist.
 Die Eigenfunktionen $\chi_n$ der Kernvibrationen sind Hermite'sche Polynome. Der Franck-Condon-Faktor beschreibt das Überlappungsintegral der Schwingungswellenfunktion von Grund- und angeregtem Zustand. Da der elektronische Übergang im Vergleich zur Kernbewegung schnell ist, kann sich die Kernkoordinate während des Übergangs nicht ändern (Born-Oppenheimer-Näherung), und sowohl der Grund- als auch der angeregte Zustand benötigen eine nicht verschwindende Wahrscheinlichkeit, um auf der gleichen Koordinate $r$ zu liegen. Wenn sich einer der Zustände in einem schwingenden Grundzustand befindet, d.h. $n$ oder $m$ gleich null ist, nimmt der Franck-Condon-Faktor die Form\sidenote{Diese Notation ist schlampig in dem Sinne, dass die Bra-Wellenfunktion ein elektronischer angeregter Zustand ist, die Ket-Funktion ein elektronischer Grundzustand!}
 \begin{equation}
- | \braket{ \chi_0 | \chi_m } | ^2  =  | \braket{ \chi_m | \chi_0 } | ^2 = \frac{S^m \exp(-S)}{m!}
+ | \braket{ \chi_0 | \chi_m } | ^2  =  | \braket{ \chi_m | \chi_0 } | ^2 = \frac{S^m \exp(-S)}{m!} 
 \end{equation}
 was eine Poisson-Verteilung des Mittelwertes $S$ ist.  Der stärkste Übergang ist also der Übergang in $m \approx S$, der bei großer Kopplung zwischen elektronischem und nuklearem System, d.h. großem $S$, vom 0--0 Übergang abweicht.
 
@@ -166,11 +165,11 @@ was eine Poisson-Verteilung des Mittelwertes $S$ ist.  Der stärkste Übergang i
 Der elektronische Teil der Wellenfunktion in Gl. \ref{eq:elec_wf_FC} kann wie immer noch weiter unterteilt werden in seinen räumlichen Anteil $\phi^\text{Raum}$ und in den Spin-Anteil  $\phi^\text{Spin}$. Der Dipol-Operator $\hat{\mu}$ interagiert nicht mit dem Spin-Anteil. Somit lässt sich das Übergangs-Matrix-Element schreiben als
 \begin{equation}
  D =   \braket{\chi_f | \chi_i} \,    \braket{\phi^\text{Spin}_f | \phi^\text{Spin}_i}  \,
-  \braket{\phi^\text{Raum}_f | \hat{\mu} | \phi^\text{Raum}_i} 
+  \braket{\phi^\text{Raum}_f | \hat{\mu} | \phi^\text{Raum}_i}  \quad .
 \end{equation}
 Da die Spin-Wellenfunktionen orthogonal aufeinander sind, dürfen sich bei einem optischen Übergang die Spin-Quantenzahlen nicht ändern, also
 \begin{equation}
- \Delta S = 0
+ \Delta S = 0 \quad .
 \end{equation}
 Übergänge finden nur innerhalb eines 'Systems' statt, also nur zwischen  Singulett-Zuständen und nur zwischen   Triplett-Zuständen.
 Störungen wie beispielsweise die Spin-Bahn-Kopplung können diese Regel aufweichen. Man spricht dann von 'intersystem crossing'.
@@ -191,7 +190,7 @@ Allerdings ist die Kopplung der Elektronen an das Lichtfeld ein schwacher Prozes
 In Kombination mit den zwischen Absorption und Emission identischen Franck-Condon-Faktoren führt  Kashas Regel dazu, dass das Fluoreszenz-Spektrum wie das an der zero-phonon line gespiegelte Absorptionsspektrum aussieht\footcite[Kapitel 1.3.2 und 1.3.3]{Lakowicz2010}. Wenn eine Schwingung mit der Frequenz $\omega$ das Spektrum dominiert, dann liegen die Peaks im Spektrum bei
 \begin{align}
   E_{abs, n} = & E_{00} + n \, \hbar \omega \\
-  E_{fl, n} = & E'_{00} - n \, \hbar \omega
+  E_{fl, n} = & E'_{00} - n \, \hbar \omega \quad .
 \end{align}
 Die Energie der zero phonon line $E_{00}$ ist zunächst einmal in Absorption und Emission identisch.  Hinzu kommt aber ggf. noch die Stokes-Verschiebung, wenn sich beispielsweise Lösemittel-Moleküle in der Umgebung des fluoreszierenden Moleküls umorientieren, je nach dem in welchem elektronischen Zustand das emittierende Molekül ist.
 
@@ -202,15 +201,12 @@ Nicht nur die spektralen Positionen, sondern auch die Amplitude der Peaks im Abs
    A(\omega  )  & \propto & \omega_{g,m \rightarrow e,n}  \,  \left| \braket{\chi_n |  \chi_m} \right|^2 
 \,  \left| \braket{\phi^\text{Raum}_e | \hat{\mu} | \phi^\text{Raum}_g} \right|^2 \\
    F(\omega ) & \propto & \omega_{e,n \rightarrow g,m}^3 \,  \left| \braket{\chi_m |  \chi_n} \right|^2 
-\,  \left|\braket{\phi^\text{Raum}_g | \hat{\mu} | \phi^\text{Raum}_e} \right|^2
+\,  \left|\braket{\phi^\text{Raum}_g | \hat{\mu} | \phi^\text{Raum}_e} \right|^2 \quad .
 \end{eqnarray}
 Eigentlich ist das spektrale Integral über eine Linie in $A(\omega  )$ bzw. $F(\omega)$ mit einem Übergang und damit einem Franck-Condon-Faktor verbunden. Das Integral hat man unter der Annahme einer Linienform aufgelöst. Dabei verbleibt ein Faktor $\omega$ auf der rechten Seite von beiden Gleichungen. Das Fluoreszenzspektrum erhält einen zusätzlichen Faktor von $\omega^2$ aufgrund der optischen Modendichte im dreidimensionalen Raum, wie es im Schwarzkörperspektrum und in der  Beziehung zwischen den Einstein-Koeffizienten $A_{12}$ und $B_{12}$ auftritt.
 Alles zusammengenommen sollte man daher $A / \omega$ und $F / \omega^3$ vergleichen.
 
 
-
-%\section{Rotationsstruktur }
-%\section{Dissoziation}
 
 \section{Elektronische Spektren großer Moleküle}
 
@@ -220,10 +216,14 @@ Große Moleküle mit vielen Kernen und Elektronen besitzen komplexe Spektren in 
 
 \paragraph{Chromophore Gruppen} Ein Chromophor ist ein Farb-Träger. Manche Elektronen-Orbitale zeigen charakteristische Eigenschaften unabhängig davon, wie diese in ein großes Molekül eingebaut sind. Wenn diese Orbitale dann zu Fluoreszenz-Emission führen, dann nennt man sie chromophore Gruppen. Ein Beispiel sind einzelne Atome von Übergangsmetallen (\ch{Fe}, \ch{Ti}, \ch{Co}). Diese zeigen nahezu atomare Spektren, auch wenn sie in größere Moleküle eingebaut sind. Ein anderes Beispiel ist die \ch{C=O} Doppelbindung oder die \ch{C=C} Doppelbindung. Diese haben ein charakteristische Absorptionsspektrum bei einer Wellenlänge von 290 nm bzw. 180 nm, unabhängig vom Rest des Moleküls.
 
-\paragraph{Delokalisierte Elektronen} Manchmal ist ein Elektronen-Orbital nicht eine Linearkombination von nur zwei Atom-Orbitalen, sondern es sind mehr Atome an dem Orbital beteiligt. Ein Elektron in einem solchen Orbital ist also nicht mehr an einem Ort, sondern über einen größeren Bereich delokalisert. Wir hatten das in Kapitel  \ref{chap:MO-teil2} im Zusammenhang mit der Hückel-Methode besprochen. In Benzol beispielsweise wird die $\sigma$-Bindung aus den sp$^2$-Hybrid-Orbitalen aufgebaut. Die verbleibenden 6 Elektronen in den atomaren p$_z$-Orbitalen bilden ein delokalisiertes $\pi$-Elektronen-System, oft durch einen Kreis in der Mitte des 6-Rings dargestellt. Ein anderes Beispiel sind konjugierte Polymere, also alternierende Einfach- und Doppel-Bindungen in einer Kette von Kohlenstoffatomen. In solchen Fällen ist jedes beteiligte Elektron überall. Elektronen in einem solchen räumlich großen Orbital kann man ähnlich zu einem Teilchen im Kasten beschreiben. Das Orbital bildet das Kasten-Potential. Die Kettenlänge bestimmt die Kastenbreite und, da $E \propto 1 /L$, die Lage der Energieniveaus. Lange Moleküle absorbieren und emittieren röter.
+\paragraph{Delokalisierte Elektronen} Manchmal ist ein Elektronen-Orbital nicht eine Linearkombination von nur zwei Atom-Orbitalen, sondern es sind mehr Atome an dem Orbital beteiligt. Ein Elektron in einem solchen Orbital ist also nicht mehr an einem Ort, sondern über einen größeren Bereich delokalisiert. Wir hatten das in Kapitel  \ref{chap:MO-teil2} im Zusammenhang mit der Hückel-Methode besprochen. In Benzol beispielsweise wird die $\sigma$-Bindung aus den sp$^2$-Hybrid-Orbitalen aufgebaut. Die verbleibenden 6 Elektronen in den atomaren p$_z$-Orbitalen bilden ein delokalisiertes $\pi$-Elektronen-System, oft durch einen Kreis in der Mitte des 6-Rings dargestellt. Ein anderes Beispiel sind konjugierte Polymere, also alternierende Einfach- und Doppel-Bindungen in einer Kette von Kohlenstoffatomen. In solchen Fällen ist jedes beteiligte Elektron überall. Elektronen in einem solchen räumlich großen Orbital kann man ähnlich zu einem Teilchen im Kasten beschreiben. Das Orbital bildet das Kasten-Potential. Die Kettenlänge bestimmt die Kastenbreite und, da $E \propto 1 /L$, die Lage der Energieniveaus. Lange Moleküle absorbieren und emittieren röter.
 
+\newpage
+\section{Zusammenfassung}
 
-%-------------------
+\textit{Schreiben Sie hier ihre persönliche Zusammenfassung des Kapitels auf. Konzentrieren Sie sich auf die wichtigsten Aspekte und die am Anfang genannten Ziele des Kapitels.}
+
+\vspace*{10cm}
 
 
 
