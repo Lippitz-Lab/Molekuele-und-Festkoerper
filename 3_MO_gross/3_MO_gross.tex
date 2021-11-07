@@ -1,6 +1,6 @@
 
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{2. November 2021}
+\renewcommand{\lastmod}{7. November 2021}
 
 \chapter{Molekülorbitaltheorie II -- Mehr Elektronen und mehr Kerne}
 
@@ -273,13 +273,19 @@ Wenn wir $E = \alpha + x \beta$ ansetzen, dann vereinfacht sich die Eigenwert-Gl
 \begin{equation}
 x^6 - 6 x^4 + 9x^2 - 4 = 0 \quad \text{oder} \quad x = \pm 1, \pm 1, \pm 2
 \end{equation}
-%
-\begin{marginfigure}[150mm]
+Wie man das numerisch macht sehen Sie im  Pluto-Skript \pluto{hueckl.jl}{hueckl.jl}.
+
+
+
+
+
+\begin{marginfigure}[20mm]
 \inputtikz{\currfiledir benzol}
 \caption{Molekülorbitale von Benzol in der Hückel-Näherung. Die Farben kodieren das Vorzeichen der Wellenfunktion. Die Anordnung entspricht der Eigen-Energie.\label{fig:MO_benzol}}
 \end{marginfigure}
-%
+
 Da wir insgesamt 6 Elektronen in diese Orbitale einfüllen müssen, und jedes Orbital mit 2 Elektron (spin up und down) besetzen können, sind das Orbitale mit $E=\alpha + 2 \beta$ und die beiden Orbitale mit $E = \alpha + \beta$ besetzt\sidenote{$\beta < 0$}. Auch diese Orbitale tragen also zur Bindung bei, da sie die Gesamtenergie insgesamt um $8\beta$ reduzieren. Wenn man die Eigenfunktionen betrachtet\footcite{Atkins}, sieht man, dass  das Orbital mit $E=\alpha \pm 2 \beta$  über den ganzen Ring delokalisiert ist, die beiden mit $E = \alpha \pm \beta$  über zwei  Atome.
+
 
 Die Hückel-Näherung in der Molekülphysik entspricht der \emph{tight binding} Methode zur Berechnung der Bandstruktur von Elektronen  in der Festkörperphysik. In der Festkörperphysik macht man den Übergang von hier $N=6$ Atomen hin zu $N= 6 \cdot 10^{23}$ Atomen, wodurch dann  $6 \cdot 10^{23}$ eng benachbarte Zustände für Elektronen entstehen, die alle durch Wellenfunktionen ähnlich zu Abbildung \ref{fig:MO_benzol} beschrieben sind.
 

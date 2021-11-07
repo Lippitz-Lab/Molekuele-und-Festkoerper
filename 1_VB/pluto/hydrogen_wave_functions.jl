@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.0
+# v0.17.0
 
 using Markdown
 using InteractiveUtils
@@ -78,14 +78,43 @@ end;
 @bind nx Slider(1:4; show_value=true)
 
 # ╔═╡ e43ee69a-e6fa-4e50-88a1-7890e98b551a
-@bind lx Slider(0:nx-1; show_value=true)
+@bind lx Slider(0:3; show_value=true)
 
 # ╔═╡ d1f36372-7efa-4964-834c-a01bb0e4576a
-@bind mx Slider(-lx:lx; default=0, show_value=true)
+@bind mx Slider(-3:3; default=0, show_value=true)
 
-# ╔═╡ 82ab8918-799a-49d2-b1cd-3795516e31a3
-# for convenience, we store the quantum numbers in a named tuple
-qn = (n = nx, m= mx, l=lx)
+# ╔═╡ 7c1d30b3-34ff-4737-885f-f5e5cd0a280b
+mutable struct QN
+	n
+	l
+	m
+end
+
+# ╔═╡ 6ff3fa08-e203-4324-b6df-920104f50d5f
+warning(text) = Markdown.MD(Markdown.Admonition("warning", "Warning!", [text]));
+
+# ╔═╡ efa2a8a8-3293-439d-8466-85c25bdce424
+function make_qn(n, l, m)
+	qn = QN(n,  l, m);
+	qn_adjusted = false;
+	
+	if (qn.l >= qn.n)
+		qn.l = 0
+		qn_adjusted = true;
+	end
+		
+	if (abs(qn.m) > qn.l)
+		qn.m = qn.l
+		qn_adjusted = true;
+	end
+	return qn, qn_adjusted
+end;
+
+# ╔═╡ 52f18d02-0b18-4cd8-8d87-c0d43b747ca8
+begin
+	 qn, adjusted = make_qn(nx, lx, mx);
+	qn
+end
 
 # ╔═╡ 4ac9ba73-91b9-4821-847f-1ce9e0097467
 # evaluate wave function on 3D grid
@@ -114,6 +143,11 @@ Plot(
 ),
 	Layout(width=600, height=400) # adjust size in pixel
  )
+
+# ╔═╡ d8657345-697a-4a91-89b9-2f36977a019a
+if adjusted  
+	warning("Quantum number adjusted!")
+end
 
 # ╔═╡ 35c9ea23-da51-495d-9367-8f3c5883046b
 # the radial part only
@@ -573,11 +607,15 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 # ╠═0252c645-5560-48db-bca8-cf5b38e5e10d
 # ╠═dad6985f-dd47-433c-9d35-2116fb7dcec3
 # ╠═4ac9ba73-91b9-4821-847f-1ce9e0097467
-# ╟─76ac0a8f-976a-4d7a-ba6b-3da27ec06a7f
-# ╟─e43ee69a-e6fa-4e50-88a1-7890e98b551a
-# ╟─d1f36372-7efa-4964-834c-a01bb0e4576a
-# ╟─82ab8918-799a-49d2-b1cd-3795516e31a3
+# ╠═76ac0a8f-976a-4d7a-ba6b-3da27ec06a7f
+# ╠═e43ee69a-e6fa-4e50-88a1-7890e98b551a
+# ╠═d1f36372-7efa-4964-834c-a01bb0e4576a
+# ╟─52f18d02-0b18-4cd8-8d87-c0d43b747ca8
+# ╟─d8657345-697a-4a91-89b9-2f36977a019a
 # ╟─7596c3ef-6bac-45f0-a1c7-0b593c35909b
 # ╟─35c9ea23-da51-495d-9367-8f3c5883046b
+# ╠═7c1d30b3-34ff-4737-885f-f5e5cd0a280b
+# ╠═6ff3fa08-e203-4324-b6df-920104f50d5f
+# ╠═efa2a8a8-3293-439d-8466-85c25bdce424
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
