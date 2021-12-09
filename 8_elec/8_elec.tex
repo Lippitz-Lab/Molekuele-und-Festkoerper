@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{28. Oktober 2021}
+\renewcommand{\lastmod}{9. Dezember 2021}
 
 
 \chapter{Spektroskopie der elektronischen Übergänge}
@@ -115,35 +115,49 @@ der stärkste. Diesen Übergang nennt man 'zero phonon line' (ZPL), weil keinerl
 
 \section{Franck-Condon-Prinzip im harmonischen Potential}
 
+\begin{marginfigure}[0mm]
+   \inputtikz{\currfiledir fig_parabola}
+\caption{Der Kopplungsterm $-A R$ im Potential des angeregten Zustandes $e$ verschiebt das Minimum der Parabel zu größeren Werten von $R$ und niedrigeren Werten des Potentials. }
+\end{marginfigure}
+
 Anhand des harmonischen Potentials wollen wir dies etwas genauer betrachten. Ein Molekül mit einem elektronischen Grundzustand $g$ und einem elektronischen angeregten Zustand $e$ kann periodische Schwingungen der Kernpositionen entlang einer Koordinate $R$ erfahren. 
 Wir nehmen an\footcite{Kuzmany}, dass das Potential dieser Schwingungen harmonisch ist, also
 \begin{eqnarray}
  U_g(R) &=& \frac{1}{2} \, k\, R^2 = \frac{1}{2} \, m \, \omega^2 \, R^2 \\
   U_e(R) &=&  U_g(R) + E_{eg} - A \, R = E_{eg}  - A \, R + \frac{1}{2} \, m \, \omega^2 \, R^2  \quad ,
  \end{eqnarray}
-wobei $E_{eg}$ der elektronische Beitrag zur Energiedifferenz ist. Wir nehmen an, dass beide Potentiale die gleiche Form, d.h. die gleiche Schwingungsfrequenz haben. Der Term $A \, R$ koppelt den elektronischen Zustand und die Kernbewegung. Er verschiebt das Potential des angeregten Zustands entlang der $R$-Koordinate. Während das Grundzustandspotential sein Minimum bei $R=0$ hat, liegt das Minimum für den angeregten Zustand bei
+wobei $E_{eg}$ der elektronische Beitrag zur Energiedifferenz ist. Wir nehmen an, dass beide Potentiale die gleiche Form, d.h. die gleiche Schwingungsfrequenz haben. Der Term $A \, R$ koppelt den elektronischen Zustand und die Kernbewegung. Er verschiebt das Potential des angeregten Zustands entlang der $R$-Koordinate. 
 %
-\begin{marginfigure}[-35mm]
-   \inputtikz{\currfiledir fig_parabola}
-\caption{Der Kopplungsterm $-A R$ im Potential des angeregten Zustandes $e$ verschiebt das Minimum der Parabel zu größeren Werten von $R$ und niedrigeren Werten des Potentials. }
-\end{marginfigure}
-%
-%
+Wir führen eine reduzierte Raumkoordinate $\tilde{R}$ ein
 \begin{equation}
- A = m \, \omega^2 \,  R	 \quad \text{also} \quad R = \frac{A}{m \omega^2} \quad .
+\tilde{R} = \frac{R}{x} \quad \text{mit} \quad x = \sqrt{\frac{\hbar}{M \Omega}}  \quad .
 \end{equation}
+Die neue Raumkoordinate $\tilde{R}$ ist so skaliert, dass die Parabel des Potentials die Energie des Schwingungs-Grundzustands $\hbar \Omega/2$ bei $\tilde{R} = 1$ schneidet.
+In diesen Koordinaten liegt das Minimum der Parabel des Grundzustands weiterhin bei 
+$\tilde{R}  = 0$, das des
+angeregten Zustands bei $\tilde{R} = \tilde{R}_e$ mit
+\begin{equation}
+\tilde{R}_e = \frac{A \, x}{ \hbar \Omega} \quad .
+\end{equation}
+In diesen Koordinaten sind die Potentiale also
+\begin{eqnarray}
+ U_g(\tilde{R}) &=& \frac{1}{2}  \, \hbar \Omega \, \tilde{R}^2 \\
+  U_e(\tilde{R}) &=&   E_{eg} + \frac{1}{2}  \, \hbar \Omega  \, \left[  (\tilde{R} - \tilde{R}_e)^2 - \tilde{R}_e^2  \right]
+ \end{eqnarray}
 Die Energien der quantenmechanischen Eigenzustände sind 
 \begin{eqnarray}
-  E_{g, n} &=&  (n + 1/2) \, \hbar \omega  \\
-  E_{e, m} &=&  (m + 1/2) \, \hbar \omega  +  E_{eg} - \frac{A^2}{2 m \omega^2} =
-   (m + 1/2 - S) \, \hbar \omega  +  E_{eg}  \nonumber \quad .
+  E_{g, n} &=&  (n + 1/2) \, \hbar \Omega  \\
+  E_{e, m} &=&   E_{eg} +   (m + 1/2 - \tilde{R}_e^2  /2 ) \, \hbar \Omega  =  E_{eg} +   (m + 1/2 - S ) \, \hbar \Omega   \nonumber
 \end{eqnarray}
-Wir führen den Huang-Rhys-Faktor $S$ als dimensionslose Kopplungskonstanten\sidenote{Kuzmany definiert  $S$ als Wurzel des hier verwendeten $S$.} ein
+wobei wir den  Huang-Rhys-Faktor $S$ als dimensionslose Kopplungskonstante eingeführt\sidenote{Kuzmany definiert  $S$ als Wurzel des hier verwendeten $S$.}  haben
 \begin{equation}
- S = \frac{A^2}{\hbar \omega} \frac{1}{2 m \omega^2}
- = \frac{1}{2} \, \left( R \, \sqrt{\frac{m \, \omega}{\hbar}}\, \right)^2 \quad ,
+ S = \frac{1}{2} \, \tilde{R}_e^2  =
+ \frac{A^2}{\hbar \Omega}  \, \frac{1}{2 M \Omega^2} \quad. 
 \end{equation}
-wobei der Term in Klammern die Verschiebung des Minimums in reduzierten Koordinaten ist.
+Der  Huang-Rhys-Faktor $S$ ist also ein Maß für die Verschiebung des Bindungspotentials im angeregten Zustand.
+
+
+
 Die Eigenfunktionen $\chi_n$ der Kernvibrationen sind Hermite'sche Polynome. Der Franck-Condon-Faktor beschreibt das Überlappungsintegral der Schwingungswellenfunktion von Grund- und angeregtem Zustand. Da der elektronische Übergang im Vergleich zur Kernbewegung schnell ist, kann sich die Kernkoordinate während des Übergangs nicht ändern (Born-Oppenheimer-Näherung), und sowohl der Grund- als auch der angeregte Zustand benötigen eine nicht verschwindende Wahrscheinlichkeit, um auf der gleichen Koordinate $r$ zu liegen. Wenn sich einer der Zustände in einem schwingenden Grundzustand befindet, d.h. $n$ oder $m$ gleich null ist, nimmt der Franck-Condon-Faktor die Form\sidenote{Diese Notation ist schlampig in dem Sinne, dass die Bra-Wellenfunktion ein elektronischer angeregter Zustand ist, die Ket-Funktion ein elektronischer Grundzustand!}
 \begin{equation}
  | \braket{ \chi_0 | \chi_m } | ^2  =  | \braket{ \chi_m | \chi_0 } | ^2 = \frac{S^m \exp(-S)}{m!} 
@@ -205,6 +219,14 @@ Nicht nur die spektralen Positionen, sondern auch die Amplitude der Peaks im Abs
 \end{eqnarray}
 Eigentlich ist das spektrale Integral über eine Linie in $A(\omega  )$ bzw. $F(\omega)$ mit einem Übergang und damit einem Franck-Condon-Faktor verbunden. Das Integral hat man unter der Annahme einer Linienform aufgelöst. Dabei verbleibt ein Faktor $\omega$ auf der rechten Seite von beiden Gleichungen. Das Fluoreszenzspektrum erhält einen zusätzlichen Faktor von $\omega^2$ aufgrund der optischen Modendichte im dreidimensionalen Raum, wie es im Schwarzkörperspektrum und in der  Beziehung zwischen den Einstein-Koeffizienten $A_{12}$ und $B_{12}$ auftritt.
 Alles zusammengenommen sollte man daher $A / \omega$ und $F / \omega^3$ vergleichen.
+
+
+\section{Stokes-Verschiebung}
+
+Vergleicht man Absorptions- und Emissionsspektren wie oben beschrieben, so stellt man fest, dass die Übergangsenergien 0--0 nicht vollständig übereinstimmen. Dies ist die Stokes-Verschiebung. Ihre Amplitude hängt vom Molekül und der Umgebung des Moleküls ab. Wenn ein Molekül in einen elektronisch angeregten Zustand überführt wird, ändert sich die räumliche Verteilung der Elektronendichte. Dies beeinflusst die Umgebung, z. B. die Lösungsmittelmoleküle, in Position und Orientierung. Unmittelbar nach der Anregung befinden sich die Lösungsmittelmoleküle noch in der Position, die im Grundzustand des Farbstoffmoleküls die geringste Energie liefert. Im angeregten Zustand verschieben sie sich und richten sich neu aus, um die Gesamtenergie zu verringern. Die Fluoreszenzemission findet also in einer anderen elektrischen Umgebung statt als die Absorption, was zu einer Verschiebung der Übergangsenergie, der Stokes-Verschiebung, führt.
+
+Allgemeiner  wird nicht nur der Unterschied zwischen den 0--0-Übergängen, sondern auch der Unterschied zwischen den Spitzen der Absorptions- und Emissionsspektren als Stokes-Verschiebung bezeichnet. Dazu gehört dann auch die Schwingungsrelaxation des Farbstoffmoleküls selbst.
+
 
 
 
