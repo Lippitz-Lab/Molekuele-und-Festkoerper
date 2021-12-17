@@ -23,7 +23,7 @@
 
 
 \usepackage{amssymb,amsmath}
-
+ 
 \usepackage{modiagram}
 \usepackage{chemformula}
 \usepackage{chemfig}
@@ -79,6 +79,7 @@
 
 
 \input{tint_book_header}
+
 
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}%
@@ -181,6 +182,32 @@
   coltitle={black},
   title={Zusammenfassung:\ },
   attach title to upper}
+  
+  
+\newcommand{\pluto}[1]{%
+%
+\edef\cfd{\currfiledir}%
+\StrGobbleRight{\cfd}{1}[\mystring]%
+%
+\sidenote{%
+\begin{tikzpicture}
+[baseline={([yshift=-2pt]current bounding box.center)}]
+\definecolor{redline}{RGB}{201,61,57}
+\definecolor{redfill}{RGB}{214,102,97}
+\definecolor{blueline}{RGB}{148,91,176}
+\definecolor{bluefill}{RGB}{170,125,192}
+\definecolor{greenline}{RGB}{59,151,46}
+\definecolor{greenfill}{RGB}{107,171,91}
+\path[draw=redline,fill=redfill,line width=0.8pt] (0,-5.4pt) circle (4.4pt);
+\path[draw=blueline,fill=bluefill,line width=0.8pt] (0,0) circle (4.4pt);
+\path[draw=greenline,fill=greenfill,line width=0.8pt] (0,5.4pt) circle (4.4pt);
+\end{tikzpicture} \ \ 
+\href{https://raw.githubusercontent.com/MarkusLippitz/Molekuele-und-Festkoerper/published/\mystring/pluto/#1}{download}
+\ \ 
+\href{https://binder.plutojl.org/v0.16.4/open?url=https\%253A\%252F\%252Fraw.githubusercontent.com\%252FMarkusLippitz\%252FMolekuele-und-Festkoerper\%252Fpublished\%252F\mystring\%252Fpluto\%252F#1}{run on binder}
+}}  
+
+
 
 
 \usepackage[titletoc]{appendix}
@@ -230,12 +257,12 @@
 \include{7_raman/7_raman}
 \include{8_elec/8_elec}
 
-%\part{Festkörperphysik I}
-%
-%\include{9_gitter/9_gitter}
-%\include{10_rezi/10_rezi}
-%\include{11_phonon/11_phonon}
-%\include{12_wk/12_wk}
+\part{Festkörperphysik I}
+
+\include{9_gitter/9_gitter}
+\include{10_rezi/10_rezi}
+\include{11_phonon/11_phonon}
+\include{12_wk/12_wk}
 %
 
 
@@ -268,8 +295,6 @@
 \include{anhang/julia}
 \include{anhang/drehimpuls}
 \include{anhang/fourier}
-%\include{anhang/1-2atom}
-%\include{anhang/wk_einstein_debye}
 
 %-------
 %

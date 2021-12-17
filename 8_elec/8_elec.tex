@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{28. Oktober 2021}
+\renewcommand{\lastmod}{13. Dezember 2021}
 
 
 \chapter{Spektroskopie der elektronischen Übergänge}
@@ -90,11 +90,11 @@ Im zweiten Schritt haben wir angenommen,  dass die Elektronen-Wellenfunktion $ \
  F =  \braket{\chi_f | \chi_i} =
  \int  \chi_f(\mathbf{R})  \,  \chi_i(\mathbf{R}) \, d \mathbf{R} 
 \end{equation}
-nennt man \emph{Franck-Condon-Faktor}. Er beschreibt den räumlichen Überlapp der Schwingungs-Wellenfunktion von Ausgangs- und Zielzustand. Da die Übergangsrate proportional zu $|D|^2$ ist, bestimmt sein Betrags-Quadrat die Intensität des Übergangs.
+nennt man \emph{Franck-Condon-Faktor}. Er beschreibt den räumlichen Überlapp der Schwingungs-Wellenfunktion von Ausgangs- und Zielzustand. Da die Übergangsrate proportional zu $|D|^2$ ist, bestimmt sein Betrags-Quadrat die Intensität des Übergangs. 
 
 
 
-Es macht intuitiv Sinn, dass ein solcher Faktor existieren muss. Bei einer elektronischen Anregung ändert sich die Elektronenwellenfunktion instantan, die Kernposition aber gar nicht, weil Kerne viel schwerer sind. Damit ein Übergang stattfinden kann, muss es also möglich sein, dass die Kerne auch im angeregten Zustand an diesem Ort sind. Das Franck-Condon-Integral berechnet gerade diese Möglichkeit.
+Es macht intuitiv Sinn, dass ein solcher Faktor existieren muss. Bei einer elektronischen Anregung ändert sich die Elektronenwellenfunktion instantan. Die Position von  Teilchen mit Masse kann sich aber nicht instantan ändern.  Damit ein Übergang stattfinden kann, muss es also möglich sein, dass die Kerne auch im angeregten Zustand an diesem Ort sind. Das Franck-Condon-Integral berechnet gerade diese Möglichkeit.\sidenote{Dass sich die Position der Elektronen nicht ändert, wird analog durch $ \braket{ \phi_f  |  \hat{\mu}_e |   \phi_i} \neq 0 $ gefordert.}
 
 Schematisch ist das in der Skizze gezeigt. Der Ausgangszustand für die Absorption eines Photons ist der elektronische Grundzustand und auch der Schwingungs-Grundzustand $\nu = 0$. Typische Schwingungs-Frequenzen sind so, dass $\hbar \omega_\text{vib} \gg k_b T$, also schon $\nu =1$ nicht thermisch angeregt werden kann. Das Bindungspotential im angeregten Zustand ist entlang der Kern-Kern-Koordinate $R$ nach außen verschoben (weniger stark bindend). Seine Form ist näherungsweise gleich zum Grundzustand. 
 
@@ -115,35 +115,49 @@ der stärkste. Diesen Übergang nennt man 'zero phonon line' (ZPL), weil keinerl
 
 \section{Franck-Condon-Prinzip im harmonischen Potential}
 
-Anhand des harmonischen Potentials wollen wir dies etwas genauer betrachten. Ein Molekül mit einem elektronischen Grundzustand $g$ und einem elektronischen angeregten Zustand $e$ kann periodische Schwingungen der Kernpositionen entlang einer Koordinate $R$ erfahren. 
-Wir nehmen an\footcite{Kuzmany}, dass das Potential dieser Schwingungen harmonisch ist, also
-\begin{eqnarray}
- U_g(R) &=& \frac{1}{2} \, k\, R^2 = \frac{1}{2} \, m \, \omega^2 \, R^2 \\
-  U_e(R) &=&  U_g(R) + E_{eg} - A \, R = E_{eg}  - A \, R + \frac{1}{2} \, m \, \omega^2 \, R^2  \quad ,
- \end{eqnarray}
-wobei $E_{eg}$ der elektronische Beitrag zur Energiedifferenz ist. Wir nehmen an, dass beide Potentiale die gleiche Form, d.h. die gleiche Schwingungsfrequenz haben. Der Term $A \, R$ koppelt den elektronischen Zustand und die Kernbewegung. Er verschiebt das Potential des angeregten Zustands entlang der $R$-Koordinate. Während das Grundzustandspotential sein Minimum bei $R=0$ hat, liegt das Minimum für den angeregten Zustand bei
-%
-\begin{marginfigure}[-35mm]
+\begin{marginfigure}[0mm]
    \inputtikz{\currfiledir fig_parabola}
 \caption{Der Kopplungsterm $-A R$ im Potential des angeregten Zustandes $e$ verschiebt das Minimum der Parabel zu größeren Werten von $R$ und niedrigeren Werten des Potentials. }
 \end{marginfigure}
+
+Anhand des harmonischen Potentials wollen wir dies etwas genauer betrachten. Ein Molekül mit einem elektronischen Grundzustand $g$ und einem elektronischen angeregten Zustand $e$ kann periodische Schwingungen der Kernpositionen entlang einer Koordinate $R$ erfahren. 
+Wir nehmen an\footcite{Kuzmany}, dass das Potential dieser Schwingungen harmonisch ist, also
+\begin{eqnarray}
+ U_g(R) &=& \frac{1}{2} \, K \, R^2 = \frac{1}{2} \, M \, \Omega^2 \, R^2 \\
+  U_e(R) &=&  U_g(R) + E_{eg} - A \, R = E_{eg}  - A \, R + \frac{1}{2} \, M \, \Omega^2 \, R^2  \quad ,
+ \end{eqnarray}
+wobei $E_{eg}$ der elektronische Beitrag zur Energiedifferenz ist. Wir nehmen an, dass beide Potentiale die gleiche Form, d.h. die gleiche Schwingungsfrequenz haben. Der Term $A \, R$ koppelt den elektronischen Zustand und die Kernbewegung. Er verschiebt das Potential des angeregten Zustands entlang der $R$-Koordinate. 
 %
-%
+Wir führen eine reduzierte Raumkoordinate $\tilde{R}$ ein
 \begin{equation}
- A = m \, \omega^2 \,  R	 \quad \text{also} \quad R = \frac{A}{m \omega^2} \quad .
+\tilde{R} = \frac{R}{x} \quad \text{mit} \quad x = \sqrt{\frac{\hbar}{M \Omega}}  \quad .
 \end{equation}
+Die neue Raumkoordinate $\tilde{R}$ ist so skaliert, dass die Parabel des Potentials die Energie des Schwingungs-Grundzustands $\hbar \Omega/2$ bei $\tilde{R} = 1$ schneidet.
+In diesen Koordinaten liegt das Minimum der Parabel des Grundzustands weiterhin bei 
+$\tilde{R}  = 0$, das des
+angeregten Zustands bei $\tilde{R} = \tilde{R}_e$ mit
+\begin{equation}
+\tilde{R}_e = \frac{A \, x}{ \hbar \Omega} \quad .
+\end{equation}
+In diesen Koordinaten sind die Potentiale also
+\begin{eqnarray}
+ U_g(\tilde{R}) &=& \frac{1}{2}  \, \hbar \Omega \, \tilde{R}^2 \\
+  U_e(\tilde{R}) &=&   E_{eg} + \frac{1}{2}  \, \hbar \Omega  \, \left[  (\tilde{R} - \tilde{R}_e)^2 - \tilde{R}_e^2  \right]
+ \end{eqnarray}
 Die Energien der quantenmechanischen Eigenzustände sind 
 \begin{eqnarray}
-  E_{g, n} &=&  (n + 1/2) \, \hbar \omega  \\
-  E_{e, m} &=&  (m + 1/2) \, \hbar \omega  +  E_{eg} - \frac{A^2}{2 m \omega^2} =
-   (m + 1/2 - S) \, \hbar \omega  +  E_{eg}  \nonumber \quad .
+  E_{g, n} &=&  (n + 1/2) \, \hbar \Omega  \\
+  E_{e, m} &=&   E_{eg} +   (m + 1/2 - \tilde{R}_e^2  /2 ) \, \hbar \Omega  =  E_{eg} +   (m + 1/2 - S ) \, \hbar \Omega   \nonumber
 \end{eqnarray}
-Wir führen den Huang-Rhys-Faktor $S$ als dimensionslose Kopplungskonstanten\sidenote{Kuzmany definiert  $S$ als Wurzel des hier verwendeten $S$.} ein
+wobei wir den  Huang-Rhys-Faktor $S$ als dimensionslose Kopplungskonstante eingeführt\sidenote{Kuzmany definiert  $S$ als Wurzel des hier verwendeten $S$.}  haben
 \begin{equation}
- S = \frac{A^2}{\hbar \omega} \frac{1}{2 m \omega^2}
- = \frac{1}{2} \, \left( R \, \sqrt{\frac{m \, \omega}{\hbar}}\, \right)^2 \quad ,
+ S = \frac{1}{2} \, \tilde{R}_e^2  =
+ \frac{A^2}{\hbar \Omega}  \, \frac{1}{2 M \Omega^2} \quad. 
 \end{equation}
-wobei der Term in Klammern die Verschiebung des Minimums in reduzierten Koordinaten ist.
+Der  Huang-Rhys-Faktor $S$ ist also ein Maß für die Verschiebung des Bindungspotentials im angeregten Zustand.
+
+
+
 Die Eigenfunktionen $\chi_n$ der Kernvibrationen sind Hermite'sche Polynome. Der Franck-Condon-Faktor beschreibt das Überlappungsintegral der Schwingungswellenfunktion von Grund- und angeregtem Zustand. Da der elektronische Übergang im Vergleich zur Kernbewegung schnell ist, kann sich die Kernkoordinate während des Übergangs nicht ändern (Born-Oppenheimer-Näherung), und sowohl der Grund- als auch der angeregte Zustand benötigen eine nicht verschwindende Wahrscheinlichkeit, um auf der gleichen Koordinate $r$ zu liegen. Wenn sich einer der Zustände in einem schwingenden Grundzustand befindet, d.h. $n$ oder $m$ gleich null ist, nimmt der Franck-Condon-Faktor die Form\sidenote{Diese Notation ist schlampig in dem Sinne, dass die Bra-Wellenfunktion ein elektronischer angeregter Zustand ist, die Ket-Funktion ein elektronischer Grundzustand!}
 \begin{equation}
  | \braket{ \chi_0 | \chi_m } | ^2  =  | \braket{ \chi_m | \chi_0 } | ^2 = \frac{S^m \exp(-S)}{m!} 
@@ -207,6 +221,13 @@ Eigentlich ist das spektrale Integral über eine Linie in $A(\omega  )$ bzw. $F(
 Alles zusammengenommen sollte man daher $A / \omega$ und $F / \omega^3$ vergleichen.
 
 
+\section{Stokes-Verschiebung}
+
+Vergleicht man Absorptions- und Emissionsspektren wie oben beschrieben, so stellt man fest, dass die Übergangsenergien 0--0 nicht vollständig übereinstimmen. Dies ist die Stokes-Verschiebung. Ihre Amplitude hängt vom Molekül und der Umgebung des Moleküls ab. Wenn ein Molekül in einen elektronisch angeregten Zustand überführt wird, ändert sich die räumliche Verteilung der Elektronendichte. Dies beeinflusst die Umgebung, z. B. die Lösungsmittelmoleküle, in Position und Orientierung. Unmittelbar nach der Anregung befinden sich die Lösungsmittelmoleküle noch in der Position, die im Grundzustand des Farbstoffmoleküls die geringste Energie liefert. Im angeregten Zustand verschieben sie sich und richten sich neu aus, um die Gesamtenergie zu verringern. Die Fluoreszenzemission findet also in einer anderen elektrischen Umgebung statt als die Absorption, was zu einer Verschiebung der Übergangsenergie, der Stokes-Verschiebung, führt.
+
+Allgemeiner  wird nicht nur der Unterschied zwischen den 0--0-Übergängen, sondern auch der Unterschied zwischen den Spitzen der Absorptions- und Emissionsspektren als Stokes-Verschiebung bezeichnet. Dazu gehört dann auch die Schwingungsrelaxation des Farbstoffmoleküls selbst.
+
+
 
 \section{Elektronische Spektren großer Moleküle}
 
@@ -214,7 +235,7 @@ Große Moleküle mit vielen Kernen und Elektronen besitzen komplexe Spektren in 
 
 \paragraph{Bindende Elektronen} Wenn Elektronen angeregt werde, die besonders relevant für eine Bindung sind, dann führt dies oft zur Dissoziation, also dem Aufbrechen des Moleküls. Das Bindungspotential im elektronisch angeregten Zustand ist dann entweder selbst nicht mehr bindend, oder hat beispielsweise über die Schwingungszustände großen Überlapp mit einem anderen nicht-bindenden Potential. Dissoziation geschieht also nicht durch den direkten Übergang gebunden--frei, sondern über einen Zwischenschritt.
 
-\paragraph{Chromophore Gruppen} Ein Chromophor ist ein Farb-Träger. Manche Elektronen-Orbitale zeigen charakteristische Eigenschaften unabhängig davon, wie diese in ein großes Molekül eingebaut sind. Wenn diese Orbitale dann zu Fluoreszenz-Emission führen, dann nennt man sie chromophore Gruppen. Ein Beispiel sind einzelne Atome von Übergangsmetallen (\ch{Fe}, \ch{Ti}, \ch{Co}). Diese zeigen nahezu atomare Spektren, auch wenn sie in größere Moleküle eingebaut sind. Ein anderes Beispiel ist die \ch{C=O} Doppelbindung oder die \ch{C=C} Doppelbindung. Diese haben ein charakteristische Absorptionsspektrum bei einer Wellenlänge von 290 nm bzw. 180 nm, unabhängig vom Rest des Moleküls.
+\paragraph{Chromophore Gruppen} Ein Chromophor ist ein Farb-Träger. Manche Elektronen-Orbitale zeigen charakteristische Eigenschaften unabhängig davon, wie diese in ein großes Molekül eingebaut sind. Wenn diese Orbitale dann zu Fluoreszenz-Emission führen, dann nennt man sie chromophore Gruppen. Ein Beispiel sind einzelne Atome von Übergangsmetallen (\ch{Fe}, \ch{Ti}, \ch{Co}). Diese zeigen nahezu atomare Spektren, auch wenn sie in größere Moleküle eingebaut sind. Ein anderes Beispiel ist die \ch{C=O} Doppelbindung oder die \ch{C=C} Doppelbindung. Diese haben ein charakteristisches Absorptionsspektrum bei einer Wellenlänge von 290 nm bzw. 180 nm, unabhängig vom Rest des Moleküls.
 
 \paragraph{Delokalisierte Elektronen} Manchmal ist ein Elektronen-Orbital nicht eine Linearkombination von nur zwei Atom-Orbitalen, sondern es sind mehr Atome an dem Orbital beteiligt. Ein Elektron in einem solchen Orbital ist also nicht mehr an einem Ort, sondern über einen größeren Bereich delokalisiert. Wir hatten das in Kapitel  \ref{chap:MO-teil2} im Zusammenhang mit der Hückel-Methode besprochen. In Benzol beispielsweise wird die $\sigma$-Bindung aus den sp$^2$-Hybrid-Orbitalen aufgebaut. Die verbleibenden 6 Elektronen in den atomaren p$_z$-Orbitalen bilden ein delokalisiertes $\pi$-Elektronen-System, oft durch einen Kreis in der Mitte des 6-Rings dargestellt. Ein anderes Beispiel sind konjugierte Polymere, also alternierende Einfach- und Doppel-Bindungen in einer Kette von Kohlenstoffatomen. In solchen Fällen ist jedes beteiligte Elektron überall. Elektronen in einem solchen räumlich großen Orbital kann man ähnlich zu einem Teilchen im Kasten beschreiben. Das Orbital bildet das Kasten-Potential. Die Kettenlänge bestimmt die Kastenbreite und, da $E \propto 1 /L$, die Lage der Energieniveaus. Lange Moleküle absorbieren und emittieren röter.
 

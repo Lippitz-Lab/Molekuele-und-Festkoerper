@@ -6,7 +6,7 @@ This work is licensed under a
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
-#Vorwort
+# Vorwort
 
 Dies ist das Vorlesungsskript meiner Vorlesung 'Molekülphysik und Festkörperphysik I'. Sie ist eine Kursvorlesung für  Studierende im dritten Jahr des Bachelorstudiums. Bei der Auswahl und Gewichtung der Themen folgt sie sehr stark dem in Bayreuth Üblichen. Ich danke an dieser Stelle insbesondere Jürgen Köhler und Anna Köhler, deren Vorlesungsskripte mir eine große Hilfe waren.
 
