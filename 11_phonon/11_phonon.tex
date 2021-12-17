@@ -40,7 +40,7 @@ Im Experiment macht man das beispielsweise durch inelastische Neutronenstreuung.
 
 \section{Einfaches Modell: lineare Kette}
 
-Wir stellen die Schwingung der einzelnen Atome in einem Kristall als Superposition von ebenen Wellen dar. Die Atome bilden Ebenen, und alle Atome einer Ebene werden in gleichere Weise (Richtung und Amplitude) aus ihrer Ruhelage ausgelenkt. Die Schwingung findet also um eine Gleichgewichtsposition herum statt, die durch das in den letzten beiden Kapiteln beschriebene Gitter definiert ist. Wir nehmen ebenfalls an, dass die Schwingung harmonisch ist, was bei kleinen Auslenkungen sicherlich der Fall ist. Die Wahl der Kristall-Ebene bestimmt die Richtung des Wellenvektors $\mathbf{k}$ der ebenen Welle. Die Wellenlänge $\lambda$ den Betrag des Vektors $|\mathbf{k}| = 2 \pi / \lambda$. Weil alle Atome in der Ebene das gleiche tun, ist es möglich, allein eine lineare Kette von Atomen zu betrachten, zu der aus jeder Ebene nur jeweils ein Atom beiträgt.
+Wir stellen die Schwingung der einzelnen Atome in einem Kristall als Superposition von ebenen Wellen dar. Die Atome bilden Ebenen, und alle Atome einer Ebene werden in gleichere Weise (Richtung und Amplitude) aus ihrer Ruhelage ausgelenkt. Die Schwingung findet also um eine Gleichgewichtsposition herum statt, die durch das in den letzten beiden Kapiteln beschriebene Gitter definiert ist. Wir nehmen ebenfalls an, dass die Schwingung harmonisch ist, was bei kleinen Auslenkungen sicherlich der Fall ist. Die Wahl der Kristall-Ebene bestimmt die Richtung des Wellenvektors $\mathbf{k}$ der ebenen Welle. Die Wellenlänge $\lambda$ den Betrag des Vektors $|\mathbf{k}| = 2 \pi / \lambda$. Weil alle Atome in der Ebene das Gleiche tun, ist es möglich, allein eine lineare Kette von Atomen zu betrachten, zu der aus jeder Ebene nur jeweils ein Atom beiträgt.
 
 Wir beschränken uns hier zunächst auf eine Auslenkung allein entlang der Richtung der Kette. Wir indizieren im Folgenden die Atome entlang der Kette mit den Indizes $s$ und $p$. Die Auslenkung eines Atoms an der Position $s$ aus der Gleichgewichtsposition sei $u_s$. 
 Das zeitliche Mittel über $u_s(t)$ ist damit Null. Die Atome seien durch Federn verbunden. Die Kraft auf das Atoms $s$ ist dann
@@ -51,7 +51,7 @@ mit der Federkonstante $c_p$, die beschreibt, die das betrachtete Atom mit dem $
 \begin{equation}
 M \frac{d^2 \, u_s}{dt^2} = \sum_p \, c_p \left( u_{s+p} - u_s \right)
 \end{equation}
-wobei wir angenommen haben, dass alle Atome die gleiche Masse $M$ besitzen. Mit dem Ansatz einer ebenen Welle\sidenote{entsprechend den Nornmalmoden in der Molekülphysik} wird die Auslenkung des Atoms mit den Index $s+p$ zu
+wobei wir angenommen haben, dass alle Atome die gleiche Masse $M$ besitzen. Mit dem Ansatz einer ebenen Welle\sidenote{entsprechend den Normalmoden in der Molekülphysik} wird die Auslenkung des Atoms mit den Index $s+p$ zu
 \begin{equation}
 u_{s+p} = U_0 \, e^{-i ( \omega t - \mathbf{k} \cdot \mathbf{a} (s+p) )}
 \end{equation}
@@ -71,7 +71,7 @@ Den hier gefundenen Zusammenhang zwischen Eigenfrequenz $\omega$ der Oszillation
 
 \section{Allein nächste Nachbarn wechselwirken}
 
-Nun machen wir zusätzlich die Annahme, dass nur nächste Nachbarn miteinander wechselwirken, dass es also nur Federn zwischen direkt benachbarten Atomen gibt. Damit sind nur dir $c_{\pm 1}$ von Null verschieden und die Summe fällt weg. Wir ziehen jetzt auch die Wurzel und erhalten
+Nun machen wir zusätzlich die Annahme, dass nur nächste Nachbarn miteinander wechselwirken, dass es also nur Federn zwischen direkt benachbarten Atomen gibt. Damit sind nur dir $c_{\pm 1}$ von null verschieden und die Summe fällt weg. Wir ziehen jetzt auch die Wurzel und erhalten
 \begin{equation}
 \omega = \sqrt{\frac{4 \, c_1}{M}} \left| \sin (\frac{1}{2} \, \mathbf{k} \cdot \mathbf{a}  ) \right| \label{eq:phonon_1atom}
 \end{equation}
@@ -83,7 +83,7 @@ Nun machen wir zusätzlich die Annahme, dass nur nächste Nachbarn miteinander w
 \end{marginfigure}
 
 
-\paragraph{Grenzfall langer Wellenlänge} Falls die Wellenlänge der ebenen Welle gegen unendlich geht, dann geht $k = 2 \pi / \lambda$  gegen Null. Damit wird das Argument des Sinus sehr klein gegen Eins und wir können die Kleinwinkelnäherung anwenden:
+\paragraph{Grenzfall langer Wellenlänge} Falls die Wellenlänge der ebenen Welle gegen unendlich geht, dann geht $k = 2 \pi / \lambda$  gegen null. Damit wird das Argument des Sinus sehr klein gegen Eins und wir können die Kleinwinkelnäherung anwenden:
 \begin{equation}
 \omega = \sqrt{\frac{4 \, c_1}{M}} \frac{1}{2}  |\mathbf{k}| | \mathbf{a}| \propto k
 \end{equation}
@@ -99,7 +99,7 @@ Die Dispersionsrelation ist in der Nähe von $k = 0$ also linear in $k$. Die Sch
 \begin{marginfigure}
 \inputtikz{\currfiledir outside_BZ}
 
-\caption{Eine Welle mit dem Wellenvektor $k + G = k + 2\pi /a$ beschreibt die gleiche Auslenkung der Atome wie die mit dem Wellenvektor $k$.  Vektoren innerhalb der ersten Brillouinzone sind ausreichend, um alle möglichen Bewegungsmuster zu beschreiben. \label{fig:phonon_k_plus_g} }
+\caption{Eine Welle mit dem Wellenvektor $k + G = k + 2\pi /a$ beschreibt die gleiche Auslenkung der Atome wie die mit dem Wellenvektor $k$.  Vektoren innerhalb der ersten Brillouin-Zone sind ausreichend, um alle möglichen Bewegungsmuster zu beschreiben. \label{fig:phonon_k_plus_g} }
 \end{marginfigure}
 
 
@@ -114,7 +114,7 @@ Dieser Ausdruck ist periodisch in $\mathbf{k}$. Alle möglichen Werte werden ber
  \begin{equation}
  - \frac{\pi}{a} < k <  \frac{\pi}{a}
  \end{equation} 
-Dies ist gerade die erste Brillouin-Zone. Werte von $k$ außerhalb dieser Zone beinhalten keine weitere Information. Sie beschreiben die gleiche Auslenkung der Atome. Die Funktion  $e^{i \mathbf{k} \cdot \mathbf{a}}$ wird nur an den Gitterpositionen ausgewertet. Welchen Wert sie an anderer Stelle annimmt spielt keine Rolle. Für $k$ außerhalb der ersten Brillouin-Zone oszilliert die Funktion zwischen den Gitterpositionen schneller, was aber keine physikalische Konsequenz hat.
+Dies ist gerade die erste Brillouin-Zone. Werte von $k$ außerhalb dieser Zone beinhalten keine weitere Information. Sie beschreiben die gleiche Auslenkung der Atome. Die Funktion  $e^{i \mathbf{k} \cdot \mathbf{a}}$ wird nur an den Gitterpositionen ausgewertet. Welchen Wert sie an anderer Stelle annimmt, spielt keine Rolle. Für $k$ außerhalb der ersten Brillouin-Zone oszilliert die Funktion zwischen den Gitterpositionen schneller, was aber keine physikalische Konsequenz hat.
 
 
 
@@ -134,7 +134,7 @@ An den Grenzen der Brillouin-Zone, bei $k = \pm \pi / a$ wird damit die Gruppeng
 
 \section{Lineare zweiatomige Kette}
 
-Nun heben wir die Annahme auf, dass alle Atome identisch sind. Wir betrachten eine Kette, die abwechselnd aus zwei Atomsorten besteht. In der Sprache eines Gitters ist hat diese also eine zweiatomige Basis. Die Gitterkonstante $a$ ist der (kürzest) Abstand zwischen \emph{identischen} Atomen. Hier nehmen wir an, dass sich die Atome in ihrer Masse unterscheiden. Die Federn seien aber wieder nur zwischen nächsten Nachbarn (also verschiedenen Atomsorten) und sie seine alle identisch.\sidenote{Man könnte auch identische Massen und alternierende Federn annehmen.} Der Index $s$ bezeichnet nun die Einheitszelle (nicht das Atom). Wir unterscheiden zwischen den Atomen, in dem die eine Sorte um $u_s$, die andere um $v_s$ ausgelenkt sein soll.  Die Reihenfolge entlang der Kette ist also $u_{s-1}$ ---  $v_{s-1}$ --- $u_{s}$ ---  $v_{s}$ --- $u_{s+1}$ ---  $v_{s+1}$. Damit werden die Bewegungsgleichungen
+Nun heben wir die Annahme auf, dass alle Atome identisch sind. Wir betrachten eine Kette, die abwechselnd aus zwei Atomsorten besteht. In der Sprache eines Gitters hat diese also eine zweiatomige Basis. Die Gitterkonstante $a$ ist der (kürzest) Abstand zwischen \emph{identischen} Atomen. Hier nehmen wir an, dass sich die Atome in ihrer Masse unterscheiden. Die Federn seien aber wieder nur zwischen nächsten Nachbarn (also verschiedenen Atomsorten) und sie seine alle identisch.\sidenote{Man könnte auch identische Massen und alternierende Federn annehmen.} Der Index $s$ bezeichnet nun die Einheitszelle (nicht das Atom). Wir unterscheiden zwischen den Atomen, in dem die eine Sorte um $u_s$, die andere um $v_s$ ausgelenkt sein soll.  Die Reihenfolge entlang der Kette ist also $u_{s-1}$ ---  $v_{s-1}$ --- $u_{s}$ ---  $v_{s}$ --- $u_{s+1}$ ---  $v_{s+1}$. Damit werden die Bewegungsgleichungen
 \begin{align}
  M_1 \frac{d^2 u_s}{dt^2} = & c \, \left( v_s + v_{s-1} - 2 u_s \right) \\
  M_2 \frac{d^2 v_s}{dt^2} = & c \, \left( u_s + u_{s+1} - 2 v_s \right) 
@@ -155,7 +155,7 @@ und erhalten zwei Lösungen für die Eigenfrequenz $\omega$ und damit die Disper
 \omega^2 =  \frac{c}{\mu}
 \pm c \sqrt{ \frac{1}{\mu^2} - \frac{4}{M_1 M_2}  \sin^2 \left( \frac{1}{2}  \mathbf{k} \cdot \mathbf{a} \right) }  \label{eq:phonon_2atom}
 \end{equation}
-mit der reduzierten Masse $\mu = (M_1  M_2)/(M_1 + M_2)$. Die Dispersionsrelation besteht also aus zwei Zweigen, je nach Vorzeichen des $\pm$: Das negative Vorzeichen beschreibt den \emph{akustischen Zweig}. Er geht exakt in die einatomige Kette über, wenn man $M_1 = M_2$ setzt und $a$ entsprechend anpasst. Auch für $M_1 \neq M_2$ ist der akustische Zweig sehr ähnlich der einatomigen Kette, insbesondere linear zu $k$ in der Nähe von $k=0$. Das positive Vorzeichen beschreibt den \emph{optischen Zweig}. Für $k \rightarrow 0$ geht hier die Frequenz $\omega$ nicht gegen Null sondern gegen $\sqrt{2 c / \mu}$. Am Rand der Brillouin-Zone, also bei $k = \pi /a $ wird der Sinus Eins und damit\sidenote{Man zieht den Term $M_1 - M_2$ aus der Wurzel und macht dabei die Annahme $M_1 > M_2$.}
+mit der reduzierten Masse $\mu = (M_1  M_2)/(M_1 + M_2)$. Die Dispersionsrelation besteht also aus zwei Zweigen, je nach Vorzeichen des $\pm$: Das negative Vorzeichen beschreibt den \emph{akustischen Zweig}. Er geht exakt in die einatomige Kette über, wenn man $M_1 = M_2$ setzt und $a$ entsprechend anpasst. Auch für $M_1 \neq M_2$ ist der akustische Zweig sehr ähnlich der einatomigen Kette, insbesondere linear zu $k$ in der Nähe von $k=0$. Das positive Vorzeichen beschreibt den \emph{optischen Zweig}. Für $k \rightarrow 0$ geht hier die Frequenz $\omega$ nicht gegen null, sondern gegen $\sqrt{2 c / \mu}$. Am Rand der Brillouin-Zone, also bei $k = \pi /a $ wird der Sinus eins und damit\sidenote{Man zieht den Term $M_1 - M_2$ aus der Wurzel und macht dabei die Annahme $M_1 > M_2$.}
 \begin{align}
 \omega_+ = & \sqrt{\frac{2 c}{M_2}} \\
 \omega_- = & \sqrt{\frac{2 c}{M_1} }
@@ -171,12 +171,12 @@ Die Aufspaltung der Äste am Rand der Brillouin-Zone geht also mit dem Verhältn
 \caption{Dispersionsrelation der zweiatomigen Kette}
 \end{marginfigure}
 
-Die Bezeichnung der beide Äste als akustisch und optisch ergibt sich aus dem Schwingungsmuster bei kleinem $k$. Man findet
+Die Bezeichnung der beiden Äste als akustisch und optisch ergibt sich aus dem Schwingungsmuster bei kleinem $k$. Man findet
 \begin{align}
  u = &v &&  \text{akustischer Zweig} \\
   \frac{u}{v} = &- \frac{M_2}{M_1} &&  \text{optischer Zweig} 
 \end{align}
-Im akustischen Zweig folgen also beide Atomsorten einer gemeinsamen Schwingungsmuster, wie man es für eine Schallwelle erwartet. Im optischen Zweig bleibt der Schwerpunkt ruhen ($u M_1 = - v M_2$). Wenn die beiden Atomsorten allerdings unterschiedliche (Teil-)Ladungen besitzen, dann führt diese Schwingung zu einem oszillierenden Dipolmoment und ist somit optisch anregbar, also Infrarot-aktiv.
+Im akustischen Zweig folgen also beide Atomsorten einem gemeinsamen Schwingungsmuster, wie man es für eine Schallwelle erwartet. Im optischen Zweig bleibt der Schwerpunkt ruhen ($u M_1 = - v M_2$). Wenn die beiden Atomsorten allerdings unterschiedliche (Teil-)Ladungen besitzen, dann führt diese Schwingung zu einem oszillierenden Dipolmoment und ist somit optisch anregbar, also Infrarot-aktiv.
 
 
 \begin{marginfigure}
@@ -195,7 +195,7 @@ Im allgemeinen Fall sind im dreidimensionalen diverse Schwingungsmoden vorhanden
 \paragraph{Transversal oder longitudinal} Die Auslenkung der Atome aus der Gleichgewichtsposition kann in Richtung des Wellenvektors $\mathbf{k}$ erfolgen (longitudinale Schwingung), oder senkrecht dazu (transversale Schwingung). Dabei ist die transversale Schwingung zweifach entartet, weil es zwei Richtungen gibt, die senkrecht auf $\mathbf{k}$ stehen.
 
 
-\paragraph{Akustisch  oder optisch} Auch bei $p > 2$  Atomen in der Basis kann man wie im letzten Abschnitt verfahren. Man findet eine akustisch Mode, in der $u = v = w = \dots$, und $p -1$ optische Moden, in denen manche Atome außer Phase schwingen.
+\paragraph{Akustisch  oder optisch} Auch bei $p > 2$  Atomen in der Basis kann man wie im letzten Abschnitt verfahren. Man findet eine akustische Mode, in der $u = v = w = \dots$, und $p -1$ optische Moden, in denen manche Atome außer Phase schwingen.
 
 Zusammen ergeben sich damit folgende Moden \\
 \begin{tabular}{rl}
@@ -261,7 +261,7 @@ Die Bedingung lässt sich durch Multiplikation mit $\hbar$ als
 \hbar \mathbf{k}_{out} =  &\hbar \mathbf{k}_{0} \pm \hbar 
 \mathbf{q}  + \hbar \mathbf{G}
 \end{align}
-Dies ist ein wichtiger Schritt! Bei der Streuung (und anderen Effekten) verhalten sich Gitterschwingungen so als wären sie ein Teilchen. Dieses Teilchen nennt man \emph{Phonon}. Es hat die Energie $\hbar \omega_\mathbf{q}$ und den Impuls $\hbar \mathbf{q}$. Das positive Vorzeichnen beschreibt die Absorption (Vernichtung) eines Phonons, das negative die Emission (Erzeugung). Der Impuls $\hbar \mathbf{G}$ wird auf den gesamten Kristall übertragen, ohne dabei Energie zu übertragen.\sidenote{Wie beim Abprallen eines Balles von einer Wand.} Der Impuls des Phonons ist allerdings kein 'echter' Impuls, sondern nur ein Quasiimpuls oder Kristallimpuls, da ihm der Massetransport im Sinne von $p = m v$ fehlt. Manchmal nennt man das Phonon ein 'Quasiteilchen', manchmal ist dieser Term aber auch für modifizierte ('dressed') elementare Teilchen reserviert.\sidenote{Siehe 'quasiparticle' in engl. wikipedia.} Zumindest beschreibt es eine kollektive Anregung und ist damit ein Boson, weil natürlich eine Gitterschwingung mehr oder weniger stark angeregt sein kann und somit viele identische Phononen existieren können.
+Dies ist ein wichtiger Schritt! Bei der Streuung (und anderen Effekten) verhalten sich Gitterschwingungen so als wären sie ein Teilchen. Dieses Teilchen nennt man \emph{Phonon}. Es hat die Energie $\hbar \omega_\mathbf{q}$ und den Impuls $\hbar \mathbf{q}$. Das positive Vorzeichnen beschreibt die Absorption (Vernichtung) eines Phonons, das negative die Emission (Erzeugung). Der Impuls $\hbar \mathbf{G}$ wird auf den gesamten Kristall übertragen, ohne dabei Energie zu übertragen.\sidenote{Wie beim Abprallen eines Balles von einer Wand.} Der Impuls des Phonons ist allerdings kein 'echter' Impuls, sondern nur ein Quasiimpuls oder Kristallimpuls, da ihm der Massentransport im Sinne von $p = m v$ fehlt. Manchmal nennt man das Phonon ein 'Quasiteilchen', manchmal ist dieser Term aber auch für modifizierte ('dressed') elementare Teilchen reserviert.\sidenote{Siehe 'quasiparticle' in engl. wikipedia.} Zumindest beschreibt es eine kollektive Anregung und ist damit ein Boson, weil natürlich eine Gitterschwingung mehr oder weniger stark angeregt sein kann und somit viele identische Phononen existieren können.
 
 
 
@@ -284,7 +284,7 @@ Man kann inelastische Streuung genauso wie elastische Streuung mit diversen Arte
  \end{table}
 
 Bei der Dispersionsrelation der Phononen ist der relevante Bereich des Wellenvektors $q$ durch die erste Brillouin-Zone, also $| q | \le \pi / a$ gegeben.  Die Änderung des Wellenvektors der (Materie-)Welle $\mathbf{K}$ ist vom Betrag her maximal $4 \pi / \lambda$ (von $+\mathbf{k}_0$ zu $-\mathbf{k}_0$). Daher muss die Wellenlänge $\lambda$ sinnvollerweise kleiner als $2a$ sein, also im Bereich von wenigen Ångström liegen.
- Die Wellenlänge von sichtbarem Licht ist also viel zu lang, um die gesamte Brillouin-Zone abzudecken. Energieänderungen  von einigen meV sind im Sichtbaren aber noch gut zu messen. Bei Röntgenstrahlen wird dies sehr schwierig, so dass Neutronenstreuung die Methode der Wahl ist, da hier die Energie der Phononen eine deutliche Änderung der Energie der Neutronen bewirkt.
+ Die Wellenlänge von sichtbarem Licht ist also viel zu lang, um die gesamte Brillouin-Zone abzudecken. Energieänderungen  von einigen meV sind im Sichtbaren aber noch gut zu messen. Bei Röntgenstrahlen wird dies sehr schwierig, sodass Neutronenstreuung die Methode der Wahl ist, da hier die Energie der Phononen eine deutliche Änderung der Energie der Neutronen bewirkt.
 
 
 
@@ -292,9 +292,9 @@ Bei der Dispersionsrelation der Phononen ist der relevante Bereich des Wellenvek
 \section{Inelastische Neutronenstreuung}
 
 
-Die Streubedingung konstruiert man auch im inelastischen Fall mit der Ewald-Kugel, wie im letzten Kapitel. Nur kommt hier nun zusätzlich der Vektor $\mathbf{q}$ des Phonons hinzu, der entweder zu $\mathbf{k}_0$ addiert oder subtrahiert wird. Je nach dem liegt $\mathbf{k}$ dann entweder innerhalb\sidenote{$|k|$ kleiner, $\lambda$ größer, $\omega$ kleiner als im einfallenden Strahl, also Emission eines Phonons} oder außerhalb der Kugel, aber nicht mehr auf der Ewald-Kugel wie im elastischen Fall.
+Die Streubedingung konstruiert man auch im inelastischen Fall mit der Ewald-Kugel, wie im letzten Kapitel. Nur kommt hier nun zusätzlich der Vektor $\mathbf{q}$ des Phonons hinzu, der entweder zu $\mathbf{k}_0$ addiert oder subtrahiert wird. Je nachdem liegt $\mathbf{k}$ dann entweder innerhalb\sidenote{$|k|$ kleiner, $\lambda$ größer, $\omega$ kleiner als im einfallenden Strahl, also Emission eines Phonons} oder außerhalb der Kugel, aber nicht mehr auf der Ewald-Kugel wie im elastischen Fall.
 
-Man misst also für jede Richtungsänderung $\mathbf{K}$ die Änderung der Energie / Wellenlänge des Neutronenstrahls. Zusammen mit der bekannten Struktur und Orientierung des Kristallgitters und damit der Gittervektoren $\mathbf{G}$ kann man so die vollständige Dispersionrelation der Phononen bestimmen.
+Man misst also für jede Richtungsänderung $\mathbf{K}$ die Änderung der Energie / Wellenlänge des Neutronenstrahls. Zusammen mit der bekannten Struktur und Orientierung des Kristallgitters und damit der Gittervektoren $\mathbf{G}$ kann man so die vollständige Dispersionsrelation der Phononen bestimmen.
 
 \begin{marginfigure}
 \inputtikz{\currfiledir ewald_inelastisch}
@@ -320,7 +320,7 @@ Man misst also für jede Richtungsänderung $\mathbf{K}$ die Änderung der Energ
 Kupfer bildet einen kubisch-flächenzentrierten Kristall mit einatomiger Basis. Der reziproke Raum ist also kubisch-raumzentriert. Die Gitterkonstante beträgt 3.6~\AA. Abb. \ref{fig:phonon_kupfer} zeigt die Dispersionsrelation der Phononen, die durch inelastische Neutronenstreuung gemessen wurde. Aufgetragen ist die Frequenz $\nu$ des Phonons (aus der Änderung der Energie der Neutronen) über dem Wellenvektor $\mathbf{q}$, der sich aus der Änderung des Wellenvektors des Neutronenstrahls ergibt. 
 Der Wellenvektor  $\mathbf{q}$  ist in Form seiner Miller-Indizes angegeben, die sich hier wie  in allen kubischen  Gittern üblich auf die konventionelle, also primitiv kubische  Zelle  beziehen. Die horizontale Achse ist mit dem Wert  $\zeta$  beschriftet, der ein- oder mehrmals in den Miller-Indizes vorkommt. Alle dargestellten Wellenvektoren liegen damit entweder auf der Achse, der 
 Flächen- oder der  Raumdiagonalen der konventionellen Zelle (erstes bis drittes Intervall). Die horizontale Achse ist entsprechend dem Betrag des Wellenvektors 
- $|\mathbf{q}|$ skaliert, d.h. der Abstand $\zeta = 0 \dots 0.5$ verhält sich wie $1$ zu $\sqrt{2}$ zu $\sqrt{3}$. Die gesamte Abbildung stellt die Frequenz der Phononen entlang einem Pfad im reziproken Raum dar, der in Abbildung \ref{fig:phonon_pfad}  dargestellt ist. Dabei kann man ausnutzen, dass reziproke Gittervektoren $\mathbf{G}$ addiert werden können ohne etwas  zu verändern (siehe Abb. \ref{fig:phonon_k_plus_g})
+ $|\mathbf{q}|$ skaliert, d.h. der Abstand $\zeta = 0 \dots 0.5$ verhält sich wie $1$ zu $\sqrt{2}$ zu $\sqrt{3}$. Die gesamte Abbildung stellt die Frequenz der Phononen entlang einem Pfad im reziproken Raum dar, der in Abbildung \ref{fig:phonon_pfad}  dargestellt ist. Dabei kann man ausnutzen, dass reziproke Gittervektoren $\mathbf{G}$ addiert werden können, ohne etwas  zu verändern (siehe Abb. \ref{fig:phonon_k_plus_g})
  
 	\begin{figure}
 \inputtikz{\currfiledir fig_copper_all}
@@ -333,7 +333,7 @@ Die Dispersionsrelation ähnelt zumindest in Richtungen hoher Symmetrie, also [0
 \section{Beispiel: Galliumarsenid (\ch{GaAs})}
 
 
-Galliumarsenid (\ch{GaAs}) besitzt ebenfalls eine kubisch-flächenzentrierte Kristallstruktur, aber mit einer zweiatomigen Basis, eben eine Zinkblende-Struktur. Die Gitterkonstante der konventionellen Einheitszelle beträgt 5.7~\AA. Die Abbildung zeigt analog zu oben die Dispersionrelation. Wir finden nun auch einen optischen Zweig, da zwei Atome in der Basis sind. Die transversalen Zweige sind wieder in die hoch-symmetrische [001] und [111] Richtung entartet. In die [110] Richtung ist diese Entartung aufgehoben und wir finden 6 Zweige (2 Atome mal 3 Raumrichtungen).
+Galliumarsenid (\ch{GaAs}) besitzt ebenfalls eine kubisch-flächenzentrierte Kristallstruktur, aber mit einer zweiatomigen Basis, eben eine Zinkblende-Struktur. Die Gitterkonstante der konventionellen Einheitszelle beträgt 5.7~\AA. Die Abbildung zeigt analog zu oben die Dispersionsrelation. Wir finden nun auch einen optischen Zweig, da zwei Atome in der Basis sind. Die transversalen Zweige sind wieder in die hoch-symmetrische [001] und [111] Richtung entartet. In die [110] Richtung ist diese Entartung aufgehoben und wir finden 6 Zweige (2 Atome mal 3 Raumrichtungen).
 
 
 \begin{figure}
@@ -358,7 +358,7 @@ Akustische Phononen finden in Form des  akusto-optischen Modulators eine wichtig
 
 Dies kann auf verschiedene Weisen genutzt werden. In einfachsten Fall als Schalter: nur wenn die Ultraschallwelle anliegt existiert eine erste Beugungsordnung. Damit kann ein Strahl schnell (ns) an- und aus-geschaltet werden, wenn man den Ultraschall-Generator schaltet. Durch Variation der Amplitude der Ultraschallwelle kann eine beliebige Amplituden-Modulation des Lichtstahls erreicht werden.
 
-Die Beugung in die plus erste Ordnung entspricht der Absorption eines Ultraschall-Phonons, die in die minus erste Ordnung der Emission. Damit ist klar, dass die Beugung auch mit einer Frequenzverschiebung einher geht. Es muss schließlich Energie- und Impuls-Erhaltung gelten. Auf diese Weise ist es möglich, sehr schmalbandige und frequenzstabile Laser im sichtbaren Spektralbereich (Frequenz ca. 300 THz) um die Frequenz des Phonons (ca. 10--100 MHz) zu verstimmen. Wenn man die Frequenz des  Ultraschall-Generators kontinuierlich ändert, dann kann man so einen kleinen Frequenzbereich kontrolliert abfahren.
+Die Beugung in die plus erste Ordnung entspricht der Absorption eines Ultraschall-Phonons, die in die minus erste Ordnung der Emission. Damit ist klar, dass die Beugung auch mit einer Frequenzverschiebung einhergeht. Es muss schließlich Energie- und Impuls-Erhaltung gelten. Auf diese Weise ist es möglich, sehr schmalbandige und frequenzstabile Laser im sichtbaren Spektralbereich (Frequenz ca. 300 THz) um die Frequenz des Phonons (ca. 10--100 MHz) zu verstimmen. Wenn man die Frequenz des  Ultraschall-Generators kontinuierlich ändert, dann kann man so einen kleinen Frequenzbereich kontrolliert abfahren.
 
 Gleichzeitig ändert sich damit auch der Beugungswinkel. So kann ein Lichtstrahl sehr schnell in verschiedene, kontinuierlich änderbare Richtungen abgelenkt werden, was in manchen optischen Mikroskopen Verwendung findet.
 

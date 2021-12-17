@@ -46,7 +46,7 @@ Bei jeder Frequenz $\omega$ existieren Phononen in der Dichte $D(\omega)$ der m�
 
 \section{Zustandsdichte im reziproken Raum $D(k) \, dk$ }
 
-Zunächst betrachten wir nicht die eigentlich benötigte Zustandsdichte im Frequenzraum $D(\omega) d\omega$ sondern die im reziproken Raum $D(k) dk$. Die Argumentation und die Rechenschritte sind dabei dieselben, die auch bei der Herleitung der optischen Modendichte bei der Schwarzkörperstrahlung verwendet wurde\sidenote{z.B. Vorlesung EPB2 Atome, Kerne, Teilchen}, auf die wir weiter unten eingehen werden.
+Zunächst betrachten wir nicht die eigentlich benötigte Zustandsdichte im Frequenzraum $D(\omega) d\omega$, sondern die im reziproken Raum $D(k) dk$. Die Argumentation und die Rechenschritte sind dabei dieselben, die auch bei der Herleitung der optischen Modendichte bei der Schwarzkörperstrahlung verwendet wurde\sidenote{z.B. Vorlesung EPB2 Atome, Kerne, Teilchen}, auf die wir weiter unten eingehen werden.
 
 Bisher hatten wir uns über die Länge unsere ein- oder mehratomigen Kette keine Gedanken gemacht. Wenn sie endlich lang sein soll, was ja notgedrungen der Fall ist, dann können die Enden entweder frei sein, also keine Kraft auf sie wirken, also $\ddot{u} = 0$ sein. Oder sie können fest sein, also ohne Bewegung, also $u=0$. Eine dritte Möglichkeit sind periodische Randbedingungen, also eine ringförmige Kette mit $u_0 = u_N$ bei $N$ Atomen in der Kette. Wir benutzen hier diese Randbedingung, die anderen geben das gleiche Ergebnis. Die Auslenkung der Masse am Index $s$ ist mit dem Ansatz der ebenen Welle
 \begin{equation}
@@ -83,7 +83,7 @@ Aus dem Blickwinkel der Normalmoden findet sich das gleiche Ergebnis. Bei $p$ At
 
 \section{Zustandsdichte im Frequenz-Raum $D(\omega) \, d\omega$ }
 
-Eine Zustandsdichte ist die Anzahl von Zuständen in einem festen Intervall, bisher einem festen Intervall auf der $k$-Achse, jetzt auf der $\omega$-Achse. Da der Zusammenhang zwischen Wellenvektor und Frequenz kein konstanter Faktor ist, ist dies nicht völlig trivial. Die Wahl des Intervalls ist typischerweise in der Variablen der Zustandsdichte kodiert, also $D(x)$ meint eigentlich $D(x) \, dx$. Es ist trotzdem sinnvoll, das $dx$ möglichst oft explizit mit zu schreiben.
+Eine Zustandsdichte ist die Anzahl von Zuständen in einem festen Intervall, bisher einem festen Intervall auf der $k$-Achse, jetzt auf der $\omega$-Achse. Da der Zusammenhang zwischen Wellenvektor und Frequenz kein konstanter Faktor ist, ist dies nicht völlig trivial. Die Wahl des Intervalls ist typischerweise in der Variablen der Zustandsdichte kodiert, also $D(x)$ meint eigentlich $D(x) \, dx$. Es ist trotzdem sinnvoll, das $dx$ möglichst oft explizit mitzuschreiben.
 
 Im Eindimensionalen können wir einfach mit $d \omega$ erweitern
 \begin{equation}
@@ -96,7 +96,7 @@ mit der Gruppengeschwindigkeit $v_g = d\omega / dk$.
 \begin{marginfigure}
 \inputtikz{\currfiledir dos_kette_2atom}
 
-\caption{Lineare zweiatomige Kette:  Zustandsdichte (links) und Dispersionsrelation (rechts). Zustände (Kreise) sind äquidistant auf der $k$-Achse, aber nicht mehr auf de $\omega$-Achse. Die Zustandsdichte divergiert an den van-Hove-Singularitäten, wenn die Gruppengeschwindigkeit Null wird.}
+\caption{Lineare zweiatomige Kette:  Zustandsdichte (links) und Dispersionsrelation (rechts). Zustände (Kreise) sind äquidistant auf der $k$-Achse, aber nicht mehr auf de $\omega$-Achse. Die Zustandsdichte divergiert an den Van-Hove-Singularitäten, wenn die Gruppengeschwindigkeit Null wird.}
 \end{marginfigure}
 
 
@@ -128,7 +128,7 @@ D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, k^2 
 \end{equation} 
 wobei $k$ hier als $k(\omega)$ zu verstehen ist.
 
-Sowohl im eindimensionalen als auch im dreidimensionalen Fall geht die Gruppengeschwindigkeit als Kehrwert ein. In der zweiatomigen Kette beispielsweise geht diese asymptotisch gegen Null in der Nähe der Bandlücke, wodurch der Integrand in Gl.~\ref{eq:WK_dos_omega} divergiert. Diese Punkte nennt man \emph{van Hove Singularitäten}. Im Eindimensionalen divergiert hier die Zustandsdichte. In zwei und drei Dimensionen finden sich davon noch endlich hohe Spitzen (siehe Abbildung \ref{fig:wk_kupfer} am Anfang des Kapitels).
+Sowohl im eindimensionalen als auch im dreidimensionalen Fall geht die Gruppengeschwindigkeit als Kehrwert ein. In der zweiatomigen Kette beispielsweise geht diese asymptotisch gegen Null in der Nähe der Bandlücke, wodurch der Integrand in Gl.~\ref{eq:WK_dos_omega} divergiert. Diese Punkte nennt man \emph{Van-Hove-Singularitäten}. Im Eindimensionalen divergiert hier die Zustandsdichte. In zwei und drei Dimensionen finden sich davon noch endlich hohe Spitzen (siehe Abbildung \ref{fig:wk_kupfer} am Anfang des Kapitels).
 
 
 
@@ -136,7 +136,7 @@ Sowohl im eindimensionalen als auch im dreidimensionalen Fall geht die Gruppenge
 
 \section{Einstein-Modell der Wärmekapazität}
 
-Gehen wir zurück zur inneren Energie als Summe über die Energien der Phononen in Gl.~\ref{eq:wk_u_allg}. Wir hatten dazu (wie auch im Kapitel davor) die Phonnen als die Quanten der Gitterschwingung angenommen. Jedes Phonon trägt die Energie $\hbar \omega$ bei. Phononen sind Bosonen, d.h. jede Gitterschwingung ist mehrfach anregbar, was die unterschiedliche Auslenkung beschreibt. Damit wird die Besetzungsfunktion $\braket{n (\omega,T) }$ eine Bose-Einstein-Verteilung
+Gehen wir zurück zur inneren Energie als Summe über die Energien der Phononen in Gl.~\ref{eq:wk_u_allg}. Wir hatten dazu (wie auch im Kapitel davor) die Phononen als die Quanten der Gitterschwingung angenommen. Jedes Phonon trägt die Energie $\hbar \omega$ bei. Phononen sind Bosonen, d.h. jede Gitterschwingung ist mehrfach anregbar, was die unterschiedliche Auslenkung beschreibt. Damit wird die Besetzungsfunktion $\braket{n (\omega,T) }$ eine Bose-Einstein-Verteilung
 \begin{equation}
 \braket{n (\omega,T) } = \frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1} \quad .
 \end{equation}
@@ -179,7 +179,7 @@ Die Dispersionsrelation ist also $\omega = v \, | \mathbf{k} |$ und somit die Zu
 \begin{equation}
 D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}   \, d\omega \label{eq:wk_debye_dos}
 \end{equation} 
-quadratisch in der Frequenz $\omega$. Die maximale Frequenz, bis zu der die Zustandsdichte quadratisch steigt, wird Debye-Frequenz $\omega_D$ genant und ergibt sich aus dem Gesamtzahl der Zustände, also der Zahl $N$ der Atome im Kristall
+quadratisch in der Frequenz $\omega$. Die maximale Frequenz, bis zu der die Zustandsdichte quadratisch steigt, wird Debye-Frequenz $\omega_D$ genannt und ergibt sich aus der Gesamtzahl der Zustände, also der Zahl $N$ der Atome im Kristall
 \begin{equation}
 N = \int_0^{\omega_{D}}  \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}   \, d\omega  \quad .
 \end{equation}
@@ -190,7 +190,7 @@ Man erhält mit $N = (L / a)^3$
 Der Term $\sqrt[3]{6 / \pi}$ verdient etwas Aufmerksamkeit. Wir haben in diesem Modell Zustände angenommen, die alle innerhalb einer Kugel im reziproken Raum mit Radius $k_{D} = \omega_{D} / v$ liegen. In manche Richtungen ragt diese Kugel über den Rand der ersten Brillouin-Zone hinaus, der bei $k = \pi / a$ liegt. In den  Ecken der kubischen Brillouin-Zone hat der Wellenvektor  aber den Betrag $k = \pi / a \sqrt{3}$. Diese Ecken liegen außerhalb der Kugel, da $\sqrt{3} \approx 1.73 > 1.24 \approx \sqrt[3]{6 / \pi}$.
 
 
-Die inneren Energie (Gl.~\ref{eq:wk_u_allg}) wird im Debye-Modell
+Die Innere Energie (Gl.~\ref{eq:wk_u_allg}) wird im Debye-Modell
 \begin{equation}
 U = 3 \int_0^{\omega_D} \, \hbar \omega \,  \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}  \,
 \frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1} \, d\omega \quad .
@@ -205,7 +205,7 @@ und erhalten für die Wärmekapazität
 C_V = 9 N \, k_B \, \left(\frac{T}{\Theta} \right)^3 \,
 \int_0^{x_D} \frac{x^4 \, e^x}{\left(  e^x - 1 \right)^2} \, dx \quad .
 \end{equation}
-Für hohe Temperaturen, also $x_D \rightarrow 0$, also $\hbar  \omega_D \ll k_B \, T$ finden wir wie erwartet das Dulong-Petit-Gesetzt. Für tiefe Temperaturen also $x_D \rightarrow \infty$, also $\hbar  \omega_D \gg k_B \, T$  erhalten wir
+Für hohe Temperaturen, also $x_D \rightarrow 0$, also $\hbar  \omega_D \ll k_B \, T$ finden wir wie erwartet das Dulong-Petit-Gesetz. Für tiefe Temperaturen also $x_D \rightarrow \infty$, also $\hbar  \omega_D \gg k_B \, T$  erhalten wir
 \begin{equation}
 C_V = \frac{12 \pi^4}{5} \, N \, k_B \, \left(\frac{T}{\Theta} \right)^3 \quad .
 \end{equation}
@@ -231,7 +231,7 @@ In manchen Materialien ist die Übereinstimmung der experimentell gefundenen Zus
 
 \section{Photonen und Phononen}
 
-Es ist sicherlich hilfreich, Unterschiede und Gemeinsamkeiten zwischen  Photonen und Phononen zu diskutieren. Photonen sind wie Phononen quantisiert, tragen die Energie $\hbar \omega$, aber einen echten Impuls $\hbar \mathbf{k}$, nicht 'nur' einen Quasiimpuls. Der physikalisch sinnvolle Bereich des Wellenvektors ist auch nicht auf die erste Brillouin-Zone limitiert, sondern kann beliebige Werte annehmen. Die Dispersionsrelation ist linear, zumindest im Vakuum: $\omega = c_0 \, | \mathbf{k} |$. In Medien ändert sich aber die Lichtgeschwindigkeit, so dass dann $\omega = c_0 \, | \mathbf{k} | / n$ wird, mit dem Brechungsindex $n$.
+Es ist sicherlich hilfreich, Unterschiede und Gemeinsamkeiten zwischen  Photonen und Phononen zu diskutieren. Photonen sind wie Phononen quantisiert, tragen die Energie $\hbar \omega$, aber einen echten Impuls $\hbar \mathbf{k}$, nicht 'nur' einen Quasiimpuls. Der physikalisch sinnvolle Bereich des Wellenvektors ist auch nicht auf die erste Brillouin-Zone limitiert, sondern kann beliebige Werte annehmen. Die Dispersionsrelation ist linear, zumindest im Vakuum: $\omega = c_0 \, | \mathbf{k} |$. In Medien ändert sich aber die Lichtgeschwindigkeit, sodass dann $\omega = c_0 \, | \mathbf{k} | / n$ wird, mit dem Brechungsindex $n$.
 
 Die Zustandsdichte leitet man beispielsweise über stehende Wellen in einem kubischen Resonator her. Man erhält das gleiche Ergebnis wie für Phononen in drei Dimensionen
 \begin{equation}
