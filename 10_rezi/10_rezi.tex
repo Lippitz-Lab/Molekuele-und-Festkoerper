@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{17. Dezember 2021}
+\renewcommand{\lastmod}{21. Dezember 2021}
 
 
 \chapter{Das reziproke Gitter}
@@ -31,7 +31,7 @@ In einem  Pulver-Diffraktometers  nach Debye-Scherrer wird ein Pulver einer kris
   \caption{Skizze  eines Pulver-Diffraktometers nach Debye-Scherrer.}
 \end{marginfigure}
 
-Dieses Verfahren ist einfacher als das historisch ältere Laue-Verfahren, in dem ein einziger, homogener Kristall als beugendes Element verwendet wird. Im Pulver sind alle Orientierungen  des Kristalls zum einlaufenden Strahl vorhanden. Wie wir unten bei der Ewald-Kugel sehen werden ist es eher unwahrscheinlich, dass die Kombination von Wellenlänge, Einfallsrichtung und Gitter zu konstruktiver Interferenz führt. Im Laue-verfahren muss der Kristall daher passend orientiert werden und / oder Röntgenstrahlung mit einem breiten Spektrum verwendet werden.
+Dieses Verfahren ist einfacher als das historisch ältere Laue-Verfahren, in dem ein einziger, homogener Kristall als beugendes Element verwendet wird. Im Pulver sind alle Orientierungen  des Kristalls zum einlaufenden Strahl vorhanden. Wie wir unten bei der Ewald-Kugel sehen werden ist es eher unwahrscheinlich, dass die Kombination von Wellenlänge, Einfallsrichtung und Gitter zu konstruktiver Interferenz führt. Im Laue-Verfahren muss der Kristall daher passend orientiert werden und / oder Röntgenstrahlung mit einem breiten Spektrum verwendet werden.
 
 Der in diesem Kapitel vorgestellte Formalismus ist nicht auf die Beugung von Röntgenstrahl beschränkt. Man kann völlig analog auch sichtbares Licht, Elektronen oder Neutronen beugen. Der Zusammenhang zwischen Energie pro Teilchen und Wellenlänge unterscheidet sich. Kurze Wellenlängen sind mit massereichen Teilchen bei niedrigeren Energien zu erreichen.  Auch kann man durch die Wahl des Strahls entscheiden, ob man die Verteilung der Elektronen (Röntgenstrahlen) oder der Kerne (Neutronenstrahlen) untersucht. 
 
@@ -66,13 +66,13 @@ Eine ausgedehnte Probe besteht damit aus vielen Streuzentren, deren Dichte als \
 \end{marginfigure}
 %
 \begin{equation}
-\Delta \phi = ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r}
+\Delta \phi = ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r} \quad ,
 \end{equation}
-wenn $\mathbf{k}$ der Wellenvektor der auslaufenden gestreuten ebenen Welle ist.\sidenote{Die Kugelwelle von oben lässt sich als Integral über ebene Wellen in alle Raumrichtungen schreiben.} Nun machen wir die Annahme, dass die Probe klein ist gegenüber $R$. Wir interessieren uns für die gestreute Welle also erst in einem Abstand, der so groß ist, dass unabhängig von Ort des Streuzentrums alle Teilwellen mit der Wellenvektor $\mathbf{k}$ am gleichen Ort ankommen. Auch nehmen wir wie quasi immer in der Streutheorie an, dass jede Welle nur einmal gestreut wird. Dies ist die  Born'schen Näherung. Damit wird die gestreute Welle
+wenn $\mathbf{k}$ der Wellenvektor der auslaufenden gestreuten ebenen Welle ist.\sidenote{Die Kugelwelle von oben lässt sich als Integral über ebene Wellen in alle Raumrichtungen schreiben.} Nun machen wir die Annahme, dass die Probe klein ist gegenüber $R$. Wir interessieren uns für die gestreute Welle also erst in einem Abstand, der so groß ist, dass unabhängig von Ort des Streuzentrums alle Teilwellen mit dem Wellenvektor $\mathbf{k}$ am gleichen Ort ankommen. Auch nehmen wir wie quasi immer in der Streutheorie an, dass jede Welle nur einmal gestreut wird. Dies ist die  Born'schen Näherung. Damit wird die gestreute Welle
 \begin{align}
  A_S(t) = & \frac{\tilde{A}}{R} \,   e^{- i \, (\omega_0 t - k_0 R)} \,
   \int_{V_\text{Probe}} \, \rho( \mathbf{r}) \,   e^{- i \,  ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r}} \, dV \\
-  = & \frac{\tilde{A}}{R} \,   e^{- i \, (\omega_0 t - k_0 R)} \, \mathcal{A}(\mathbf{K})
+  = & \frac{\tilde{A}}{R} \,   e^{- i \, (\omega_0 t - k_0 R)} \, \mathcal{A}(\mathbf{K}) 
 \end{align}
 mit der \emph{Streuamplitude} 
 \begin{equation}
@@ -97,13 +97,13 @@ mit $h,k,l$ ganzen Zahlen, den Fourier-Koeffizienten als Integral über die prim
 \end{equation}
 und den sogenannten \emph{reziproken Gittervektoren}
 \begin{equation}
-\mathbf{G}_{hkl} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_2 
+\mathbf{G}_{hkl} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_3 \quad .
 \end{equation}
 Die $\mathbf{b}_i$ sind die primitiven Einheitsvektoren des reziproken Gitters. $\mathbf{G}_{hkl}$ beschriebt also die Menge aller Gitterpunkte. Jedem dieser Gitterpunkte ist genau ein Fourier-Koeffizient $\rho_{hkl}$ der Streudichte zugeordnet. 
 
-Mit folgender Überlegung können die reziproken Einheitsvektoren $\mathbf{b}_i$ bestimmen: die Streudichte ist gitter-periodisch, die Fourier-Koeffizient $\rho_{hkl}$ aber ortsunabhängig. Damit muss für den Integranden in Gl.~\ref{eq:rezi_rho_hkl} gelten
+Mit folgender Überlegung können wir die reziproken Einheitsvektoren $\mathbf{b}_i$ bestimmen: die Streudichte ist gitter-periodisch, die Fourier-Koeffizienten $\rho_{hkl}$ aber ortsunabhängig. Damit muss für den Integranden in Gl.~\ref{eq:rezi_rho_hkl} gelten
 \begin{equation}
- e^{i \, \mathbf{G}_{hkl} \cdot \mathbf{r}}  =  e^{i \, \mathbf{G}_{hkl} \cdot (\mathbf{r} + \mathbf{R})}
+ e^{i \, \mathbf{G}_{hkl} \cdot \mathbf{r}}  =  e^{i \, \mathbf{G}_{hkl} \cdot (\mathbf{r} + \mathbf{R})} \quad ,
 \end{equation}
 also 
 \begin{equation}
@@ -113,7 +113,7 @@ mit einer ganzen Zahl $m$. Diese Bedingung muss für jede Wahl von $h,k,l$ erfü
 \begin{align}
  \mathbf{b}_i \cdot \mathbf{a}_j & = 2 \pi \, \delta_{ij}  \\
   \mathbf{b}_1 = &\frac{2 \pi}{V_\text{PEZ}} \left(  \mathbf{a}_2 \times \mathbf{a}_3 \right)  \quad \text{und } \, 1,2,3 \, \,\text{ zyklisch} \\
-  \text{mit} \quad  V_\text{PEZ} = &  \mathbf{a}_1 \cdot \left(  \mathbf{a}_2   \times \mathbf{a}_3 \right)
+  \text{mit} \quad  V_\text{PEZ} = &  \mathbf{a}_1 \cdot \left(  \mathbf{a}_2   \times \mathbf{a}_3 \right) \quad .
 \end{align}
 Damit haben wir unser reziprokes Gitter definiert. Die Einheitsvektoren stehen in einem gewissen Sinne senkrecht aufeinander, auch wenn  sie unterschiedliche Einheiten besitzen.
 
@@ -128,11 +128,11 @@ Wir haben nun also zwei Gitter. Im Ortsraum gibt es das Gitter aus dem letzten K
 \paragraph{Kubisch primitives Gitter} In kartesischen Koordinaten sind die primitiven Einheitsvektoren eines kubisch primitiven Gitters im Ortsraum
 \begin{equation}
  \mathbf{a}_1 = a \hat{\mathbf{x}} \quad \mathbf{a}_2 = a \hat{\mathbf{y}}
- \quad \mathbf{a}_3 = a \hat{\mathbf{z}}
+ \quad \mathbf{a}_3 = a \hat{\mathbf{z}} \quad .
 \end{equation}
 Die Einheitsvektoren des reziproken Gitters sind dann also
 \begin{equation}
-  \mathbf{b}_1 = \frac{2 \pi}{V_\text{PEZ}} \left(  \mathbf{a}_2 \times \mathbf{a}_3 \right)  = \frac{2 \pi}{a^3} \, a^2  \, \hat{\mathbf{x}} = \frac{2 \pi}{a}  \, \hat{\mathbf{x}} 
+  \mathbf{b}_1 = \frac{2 \pi}{V_\text{PEZ}} \left(  \mathbf{a}_2 \times \mathbf{a}_3 \right)  = \frac{2 \pi}{a^3} \, a^2  \, \hat{\mathbf{x}} = \frac{2 \pi}{a}  \, \hat{\mathbf{x}}  \quad .
 \end{equation}
 Das reziproke Gitter eines kubisch primitiven Gitters ist also wieder ein kubisch primitives Gitter, nur eben mit reziproker Gitterkonstante $2 \pi / a$.
 
@@ -141,22 +141,23 @@ Das reziproke Gitter eines kubisch primitiven Gitters ist also wieder ein kubisc
 \begin{align}
  \mathbf{a}_1 = & \frac{a}{2} \left( - \hat{\mathbf{x}} + \hat{\mathbf{y}} +\hat{\mathbf{z}} \right) \\
   \mathbf{a}_2 = & \frac{a}{2} \left( + \hat{\mathbf{x}} - \hat{\mathbf{y}} +\hat{\mathbf{z}} \right) \\
-   \mathbf{a}_3 = & \frac{a}{2} \left( + \hat{\mathbf{x}} + \hat{\mathbf{y}} - \hat{\mathbf{z}} \right) 
+   \mathbf{a}_3 = & \frac{a}{2} \left( + \hat{\mathbf{x}} + \hat{\mathbf{y}} - \hat{\mathbf{z}} \right)  \quad .
 \end{align}
 Daraus erhält man die primitiven Einheitsvektoren im reziproken Raum
 \begin{align}
 \mathbf{b}_1 = & \frac{4\pi}{a} \frac{1}{2} \left( \hat{\mathbf{y}} + \hat{\mathbf{z}}  \right) \\
 \mathbf{b}_2 = & \frac{4\pi}{a} \frac{1}{2} \left( \hat{\mathbf{x}} + \hat{\mathbf{z}}  \right) \\
-\mathbf{b}_3 = & \frac{4\pi}{a} \frac{1}{2} \left( \hat{\mathbf{x}} + \hat{\mathbf{y}}  \right) 
+\mathbf{b}_3 = & \frac{4\pi}{a} \frac{1}{2} \left( \hat{\mathbf{x}} + \hat{\mathbf{y}}  \right)  \quad ,
 \end{align}
 also ein kubisch-flächenzentriertes Gitter, wobei die konventionelle Einheitszelle dann die Kantenlänge $4 \pi / a$ hat.
 
 
 \section{Brillouin-Zone}
 
-Das reziproke Gitter es ebenfalls ein Bravais-Gitter. Daher sind alle Definitionen des letzten Kapitels weiterhin gültig. Es gibt also ebenfalls (primitive) Einheitsvektoren und (primitive) Einheitszellen. Das Volumen der primitiven Einheitszelle im reziproken Raum ist gerade reziprok zum Volumen der primitiven Einheitszelle im Realraum, also
+Das reziproke Gitter ist ebenfalls ein Bravais-Gitter. Daher sind alle Definitionen des letzten Kapitels weiterhin gültig. Es gibt also ebenfalls (primitive) Einheitsvektoren und (primitive) Einheitszellen. Das Volumen der primitiven Einheitszelle im reziproken Raum ist gerade reziprok zum Volumen der primitiven Einheitszelle im Realraum, also
 \begin{equation}
 V_\text{PEZ, reziprok} = \frac{(2 \pi)^3}{V_\text{PEZ, real} }
+\quad .
 \end{equation}
 
 Ein Unterschied ist, dass im reziproken Raum die Wigner-Seitz-Zelle Brillouin-Zone (BZ) genannt wird, und dass bei der Brillouin-Zone nicht nur das innerste Volumen interessant ist, sondern auch weiter außenliegende Schalen. Alle  Brillouin-Zonen haben aber das gleiche Volumen wie die innerste, erste  Brillouin-Zone.
@@ -216,15 +217,15 @@ mit dem Wellenvektor $\mathbf{k}$ im reziproken Raum, also
 \end{equation}
 mit $h,k,l$ ganze Zahlen und $ \mathbf{b}_i$ primitive Einheitsvektoren im reziproken Raum. Die Phasenfronten der ebenen Welle sind gegeben durch
 \begin{equation}
-\mathbf{k} \cdot \mathbf{r} = 2 \pi \, N
+\mathbf{k} \cdot \mathbf{r} = 2 \pi \, N \quad ,
 \end{equation}
 wobei die ganze Zahl $N$ die Fronten durchnummeriert. Für den Achsenabschnitt $x_i$ der Phasenfront im Realraum muss gelten (hier entlang der x-Achse, also $i=1$)
 \begin{equation}
- \mathbf{k} \cdot (x_1 \mathbf{a}_1) = 2 \pi \, h \, x_1 = 2 \pi \, N
+ \mathbf{k} \cdot (x_1 \mathbf{a}_1) = 2 \pi \, h \, x_1 = 2 \pi \, N \quad .
 \end{equation}
 Damit ist $h = N / x_1$, also gerade der Miller'sche Index, und analog für $k$ und $l$. Reziproke Gittervektoren, Miller'sche Indizes und ebene Wellen im Realraum sind also das Gleiche. Weiter unten wird relevant werden, dass der Abstand $d$  der Phasenfronten der ebenen Wellen, also die Wellenlänge, reziprok zur Länge $| \mathbf{k} |$ des Gittervektors ist
 \begin{equation}
- d = \frac{2 \pi}{| \mathbf{k} |}
+ d = \frac{2 \pi}{| \mathbf{k} |} \quad .
 \end{equation}
 
 
@@ -244,25 +245,25 @@ In welche Richtung $\mathbf{K} = \mathbf{k} - \mathbf{k}_0$ finden sich in Streu
 
 Aus geometrischen Überlegungen findet man, dass konstruktive Interferenz genau dann auftritt, wenn die \emph{Bragg-Bedingung} erfüllt ist
 \begin{equation}
-n \, \lambda = 2 \, d \, \sin \Theta
+n \, \lambda = 2 \, d \, \sin \Theta \quad .
 \end{equation}
 Dabei bezeichnet $n$ die Beugungsordnung, $\lambda$ die Wellenlänge der (Materie-)Welle, $d$ den Abstand der Ebenen und $\Theta$ den Winkel zwischen einfallendem Strahl und Gitter-Ebene. Da es sich um spiegelnde Reflexion handelt, ist dies natürlich auch der Winkel des auslaufenden Strahls mit der Ebene.\sidenote{Aber nicht der zum Lot!} Die Änderung 
 $\mathbf{K}$ des Wellenvektors  steht senkrecht auf den reflektierenden Gitterebenen. Für den  Betrag gilt
 \begin{equation}
-|\mathbf{K}| = |\mathbf{k} - \mathbf{k}_0| = 2 | \mathbf{k}_0| \, \sin \Theta
+|\mathbf{K}| = |\mathbf{k} - \mathbf{k}_0| = 2 | \mathbf{k}_0| \, \sin \Theta \quad .
 \label{eq:rezi_def_k_sin_theta}
 \end{equation}
 Es gibt in einem Kristall natürlich viele Möglichkeiten, Ebenen zu finden, und damit auch viele Richtungen, die die Bragg-Bedingung erfüllen, also viele Streu-Peaks.
  
  
-\section{Von Laue-Theorie der Beugung} 
+\section{Laue-Theorie der Beugung} 
  
-Die Bragg-Bedingung sagt nur voraus, ob es in eine bestimmte Richtung einen Peak gibt, nicht jedoch dessen Intensität. Die Bragg-Theorie benutzt ja auch nur die Gitter-Periodizität der Streudichte $\rho( \mathbf{r})$, nicht deren genaue Form. Beides geschieht in der von Laue-Theorie.
+Die Bragg-Bedingung sagt nur voraus, ob es in eine bestimmte Richtung einen Peak gibt, nicht jedoch dessen Intensität. Die Bragg-Theorie benutzt ja auch nur die Gitter-Periodizität der Streudichte $\rho( \mathbf{r})$, nicht deren genaue Form. Beides geschieht in der  Laue-Theorie.\sidenote{Max von Laue, 1879--1960 }
 
 Die Intensität eines Streu-Peaks ist proportional zum Quadrat der Streuamplitude. Mit Gl.~\ref{eq:rezi_streuamplitude} erhalten wir
 \begin{equation}
 I(\mathbf{K}) \propto \left| \mathcal{A}(\mathbf{K}) \right|^2 
-= \left|   \int_{V_\text{Probe}} \, \rho( \mathbf{r}) \,   e^{- i \,   \mathbf{K} \cdot \mathbf{r}} \, dV \right|^2
+= \left|   \int_{V_\text{Probe}} \, \rho( \mathbf{r}) \,   e^{- i \,   \mathbf{K} \cdot \mathbf{r}} \, dV \right|^2 \quad .
 \end{equation}
 Wir wiederholen noch einmal die Schritte vom Anfang des Kapitels und schreiben die Streudichte als Fourier-Summe mit den Koeffizienten $\rho_{hkl}$
 \begin{equation}
@@ -270,25 +271,25 @@ Wir wiederholen noch einmal die Schritte vom Anfang des Kapitels und schreiben d
 \end{equation}
 mit $h,k,l$ ganzen Zahlen, den Fourier-Koeffizienten $\rho_{hkl}$ und den  reziproken Gittervektoren
 \begin{equation}
-\mathbf{G}_{hkl} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_3 
+\mathbf{G}_{hkl} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_3  \quad .
 \end{equation}
 Im Folgenden lasse ich die Indizes an $\mathbf{G}$ manchmal weg. Damit erhalten wir für die Streu-Intensität 
 \begin{equation}
 I(\mathbf{K}) \propto \left| \mathcal{A}(\mathbf{K}) \right|^2 
 = \left| 
  \sum_{h,k,l} \, \rho_{hkl}
-  \int_{V_\text{Probe}}   e^{ i \,   (\mathbf{G}- \mathbf{K} )\cdot \mathbf{r}} \, dV \right|^2
+  \int_{V_\text{Probe}}   e^{ i \,   (\mathbf{G}- \mathbf{K} )\cdot \mathbf{r}} \, dV \right|^2 \quad .
 \end{equation}
 Der Integrand oszilliert schnell mit $\mathbf{r}$ und mittelt sich weg, falls nicht $\mathbf{G} =  \mathbf{K}$. In diesem Fall ergibt das Integral gerade das Probenvolumen $V_\text{Probe}$.
 
-Damit haben wir die von Laue-Streubedingung erhalten
+Damit haben wir die  Laue-Streubedingung erhalten
 \begin{equation}
-\mathbf{G} =  \mathbf{K}
+\mathbf{G} =  \mathbf{K} \quad .
 \end{equation}
 Die Änderung des Wellenvektors muss einem Gittervektor entsprechen. Oder andersherum: bei der Beugung am Gitter wird auf den einfallenden Wellenvektor ein Gittervektor addiert.  Die Streuintensität ist in diesem Fall
 \begin{equation}
 I(\mathbf{K} = \mathbf{G}_{hkl} ) \propto \left| \mathcal{A}(\mathbf{K} = \mathbf{G}_{hkl} ) \right|^2 
-= \left| \rho_{hkl} \right|^2   V_\text{Probe}^2 \label{eq:rezi_laue_peak}
+= \left| \rho_{hkl} \right|^2   V_\text{Probe}^2  \quad . \label{eq:rezi_laue_peak}
 \end{equation}
 Ein einziger Fourier-Koeffizient bestimmt also die Intensität des Peaks in Richtung $(hkl)$.
 
@@ -298,20 +299,20 @@ Eine Nebenbemerkung noch zur Form der Peaks im reziproken Raum. Die Lage ist dur
 
 \section{Äquivalenz der beiden Bedingungen}
 
-Wir starten von der von Laue-Bedingung $\mathbf{G} =  \mathbf{K}$ und leiten daraus die Bragg-Bedingung her:
+Wir starten von der Laue-Bedingung $\mathbf{G} =  \mathbf{K}$ und leiten daraus die Bragg-Bedingung her:
 \begin{equation}
- | \mathbf{K} | =  |\mathbf{k} - \mathbf{k}_0| = 2 | \mathbf{k}_0| \, \sin \Theta = \frac{4 \pi}{ \lambda} \, \sin \Theta = | \mathbf{G} | = n \, | \mathbf{G} | 
+ | \mathbf{K} | =  |\mathbf{k} - \mathbf{k}_0| = 2 | \mathbf{k}_0| \, \sin \Theta = \frac{4 \pi}{ \lambda} \, \sin \Theta = | \mathbf{G} | = n \, | \mathbf{G} |  \quad .
 \end{equation}
 Die ersten Schritte sind Gl.~\ref{eq:rezi_def_k_sin_theta} und rein geometrische Überlegungen zur Reflexion, also noch nicht die Bragg-Bedingung. Im letzten Schritt haben wir ausgenutzt, dass auch jedes ganzzahlige Vielfache eines Gittervektors wieder ein Gittervektor ist.\sidenote{$\mathbf{G}$ ist ja mit vollem Namen $\mathbf{G}_{hkl}$, also eine Menge von Vektoren}
 
 Wie wir bei den Miller'schen Indizes gesehen hatten, beschreibt jeder Gittervektor eine ebene Welle und damit eine Schar von Ebenen im Abstand 
 \begin{equation}
- d = \frac{2 \pi}{|\mathbf{G} | }
+ d = \frac{2 \pi}{|\mathbf{G} | }  \quad .
 \end{equation}
  Alles zusammen ergibt dies die Bragg-Bedingung
  \begin{align}
    \frac{4 \pi}{ \lambda} \, \sin \Theta  & = n \frac{2 \pi}{d } \\
-   2 d  \, \sin \Theta  & = n \lambda 
+   2 d  \, \sin \Theta  & = n \lambda   \quad .
  \end{align}
  
 
@@ -360,7 +361,7 @@ Das Integral über die primitive Einheitszelle teilen wir jetzt auf in eine Summ
  %
  = &
  N_\text{PEZ} \, 
-\sum_\alpha f_\alpha ( \mathbf{G}_{hkl} ) \, e^{-i \, \mathbf{G}_{hkl} \cdot \mathbf{r}_\alpha} 
+\sum_\alpha f_\alpha ( \mathbf{G}_{hkl} ) \, e^{-i \, \mathbf{G}_{hkl} \cdot \mathbf{r}_\alpha}   \quad .
 \end{align}
 Das Integral über die Streudichte in der Umgebung des Atoms $\alpha$ ist atom-spezifisch und wird im \emph{Atom-Strukturfaktor} $f_\alpha ( \mathbf{G} )$ zusammengefasst.
 
@@ -384,7 +385,7 @@ mit dem \emph{Strukturfaktor} $\mathcal{S}_{hkl} = \rho_{hkl} \, V_\text{PEZ} $.
 
 Cäsiumchlorid  (\ch{CsCl}) bildet ein kubisch-primitives Gitter mit einer zweiatomigen Basis, beispielsweise mit dem \ch{Cs}-Atom im Ursprung und dem \ch{Cl}-Atom in der Mitte der Raumdiagonalen. Damit wird der Strukturfaktor 
 \begin{equation}
-\mathcal{S}_{hkl} = f_\text{\ch{Cs}} \, e^{-2 \pi \, i  \, \mathbf{G} \cdot \mathbf{0}} + f_\text{\ch{Cl}} \, e^{- 2 \pi  \, i \, \frac{1}{2}(h + k + l) } 
+\mathcal{S}_{hkl} = f_\text{\ch{Cs}} \, e^{-2 \pi \, i  \, \mathbf{G} \cdot \mathbf{0}} + f_\text{\ch{Cl}} \, e^{- 2 \pi  \, i \, \frac{1}{2}(h + k + l) }   \quad .
 \end{equation}
 Die erste Exponentialfunktion ist immer $1$, die zweite ist $+1$, falls die Summe $h + k + l$ gerade ist, und sonst $-1$. Damit ergibt sich
 \begin{equation}
@@ -392,7 +393,7 @@ Die erste Exponentialfunktion ist immer $1$, die zweite ist $+1$, falls die Summ
   \begin{array}{@{}ll@{}}
     f_\text{\ch{Cs}}  + f_\text{\ch{Cl}}  &\text{falls}\  h+k+l \ \text{gerade} \\
      f_\text{\ch{Cs}}  - f_\text{\ch{Cl}} & \text{falls}\  h+k+l \ \text{ungerade} \\
-  \end{array}\right.
+  \end{array}\right.  \quad .
 \end{equation} 
 Bei Röntgenstreuung ist $  f_\text{\ch{Cs}}  \approx f_\text{\ch{Cl}}$, also nur jeder zweite Reflex zu sehen. Bei Neutronenstreuung sind die Atom-Strukturfaktoren dagegen deutlich unterschiedlich und alle Peaks zu erkennen.
 
@@ -417,15 +418,15 @@ Aus dem Experiment erhält man die Position der Peaks als Funktion des doppelten
 
 Wir betrachten den reziproken Abstand der Gitterebenen
 \begin{equation}
-\frac{1}{d} = \frac{|\mathbf{G}|}{2 \pi} = \frac{2 \sin \Theta}{ \lambda}
+\frac{1}{d} = \frac{|\mathbf{G}|}{2 \pi} = \frac{2 \sin \Theta}{ \lambda}  \quad .
 \end{equation}
 In kubischen Gittern wird dies
 \begin{equation}
  \sqrt{h^2 + k^2 + l^2} = \frac{2 a \, \sin \Theta}{ \lambda}
 \end{equation}
-mit der Gitterkonstante $a$ der konventionellen Einheitszelle im Realraum. Somit also 
+mit der Gitterkonstante $a$ der konventionellen Einheitszelle im Realraum, somit also 
 \begin{equation}
- h^2 + k^2 + l^2 = \left(\frac{2 a }{ \lambda} \right)^2 \, \sin^2 \Theta
+ h^2 + k^2 + l^2 = \left(\frac{2 a }{ \lambda} \right)^2 \, \sin^2 \Theta  \quad .
 \end{equation}
 Man versucht also die Position aller Peaks durch eine einzige\sidenote{im Rahmen der Messgenauigkeit} Wahl von $a/\lambda$ und je einen Satz von ganzen Zahlen $(hkl)$ zu beschreiben. Somit erhält man die Gitterkonstante $a$ und aus der An- bzw. Abwesenheit der Peaks den Strukturfaktor und damit das Gitter.
 

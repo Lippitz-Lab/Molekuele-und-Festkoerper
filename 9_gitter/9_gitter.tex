@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{17. Dezember 2021}
+\renewcommand{\lastmod}{21. Dezember 2021}
 
 
 \chapter{Kristallgitter}
@@ -48,7 +48,7 @@ Eine Kristallstruktur besteht aus einem mathematischen Punktgitter und einer Bas
 
 Ein dreidimensionales (mathematische) Gitter ist eine Anordnung von (mathematischen) Punkten im Raum, die translationsinvariant ist unter jeder Translation $\mathbf{T}$
 \begin{equation}
- \mathbf{T} = n_1 \mathbf{a}_1 + n_2 \mathbf{a}_2 + n_3 \mathbf{a}_3  
+ \mathbf{T} = n_1 \mathbf{a}_1 + n_2 \mathbf{a}_2 + n_3 \mathbf{a}_3   \quad ,
 \end{equation}
 wobei die $n_i$ beliebige ganze Zahlen sind und die \emph{Basis-Vektoren} $\mathbf{a}_i$ nicht alle in einer Ebene liegen. Das 'Basis' in diesen Basis-Vektoren hat nichts mit der oben genannten Basis zu tun, die die Physik beinhaltet. Ein beliebiger Vektor aus der Menge der möglichen Translationen $\mathbf{T}$ wird als \emph{Gittervektor} bezeichnet. Die Länge der Basis-Vektoren   $\mathbf{a}_i$, also  $a_i$, wird \emph{Gitterkonstante} genannt.
 
@@ -72,13 +72,16 @@ mit ganzzahligen  $n_i$ beschrieben. Eine äquivalente Definition des Bravais-Gi
 
 Wieviel verschiedene Punktgitter kann es im dreidimensionalen Raum geben? Ein Gitter gilt dann als 'verschieden', wenn es eine andere Symmetrie besitzt. Einfach alle Achsen skalieren ändert nichts Relevantes. Mögliche Symmetrie-Operationen sind die oben eingeführten Translationen $\mathbf{T}$. Eine andere Art von Symmetrie-Operationen lässt einen einzelnen Gitterpunkt unverändert. Die Menge dieser Operationen nennt man \emph{Punktgruppe} und ist Teil der Gruppentheorie.
 
-\paragraph{Drehung} Was ist der kleinste Winkel $\phi$, um den man ein Gitter drehen kann, so dass es wieder in sich über geht? Dieser Winkel wird in der Form $\phi = 2 \pi / n$ als Zähligkeit $n$ notiert\sidenote{Dies ist die Notation nach Hermann-Mauguin. Alternativ gibt es auch die nach Schoenflies, hier $C_1$, $C_2$ etc.}. Es können nur Werte $n= 1$, 2, 3, 4 und 6 auftreten. Auch im Zweidimensionalen gibt es keine Kacheln mit 5, 7 oder 8 Ecken.
+\begin{description}\setlength{\itemsep}{0pt}
+\item[Drehung] Was ist der kleinste Winkel $\phi$, um den man ein Gitter drehen kann, sodass es wieder in sich über geht? Dieser Winkel wird in der Form $\phi = 2 \pi / n$ als Zähligkeit $n$ notiert\sidenote{Dies ist die Notation nach Hermann-Mauguin. Alternativ gibt es auch die nach Schoenflies, hier $C_1$, $C_2$ etc.}. Es können nur Werte $n= 1$, 2, 3, 4 und 6 auftreten. Auch im Zweidimensionalen gibt es keine Kacheln mit 5, 7 oder 8 Ecken.
 
-\paragraph{Spiegelung} Bei der Spiegelung an einer Ebene wird nicht nur ein Punkt, sondern eine ganze Ebene, in der er liegt, festgehalten. Diese Symmetrie wird durch ein $m$ gekennzeichnet, wenn die Drehachse in dieser Spiegel-Ebene liegt, und durch $/m$, wenn die Drehachse senkrecht auf der Spiegel-Ebene steht.
+\item[Spiegelung] Bei der Spiegelung an einer Ebene wird nicht nur ein Punkt, sondern eine ganze Ebene, in der er liegt, festgehalten. Diese Symmetrie wird durch ein $m$ gekennzeichnet, wenn die Drehachse in dieser Spiegel-Ebene liegt, und durch $/m$, wenn die Drehachse senkrecht auf der Spiegel-Ebene steht.
 
-\paragraph{Inversion} Die Punktspiegelung wird durch $\bar{1}$ gekennzeichnet.
+\item[Inversion] Die Punktspiegelung wird durch $\bar{1}$ gekennzeichnet.
 
-\paragraph{Drehinversion} Dies ist eine hilfreiche zusammengesetzte Symmetrie-Operation aus einer Drehung und anschließender Inversion, die durch die Zähligkeit mit Überstrich, also beispielsweise $\bar{3}$ dargestellt wird. 
+\item[Drehinversion] Dies ist eine hilfreiche zusammengesetzte Symmetrie-Operation aus einer Drehung und anschließender Inversion, die durch die Zähligkeit mit Überstrich, also beispielsweise $\bar{3}$ dargestellt wird. 
+\end{description}
+
 
 Auf Basis der Dreh-Symmetrie\footcite{Hunklinger2014} können die mathematischen Punkt-Gitter in sieben Klassen unterteilt werden, die sogenannten Kristallsysteme. Im kubischen System gibt es also 4 Rotationsachsen mit jeweils dreizähliger Symmetrie, die vier Raumdiagonalen des Würfels. Die anderen Symmetrie-Operationen werden eine Rolle spielen, wenn wir eine Basis an das mathematische Gitter binden.
 
@@ -167,7 +170,7 @@ Diese Zelle ist primitiv, da sie nur einen Gitterpunkt beinhaltet. Sie hat auße
 \paragraph{\ch{NaCl}}
 Kristallines \ch{NaCl} besteht aus einem flächen-zentrierten kubischen Gitter (engl: face-centered cubic, fcc). Schon weil es zwei verschiedene Atome sind, muss es eine Basis mit mindestens zwei Atomen geben. Hier sind es genau zwei Atome,  beispielsweise mit \ch{Na+} im Ursprung und \ch{Cl-} im Zentrum der konventionellen Einheizstelle, also bei
 \begin{equation}
- \mathbf{r}_{Cl} = \frac{1}{2} \left(\mathbf{a}_1 + \mathbf{a}_2 +  \mathbf{a}_3  \right)
+ \mathbf{r}_{Cl} = \frac{1}{2} \left(\mathbf{a}_1 + \mathbf{a}_2 +  \mathbf{a}_3  \right)   \quad ,
 \end{equation}
 wenn die $\mathbf{a}_i$ so gewählt sind, dass sie die konventionelle Einheitszelle aufspannen, also kartesisch sind. Dies ist auch die Struktur von \ch{LiF}, \ch{MgO}, \ch{CaTe}.
 
@@ -181,7 +184,7 @@ wenn die $\mathbf{a}_i$ so gewählt sind, dass sie die konventionelle Einheitsze
 \paragraph{\ch{CsCl}}
 Dies ist ein primitives kubisches Gitter (engl. simple cubic, sc), ebenfalls mit einer zwei-atomigen Basis mit 
 \begin{equation}
- \mathbf{r}_{Cl} = \frac{1}{2} \left(\mathbf{a}_1 + \mathbf{a}_2 +  \mathbf{a}_3  \right)
+ \mathbf{r}_{Cl} = \frac{1}{2} \left(\mathbf{a}_1 + \mathbf{a}_2 +  \mathbf{a}_3  \right)   \quad .
 \end{equation}
 Dies ist auch die Struktur von \ch{CsI}, \ch{TlBr}.
 
@@ -193,10 +196,10 @@ Dies ist auch die Struktur von \ch{CsI}, \ch{TlBr}.
 
 \paragraph{\ch{Fe}} Eisen bildet ein kubisch-raumzentriertes Gitter (engl. body-centered cubic, bcc) mit nur einem Atom in der Basis.
 
-\paragraph{Diamant} Kohlenstoff-Atome in einem Diamant-Kristall bilden ein fcc-Gitter (face-centered cubic), aber ebenfalls mit einer zwei-atomigen Basis. Eine Basis kann also auch identische Atome beinhalten. Die Positionen sind der Ursprung sowie um ein Viertel der Raum-Diagonalen verschoben in der konventionellen Einheitszelle, als
+\paragraph{Diamant} Kohlenstoff-Atome in einem Diamant-Kristall bilden ein fcc-Gitter (face-centered cubic), aber ebenfalls mit einer zwei-atomigen Basis. Eine Basis kann also auch identische Atome beinhalten. Die Positionen sind der Ursprung sowie um ein Viertel der Raum-Diagonalen verschoben in der konventionellen Einheitszelle, also
 \begin{align}
  \mathbf{r}_{C_1} = & 0 \\
- \mathbf{r}_{C_2} = & \frac{1}{4} \left(\mathbf{a}_1 + \mathbf{a}_2 +  \mathbf{a}_3  \right)
+ \mathbf{r}_{C_2} = & \frac{1}{4} \left(\mathbf{a}_1 + \mathbf{a}_2 +  \mathbf{a}_3  \right)   \quad .
 \end{align}
 Die Atome sind untereinander in der tetraederförmigen Bindung der $sp^3$-Hybridisierung verbunden. Dies ist auch die Struktur von \ch{Si}, \ch{Ge}.
 
@@ -213,7 +216,7 @@ Die Atome sind untereinander in der tetraederförmigen Bindung der $sp^3$-Hybrid
 
 Man kann die Atome in einem Kristallgitter durch harte Kugeln ersetzen und dabei den Kugeldurchmesser maximal wählen, also so, dass die Kugeln sich berühren. Welcher Volumenanteil des Kristalls wird nun durch Kugeln ausgefüllt? Die maximale Packungsdichte ist 
 \begin{equation}
- \frac{\pi}{3 \sqrt{2}} \approx 74 \%
+ \frac{\pi}{3 \sqrt{2}} \approx 74 \%   \quad .
 \end{equation}
 Um diese Packungsdichte zu erreichen, liegen die Kugeln in der untersten Lage A in einem zweidimensionalen hexagonalen Gitter. Jede Kugel ist also von fünf Nachbarn umgeben. In der nächsten Lage B liegen die Kugeln in den Mulden, die sich zwischen den unteren Kugeln bilden.  Die Größe der Kugeln erzwingt, dass nur jede zweite Mulde besetzt wird.
 Dies ist wieder ein zweidimensionales hexagonales Gitter. Für die dritte Lage gibt es zwei Möglichkeiten: entweder man besetzt die Mulden, die den Positionen in Lage A entsprechen, oder man besetzt die Mulden, die weder von der Lage A noch von der Lage B eingenommen werden. Im ersten Fall spricht man von der ABAB-Stapelfolge, im zweiten von der ABCABC-Folge.
@@ -227,7 +230,7 @@ Dies ist wieder ein zweidimensionales hexagonales Gitter. Für die dritte Lage g
 
 Welchen Bravais-Gittern entsprechen diese Folgen?  Die Folge ABCABC bildet ein flächen-zentriert kubisches Gitter (fcc).  Die Raum-Diagonale der  Einheitszelle steht senkrecht auf den Ebenen A, B und C. Diese Packung wird daher auch 'cubic closed packing' (ccp) genannt. Die Folge ABAB nennt man  'hexagonal closed packing' (hcp), weil sie ein (dreidimensionales) hexagonales Bravais-Gitter mit einer zwei-atomigen Basis bildet (mit $c=a \sqrt{8/3}$, siehe Abb. \ref{fig:gitter_bravais14}). Eine Kugel ist dabei am Ursprung der konventionellen Einheitszelle, die zweite bei 
 \begin{equation}
- \mathbf{r}_{S_2} =  \frac{2}{3}  \mathbf{a}_1 + \frac{1}{3}  \mathbf{a}_2 + \frac{1}{2}  \mathbf{a}_3  
+ \mathbf{r}_{S_2} =  \frac{2}{3}  \mathbf{a}_1 + \frac{1}{3}  \mathbf{a}_2 + \frac{1}{2}  \mathbf{a}_3     \quad ,
 \end{equation}
  wobei die $\mathbf{a}_i$ die konventionelle Einheitszelle aufspannen.
 
@@ -258,13 +261,13 @@ Die Van-der-Waals-Bindung ist sehr schwach (meV pro Atom), aber immer vorhanden.
 
 Die Verteilung der Elektronen um einen Atomkern ist kein starres Gebilde. Die Elektronendichte-Verteilung fluktuiert und in einem Augenblick kann es ein netto Dipolmoment $\mathbf{p}_1$ bei Atom $1$ geben. Dieses Dipolmoment ist verknüpft mit einem elektrischen Feld, dessen Amplitude $E_1 \propto p_1 / r^3$ ist.\sidenote{Die Richtungsabhängigkeit ignorieren wir hier.} Ein Atom $2$ in der Entfernung $r$ wird dann durch dieses Feld polarisiert und es bildet sich ein induziertes Dipolmoment $p_2 = \alpha E_1 \propto 1/r^3$. Das Wechselwirkungspotential $\phi(r)$ ist damit das Potential von $\mathbf{p}_2$ im Feld $\mathbf{E}_1$, 
 \begin{equation}
- \phi(r) = - \mathbf{p}_2 \, \mathbf{E}_1 \propto - \frac{B}{r^6}
+ \phi(r) = - \mathbf{p}_2 \, \mathbf{E}_1 \propto - \frac{B}{r^6}   \quad ,
 \end{equation}
 wobei die Konstante $B$ positiv und für das jeweilige Element charakteristisch ist.
 
 Bei kleine Atom--Atom--Abständen kommt die abstoßende Kraft aufgrund des Pauli-Verbots hinzu. Oft modelliert man sie als $A/r^{12}$. Insgesamt ergibt sich damit das \emph{Lenard-Jones-Potential}
 \begin{equation}
-\phi(r) = \frac{A}{r^{12}} - \frac{B}{r^{6}} = 4 \epsilon \left[ \frac{\sigma^{12}}{r^{12}} -  \frac{\sigma^{6}}{r^{6}} \right]
+\phi(r) = \frac{A}{r^{12}} - \frac{B}{r^{6}} = 4 \epsilon \left[ \frac{\sigma^{12}}{r^{12}} -  \frac{\sigma^{6}}{r^{6}} \right]   \quad ,
 \end{equation}
 wobei $\epsilon$ die Tiefe und $\sigma$ den Nulldurchgang des Potentials, sozusagen den Radius des Atomrumpfes, bestimmt. Der Gleichgewichtsabstand ist $r_0 = 2^{1/6} \sigma \approx 1.12 \sigma$.
 
@@ -274,7 +277,7 @@ U_B = \frac{1}{2} \sum_{m,n}^N \phi_{n,m} =
 2 N \epsilon \sum_{m=1,   \neq n}^N 
 \left[ 
 \frac{\sigma^{12}}{r_{nm}^{12}} -  \frac{\sigma^6}{r_{nm}^{6}} 
-\right]
+\right]   \quad .
 \end{equation}
 Der Faktor $1/2$ kommt daher, dass man in der ersten Summe alle Bindungs-Paare doppelt zählt. Die zweite Summe läuft nur noch über einen Summanden, da der Kristall translationsinvariant ist und es daher ausreicht, von einem Atom ausgehend alle Bindungen zu betrachten.
 
@@ -295,7 +298,7 @@ U_B = &
 12.13 \; \frac{\sigma^{12}}{a^{12}}
 -
 14.45 \; \frac{\sigma^{6}}{a^{6}}
-\right] 
+\right]    \quad .
 \end{align}
 Das Minimum der Bindungsenergie im Kristall findet sich nun bei $r_0 \approx 1.09 \sigma$, also etwas näher als im vd-Waals-'Molekül'. Dieser Wert wird auch experimentell für die schwereren Edelgasatome gefunden.
 
@@ -306,7 +309,7 @@ Bei der Ionischen Bindung dominiert die Coulomb-Anziehung zwischen unterschiedli
 Zunächst müssen wir beide Atome ionisieren
 \begin{align}
  \ch{Na} + 5.14\text{ eV} \rightarrow  & \ch{Na+} + \ch{e-} \\
-  \ch{e-}  + \ch{Cl} \rightarrow  & \ch{Cl-} + 3.61\text{ eV}
+  \ch{e-}  + \ch{Cl} \rightarrow  & \ch{Cl-} + 3.61\text{ eV}   \quad .
 \end{align}
 Wir müssen also netto 1.53 eV aufwenden, um ein Ionenpaar herzustellen.
 
@@ -314,11 +317,11 @@ Dann bringen wir die beiden Ionen aus dem Unendlichen zusammen, bis zum experime
 
 Analog zur Van-der-Waals-Wechselwirkung setzen wir also wieder als Potential zwischen einem Paar von Ionen an
 \begin{equation}
- \phi(r_{nm}) = \pm \frac{e^2}{4 \pi \epsilon_0 \, r_{nm}} + \frac{B}{ r_{nm}^{12}}
+ \phi(r_{nm}) = \pm \frac{e^2}{4 \pi \epsilon_0 \, r_{nm}} + \frac{B}{ r_{nm}^{12}}   \quad .
 \end{equation}
 Das wechselnde Vorzeichen berücksichtigt die abwechselnd anziehende und abstoßende Wechselwirkung, je nach Ladung des Ions. Wir bilden wieder die Summe über alle Paare
 \begin{equation}
-U_B = N \sum_{m \neq n} \, \phi(r_{nm})  = N \sum_{m \neq n} \, \phi(\rho_{nm} \, a) 
+U_B = N \sum_{m \neq n} \, \phi(r_{nm})  = N \sum_{m \neq n} \, \phi(\rho_{nm} \, a)   \quad ,
 \end{equation}
 wobei $N$ nun die Anzahl der Ionen einer Sorte bezeichnet und so der Faktor 2 überflüssig wird. Wir haben wieder die Abstände durch die Gitterkonstante ausgedrückt. Nun machen wir die Annahme, dass die abstoßende Wechselwirkung kurzreichweitig ist und nur $z$ Ionen im Abstand $a$ beitragen. Damit wird  
 \begin{align}
@@ -343,7 +346,7 @@ Diamant & $\alpha \approx 1.64$ \\
 
 Am Gleichgewichts-Abstand ist die Ableitung nach der Gitterkonstante Null, wodurch sich $B$ bestimmen lässt. Damit ergibt sich für die Bindungsenergie pro Ion einer Sorte
 \begin{equation}
-\frac{U_B}{N} = \frac{e^2 \, \alpha }{4 \pi \epsilon_0 \, R_0} \, \left( 1- \frac{1}{12} \right) = U_\text{Coulomb} \, \alpha \, \left( 1- \frac{1}{12} \right) 
+\frac{U_B}{N} = \frac{e^2 \, \alpha }{4 \pi \epsilon_0 \, R_0} \, \left( 1- \frac{1}{12} \right) = U_\text{Coulomb} \, \alpha \, \left( 1- \frac{1}{12} \right)   \quad .
 \end{equation}
 Für \ch{NaCl} ergibt sich so ein Wert von -8.25~eV, nah am experimentell gefundenen Wert von -8.15~eV.
 
@@ -353,9 +356,9 @@ Für \ch{NaCl} ergibt sich so ein Wert von -8.25~eV, nah am experimentell gefund
 
 \section{Wasserstoff-Brückenbindung}
 
-In einer Wasserstoff-Brückenbindung bildet ein Wasserstoff-Atom nicht eine kovalente Bindung zu einem anderen Atom, sondern zu zwei Atomen. Dies ist natürlich keine gewöhnliche kovalente Bindung. Dazu fehlt dem Wasserstoff  Bindungselektron.
+In einer Wasserstoff-Brückenbindung bildet ein Wasserstoff-Atom nicht eine kovalente Bindung zu einem anderen Atom, sondern zu zwei Atomen. Dies ist natürlich keine gewöhnliche kovalente Bindung. Dazu fehlt dem Wasserstoff ein Bindungselektron.
 
-Die Wasserstoff-Brückenbindung entsteht, wenn das H-Atom stark kovalent an einen Bindungspartner gebunden ist. Dabei geht das Elektron des H-Atoms fast vollständig auf den Partner über und es verbleibt quasi ein Proton. Dies wirkt anziehend auf andere negativ geladene Bindungspartner. Aus räumlichen Gründen\sidenote{Das Proton ist viel kleiner als alle Atome mit Elektronen} kann jeweils nur ein weiterer Bindungspartner wechselwirken. Die Bindung ist daher auch oft asymmetrisch, also \ch{A}$-$\ch{H}$--$\ch{B}. Typische Bindungsenergien sind 0.2~eV, bei \ch{HF} kann aber auch 1.6~eV erreicht werden.
+Die Wasserstoff-Brückenbindung entsteht, wenn das H-Atom stark kovalent an einen Bindungspartner gebunden ist. Dabei geht das Elektron des H-Atoms fast vollständig auf den Partner über und es verbleibt quasi ein Proton. Dies wirkt anziehend auf andere negativ geladene Bindungspartner. Aus räumlichen Gründen\sidenote{Das Proton ist viel kleiner als alle Atome mit Elektronen} kann jeweils nur ein weiterer Bindungspartner wechselwirken. Die Bindung ist daher auch oft asymmetrisch, also \ch{A} - \ch{H} --- \ch{B}. Typische Bindungsenergien sind 0.2~eV, bei \ch{HF} kann aber auch 1.6~eV erreicht werden.
 
 Diese Bindung spielt in der Biologie eine große Rolle. Proteine sind typischerweise durch viele Wasserstoff-Brückenbindungen verbunden. Jede einzelne Bindung ist schwach, nicht viel stärker als $k_B T$, und kann so einfach geöffnet werden, um eine Funktionalität zu erzeugen. Gleichzeitig sind alle Bindungen zusammen stark, ähnlich einem Klettverschluss.
 
