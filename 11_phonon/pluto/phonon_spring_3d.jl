@@ -5,7 +5,7 @@ using Markdown
 using InteractiveUtils
 
 # ╔═╡ 0c60e1a9-f02b-4bf0-82b6-2e8b1ae45ec1
-using LinearAlgebra, Plots,DelimitedFiles
+using LinearAlgebra, Plots, DelimitedFiles
 
 # ╔═╡ 9030d4ec-d536-402d-8945-8ed00628e6b7
 using SplitApplyCombine: invert
@@ -62,7 +62,7 @@ pos = [ circshift([a b 0], (0,c))
 					for a in [-1,1] 
 					for b in [-1,1] 
 					for c in [0,1,2]
-						];
+						] ;
 
 # ╔═╡ db9560db-b928-4674-8049-9391447da424
 md"""
@@ -92,22 +92,18 @@ end;
 begin
 	k_0_pi = range(0, pi; length= 100);
 	
-	scatter(data1[:,1], data1[:,2], layout=(1,3))
-	scatter!(data1[:,1], data1[:,3], subplot=1)
+	scatter(data1[:,1], data1[:,2:end], layout=(1,3), subplot=1)
 	plot!(k_0_pi ./ pi,  
 		invert([omegas(pos, [k, 0, 0]) for k in k_0_pi]) .* 2.55, 
 		legend = false, subplot=1, yrange = (0,8))
 #
-	scatter!(data2[:,1], data2[:,2], subplot=2)
-	scatter!(data2[:,1], data2[:,3], subplot=2)
-	scatter!(data2[:,1], data2[:,4], subplot=2)
+	scatter!(data2[:,1], data2[:,2:end], subplot=2)
 	plot!(k_0_pi ./ pi, 
 		 invert([omegas(pos, [k, k, 0]) for k in k_0_pi]) .* 2.55, 
 		 legend = false, subplot=2, yrange = (0,8), 
 		 xflip=true, yaxis=false, yticks= nothing)
 #
-	scatter!(data3[:,1], data3[:,2], subplot=3)
-	scatter!(data3[:,1], data3[:,3], subplot=3)
+	scatter!(data3[:,1], data3[:,2:end], subplot=3)
 	plot!(k_0_pi ./ pi,  
 		 invert([omegas(pos, [k, k, k]) for k in k_0_pi]) .* 2.55, 
 		 legend = false, subplot=3, yrange = (0,8), 

@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{24. Januar 2022}
+\renewcommand{\lastmod}{27. Januar 2022}
 
 
 \chapter{Phononen}
@@ -40,7 +40,7 @@ Im Experiment macht man das beispielsweise durch inelastische Neutronenstreuung.
 
 \section{Einfaches Modell: lineare Kette}
 
-Wir stellen die Schwingung der einzelnen Atome in einem Kristall als Superposition von ebenen Wellen dar. Die Atome bilden Ebenen, und alle Atome einer Ebene werden in gleichere Weise (Richtung und Amplitude) aus ihrer Ruhelage ausgelenkt. Die Schwingung findet also um eine Gleichgewichtsposition herum statt, die durch das in den letzten beiden Kapiteln beschriebene Gitter definiert ist. Wir nehmen ebenfalls an, dass die Schwingung harmonisch ist, was bei kleinen Auslenkungen sicherlich der Fall ist. Die Wahl der Kristall-Ebene bestimmt die Richtung des Wellenvektors $\mathbf{k}$ der ebenen Welle. Die Wellenlänge $\lambda$ den Betrag des Vektors $|\mathbf{k}| = 2 \pi / \lambda$. Weil alle Atome in der Ebene das Gleiche tun, ist es möglich, allein eine lineare Kette von Atomen zu betrachten, zu der aus jeder Ebene nur jeweils ein Atom beiträgt.
+Wir stellen die Schwingung der einzelnen Atome in einem Kristall als Superposition von ebenen Wellen dar. Die Atome bilden Ebenen, und alle Atome einer Ebene werden in gleichere Weise (Richtung und Amplitude) aus ihrer Ruhelage ausgelenkt. Die Schwingung findet also um eine Gleichgewichtsposition herum statt, die durch das in den letzten beiden Kapiteln beschriebene Gitter definiert ist. Wir nehmen ebenfalls an, dass die Schwingung harmonisch ist, was bei kleinen Auslenkungen sicherlich der Fall ist. Die Wahl der Kristall-Ebene bestimmt die Richtung des Wellenvektors $\mathbf{k}$ der ebenen Welle. Die Wellenlänge $\lambda$ den Betrag des Vektors $k = |\mathbf{k}| = 2 \pi / \lambda$. Weil alle Atome in der Ebene das Gleiche tun, ist es möglich, allein eine lineare Kette von Atomen zu betrachten, zu der aus jeder Ebene nur jeweils ein Atom beiträgt.
 
 Wir beschränken uns hier zunächst auf eine Auslenkung allein entlang der Richtung der Kette. Wir indizieren im Folgenden die Atome entlang der Kette mit den Indizes $s$ und $p$. Die Auslenkung eines Atoms an der Position $s$ aus der Gleichgewichtsposition sei $u_s$. 
 Das zeitliche Mittel über $u_s(t)$ ist damit Null. Die Atome seien durch Federn verbunden. Die Kraft auf das Atoms $s$ ist dann
@@ -53,15 +53,15 @@ M \frac{d^2 \, u_s}{dt^2} = \sum_p \, c_p \left( u_{s+p} - u_s \right)
 \end{equation}
 wobei wir angenommen haben, dass alle Atome die gleiche Masse $M$ besitzen. Mit dem Ansatz einer ebenen Welle\sidenote{entsprechend den Normalmoden in der Molekülphysik} wird die Auslenkung des Atoms mit den Index $s+p$ zu
 \begin{equation}
-u_{s+p} = U_0 \, e^{-i ( \omega t - \mathbf{k} \cdot \mathbf{a} (s+p) )}
+u_{s+p} = U_0 \, e^{-i ( \omega t - k \, a \, (s+p) )}
 \end{equation}
-mit dem Wellenvektor $\mathbf{k}$ im reziproken Raum und dem Gittervektor $\mathbf{a}$ im Realraum. Der Term $\mathbf{a} (s+p)$ beschreibt also die  Gleichgewichtsposition des betrachteten Atoms im Realraum, also das, was wir in den letzten beiden Kapiteln diskutiert hatten. Wenn wir diesen Ansatz in die Bewegungsgleichung einsetzen erhalten wir
+mit der Länge $k$ des Wellenvektors  im reziproken Raum und der Länge $a$ des  Gittervektors  im Realraum. Der Term $a (s+p)$ beschreibt also die  Gleichgewichtsposition des betrachteten Atoms im Realraum, also das, was wir in den letzten beiden Kapiteln diskutiert hatten. Wenn wir diesen Ansatz in die Bewegungsgleichung einsetzen erhalten wir
 \begin{equation}
-- \omega^2 \, M = \sum_p \, c_p \left( e^{i \mathbf{k} \cdot \mathbf{a} p} - 1 \right)
+- \omega^2 \, M = \sum_p \, c_p \left( e^{i  k \, a \, p} - 1 \right)
 \end{equation}
 Da ja alle Atome identisch sind, gilt $c_p = c_{-p}$ und damit
 \begin{equation}
- \omega^2 =  \frac{2}{M} \, \sum_{p=1}^\infty \, c_p \left( 1 - \cos ( \mathbf{k} \cdot \mathbf{a} p ) \right)
+ \omega^2 =  \frac{2}{M} \, \sum_{p=1}^\infty \, c_p \left( 1 - \cos (  k \, a \, p ) \right)
 \end{equation}
 Den hier gefundenen Zusammenhang zwischen Eigenfrequenz $\omega$ der Oszillation und Länge (und Richtung) des Wellenvektors $\mathbf{k}$ nennt man \emph{Dispersionsrelation}.
 
@@ -73,7 +73,7 @@ Den hier gefundenen Zusammenhang zwischen Eigenfrequenz $\omega$ der Oszillation
 
 Nun machen wir zusätzlich die Annahme, dass nur nächste Nachbarn miteinander wechselwirken, dass es also nur Federn zwischen direkt benachbarten Atomen gibt. Damit sind nur dir $c_{\pm 1}$ von null verschieden und die Summe fällt weg. Wir ziehen jetzt auch die Wurzel und erhalten
 \begin{equation}
-\omega = \sqrt{\frac{4 \, c_1}{M}} \left| \sin (\frac{1}{2} \, \mathbf{k} \cdot \mathbf{a}  ) \right| \label{eq:phonon_1atom}
+\omega = \sqrt{\frac{4 \, c_1}{M}} \left| \sin (\frac{1}{2} \, k \, a   ) \right| \label{eq:phonon_1atom}
 \end{equation}
 
 \begin{marginfigure}
@@ -85,7 +85,7 @@ Nun machen wir zusätzlich die Annahme, dass nur nächste Nachbarn miteinander w
 
 \paragraph{Grenzfall langer Wellenlänge} Falls die Wellenlänge der ebenen Welle gegen unendlich geht, dann geht $k = 2 \pi / \lambda$  gegen null. Damit wird das Argument des Sinus sehr klein gegen Eins und wir können die Kleinwinkelnäherung anwenden:
 \begin{equation}
-\omega = \sqrt{\frac{4 \, c_1}{M}} \frac{1}{2}  |\mathbf{k}| | \mathbf{a}| \propto k
+\omega = \sqrt{\frac{4 \, c_1}{M}} \frac{1}{2}  |k \, a| \propto k
 \end{equation}
 Die Dispersionsrelation ist in der Nähe von $k = 0$ also linear in $k$. Die Schallgeschwindigkeit $v$ ist frequenzunabhängig
 \begin{equation}
@@ -94,7 +94,7 @@ Die Dispersionsrelation ist in der Nähe von $k = 0$ also linear in $k$. Die Sch
 
 
 
-\paragraph{Physikalisch bedeutsamer Bereich von $\mathbf{k}$} 
+\paragraph{Physikalisch bedeutsamer Bereich von $k$} 
 
 \begin{marginfigure}
 \inputtikz{\currfiledir outside_BZ}
@@ -106,15 +106,15 @@ Die Dispersionsrelation ist in der Nähe von $k = 0$ also linear in $k$. Die Sch
 Wir betrachten das Verhältnis der Auslenkung benachbarter Atome, also
 \begin{equation}
  \frac{u_{s+1}}{u_s}  = 
- \frac{U_0 e^{i \mathbf{k} \cdot \mathbf{a} (s+1) } } 
-        {U_0 e^{i \mathbf{k} \cdot \mathbf{a} s}} 
-         = e^{i \mathbf{k} \cdot \mathbf{a}}
+ \frac{U_0 e^{i  k \, a \, (s+1) } } 
+        {U_0 e^{i  k \, a \, s}} 
+         = e^{i  k \, a }
 \end{equation}
-Dieser Ausdruck ist periodisch in $\mathbf{k}$. Alle möglichen Werte werden bereits abgedeckt im Intervall $- \pi < \mathbf{k} \cdot \mathbf{a}  < \pi$, bzw. in einer Dimension 
+Dieser Ausdruck ist periodisch in $k$. Alle möglichen Werte werden bereits abgedeckt im Intervall $- \pi <  k \, a  < \pi$, bzw. in einer Dimension 
  \begin{equation}
  - \frac{\pi}{a} < k <  \frac{\pi}{a}
  \end{equation} 
-Dies ist gerade die erste Brillouin-Zone. Werte von $k$ außerhalb dieser Zone beinhalten keine weitere Information. Sie beschreiben die gleiche Auslenkung der Atome. Die Funktion  $e^{i \mathbf{k} \cdot \mathbf{a}}$ wird nur an den Gitterpositionen ausgewertet. Welchen Wert sie an anderer Stelle annimmt, spielt keine Rolle. Für $k$ außerhalb der ersten Brillouin-Zone oszilliert die Funktion zwischen den Gitterpositionen schneller, was aber keine physikalische Konsequenz hat.
+Dies ist gerade die erste Brillouin-Zone. Werte von $k$ außerhalb dieser Zone beinhalten keine weitere Information. Sie beschreiben die gleiche Auslenkung der Atome. Die Funktion  $e^{i  k \, a }$ wird nur an den Gitterpositionen ausgewertet. Welchen Wert sie an anderer Stelle annimmt, spielt keine Rolle. Für $k$ außerhalb der ersten Brillouin-Zone oszilliert die Funktion zwischen den Gitterpositionen schneller, was aber keine physikalische Konsequenz hat.
 
 
 
@@ -123,7 +123,7 @@ Die Gruppengeschwindigkeit beschreibt die Geschwindigkeit eines Wellenpakets und
 \begin{equation}
 v_g = \frac{d \omega}{d k} =
  \sqrt{\frac{c_1 \, a^2}{M} } \, \cos 
- \left( \frac{1}{2} \mathbf{k} \cdot \mathbf{a} \right)
+ \left( \frac{1}{2}  k \, a \right)
 \end{equation}
 An den Grenzen der Brillouin-Zone, bei $k = \pm \pi / a$ wird damit die Gruppengeschwindigkeit Null. Dies entspricht einer stehenden Welle.
 
@@ -142,25 +142,25 @@ Nun heben wir die Annahme auf, dass alle Atome identisch sind. Wir betrachten ei
 wobei $c$ hier die einzige Federkonstante bezeichnet ($c_1$ von oben) und die $M_{1,2}$ die Masse der beiden Atomsorten ist.
 Wir machen den Ansatz
 \begin{align}
-  u_s   = & u \,   e^{i \mathbf{k} \cdot \mathbf{a}  s} \, e^{-i \omega t} \\
-  v_s  = & v  \, e^{i \mathbf{k} \cdot \mathbf{a}  s} \, e^{-i \omega t}
+  u_s   = & u \,   e^{i  k \, a \,  s} \, e^{-i \omega t} \\
+  v_s  = & v  \, e^{i  k \, a \,  s} \, e^{-i \omega t}
 \end{align}
 und erhalten zwei Lösungen für die Eigenfrequenz $\omega$ und damit die Dispersionsrelation
 %\begin{equation}
 %\omega^2 = c \, \frac{M_1 + M_2}{M_1 M_2}
-%\pm \frac{c}{M_1 M_2} \sqrt{ (M_1 + M_2)^2 - 4 M_1 M_2 \sin^2 \left( \frac{1}{2}  \mathbf{k} \cdot \mathbf{a} \right) } 
+%\pm \frac{c}{M_1 M_2} \sqrt{ (M_1 + M_2)^2 - 4 M_1 M_2 \sin^2 \left( \frac{1}{2}   k \, a, \right) } 
 %\end{equation}
 %oder
 \begin{equation}
 \omega^2 =  \frac{c}{\mu}
-\pm c \sqrt{ \frac{1}{\mu^2} - \frac{4}{M_1 M_2}  \sin^2 \left( \frac{1}{2}  \mathbf{k} \cdot \mathbf{a} \right) }  \label{eq:phonon_2atom}
+\pm c \sqrt{ \frac{1}{\mu^2} - \frac{4}{M_1 M_2}  \sin^2 \left( \frac{1}{2}   k \, a  \right) }  \label{eq:phonon_2atom}
 \end{equation}
 mit der reduzierten Masse $\mu = (M_1  M_2)/(M_1 + M_2)$. Die Dispersionsrelation besteht also aus zwei Zweigen, je nach Vorzeichen des $\pm$: Das negative Vorzeichen beschreibt den \emph{akustischen Zweig}. Er geht exakt in die einatomige Kette über, wenn man $M_1 = M_2$ setzt und $a$ entsprechend anpasst. Auch für $M_1 \neq M_2$ ist der akustische Zweig sehr ähnlich der einatomigen Kette, insbesondere linear zu $k$ in der Nähe von $k=0$. Das positive Vorzeichen beschreibt den \emph{optischen Zweig}. Für $k \rightarrow 0$ geht hier die Frequenz $\omega$ nicht gegen null, sondern gegen $\sqrt{2 c / \mu}$. Am Rand der Brillouin-Zone, also bei $k = \pi /a $ wird der Sinus eins und damit\sidenote{Man zieht den Term $M_1 - M_2$ aus der Wurzel und macht dabei die Annahme $M_1 > M_2$.}
 \begin{align}
 \omega_+ = & \sqrt{\frac{2 c}{M_2}} \\
 \omega_- = & \sqrt{\frac{2 c}{M_1} }
 \end{align}
-Die Aufspaltung der Äste am Rand der Brillouin-Zone geht also mit dem Verhältnis der Massen $M_1 / M_2$. Diese Aufspaltung führt zu einer \emph{Bandlücke}: Im Frequenzbereich zwischen $\omega_- $ und $\omega_+$ gibt es keine Lösung der Bewegungsgleichung, unabhängig vom Wellenvektor $\mathbf{k}$. In einer solchen Kette von mit Federn verbundenen Massen können sich keine Wellen ausbreiten, deren Frequenz wischen $\omega_- $ und $\omega_+$ liegt. Wenn eine Masse von außen mit einer solchen Frequenz getrieben würde, dann bliebe diese Bewegung auf die nähere Umgebung beschränkt und weit entfernte Massen würden in Ruhe bleiben.
+Die Aufspaltung der Äste am Rand der Brillouin-Zone geht also mit dem Verhältnis der Massen $M_1 / M_2$. Diese Aufspaltung führt zu einer \emph{Bandlücke}: Im Frequenzbereich zwischen $\omega_- $ und $\omega_+$ gibt es keine Lösung der Bewegungsgleichung, unabhängig vom Wellenvektor $k$. In einer solchen Kette von mit Federn verbundenen Massen können sich keine Wellen ausbreiten, deren Frequenz wischen $\omega_- $ und $\omega_+$ liegt. Wenn eine Masse von außen mit einer solchen Frequenz getrieben würde, dann bliebe diese Bewegung auf die nähere Umgebung beschränkt und weit entfernte Massen würden in Ruhe bleiben.
 
 
 

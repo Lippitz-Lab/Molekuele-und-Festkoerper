@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{17. Dezember 2021}
+\renewcommand{\lastmod}{27. Januar 2022}
 
 \chapter{Wärmekapazität der Phononen}
 
@@ -50,18 +50,18 @@ Zunächst betrachten wir nicht die eigentlich benötigte Zustandsdichte im Frequ
 
 Bisher hatten wir uns über die Länge unsere ein- oder mehratomigen Kette keine Gedanken gemacht. Wenn sie endlich lang sein soll, was ja notgedrungen der Fall ist, dann können die Enden entweder frei sein, also keine Kraft auf sie wirken, also $\ddot{u} = 0$ sein. Oder sie können fest sein, also ohne Bewegung, also $u=0$. Eine dritte Möglichkeit sind periodische Randbedingungen, also eine ringförmige Kette mit $u_0 = u_N$ bei $N$ Atomen in der Kette. Wir benutzen hier diese Randbedingung, die anderen geben das gleiche Ergebnis. Die Auslenkung der Masse am Index $s$ ist mit dem Ansatz der ebenen Welle
 \begin{equation}
- u_s = u \, e^{- i \omega \, t} \, e^{i s \mathbf{k} \cdot \mathbf{a}}
+ u_s = u \, e^{- i \omega \, t} \, e^{i s \, k a}
 \end{equation}
-mit dem Wellenvektor $\mathbf{k} $ im reziproken Raum und dem Gittervektor $\mathbf{a}$ im  Realraum. Die Randbedingung $u_0 = u_N$ erfordert dann
+mit der Länge $k$ des Wellenvektors im reziproken Raum und der Länge $a$ des  Gittervektors  im  Realraum. Die Randbedingung $u_0 = u_N$ erfordert dann
 \begin{equation}
  N \, k \, a = 2 \pi \, n \quad ,
 \end{equation}
-wobei $n$ eine beliebige ganze Zahl ist und wir die Beträge der Vektoren eingesetzt haben.
+wobei $n$ eine beliebige ganze Zahl ist.
 Die Gesamtlänge der Kette ist $L = N a$. Damit kann $k$ nur diskrete Werte annehmen, die den Abstand $\Delta k$ haben
 \begin{equation}
 \Delta  k = \frac{2 \pi }{L}  \quad .
 \end{equation}
-Die Dichte $ D(k) \, dk$ der möglichen Werte von $k$ auf der $k$-Achse ein Wert pro $\Delta k$, also
+Die Dichte $ D(k) \, dk$ der möglichen Werte von $k$ auf der $k$-Achse ist ein Wert pro $\Delta k$, also
 \begin{equation}
  D(k) \, dk = \frac{L}{2 \pi} \, dk  \quad .
 \end{equation}
@@ -72,8 +72,10 @@ D(k) = \frac{N_\text{PEZ}}{V_{BZ}}  =
 \frac{V_\text{Kristall}} {(2 \pi)^d} =
  \left(\frac{L}{2 \pi} \right)^d 
 \end{equation}
-mit der Dimensionalität $d$ und der Anzahl der primitiven Einheitszellen $N_\text{PEZ}$. Das ist wie oben die Zustandsdichte für eine Art der Bewegung. Bei $p$ Atomen je Einheitszelle gibt es $3p$ Äste in der Dispersionsrelation und die Gesamt-Zustandsdichte ist entsprechend größer.
-
+mit der Dimensionalität $d$ und der Anzahl der primitiven Einheitszellen $N_\text{PEZ}$. Das ist wie oben die Zustandsdichte für eine Art der Bewegung (transversal oder longitudinal, akustisch oder optisch). Bei $p$ Atomen je Einheitszelle gibt es $3p$ Äste in der Dispersionsrelation und die Gesamt-Zustandsdichte im Dreidimensional ist entsprechend größer:
+\begin{equation}
+  D^{3D, ges}(k) =  3 \, p \,   \left(\frac{L}{2 \pi} \right)^3 \quad .
+  \end{equation}
 Was ist hier passiert? Die physikalisch sinnvollen Werte von $k$ waren schon im letzten Kapitel nach oben beschränkt, weil es nicht hilft, wenn die Welle schneller oszilliert als der Abstand der Atome ist. Bei einem Ring von Atomen ist nun aber auch nicht jede Wellenlänge wählbar, da nur stehende Wellen auf dem Ring möglich sind.\sidenote{Analog stehende Wellen auf einer endlichen Kette mit freien / festen Randbedingungen} Mögliche Werte der Wellenlänge haben die Form $\lambda_0 / n$, und damit mögliche Werte des Wellenvektors $n / \lambda_0$. Dadurch wird die $k$-Achse diskret. Dies spielt aber nur bei der Zustandsdichte eine Rolle, da die Punkte so dicht liegen, dass dies höchstens bei sehr kleinen Kristallen auflösbar ist.
 
 Aus dem Blickwinkel der Normalmoden findet sich das gleiche Ergebnis. Bei $p$ Atomen je primitiver Einheitszelle und $N_\text{PEZ}$ primitiven Einheitszellen im Kristall erwarten wir $3 p \, N_\text{PEZ}$ Normalmoden. In der Dispersionsrelation der Phononen gibt es dann $3p$ Äste und $N_\text{PEZ}$ diskrete Werte auf der $k$-Achse, also ebenso viele Zustände für Phononen wie Normalmoden.
@@ -126,7 +128,7 @@ Wir müssen also nur noch ein Oberflächenintegral über eine Fläche konstanter
 \begin{equation}
 D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, k^2 }{|v_g|}   \, d\omega  \quad ,
 \end{equation} 
-wobei $k$ hier als $k(\omega)$ zu verstehen ist.
+wobei $k$ hier als $k(\omega)$ zu verstehen ist.\sidenote{Das ist immer noch die Zustandsdichte pro Ast in der Dispersionsrelation. Bei $p$ Atomen pro Einheitszelle kommt in Dreidimensionalen also noch der Faktor $3p$ hinzu, um die Gesamt-Zustandsdichte zu erhalten.}
 
 Sowohl im eindimensionalen als auch im dreidimensionalen Fall geht die Gruppengeschwindigkeit als Kehrwert ein. In der zweiatomigen Kette beispielsweise geht diese asymptotisch gegen Null in der Nähe der Bandlücke, wodurch der Integrand in Gl.~\ref{eq:WK_dos_omega} divergiert. Diese Punkte nennt man \emph{Van-Hove-Singularitäten}. Im Eindimensionalen divergiert hier die Zustandsdichte. In zwei und drei Dimensionen finden sich davon noch endlich hohe Spitzen (siehe Abbildung \ref{fig:wk_kupfer} am Anfang des Kapitels).
 
@@ -153,7 +155,7 @@ Einstein macht nun auch die weitergehende Annahme, dass nur ein Oszillator zur  
 \begin{equation}
 U(T) =  3N \, \frac{\hbar \omega_0 }{e^{\frac{\hbar \omega_0}{k_B \, T} }- 1}
 \end{equation}
-bei $N$ Atomen im Kristall. Der zusätzliche Faktor 3 berücksichtigt die drei Schwingungs-Freiheitsgraden je Atom. Die Wärmekapazität ist die Ableitung davon nach der Temperatur $T$
+bei $N$ Atomen im Kristall. Der zusätzliche Faktor 3 berücksichtigt die drei Schwingungs-Freiheitsgraden je Atom, den es in der Gesamt-Zustandsdichte ja noch gegeben hat. Die Wärmekapazität ist die Ableitung davon nach der Temperatur $T$
 \begin{equation}
 C_V = \frac{\partial U}{\partial T }  =3 N \, k_B \, 
 \left( \frac{\hbar \omega_0}{k_B \, T} \right)^2 

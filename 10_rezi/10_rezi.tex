@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{21. Dezember 2021}
+\renewcommand{\lastmod}{27. Januar 2022}
 
 
 \chapter{Das reziproke Gitter}
@@ -55,10 +55,7 @@ wobei  die Kugelwelle nur noch vom Abstand $R = |\mathbf{R}|$ zum Kugelmittelpun
 \caption{Skizze Streuung am Punkt}
 \end{marginfigure}
 
-
-
-
-Eine ausgedehnte Probe besteht damit aus vielen Streuzentren, deren Dichte als \emph{Streudichte} $\rho(\mathbf{r})$ bezeichnet wird. Allerdings muss man die Phasendifferenz der einzelnen Wellen beachten, wenn man über viele Streuzentren integriert. Für zwei Streuzentren, eines im Ursprung, das andere bei $\mathbf{r}$, findet man durch geometrische Überlegungen die Phasendifferenz
+Eine ausgedehnte Probe besteht damit aus vielen Streuzentren, über die summiert wird. Allerdings muss man die Phasendifferenz der einzelnen Wellen beachten, wenn man über viele Streuzentren integriert. Für zwei Streuzentren, eines im Ursprung, das andere bei $\mathbf{r}$, findet man durch geometrische Überlegungen die Phasendifferenz
 %
 \begin{marginfigure}
 \inputtikz{\currfiledir two-points-interference}
@@ -68,13 +65,20 @@ Eine ausgedehnte Probe besteht damit aus vielen Streuzentren, deren Dichte als \
 \begin{equation}
 \Delta \phi = ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r} \quad ,
 \end{equation}
-wenn $\mathbf{k}$ der Wellenvektor der auslaufenden gestreuten ebenen Welle ist.\sidenote{Die Kugelwelle von oben lässt sich als Integral über ebene Wellen in alle Raumrichtungen schreiben.} Nun machen wir die Annahme, dass die Probe klein ist gegenüber $R$. Wir interessieren uns für die gestreute Welle also erst in einem Abstand, der so groß ist, dass unabhängig von Ort des Streuzentrums alle Teilwellen mit dem Wellenvektor $\mathbf{k}$ am gleichen Ort ankommen. Auch nehmen wir wie quasi immer in der Streutheorie an, dass jede Welle nur einmal gestreut wird. Dies ist die  Born'schen Näherung. Damit wird die gestreute Welle
+wenn $\mathbf{k}$ der Wellenvektor der auslaufenden gestreuten ebenen Welle ist.\sidenote{Die Kugelwelle von oben lässt sich als Integral über ebene Wellen in alle Raumrichtungen schreiben.} Das ergibt also
+\begin{equation}
+  A_S(t) =  \frac{\tilde{A}}{R} \,   e^{- i \, (\omega_0 t - k_0 R)} \,
+  \sum_j  e^{- i \,  ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r}_j} \quad .
+\end{equation}
+Dabei haben wir die Annahme gemacht, dass die Größe der Probe, also die Unterschiede zwischen den $\mathbf{r}_j$ klein gegenüber dem Abstand $R$ zum Schirm ist. Wir interessieren uns für die gestreute Welle also erst in einem Abstand, der so groß ist, dass unabhängig von Ort des Streuzentrums alle Teilwellen mit dem Wellenvektor $\mathbf{k}$ am gleichen Ort ankommen\sidenote{Auch nehmen wir wie quasi immer in der Streutheorie an, dass jede Welle nur einmal gestreut wird. Dies ist die  Born'schen Näherung.}. 
+
+Jetzt gehen wir von einzelnen Streuzentren an Positionen $\mathbf{r}_j$  über zu einer \emph{Streudichte} $\rho(\mathbf{r})$, also der Anzahl der Streuzentren in einem Volumenelement $dV$. Damit wird die Summe zum Integral und wir erhalten für die die gestreute Welle
 \begin{align}
  A_S(t) = & \frac{\tilde{A}}{R} \,   e^{- i \, (\omega_0 t - k_0 R)} \,
   \int_{V_\text{Probe}} \, \rho( \mathbf{r}) \,   e^{- i \,  ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r}} \, dV \\
   = & \frac{\tilde{A}}{R} \,   e^{- i \, (\omega_0 t - k_0 R)} \, \mathcal{A}(\mathbf{K}) 
 \end{align}
-mit der \emph{Streuamplitude} 
+mit der \emph{Streuamplitude} als Fourier-transformierten der Streudichte
 \begin{equation}
 \mathcal{A}(\mathbf{K}) =  \int_{V_\text{Probe}} \, \rho( \mathbf{r}) \,   e^{- i \,  ( \mathbf{k} - \mathbf{k}_0 ) \cdot \mathbf{r}} \, dV  = \mathcal{FT} \left\{ \rho( \mathbf{r})  \right\} \label{eq:rezi_streuamplitude}
 \end{equation}
@@ -353,17 +357,23 @@ Wir starten von Gl.~\ref{eq:rezi_streuamplitude} und setzen die Definition der F
 \end{equation}
 mit der Anzahl der primitiven Einheitszellen $ N_\text{PEZ} =  V_\text{Probe} / V_\text{PEZ}$.
 Das Integral über die primitive Einheitszelle teilen wir jetzt auf in eine Summe über die Atome der Einheitszelle und ein Integral über die direkte Umgebung der Atome. Im Endeffekt wird damit wieder über die ganze Einheitszelle integriert. Die alte Ortskoordinate  $\mathbf{r} =  \mathbf{r}' +  \mathbf{r}_\alpha$ schreiben wir als Summe der Position des Atoms  $\mathbf{r}_\alpha$ und der lokalen Koordinate $\mathbf{r}'$ in dessen Umgebung. Damit erhalten wir
-\begin{align}
+\begin{equation}
 \mathcal{A}(\mathbf{K} = \mathbf{G}_{hkl} ) 
-=   &  N_\text{PEZ}  \, \
+=    N_\text{PEZ}  \, 
 \sum_\alpha e^{-i \, \mathbf{G}_{hkl} \cdot \mathbf{r}_\alpha} \, \int_{V_\alpha}  
- \rho_\alpha(\mathbf{r'})\,  e^{-i \, \mathbf{G}_{hkl} \cdot \mathbf{r'}} \, dV' \\
- %
- = &
- N_\text{PEZ} \, 
-\sum_\alpha f_\alpha ( \mathbf{G}_{hkl} ) \, e^{-i \, \mathbf{G}_{hkl} \cdot \mathbf{r}_\alpha}   \quad .
-\end{align}
-Das Integral über die Streudichte in der Umgebung des Atoms $\alpha$ ist atom-spezifisch und wird im \emph{Atom-Strukturfaktor} $f_\alpha ( \mathbf{G} )$ zusammengefasst.
+ \rho_\alpha(\mathbf{r'})\,  e^{-i \, \mathbf{G}_{hkl} \cdot \mathbf{r'}} \, dV' \quad .
+\end{equation}
+Das Integral über die Streudichte in der Umgebung des Atoms $\alpha$ ist eine Fourier-Transformation und atom-spezifisch. Man definiert daher einen \emph{atomaren Streufaktor} (oder auch \emph{Atomformfaktor}) $f_\alpha ( \mathbf{G} )$ als Fourier-Transformation  der atomaren Streudichte
+\begin{equation}
+  f_\alpha ( \mathbf{G} ) = \mathcal{FT} (\rho_\alpha(\mathbf{r}))
+\end{equation}
+und erhält
+\begin{align}
+  \mathcal{A}(\mathbf{K} = \mathbf{G}_{hkl} ) 
+  =  &
+   N_\text{PEZ} \, 
+  \sum_\alpha f_\alpha ( \mathbf{G}_{hkl} ) \, e^{-i \, \mathbf{G}_{hkl} \cdot \mathbf{r}_\alpha}   \quad .
+  \end{align}
 
 Die Koordinaten  $\mathbf{r}_\alpha$  der Atompositionen hängen nur von der Kristallstruktur, also dem Bravais-Gitter ab. Wir schreiben die Position in den primitiven Einheitsvektoren $\mathbf{a}_i$ als
 \begin{equation}
@@ -376,9 +386,12 @@ mit $0 \le u,v,w \le 1$. Zusammen mit der Definition von  $ \mathbf{G}$ erhalten
   N_\text{PEZ}  \, 
 \sum_\alpha f_\alpha ( \mathbf{G}_{hkl} ) \, e^{-2 \pi \, i \, ( h u_\alpha + k v_\alpha + l w_\alpha  ) } \\
  = &
- N_\text{PEZ} \, \mathcal{S}_{hkl}
+ N_\text{PEZ} \, \mathcal{S}_{hkl} = \rho_{hkl} \, V_\text{probe} 
 \end{align}
-mit dem \emph{Strukturfaktor} $\mathcal{S}_{hkl} = \rho_{hkl} \, V_\text{PEZ} $.
+mit dem \emph{Strukturfaktor} $\mathcal{S}_{hkl} $
+\begin{equation}
+  \mathcal{S}_{hkl} =  \rho_{hkl} \, V_\text{PEZ}  = \sum_\alpha f_\alpha ( \mathbf{G}_{hkl} ) \, e^{-2 \pi \, i \, ( h u_\alpha + k v_\alpha + l w_\alpha  ) }  \quad .
+\end{equation}
 
 
 \section{Beispiel: \ch{CsCl}}
