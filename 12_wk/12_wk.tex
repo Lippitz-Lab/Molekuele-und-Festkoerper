@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{27. Januar 2022}
+\renewcommand{\lastmod}{1. Februar 2022}
 
 \chapter{Wärmekapazität der Phononen}
 
@@ -102,9 +102,15 @@ mit der Gruppengeschwindigkeit $v_g = d\omega / dk$.
 \end{marginfigure}
 
 
-Im Zwei- oder Dreidimensionalen gehen wir einen anderen Weg. Wir nutzen aus, dass im reziproken Raum die Zustände äquidistant sind, die Zustandsdichte also konstant ist. Alle Zustände bei gegebenem, festem $\omega$ bilden die Fläche\sidenote{in 3D, sonst Kurve in 2D} $S(\omega)$. Die Zustände bei $\omega + d\omega$ bilden eine weitere Fläche. Wir zählen somit die Zustände im Intervall $d\omega$, indem wir das Volumen zwischen den beiden Flächen bestimmen und mit der Zustandsdichte im $k$-Raum multiplizieren
+Im Zwei- oder Dreidimensionalen gehen wir einen anderen Weg. Wir nutzen aus, dass im reziproken Raum die Zustände äquidistant sind, die Zustandsdichte also konstant ist. Alle Zustände bei gegebenem, festem $\omega$ bilden die Fläche\sidenote{in 3D, sonst Kurve in 2D} $S(\omega)$. Die Zustände bei $\omega + \Delta\omega$ bilden eine weitere Fläche. Wir zählen somit die Zustände im Intervall $\Delta\omega$, indem wir das Volumen zwischen den beiden Flächen bestimmen und mit der Zustandsdichte im $k$-Raum multiplizieren
 \begin{equation}
-D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^d \, \int_{\omega = \text{const.}}^{\omega + d\omega = \text{const.}} \, d \mathbf{k} \quad .
+D(\omega) \Delta\omega 
+= \int_{\omega}^{\omega + \Delta\omega } D(\omega) \, d \omega
+= \int_{\mathbf{k}(\omega)}^{\mathbf{k}(\omega + \Delta\omega) } D(\mathbf{k}) \, d \mathbf{k}
+=
+\left( \frac{L}{2 \pi} \right)^d \, 
+\int_{\mathbf{k}(\omega)}^{\mathbf{k}(\omega + \Delta\omega) } 
+ \, d \mathbf{k} \quad .
 \end{equation}
 Das Volumenelement $d \mathbf{k}$ teilen wir auf in einen Teil entlang der Fläche konstanter Frequenz $S(\omega)$ und einem Teil senkrecht dazu:  $d \mathbf{k} = dk_\perp \, dS_\omega$. Weil sich $\omega$ in Richtung $ dS_\omega$ nicht ändert,  kann man dann die Gruppengeschwindigkeit schreiben als
 \begin{equation}
@@ -155,11 +161,12 @@ Gehen wir zurück zur inneren Energie als Summe über die Energien der Phononen 
 
 
 
-Einstein macht nun auch die weitergehende Annahme, dass nur ein Oszillator zur  Zustandsdichte beiträgt, also $D(\omega) \propto \delta(\omega_0 - \omega)$. Damit wird Gl.~\ref{eq:wk_u_allg}.
+Einstein macht nun auch die weitergehende Annahme, dass nur ein Oszillator zur  Zustandsdichte beiträgt, also $D(\omega) 3 N \, \delta(\omega_0 - \omega)$ bei $N$ Atomen im Kristall und 3 Dimensionen im Raum. Damit wird Gl.~\ref{eq:wk_u_allg}.
 \begin{equation}
-U(T) =  3N \, \frac{\hbar \omega_0 }{e^{\frac{\hbar \omega_0}{k_B \, T} }- 1}
+U(T) =  3N \, \frac{\hbar \omega_0 }{e^{\frac{\hbar \omega_0}{k_B \, T} }- 1} \quad .
 \end{equation}
-bei $N$ Atomen im Kristall. Der zusätzliche Faktor 3 berücksichtigt die drei Schwingungs-Freiheitsgraden je Atom, den es in der Gesamt-Zustandsdichte ja noch gegeben hat. Die Wärmekapazität ist die Ableitung davon nach der Temperatur $T$
+%bei $N$ Atomen im Kristall. Der zusätzliche Faktor 3 berücksichtigt die drei Schwingungs-Freiheitsgraden je Atom, den es in der Gesamt-Zustandsdichte ja noch gegeben hat. 
+Die Wärmekapazität ist die Ableitung davon nach der Temperatur $T$
 \begin{equation}
 C_V = \frac{\partial U}{\partial T }  =3 N \, k_B \, 
 \left( \frac{\hbar \omega_0}{k_B \, T} \right)^2 
