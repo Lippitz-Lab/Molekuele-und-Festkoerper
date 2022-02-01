@@ -109,7 +109,11 @@ D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^d \, \int_{\omega = \text{con
 Das Volumenelement $d \mathbf{k}$ teilen wir auf in einen Teil entlang der Fläche konstanter Frequenz $S(\omega)$ und einem Teil senkrecht dazu:  $d \mathbf{k} = dk_\perp \, dS_\omega$. Weil sich $\omega$ in Richtung $ dS_\omega$ nicht ändert,  kann man dann die Gruppengeschwindigkeit schreiben als
 \begin{equation}
 v_g = \left| \frac{d\omega}{d \mathbf{k}} \right| 
-=\left| \frac{d\omega}{d k_\perp} \right|
+= \left| \text{grad}_\mathbf{k}  \, \omega \right| 
+= \left| \nabla_\mathbf{k} \,  \omega \right| 
+= \sqrt{ \left| \frac{d\omega}{d S_\omega}\right| ^2 +
+\left(\frac{d\omega}{d k_\perp}\right)^2  } 
+= \left| \frac{d\omega}{d k_\perp} \right|
 \end{equation}
 und so
 \begin{equation}
@@ -183,7 +187,8 @@ D(\omega) d\omega = \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \ome
 \end{equation} 
 quadratisch in der Frequenz $\omega$. Die maximale Frequenz, bis zu der die Zustandsdichte quadratisch steigt, wird Debye-Frequenz $\omega_D$ genannt und ergibt sich aus der Gesamtzahl der Zustände, also der Zahl $N$ der Atome im Kristall
 \begin{equation}
-N = \int_0^{\omega_{D}}  \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}   \, d\omega  \quad .
+N =  \int_0^{\omega_{D}} D(\omega) d\omega
+= \int_0^{\omega_{D}}  \left( \frac{L}{2 \pi} \right)^3 \,     \frac{ 4 \pi \, \omega^2 }{v^3}   \, d\omega  \quad .
 \end{equation}
 Man erhält mit $N = (L / a)^3$
 \begin{equation}
