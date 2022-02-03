@@ -1,5 +1,5 @@
 \renewcommand{\chapterauthors}{Markus Lippitz}
-\renewcommand{\lastmod}{1. Februar 2022}
+\renewcommand{\lastmod}{3. Februar 2022}
 
 \chapter{Wärmekapazität der Phononen}
 
@@ -153,7 +153,7 @@ Gehen wir zurück zur inneren Energie als Summe über die Energien der Phononen 
 \braket{n (\omega,T) } = \frac{1}{e^{\frac{\hbar \omega}{k_B \, T} }- 1} \quad .
 \end{equation}
 
-\begin{marginfigure}
+\begin{marginfigure}[-40mm]
 \inputtikz{\currfiledir BE_stat}
 
 \caption{Die mittlere Besetzung $\braket{n}$ eines Zustands nach der Bose-Einstein-Verteilung (dick) im Vergleich zur Maxwell-Boltzmann-Verteilung (dünn) der klassischen Physik.}
@@ -224,6 +224,19 @@ Für hohe Temperaturen, also $x_D \rightarrow 0$, also $\hbar  \omega_D \ll k_B 
 C_V = \frac{12 \pi^4}{5} \, N \, k_B \, \left(\frac{T}{\Theta} \right)^3 \quad .
 \end{equation}
 Also eine $T^3$-Abhängigkeit der Wärmekapazität. Mit fallender Temperatur fällt also die Wärmekapazität im Debye-Modell nicht so schnell, nicht exponentiell, wie im Einstein-Modell. Es gibt auch bei tiefen Temperaturen noch besetzte Zustände, die zur Wärmekapazität beitragen.
+
+
+\begin{marginfigure}[0mm]
+  \inputtikz{\currfiledir BE_stat_Tvar}
+
+  \vspace*{2mm}
+
+  \inputtikz{\currfiledir BE_stat_Tableitung}
+
+
+  \caption{\textit{oben:} Die mittlere Besetzung $\braket{n}$ eines Zustands nach der Bose-Einstein-Verteilung bei verschiedener Temperatur. \textit{oben:} Ableitung der Besetzung nach der Temperatur. In beiden Fällen tragen hauptsächlich Phononen mit $\hbar \omega < k_b T$ bei. }
+  \end{marginfigure}
+
 
 Dies findet man auch experimentell in sehr vielen Materialien, solange der Beitrag der Elektronen zur Wärmekapazität keine Rolle spielt (siehe Abbildung \ref{fig:wk_kupfer} am Anfang des Kapitels). Für Kupfer beträgt die Debye-Temperatur $\Theta = 343$~K, was einer Debye-Frequenz $\nu_D = 7.14$~THz entspricht.
 
