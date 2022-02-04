@@ -1,0 +1,39 @@
+
+
+
+\begin{tikzpicture}
+%\useasboundingbox (-1.3,-1.2) rectangle (10.2,4.7);
+%\draw (-1.3,-1.2) rectangle (11.2,4.7);
+
+    \begin{axis}[ xlabel={Ramanverschiebung $\bar{\nu}$ (cm$^{-1}$)}, ylabel={Streuquerschnitt (willk. E.)},  width=115mm, height=60mm, ymode=log, 
+    xmin = 2155, xmax= 2495, 
+      ymin=3e-1, ymax = 1e3, ybar, log origin=infty, bar shift = 0,
+      x tick label style={/pgf/number format/.cd,%
+          set thousands separator={} },
+          xtick pos=bottom,
+          extra x ticks={(1/354.8 - 1/385) * 1e7, (1/354.8 - 1/387) * 1e7, (1/354.8 - 1/389) * 1e7},
+         extra x tick style={ticklabel pos=top , xtick pos=top},
+         extra x tick labels={ 385 , 387, 389},
+      clip=false, x label style={at={(axis description cs:0.5,-0.15)}}
+    ]
+ 
+        \node at (rel axis cs:0.5,1.2) {Wellenlänge (nm)};
+     
+   \fill[ gray] 	(2330 ,  247 )  -- (2315, 0.3) --(2330 ,  0.3 )  -- cycle ;
+   
+      \addplot[fill=black, black, bar width=1pt] table [x index=0, y index=1] {\currfiledir raman_N2_os.dat};
+    
+   \addplot[fill=black,black, bar width=1pt] table {   
+    		2330    247 
+    };
+
+ 	  \node[]  at (2330 ,  360 ){ Q-Zweig};
+	  \node[]  at (2250 ,  100 ){ O-Zweig};
+	  \node[]  at (2410 ,  100 ){ S-Zweig};
+
+    \end{axis}
+    
+
+   
+\end{tikzpicture}
+
