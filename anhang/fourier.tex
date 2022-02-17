@@ -1,4 +1,4 @@
-\renewcommand{\lastmod}{26. Februar 2021}
+\renewcommand{\lastmod}{17. Februar 2022}
 \renewcommand{\chapterauthors}{Markus Lippitz}
 
 \chapter{Fourier-Transformation}
@@ -9,7 +9,7 @@
 
 Der reziproke Raum in der Festkörperphysik ist die Fourier-Transformierte des Realraums. Es ist daher sinnvoll und hilfreich, einen intuitiven Zugang zur Fourier-Transformation zu haben. Im Endeffekt muss man in der Experimentalphysik nur selten eine Fourier-Transformation wirklich ausrechnen. Sehr oft reicht es, ein paar oft vorkommende Fourier-Paare zu kennen und diese mit einfachen Regeln zu kombinieren. Dies möchte ich hier kurz vorstellen. Eine sehr schöne und viel detailliertere Darstellung findet sich in \cite{Butz2011}. Ich folge hier seiner Notation.
 
-Bevor wir zu den Fourier-Paare kommen, müssen allerdings doch erst ein paar Grundlagen gelegt werden.
+Bevor wir zu den Fourier-Paaren kommen, müssen allerdings doch erst ein paar Grundlagen gelegt werden.
 
 \section{Fourier-Reihen: eine periodische Funktion und deren Fourier-Koeffizienten}
 
@@ -26,7 +26,7 @@ und den Fourier-Koeffizienten
 \begin{equation}
  C_k = \frac{1}{T} \, \int_{-T/2}^{T/2} \, f(t) \, \, e^{-i \, \omega_k \, t} \, dt
 \end{equation}
-Man beachte das negative Vorzeichen in der Exponentialfunktion im Gegensatz zur Gleichung davor. Für reelwertige Funktionen $f(t)$ sind 'gegenüberliegende' $C_k$ konjugiert-komplex, also  $C_k = C_{-k}^\star$. Für $k<0$ sind die Frequenzen $\omega_k$ negativ, was aber kein Problem darstellt.\sidenote{Man könnte alternativ $k\ge 0$ verlangen und eine $\sin$ und $\cos$ Reihe ansetzen.} Der nullte Koeffizient $C_0$ ist also gerade der zeitliche Mittelwert der Funktion $f(t)$.
+Man beachte das negative Vorzeichen in der Exponentialfunktion im Gegensatz zur Gleichung davor. Für reellwertige Funktionen $f(t)$ sind 'gegenüberliegende' $C_k$ konjugiert-komplex, also  $C_k = C_{-k}^\star$. Für $k<0$ sind die Frequenzen $\omega_k$ negativ, was aber kein Problem darstellt.\sidenote{Man könnte alternativ $k\ge 0$ verlangen und eine $\sin$ und $\cos$ Reihe ansetzen.} Der nullte Koeffizient $C_0$ ist also gerade der zeitliche Mittelwert der Funktion $f(t)$.
 
 
 
@@ -50,7 +50,7 @@ Weil wir die Zahlenfolge außerhalb des gemessenen Intervalls nicht kennen mache
  F_j = & \frac{1}{N} \, \sum_{k=0}^{N-1} \, f_k \, e^{- k \, j \, 2 \pi i / N } \\
   f_k = &  \sum_{j=0}^{N-1} \, F_j \, e^{+ k \,  j \, 2 \pi i / N } 
 \end{align}
-Die Definition ist wieder so, dass $F_0$ dem Mittelwert entspricht. Wegen $f_{-k} = f_{N - k}$ liegen die positiven Frequenzen mit steigender Frequenz in der ersten Hälfte von $F_j$. Danach kommen die negativen Frequenz, beginnend bei der 'negativsten' Frequenz steigend mit zur letzten Frequenz vor der Frequenz Null. Die maximal darstellbare Frequenz ist also die Nyquist-(Kreis-)Frequenz
+Die Definition ist wieder so, dass $F_0$ dem Mittelwert entspricht. Wegen $f_{-k} = f_{N - k}$ liegen die positiven Frequenzen mit steigender Frequenz in der ersten Hälfte von $F_j$. Danach kommen die negativen Frequenzen, beginnend bei der 'negativsten' Frequenz steigend mit zur letzten Frequenz vor der Frequenz Null. Die maximal darstellbare Frequenz ist also die Nyquist-(Kreis-)Frequenz
 \begin{equation}
 \Omega_\text{Nyquist} = \frac{\pi}{\Delta t}
 \end{equation}
@@ -226,6 +226,59 @@ Die Faltung mit der Rechteck-Funktion geht über in eine Multiplikation mit dem 
 \mathcal{FT}\left\{ f(x)  \right\} = b \frac{\sin (k b/2) }{kb/2} \, 2 \cos ( k d/2) = \frac{4}{k} \, \sin (k b/2) \,  \cos ( k d/2) 
 \end{equation}
 Die Intensität in Richtung $k$ ist dann das Betragsquadrat davon.
+
+
+
+
+\section{Zweidimensionale Fourier-Transformation}
+
+Wir können die Definition der Fourier-Transformation auf zwei und mehr Dimensionen erweitern. Die konjugierten Variablen sind $(x,y)$ und $(k_x, k_y)$, anstelle von $t$ und $\omega$. Der Wellenvektor $k_i = 2\pi / \lambda_i$ enthält den Faktor von $2\pi$ wie in der Kreisfrequenz $\omega$. Wir definieren
+\begin{align}
+  F(k_x, k_y) = & \iint_{-\infty}^{+\infty} \, f(x,y) \, e^{- i (k_x \, x + k_y \, y )} \, dx \, dy \\
+  f(x,y) = & \frac{1}{(2 \pi )^2} \iint_{-\infty}^{+\infty} \, F(k_x, k_y) \,\, e^{+ i (k_x \, x + k_y \, y )}  \, dk_x \,dk_y \quad .
+ \end{align}
+
+
+ Wenn wir die Funktion $f(x,y)$ in ein Produkt von eindimensionalen Funktionen zerlegen können, dann ist die Fourier-Transformation einfach das Produkt der einzelnen Fourier-Transformationen
+\begin{equation}
+  f(x,y) = g(x) \cdot h(y) \quad \leftrightarrow \quad 
+  F(k_x, k_y) = G(k_x) \cdot H(k_y) \quad .
+\end{equation}
+
+Ein Rechteck der Größe $a \times b$ wird in ein Produkt von Sinc-Funktionen umgewandelt
+\begin{align}
+  (x,y) = & \text{rect} _a (x) \cdot \text{rect} _b (y) \\
+  \leftrightarrow \quad  F(k_x, k_y) = & a b \, \text{sinc}( k_x a /2) \, \text{sinc}( k_y b /2) \quad .
+\end{align}
+
+
+Ein Spezialfall davon ist die rotationssymmetrische zweidimensionale Gaußsche Funktion
+\begin{equation}
+  f(x,y) = 
+  \frac{1}{2 \pi \sigma^2} \, e^{-  \frac{x^2 + y^2}{2 \sigma^2} }
+  \quad \leftrightarrow \quad 
+  F(k_x, k_y) = e^{- \frac{\sigma^2 }{2} \left(k_x^2 + k_y^2 \right)  } \quad .
+\end{equation}
+
+Eine wichtige Funktion kann nicht in ein Produkt eindimensionaler Funktionen zerlegt werden: eine Scheibe mit dem Radius $a$
+    \begin{equation}
+    f(x,y)  = \left\{ 
+    \begin{array}{ll}
+    1 & \text{für} \quad x^2+y^2 < a \\
+    0 & \text{sonst} \\
+    \end{array}
+    \right.
+   \end{equation}
+   wird transformiert in
+\begin{equation}
+  F(k_x, k_y) = a \, \frac{J_1(\pi \, a \, \rho )}{\rho}
+  \quad \text{width} \quad \rho = \sqrt{k_x^2 + k_y^2}
+\end{equation}
+und der (zylindrischen) Besselfunktion erster Art $J_1(x)$
+\begin{equation}
+  J_1(x) = \frac{1}{\pi} \int_0^\pi \cos (\tau - x \sin \tau) \,d\tau \quad ,
+\end{equation}
+die das zylindrische Analogon einer Sinc-Funktion ist.
 
 %--------------------
 \printbibliography[segment=\therefsegment,heading=subbibliography]
