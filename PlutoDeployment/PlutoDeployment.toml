@@ -1,12 +1,22 @@
 [Export]
 baked_notebookfile = true
+create_index = true
+
 
 [SliderServer]
 port = 2347
 host = "127.0.0.1"
 
+exclude=[
+    # HITRAN seems to be broken
+    "5_rot/pluto/hcl-hitran.jl",
+    "6_vib/pluto/HCN-hitran.jl"
+    ]
+   
+
+
 # You can also set Pluto's configuration here:
 [Pluto]
 [Pluto.compiler]
-# threads = 2
+threads = 1
 # See documentation for `Pluto.Configuration` for the full list of options. You need specify the categories within `Pluto.Configuration.Options` (`compiler`, `evaluation`, etc).
