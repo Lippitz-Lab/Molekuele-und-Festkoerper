@@ -1,0 +1,26 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Lecture notes 'Molekülphysik und Festkörperphysik I'
+message: >-
+  If you use this text, please cite it using the
+  metadata from this file.
+type: lecture notes
+authors:
+  - given-names: Markus
+    family-names: Lippitz
+    orcid: 'https://orcid.org/0000-0003-1218-6511'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.6124372
+repository-code: 'https://github.com/MarkusLippitz/Molekuele-und-Festkoerper'
+abstract: >-
+  This is the lecture notes (in German) of my lecture
+  'Molecular Physics and Solid State Physics I', as used in
+  the winter semester 21/22. It is a lecture for students in
+  the third year of the Bachelor's programme. In the
+  selection and weighting of the topics, it is very closely
+  oriented to what is usual in Bayreuth.
+license: CC-BY-SA-4.0
+commit: v22.2

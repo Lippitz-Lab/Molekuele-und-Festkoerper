@@ -1,0 +1,36 @@
+creativeWorkStatus: Published
+name: Lecture notes 'Molekülphysik und Festkörperphysik I'
+description: >-
+  This is the lecture notes (in German) of my lecture 'Molecular Physics 
+  and Solid State Physics I', as used in the winter semester 21/22. It 
+  is a lecture for students in the third year of the Bachelor's programme. 
+  In the selection and weighting of the topics, it is very closely 
+  oriented to what is usual in Bayreuth.
+license:
+  id: https://creativecommons.org/licenses/by-sa/4.0/deed.de
+id: https://github.com/MarkusLippitz/Molekuele-und-Festkoerper
+creator:
+  - givenName: Markus
+    familyName: Lippitz
+    id: https://orcid.org/0000-0003-1218-6511
+    type: Person
+    affiliation:
+      name: Universität Bayreuth
+      id: https://ror.org/0234wmv40
+      type: Organization
+keywords:
+  - Molekülphysik
+  - Festkörperphysik
+  - molecular physics
+  - solid state physics
+  - lecture notes
+inLanguage:
+  - de
+about:
+  - https://w3id.org/kim/hochschulfaechersystematik/n0128
+learningResourceType:
+  - https://w3id.org/kim/hcrt/script
+educationalLevel:
+  - https://w3id.org/kim/educationalLevel/level_A
+  - https://w3id.org/kim/educationalLevel/level_6
+datePublished: '2022-02-17'
