@@ -1,13 +1,14 @@
+'@context': https://schema.org/
 creativeWorkStatus: Published
+type: LearningResource
 name: Lecture notes 'Molekülphysik und Festkörperphysik I'
 description: >-
-  This is the lecture notes (in German) of my lecture 'Molecular Physics 
-  and Solid State Physics I', as used in the winter semester 21/22. It 
-  is a lecture for students in the third year of the Bachelor's programme. 
-  In the selection and weighting of the topics, it is very closely 
-  oriented to what is usual in Bayreuth.
-license:
-  id: https://creativecommons.org/licenses/by-sa/4.0/deed.de
+  This is the lecture notes (in German) of my lecture 'Molecular Physics  and
+  Solid State Physics I', as used in the winter semester 21/22. It  is a lecture
+  for students in the third year of the Bachelor's programme.  In the selection
+  and weighting of the topics, it is very closely  oriented to what is usual in
+  Bayreuth.
+license: https://creativecommons.org/licenses/by-sa/4.0/deed.de
 id: https://github.com/MarkusLippitz/Molekuele-und-Festkoerper
 creator:
   - givenName: Markus
@@ -28,6 +29,7 @@ inLanguage:
   - de
 about:
   - https://w3id.org/kim/hochschulfaechersystematik/n0128
+image: https://www.ep3.uni-bayreuth.de/pool/bilder/epc1-banner.png
 learningResourceType:
   - https://w3id.org/kim/hcrt/script
 educationalLevel:
